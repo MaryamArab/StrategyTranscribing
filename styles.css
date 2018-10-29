@@ -1,0 +1,52 @@
+html{
+    font-family: "Gotham A", "Gotham B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+    /*font-family: Cabin;*/
+    color: #555;
+    background-color: white;
+}
+a {
+    color: #42517F;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #23530e;
+}
+
+p {
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    margin: 0px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1150px;
+    }
+}
+.titleColor{
+    color: #42517F;
+}
+.RobotoPanel{
+    width:780px;
+    border-color: #4CAF50!important;
+    color: #000!important;
+    background-color: #ffffff!important;"
+}
+li{
+    margin-left:30px;
+    font-family: Tahoma;
+    font-weight: Bold;
+    font-size:15px;
+}
+legend {
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    color: #000;
+    padding: 3px 6px;
+}
