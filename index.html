@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Strategy Tutorial</title>
-    <script src="include/jquery-2.1.4.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+    <script src="monaco/node_modules/monaco-editor/min/vs/loader.js"></script>
     <script src="js/index.js"></script>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
@@ -17,7 +18,7 @@
 <div class="container">
     <BR>
     <div class="row">
-        <div style="float: left;" class=" row col-sm-12">
+        <div style="float: left; padding-left: -15px!important;" class=" row col-sm-12">
             <h1 class="titleColor">Programming Strategies</h1>
 
         </div>
@@ -31,7 +32,7 @@
                 <p>Software developers solve a diverse and wide range of problems. While software engineering research often focuses on tools to support this problem solving,
                     the strategies that developers use to solve problems are at least as important as the tools they use. </p>
 
-                    <p>
+                <p>
                         In this study, we are looking for strategies expert developers use in their everyday programming tasks.</p>
                 <p>We start with defining what we mean by Programming Strategy, then we will go through a set of tutorial steps which describe the syntax
                     of a language for describing strategies expert developers used in their everyday development life.
@@ -163,18 +164,6 @@
                     </div>
                 </div>
                 <BR>
-
-                <!--<div class="media row">-->
-                    <!--<div class="media-body well well-sm research-section col-sm-12">-->
-                        <!--<h3>Call</h3>-->
-                        <!--<p>A statement can call other strategies</p>-->
-                        <!--<div class="RobotoPanel">-->
-                            <!--<img src="images/call.png">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<BR>-->
-
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
                         <h3>Loops</h3>
@@ -191,11 +180,12 @@
         </div>
         <BR><BR>
         <div class="row">
-            <h3 style="color: darkred;">Now that you’ve learned how to write a strategy in Roboto, it’s your turn to write one:</h3>
+            <h3>Now that you’ve learned how to write a strategy in Roboto, it’s your turn to write one.</h3>
+            <BR><BR>
             <div>
                 <form>
                     <legend>How many years of industrial work experience you have in Java?</legend>
-                    Java development work experience: <input type="number" name="wexs">
+                    Java development work experience: <input type="number" id="workExp">
                 </form>
                 <BR>
 
@@ -205,22 +195,22 @@
 
                         <div>
                             <input type="radio" id="java9"
-                                   name="drone" value="java9" checked />
+                                   name="javaVersion" value="java9" checked />
                             <label for="java9">Java9</label>
                         </div>
                         <div>
                             <input type="radio" id="java8"
-                                   name="drone" value="java8" checked />
+                                   name="javaVersion" value="java8"/>
                             <label for="java8">Java8</label>
                         </div>
                         <div>
                             <input type="radio" id="java7"
-                                   name="drone" value="java7" checked />
+                                   name="javaVersion" value="java7"/>
                             <label for="java7">Java7</label>
                         </div>
                         <div>
                             <input type="radio" id="java6"
-                                   name="drone" value="java6" checked />
+                                   name="javaVersion" value="java6" />
                             <label for="java6">Java6</label>
                         </div>
 
@@ -234,49 +224,49 @@
 
                         <div>
                             <input type="radio" id="blade"
-                                   name="drone" value="blade" checked />
+                                   name="javaFramework" value="blade" checked />
                             <label for="blade">Blade</label>
                         </div>
 
                         <div>
                             <input type="radio" id="dropwizard"
-                                   name="drone" value="dropwizard" />
+                                   name="javaFramework" value="dropwizard" />
                             <label for="dropwizard">Dropwizard</label>
                         </div>
 
                         <div>
                             <input type="radio" id="grails"
-                                   name="drone" value="grails" />
+                                   name="javaFramework" value="grails" />
                             <label for="grails">Grails</label>
                         </div>
                         <div>
                             <input type="radio" id="gwt"
-                                   name="drone" value="gwt" />
+                                   name="javaFramework" value="gwt" />
                             <label for="gwt">GWT</label>
                         </div>
                         <div>
                             <input type="radio" id="hibernate"
-                                   name="drone" value="hibernate" />
+                                   name="javaFramework" value="hibernate" />
                             <label for="hibernate">Hibernate</label>
                         </div>
                         <div>
                             <input type="radio" id="JSF"
-                                   name="drone" value="JSF" />
+                                   name="javaFramework" value="JSF" />
                             <label for="JSF">JavaServer Faces(JSF)</label>
                         </div>
                         <div>
                             <input type="radio" id="spark"
-                                   name="drone" value="spark" />
+                                   name="javaFramework" value="spark" />
                             <label for="spark">Spark</label>
                         </div>
                         <div>
                             <input type="radio" id="spring"
-                                   name="drone" value="spring" />
+                                   name="javaFramework" value="spring" />
                             <label for="spring">Spring</label>
                         </div>
                         <div>
                             <input type="radio" id="struts"
-                                   name="drone" value="struts" />
+                                   name="javaFramework" value="struts" />
                             <label for="struts">Struts</label>
                         </div>
                         <div>
@@ -286,13 +276,13 @@
                         </div>
                         <div>
                             <input type="radio" id="other"
-                                   name="drone" value="other" />
+                                   name="javaFramework" value="other" />
                             <label for="other">Other</label>
                         </div>
                         <div>
                             <label for="otherFrameworks">If Other selected:</label>
                             <input type="text" id="otherFrameworks"
-                                   name="drone" />
+                                   name="javaFramework" />
 
                         </div>
 
@@ -300,12 +290,26 @@
                 </form>
                 <BR>
                 <legend>For this framework, describe a type of defect that can be tricky to debug.</legend>
-                <textarea type="text"  class="md-textarea form-control" rows="3"></textarea>
+                <textarea type="text"  class="md-textarea form-control" rows="3" id="defect"></textarea>
                 <BR>
-                <legend>Imagine a novice developer came to you with this type of defect. Describe the best strategy you can offer this developer, describing, in as much detail as possible, the steps you’d take to debug this defect.</legend>
+                <legend>
+                    <b>Guidelines for writing strategy</b>
+                    <BR>
+                    <BR>
+                    Imagine a novice developer came to you with this type of defect. Imagine they did not have any similar experience so far.
+                        Describe the best strategy you can offer this developer, the steps you'd take to debug this defect, with sufficient details.
+                    <p style="margin-top:1%;"><b>Use comments to elaborate. </b>Each step in a strategy should be clear and concise, but you can use comments to help developers who may not fully know how to execute a step.Include your comments before each statement after # tag.</p>
+                    <p style="margin-top:1%;"><b>Avoid wasted work. </b>Structure your strategy in a way that minimizes how much work a developer has to do </p>
+                    <p style="margin-top:1%;"><b>Include explicit restarts.</b> Some strategies fail; include these failure points in your strategy, guiding developers either back to the start of a strategy, or to use a different strategy.</p>
+                    <p style="margin-top:1%;"><b>Include rationale.</b> A strategy should include an overall rationale for its approach, as well as rationale for how each step achieves the high level approach. This helps motivate a developer to follow the strategy reliably.</p>
+                    <p style="margin-top:1%;"><b>Encourage externalization.</b> For any information a developer will need to reference and reuse, encourage them to capture it in a variable. This ensures they don’t lose it, but also that it’s easy to reference. It also allows the data to be used in other parts of a strategy.</p>
+
+
+                </legend>
                 <div class="media-body well well-sm research-section col-sm-7">
                     <h3>Your Debugging Strategy</h3>
-                    <textarea type="text" id="form7" class="md-textarea form-control" rows="28"></textarea>
+                    <div id="strategyDefinition" style="min-height: 550px;"></div>
+                    <!--<textarea type="text"  class="md-textarea form-control" rows="28" id = "strategyDefinition"></textarea>-->
                 </div>
                 <div class="media-body well well-sm research-section col-sm-5">
                     <h4>An example strategy, for reference </h4>
@@ -314,30 +318,25 @@
                 </div>
                 <BR>
                 <legend style="clear: both">To use this strategy, what tools or tool features must a developer have access to?</legend>
-                <textarea type="text"  class="md-textarea form-control" rows="3"></textarea>
+                <textarea type="text"  class="md-textarea form-control" rows="3" id="toolsRequirements"></textarea>
 
                 <BR>
                 <legend>To use this strategy, what if anything should the developer know about the codebase?</legend>
-                <textarea type="text"  class="md-textarea form-control" rows="3"></textarea>
+                <textarea type="text"  class="md-textarea form-control" rows="3" id="codebaseRequirements"></textarea>
 
                 <BR>
                 <legend>To use this strategy, what conceptual knowledge should a developer have about the way the framework works?</legend>
-                <textarea type="text" class="md-textarea form-control" rows="3"></textarea>
+                <textarea type="text" class="md-textarea form-control" rows="3" id="knowledgeRequirements"></textarea>
 
                 <BR>
-                <legend>Test it out</legend>
-                <p>Now, in order to test your strategy in terms of being valuable and valid in cases where resources required by other strategies are not available, we ask you to test it with experimenter to give you some feedback.
-                     Please test it with experimenter and improve your strategy statements by adding more description, details, or steps if needed.</p>
-                <BR><BR>
             </div>
         </div>
     </div>
+    <button onclick="addNewStrategy()" class="btn btn-success" style="float: right; font-weight: bold;">Submit</button>
+    <BR><BR><BR>
 
 </div>
-<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-<script>
-    // Initialize Firebase
 
-</script>
+
 </body>
 </html>
