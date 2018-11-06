@@ -46,6 +46,7 @@ require(['vs/editor/editor.main'], function() {
 });
 
 async function addNewStrategy() {
+    let pId =document.getElementById("pId").value;
     let workExperience = document.getElementById("workExp").value;
     let javaVersion = document.querySelector('input[name = "javaVersion"]:checked').value;
     let javaFramework = document.querySelector('input[name = "javaFramework"]:checked').value;
@@ -63,6 +64,7 @@ async function addNewStrategy() {
 
     let database = firebase.firestore();
     database.collection("Strategies").add({
+        ParticipationId: pId,
         Experience: workExperience,
         JavaVersion:javaVersion,
         JavaFramework:javaFramework,
