@@ -46,10 +46,15 @@ require(['vs/editor/editor.main'], function() {
 });
 
 async function addNewStrategy() {
+    let time = new Date();
+    var hh = time.getHours();
+    var mm = time.getMinutes();
+    var ss = time.getSeconds();
+    var timestamp = hh + ":" + mm + ":" + ss;
     let pId =document.getElementById("pId").value;
     let languageAndPlatform= document.getElementById("languagePlatform").value;
     let studyField= document.getElementById("studyField").value;
-    let degree = document.getElementById("degree");
+    let degree = document.getElementById("degree").value;
     let workExperience = document.getElementById("workExp").value;
     let haveDebugStrategy = document.querySelector('input[name="consent"]:checked').value;
     let javaVersion = document.querySelector('input[name = "javaVersion"]:checked').value;
@@ -59,7 +64,8 @@ async function addNewStrategy() {
     let toolsRequirements = document.getElementById("toolsRequirements").value;
     let codebaseRequirements = document.getElementById("codebaseRequirements").value;
     let knowledgeRequirements = document.getElementById("knowledgeRequirements").value;
-    if(workExperience ==="" || defect==="" ||strategyDefenition==="" || toolsRequirements==="" || codebaseRequirements==="" || knowledgeRequirements===""){
+    if(workExperience ==="" || defect==="" ||strategyDefenition==="" || toolsRequirements==="" || codebaseRequirements==="" || knowledgeRequirements===""
+    || degree ==="" || studyField ==="" || languageAndPlatform ==="" || haveDebugStrategy === null){
         alert("Please fill out all the required fields");
         return;
     }
@@ -67,10 +73,12 @@ async function addNewStrategy() {
         javaFramework = document.getElementById("otherFrameworks").value;
 
     let database = firebase.firestore();
+
     database.collection("Strategies").add({
+        Time:timestamp,
         ParticipationId: pId,
         languageAndPlatform:languageAndPlatform,
-        ColledgeField:studyField,
+        CollegeField:studyField,
         HighestDegree: degree,
         HaveStrategyWhenDebugging: haveDebugStrategy,
         Experience: workExperience,
@@ -81,5 +89,29 @@ async function addNewStrategy() {
         ToolsRequirements:toolsRequirements,
         CodebaseRequirements:codebaseRequirements,
         KnowledgeRequirements: knowledgeRequirements,
+    }).catch(function (err) {
+        console.log("error saving", err);
     });
+    alert("You successfully submit your draft of strategy. Thank you so much for participating in our study.")
+
+
+
+
+
+
+    // database.collection("Strategies").add({
+    //     ParticipationId: pId,
+    //     languageAndPlatform:languageAndPlatform,
+    //     ColledgeField:studyField,
+    //     HighestDegree: degree,
+    //     HaveStrategyWhenDebugging: haveDebugStrategy,
+    //     Experience: workExperience,
+    //     JavaVersion:javaVersion,
+    //     JavaFramework:javaFramework,
+    //     Defect:defect,
+    //     StrategyDefenition:strategyDefenition,
+    //     ToolsRequirements:toolsRequirements,
+    //     CodebaseRequirements:codebaseRequirements,
+    //     KnowledgeRequirements: knowledgeRequirements,
+    // });
 }
