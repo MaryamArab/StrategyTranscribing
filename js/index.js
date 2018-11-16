@@ -47,7 +47,11 @@ require(['vs/editor/editor.main'], function() {
 
 async function addNewStrategy() {
     let pId =document.getElementById("pId").value;
+    let languageAndPlatform= document.getElementById("languagePlatform").value;
+    let studyField= document.getElementById("studyField").value;
+    let degree = document.getElementById("degree");
     let workExperience = document.getElementById("workExp").value;
+    let haveDebugStrategy = document.querySelector('input[name="consent"]:checked').value;
     let javaVersion = document.querySelector('input[name = "javaVersion"]:checked').value;
     let javaFramework = document.querySelector('input[name = "javaFramework"]:checked').value;
     let defect= document.getElementById("defect").value;
@@ -65,6 +69,10 @@ async function addNewStrategy() {
     let database = firebase.firestore();
     database.collection("Strategies").add({
         ParticipationId: pId,
+        languageAndPlatform:languageAndPlatform,
+        ColledgeField:studyField,
+        HighestDegree: degree,
+        HaveStrategyWhenDebugging: haveDebugStrategy,
         Experience: workExperience,
         JavaVersion:javaVersion,
         JavaFramework:javaFramework,

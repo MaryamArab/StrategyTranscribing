@@ -188,8 +188,55 @@
                 <BR>
 
                 <form>
+                    <legend>What languages and platforms you are most familiar with?</legend>
+                    <textarea type="text" class="md-textarea form-control" rows="2" id="languagePlatform"></textarea>
+                </form>
+                <BR>
+
+                <form>
+                    <legend>What was your academic field of study? </legend>
+                    <textarea type="text" class="md-textarea form-control" rows="2" id="studyField"></textarea>
+                </form>
+                <BR>
+                <form>
+                    <legend>What is the highest academic degree you obtain? </legend>
+                    Higehst academic degree: <input type="number" id="degree">
+                </form>
+                <BR>
+
+                <form>
                     <legend>How many years of industrial work experience you have in Java?</legend>
                     Java development work experience: <input type="number" id="workExp">
+                </form>
+                <BR>
+                <form>
+                    <fieldset>
+                    <legend>Choose the statement below that is best describes your answer to the following phrase. </legend>
+                        <p>"When I encounter a bug, I have effective strategies for finding it's cause"</p>
+                        <div>
+                            <input type="radio" id="sagree"
+                                   name="consent" value="sagree"  />
+                            <label for="sagree">Strongly agree</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="agree"
+                               name="consent" value="agree"  />
+                             <label for="agree">Agree</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="disagree"
+                                   name="consent" value="disagree"  />
+                            <label for="disagree">Disagree</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="sdisagree"
+                                   name="consent" value="sdisagree"  />
+                            <label for="sdisagree">Strongly disagree</label>
+                        </div>
+                    </fieldset>
                 </form>
                 <BR>
 
@@ -333,6 +380,13 @@
                 <textarea type="text" class="md-textarea form-control" rows="3" id="knowledgeRequirements"></textarea>
 
                 <BR>
+                <legend>Thanks for writing a draft. Can you step through the strategy line by line and explain the following for each line
+                    <p style="margin-top:1%;">Do you think it’s clear?</p>
+                    <p style="margin-top:1%;">Do you think a novice would understand it?</p>
+                    <p style="margin-top:1%;">Do you think it’s correct?</p>
+                    <p style="margin-top:1%;">Does it need more detail?</p>
+                </legend>
+
             </div>
         </div>
     </div>
