@@ -51,15 +51,14 @@ async function addNewStrategy() {
     var mm = time.getMinutes();
     var ss = time.getSeconds();
     var timestamp = hh + ":" + mm + ":" + ss;
-    let pname = document.getElementById("pname");
+    let pname = document.getElementById("pname").value;
     let pId =document.getElementById("pId").value;
     let languages= document.getElementById("languages").value;
     let domains= document.getElementById("domains").value;
     let studyField= document.getElementById("studyField").value;
     let degree = document.getElementById("degree").value;
     let workExperience = document.getElementById("workExp").value;
-    let haveDebugStrategy = document.querySelector('input[name="consent"]:checked').value;
-    let javaVersion = document.querySelector('input[name = "javaVersion"]:checked').value;
+    let version = document.querySelector('input[name = "version"]:checked').value;
     let javaFramework = document.querySelector('input[name = "javaFramework"]:checked').value;
     let defect= document.getElementById("defect").value;
     let strategyDefenition = window.editor.getValue();
@@ -70,11 +69,11 @@ async function addNewStrategy() {
     let correction = document.getElementById("correction").value;
     let completeness = document.getElementById("completeness").value;
     let understandability = document.getElementById("understandability").value;
-    let partnerStratChallenges = document.getElementById("partnerStratChallenges");
-    let stratWritingChallenges = document.getElementById("stratWritingChallenges");
+    let partnerStratChallenges = document.getElementById("partnerStratChallenges").value;
+    let stratWritingChallenges = document.getElementById("stratWritingChallenges").value;
 
     if(workExperience ==="" || defect==="" ||strategyDefenition==="" || toolsRequirements==="" || codebaseRequirements==="" || knowledgeRequirements===""
-    || degree ==="" || studyField ==="" || languages ==="" ||domains==="" || haveDebugStrategy === null){
+    || degree ==="" || studyField ==="" || languages ==="" ||domains==="" ){
         alert("Please fill out all the required fields");
         return;
     }
@@ -91,15 +90,14 @@ async function addNewStrategy() {
 
     database.collection("Strategies").doc(pId).set({
         Time:timestamp,
-        PArticipantName: pname,
+        ParticipantName: pname,
         ParticipationId: pId,
         Languages:languages,
         Domains:domains,
         CollegeField:studyField,
         HighestDegree: degree,
-        HaveStrategyWhenDebugging: haveDebugStrategy,
         Experience: workExperience,
-        JavaVersion:javaVersion,
+        Version:version,
         JavaFramework:javaFramework,
         Defect:defect,
         StrategyDefenition:strategyDefenition,
@@ -116,6 +114,6 @@ async function addNewStrategy() {
     }).catch(function (err) {
         console.log("error saving", err);
     });
-    alert("You successfully submit your draft of strategy. Thank you so much for participating in our study.")
+    alert("Congratulation.You successfully submit your draft of strategy. Thank you so much for participating in our study.")
 
 }
