@@ -51,6 +51,7 @@ async function addNewStrategy() {
     var mm = time.getMinutes();
     var ss = time.getSeconds();
     var timestamp = hh + ":" + mm + ":" + ss;
+    let pname = document.getElementById("pname");
     let pId =document.getElementById("pId").value;
     let languages= document.getElementById("languages").value;
     let domains= document.getElementById("domains").value;
@@ -90,6 +91,7 @@ async function addNewStrategy() {
 
     database.collection("Strategies").doc(pId).set({
         Time:timestamp,
+        PArticipantName: pname,
         ParticipationId: pId,
         Languages:languages,
         Domains:domains,
