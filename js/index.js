@@ -53,11 +53,9 @@ async function addNewStrategy() {
     var timestamp = hh + ":" + mm + ":" + ss;
     let pId =document.getElementById("pId").value;
     let languages= document.getElementById("languages").value;
-    let platforms= document.getElementById("platforms").value;
     let domains= document.getElementById("domains").value;
     let studyField= document.getElementById("studyField").value;
     let degree = document.getElementById("degree").value;
-    let workStartDate = document.getElementById("workStartDate").value;
     let workExperience = document.getElementById("workExp").value;
     let haveDebugStrategy = document.querySelector('input[name="consent"]:checked').value;
     let javaVersion = document.querySelector('input[name = "javaVersion"]:checked').value;
@@ -67,9 +65,22 @@ async function addNewStrategy() {
     let toolsRequirements = document.getElementById("toolsRequirements").value;
     let codebaseRequirements = document.getElementById("codebaseRequirements").value;
     let knowledgeRequirements = document.getElementById("knowledgeRequirements").value;
+    let clarity = document.getElementById("clarity").value;
+    let correction = document.getElementById("correction").value;
+    let completeness = document.getElementById("completeness").value;
+    let understandability = document.getElementById("understandability").value;
+    let partnerStratChallenges = document.getElementById("partnerStratChallenges");
+    let stratWritingChallenges = document.getElementById("stratWritingChallenges");
+
     if(workExperience ==="" || defect==="" ||strategyDefenition==="" || toolsRequirements==="" || codebaseRequirements==="" || knowledgeRequirements===""
-    || degree ==="" || studyField ==="" || languages ==="" ||platforms===""||domains==="" || haveDebugStrategy === null){
+    || degree ==="" || studyField ==="" || languages ==="" ||domains==="" || haveDebugStrategy === null){
         alert("Please fill out all the required fields");
+        return;
+    }
+
+    if(clarity === "" || correction === "" || completeness ==="" || understandability === "" || partnerStratChallenges ==="" || stratWritingChallenges ==="")
+    {
+        alert("Please fill out all the post study questions.");
         return;
     }
     if(javaFramework ==="other" )
@@ -81,12 +92,10 @@ async function addNewStrategy() {
         Time:timestamp,
         ParticipationId: pId,
         Languages:languages,
-        Platforms:platforms,
         Domains:domains,
         CollegeField:studyField,
         HighestDegree: degree,
         HaveStrategyWhenDebugging: haveDebugStrategy,
-        WorkStartDate: workStartDate,
         Experience: workExperience,
         JavaVersion:javaVersion,
         JavaFramework:javaFramework,
@@ -95,6 +104,13 @@ async function addNewStrategy() {
         ToolsRequirements:toolsRequirements,
         CodebaseRequirements:codebaseRequirements,
         KnowledgeRequirements: knowledgeRequirements,
+        Clarity:clarity,
+        Correction:correction,
+        Completeness:completeness,
+        Understandability : understandability,
+        PartnerStrategyChallenges:partnerStratChallenges,
+        StrategyWritingChallenges: stratWritingChallenges
+
     }).catch(function (err) {
         console.log("error saving", err);
     });

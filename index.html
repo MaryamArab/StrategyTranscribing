@@ -5,6 +5,7 @@
     <title>Strategy Tutorial</title>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
     <script src="monaco/node_modules/monaco-editor/min/vs/loader.js"></script>
     <script src="js/index.js"></script>
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -178,48 +179,43 @@
         </div>
         <BR><BR>
         <div class="row">
-            <h3>Now that you’ve learned how to write a strategy in Roboto, it’s your turn to write one.</h3>
+            <h3  style="color:#42517F;">Now that you’ve learned how to write a strategy in Roboto, it’s your turn to write one.</h3>
             <BR><BR>
             <div>
                 <form>
                     <legend>What is your participation ID: <input id="pId"></legend>
                     <legend>What programming languages you are familiar with?<textarea type="text" class="md-textarea form-control" rows="2" id="languages"></textarea></legend>
-                    <legend>What platforms you are  familiar with?<textarea type="text" class="md-textarea form-control" rows="2" id="platforms"></textarea></legend>
-                    <legend>What domains you’ve built software in?<textarea type="text" class="md-textarea form-control" rows="2" id="domains"></textarea></legend>
+                    <legend>What domains have you built software in?<textarea type="text" class="md-textarea form-control" rows="2" id="domains"></textarea></legend>
                     <legend>What was your academic field of study? <textarea type="text" class="md-textarea form-control" rows="2" id="studyField"></textarea></legend>
-                    <legend>What is your highest academic credentials? <input id="degree"></legend>
-                    <legend>When you first started working in the software industry? <input style="color: grey" type="number" value="2010" id="workStartDate"></legend>
+                    <legend>What is your highest academic degree? <input id="degree"></legend>
                     <legend>How many years of industrial work experience you have?<input type="number" id="workExp"></legend>
                 </form>
                 <form>
                     <fieldset>
-                    <legend>Choose the statement below that is best describes your answer to the following phrase. </legend>
+                    <legend>How best the following phrase describes your answer.
+                        <BR>
                         <p>"When I encounter a bug, I have effective strategies for finding it's cause"</p>
-                        <div>
-                            <input type="radio" id="sdisagree"
-                                   name="consent" value="sdisagree"  checked/>
-                            <label for="sdisagree">Strongly disagree</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="disagree"
-                                   name="consent" value="disagree"  />
-                            <label for="disagree">Disagree</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="agree"
-                                   name="consent" value="agree"  />
-                            <label for="agree">Agree</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="sagree"
-                                   name="consent" value="sagree"  />
-                            <label for="sagree">Strongly agree</label>
-                        </div>
-
-
-
-
-
+                    </legend>
+                    <div>
+                        <input type="radio" id="sdisagree"
+                               name="consent" value="sdisagree"  checked/>
+                        <label for="sdisagree">Strongly disagree</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="disagree"
+                               name="consent" value="disagree"  />
+                        <label for="disagree">Disagree</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="agree"
+                               name="consent" value="agree"  />
+                        <label for="agree">Agree</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sagree"
+                               name="consent" value="sagree"  />
+                        <label for="sagree">Strongly agree</label>
+                    </div>
 
                     </fieldset>
                 </form>
@@ -365,20 +361,45 @@
                 <textarea type="text" class="md-textarea form-control" rows="3" id="knowledgeRequirements"></textarea>
 
                 <BR>
-                <legend>Thanks for writing a draft. Can you step through the strategy line by line and explain the following for each line
-                    <p style="margin-top:1%;">Do you think it’s clear?</p>
-                    <p style="margin-top:1%;">Do you think a novice would understand it?</p>
-                    <p style="margin-top:1%;">Do you think it’s correct?</p>
-                    <p style="margin-top:1%;">Does it need more detail?</p>
+                <legend>Thanks for writing a draft. Please step through the strategy line by line and make sure your strategy is clear and a novice would understand it. Please feel free to add corrections or details as you review your strategy.   </legend>
+                <br>
+                <br>
+                <h3 style="color:#42517F;">Now please share your written strategy with the other user:</h3>
+                <legend>
+                    <p>Ask them to read your strategy steps.</p>
+                    <p>Make sure they understand every steps.</p>
+                    <p>Answer their questions and add more details and description for each step that remove their doubts.</p>
                 </legend>
+                <BR>
+                <BR>
+                <BR>
+                <h2 style="color:#42517F;">Post-study questions</h2>
 
+                <h3 style="color: #42517F;"> Please answer the following questions about your partner strategy:</h3>
+                <div>
+                    <form>
+                        <legend>Do you think the strategy you used is clear enough? If not, specify the obscure steps. <textarea type="text" class="md-textarea form-control" rows="2" id="clarity"></textarea></legend>
+                        <legend>Is the strategy  correct? If not, mention why?<textarea type="text" class="md-textarea form-control" rows="2" id="correction"></textarea></legend>
+                        <legend>Is the strategy  complete? If not, what aspects are missing?<textarea type="text" class="md-textarea form-control" rows="2" id="completeness"></textarea></legend>
+                        <legend>Do you think a novice would understand it? If not, why?<textarea type="text" class="md-textarea form-control" rows="2" id="understandability"></textarea></legend>
+                        <legend>What are the challenges you faced in using your partner strategy?<textarea type="text" class="md-textarea form-control" rows="4" id="partnerStratChallenges"></textarea></legend>
+                    </form>
+                </div>
+                <h3 style="color:#42517F;"> Please answer the following question about your strategy.</h3>
+                <div>
+                    <form>
+                        <legend>What are the challenges you faced in writing down your strategy?<textarea type="text" class="md-textarea form-control" rows="4" id="stratWritingChallenges"></textarea></legend>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    <button onclick="addNewStrategy()" class="btn btn-success" style="float: right; font-weight: bold;">Submit</button>
-    <BR><BR><BR>
 
 </div>
+<button onclick="addNewStrategy()" class="btn btn-success" style="float: right; font-weight: bold;">Submit</button>
+ß
+<BR><BR><BR> <BR><BR>
+
 
 
 </body>
