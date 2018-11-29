@@ -45,6 +45,230 @@ require(['vs/editor/editor.main'], function() {
     });
 });
 
+
+$(document).ready(function () {
+    var timeoutId,
+        saveData = {};
+    var $defect = $('#defect');
+    var $toolsRequirements = $('#toolsRequirements');
+    var $codebaseRequirements = $('#codebaseRequirements');
+    var $knowledgeRequirements = $('#knowledgeRequirements');
+    var $clarity = $('#clarity');
+    var $correction = $('#correction');
+    var $completeness = $('#completeness');
+    var $understandability = $('#understandability');
+    var $partnerStratChallenges = $('#partnerStratChallenges');
+    var $stratWritingChallenges = $('#stratWritingChallenges');
+
+
+
+
+// Function to save all fields that were changed.
+    function saveRatings() {
+
+        // Iterate over all properties on our saveData object and populate them with data from element.
+        for (var key in saveData) {
+            // Get reference to element we stored on saveData object.
+            var $field = saveData[key];
+            // Replace value on saveData object with the current element value.
+            saveData[key] = $field.val();
+            // Change color on text box to show it was saved.
+            $field.css({
+                backgroundColor: '#cfc'
+            });
+        }
+        // Log saveData object to console, this is the object that would go to server as part of ajax call.
+        console.log(saveData);
+        saveData = {};
+    }
+
+// Handle keypress event.
+    $('.field').keypress(function (e) {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+
+    $defect.keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+    $toolsRequirements.keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+    $codebaseRequirements.keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+
+    $knowledgeRequirements.keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+
+    $clarity.keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+
+    $correction.keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+
+    $completeness.keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+
+    $understandability.keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+
+    $partnerStratChallenges.keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+
+    $stratWritingChallenges.keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#fcc'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+});
+
 async function addNewStrategy() {
     let time = new Date();
     var hh = time.getHours();

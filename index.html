@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Strategy Tutorial</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
@@ -183,8 +185,8 @@
             <BR><BR>
             <div>
                 <form>
-                    <legend>What is your full name: <input id="pname"></legend>
-                    <legend>What is your participation ID: <input id="pId"></legend>
+                    <legend>What is your full name: <input id="pname" class="field"></legend>
+                    <legend>What is your participation ID: <input id="pId" class="field"></legend>
                     <!--<legend>What programming languages you are familiar with?<textarea type="text" class="md-textarea form-control" rows="2" id="languages"></textarea></legend>-->
                     <!--<legend>What domains have you built software in?<textarea type="text" class="md-textarea form-control" rows="2" id="domains"></textarea></legend>-->
                     <!--<legend>What was your academic field of study? <textarea type="text" class="md-textarea form-control" rows="2" id="studyField"></textarea></legend>-->
@@ -437,7 +439,7 @@
                 </legend>
                 <div class="media-body well well-sm research-section col-sm-7">
                     <h3>Your Debugging Strategy</h3>
-                    <div id="strategyDefinition" style="min-height: 550px;"></div>
+                    <div id="strategyDefinition" style="min-height: 550px;" class="field"></div>
                     <!--<textarea type="text"  class="md-textarea form-control" rows="28" id = "strategyDefinition"></textarea>-->
                 </div>
                 <div class="media-body well well-sm research-section col-sm-5">
@@ -495,8 +497,8 @@
                     <legend>What programming languages you are familiar with?<textarea type="text" class="md-textarea form-control" rows="2" id="languages"></textarea></legend>
                     <legend>What domains have you built software in?<textarea type="text" class="md-textarea form-control" rows="2" id="domains"></textarea></legend>
                     <legend>What was your academic field of study? <textarea type="text" class="md-textarea form-control" rows="2" id="studyField"></textarea></legend>
-                    <legend>What is your highest academic degree? <input id="degree"></legend>
-                    <legend>How many years of industrial work experience do you have?<input type="number" id="workExp"></legend>
+                    <legend>What is your highest academic degree? <input id="degree" class="field"></legend>
+                    <legend>How many years of industrial work experience do you have?<input type="number" id="workExp" class="field"></legend>
                 </form>
             </div>
         </div>
