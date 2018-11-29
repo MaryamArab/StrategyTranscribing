@@ -285,7 +285,7 @@ async function addNewStrategy() {
     let version = document.querySelector('input[name = "version"]:checked').value;
     let javaFramework = document.querySelector('input[name = "javaFramework"]:checked').value;
     let defect= document.getElementById("defect").value;
-    let strategyDefenition = window.editor.getValue();
+    let strategyDefinition = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
     let toolsRequirements = document.getElementById("toolsRequirements").value;
     let codebaseRequirements = document.getElementById("codebaseRequirements").value;
     let knowledgeRequirements = document.getElementById("knowledgeRequirements").value;
@@ -295,8 +295,9 @@ async function addNewStrategy() {
     let understandability = document.getElementById("understandability").value;
     let partnerStratChallenges = document.getElementById("partnerStratChallenges").value;
     let stratWritingChallenges = document.getElementById("stratWritingChallenges").value;
+    console.log("Strategy definition:   " + strategyDefinition);
 
-    if(workExperience ==="" || defect==="" ||strategyDefenition==="" || toolsRequirements==="" || codebaseRequirements==="" || knowledgeRequirements===""
+    if(workExperience ==="" || defect==="" ||strategyDefinition==="" || toolsRequirements==="" || codebaseRequirements==="" || knowledgeRequirements===""
     || degree ==="" || studyField ==="" || languages ==="" ||domains==="" ){
         alert("Please fill out all the required fields");
         return;
@@ -324,7 +325,7 @@ async function addNewStrategy() {
         Version:version,
         JavaFramework:javaFramework,
         Defect:defect,
-        StrategyDefenition:strategyDefenition,
+        StrategyDefinition:strategyDefinition,
         ToolsRequirements:toolsRequirements,
         CodebaseRequirements:codebaseRequirements,
         KnowledgeRequirements: knowledgeRequirements,
