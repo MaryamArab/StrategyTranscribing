@@ -187,218 +187,92 @@
                 <form>
                     <legend>What is your full name: <input id="pname" class="field"></legend>
                     <legend>What is your participation ID: <input id="pId" class="field"></legend>
-                    <!--<legend>What programming languages you are familiar with?<textarea type="text" class="md-textarea form-control" rows="2" id="languages"></textarea></legend>-->
-                    <!--<legend>What domains have you built software in?<textarea type="text" class="md-textarea form-control" rows="2" id="domains"></textarea></legend>-->
-                    <!--<legend>What was your academic field of study? <textarea type="text" class="md-textarea form-control" rows="2" id="studyField"></textarea></legend>-->
-                    <!--<legend>What is your highest academic degree? <input id="degree"></legend>-->
-                    <!--<legend>How many years of industrial work experience do you have?<input type="number" id="workExp"></legend>-->
                 </form>
-                <!--<form>-->
-                    <!--<fieldset>-->
-                    <!--<legend>How best the following phrase describes your answer.-->
-                        <!--<BR>-->
-                        <!--<p>"When I encounter a bug, I have effective strategies for finding it's cause"</p>-->
-                    <!--</legend>-->
-                    <!--<div>-->
-                        <!--<input type="radio" id="sdisagree"-->
-                               <!--name="consent" value="sdisagree"  checked/>-->
-                        <!--<label for="sdisagree">Strongly disagree</label>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                        <!--<input type="radio" id="disagree"-->
-                               <!--name="consent" value="disagree"  />-->
-                        <!--<label for="disagree">Disagree</label>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                        <!--<input type="radio" id="agree"-->
-                               <!--name="consent" value="agree"  />-->
-                        <!--<label for="agree">Agree</label>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                        <!--<input type="radio" id="sagree"-->
-                               <!--name="consent" value="sagree"  />-->
-                        <!--<label for="sagree">Strongly agree</label>-->
-                    <!--</div>-->
+                <legend>Select a language you are expert in:
 
-                    <!--</fieldset>-->
-                <!--</form>-->
+                    <select id="mySelect" onchange="languageSelectionChanged()">
+                        <option value="Java">Java
+                        <option value="JavaScript">JavaScript
+                    </select>
+                </legend>
                 <BR>
 
-                <!--<form>-->
-                    <!--<fieldset>-->
-                        <!--<legend>Which versions of Java do you regularly use?</legend>-->
-
-                        <!--<div>-->
-                            <!--<input type="radio" id="java9"-->
-                                   <!--name="version" value="java9" checked />-->
-                            <!--<label for="java9">Java9</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="java8"-->
-                                   <!--name="version" value="java8"/>-->
-                            <!--<label for="java8">Java8</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="java7"-->
-                                   <!--name="version" value="java7"/>-->
-                            <!--<label for="java7">Java7</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="java6"-->
-                                   <!--name="version" value="java6" />-->
-                            <!--<label for="java6">Java6</label>-->
-                        <!--</div>-->
-
-                    <!--</fieldset>-->
-                <!--</form>-->
-                <form>
+                <form id="languageVersionForm">
                     <fieldset>
-                        <legend>Which versions of JavaScript do you regularly use?</legend>
+                        <legend>Which versions of Java do you regularly use?</legend>
 
                         <div>
-                            <input type="radio" id="js1.0"
-                                   name="version" value="js1.0" checked />
-                            <label for="js1.0">JavaScript 1.0</label>
+                            <input type="radio" id="java9"
+                                   name="version" value="java9" checked />
+                            <label for="java9">Java9</label>
                         </div>
                         <div>
-                            <input type="radio" id="js1.3"
-                                   name="version" value="js1.3"/>
-                            <label for="js1.3">JavaScript 1.3</label>
+                            <input type="radio" id="java8"
+                                   name="version" value="java8"/>
+                            <label for="java8">Java8</label>
                         </div>
                         <div>
-                            <input type="radio" id="js1.5"
-                                   name="version" value="js1.5"/>
-                            <label for="js1.5">JavaScript 1.5</label>
+                            <input type="radio" id="java7"
+                                   name="version" value="java7"/>
+                            <label for="java7">Java7</label>
                         </div>
                         <div>
-                            <input type="radio" id="js1.8.5"
-                                   name="version" value="js1.8.5" />
-                            <label for="js1.8.5">JavaScript1.8.5</label>
+                            <input type="radio" id="java6"
+                                   name="version" value="java6" />
+                            <label for="java6">Java6</label>
                         </div>
 
                     </fieldset>
                 </form>
                 <BR>
-                <!--<form>-->
-                    <!--<fieldset>-->
-                        <!--<legend>Which Java framework are you most familiar with? (choose one of the following or other)</legend>-->
-
-                        <!--<div>-->
-                            <!--<input type="radio" id="blade"-->
-                                   <!--name="javaFramework" value="blade" checked />-->
-                            <!--<label for="blade">Blade</label>-->
-                        <!--</div>-->
-
-                        <!--<div>-->
-                            <!--<input type="radio" id="dropwizard"-->
-                                   <!--name="javaFramework" value="dropwizard" />-->
-                            <!--<label for="dropwizard">Dropwizard</label>-->
-                        <!--</div>-->
-
-                        <!--<div>-->
-                            <!--<input type="radio" id="grails"-->
-                                   <!--name="javaFramework" value="grails" />-->
-                            <!--<label for="grails">Grails</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="gwt"-->
-                                   <!--name="javaFramework" value="gwt" />-->
-                            <!--<label for="gwt">GWT</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="hibernate"-->
-                                   <!--name="javaFramework" value="hibernate" />-->
-                            <!--<label for="hibernate">Hibernate</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="JSF"-->
-                                   <!--name="javaFramework" value="JSF" />-->
-                            <!--<label for="JSF">JavaServer Faces(JSF)</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="spark"-->
-                                   <!--name="javaFramework" value="spark" />-->
-                            <!--<label for="spark">Spark</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="spring"-->
-                                   <!--name="javaFramework" value="spring" />-->
-                            <!--<label for="spring">Spring</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="struts"-->
-                                   <!--name="javaFramework" value="struts" />-->
-                            <!--<label for="struts">Struts</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="none"-->
-                                   <!--name="javaFramework" value="none" />-->
-                            <!--<label for="none">None</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<input type="radio" id="other"-->
-                                   <!--name="javaFramework" value="other" />-->
-                            <!--<label for="other">Other</label>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<label for="otherFrameworks">If Other selected:</label>-->
-                            <!--<input type="text" id="otherFrameworks"-->
-                                   <!--name="javaFramework" />-->
-
-                        <!--</div>-->
-
-                    <!--</fieldset>-->
-                <!--</form>-->
-                <form>
+                <form id ="languageFrameworksForm">
                     <fieldset>
-                        <legend>Which JavaScript framework are you most familiar with? (choose one of the following or other)</legend>
-
+                        <legend>Which Java framework are you most familiar with? (choose one of the following or other)</legend>
                         <div>
-                            <input type="radio" id="react"
-                                   name="javaFramework" value="react" checked />
-                            <label for="react">React.js</label>
+                            <input type="radio" id="blade"
+                                   name="javaFramework" value="blade" checked />
+                            <label for="blade">Blade</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="dropwizard"
+                                   name="javaFramework" value="dropwizard" />
+                            <label for="dropwizard">Dropwizard</label>
                         </div>
 
                         <div>
-                            <input type="radio" id="angular"
-                                   name="javaFramework" value="angular" />
-                            <label for="angular">Angular.js</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="vue"
-                                   name="javaFramework" value="vue" />
-                            <label for="vue">Vue.js</label>
+                            <input type="radio" id="grails"
+                                   name="javaFramework" value="grails" />
+                            <label for="grails">Grails</label>
                         </div>
                         <div>
-                            <input type="radio" id="meteor"
-                                   name="javaFramework" value="meteor" />
-                            <label for="meteor">Meteor.js</label>
+                            <input type="radio" id="gwt"
+                                   name="javaFramework" value="gwt" />
+                            <label for="gwt">GWT</label>
                         </div>
                         <div>
-                            <input type="radio" id="ember"
-                                   name="javaFramework" value="ember" />
-                            <label for="ember">Ember.js</label>
+                            <input type="radio" id="hibernate"
+                                   name="javaFramework" value="hibernate" />
+                            <label for="hibernate">Hibernate</label>
                         </div>
                         <div>
-                            <input type="radio" id="backbone"
-                                   name="javaFramework" value="backbone" />
-                            <label for="backbone">Backbone.js</label>
+                            <input type="radio" id="JSF"
+                                   name="javaFramework" value="JSF" />
+                            <label for="JSF">JavaServer Faces(JSF)</label>
                         </div>
                         <div>
-                            <input type="radio" id="aurelia"
-                                   name="javaFramework" value="aurelia" />
-                            <label for="aurelia">Aurelia.js</label>
+                            <input type="radio" id="spark"
+                                   name="javaFramework" value="spark" />
+                            <label for="spark">Spark</label>
                         </div>
                         <div>
-                            <input type="radio" id="polymer"
-                                   name="javaFramework" value="polymer" />
-                            <label for="polymer">Polymer</label>
+                            <input type="radio" id="spring"
+                                   name="javaFramework" value="spring" />
+                            <label for="spring">Spring</label>
                         </div>
                         <div>
-                            <input type="radio" id="mithril"
-                                   name="javaFramework" value="mithril" />
-                            <label for="mithril">Mithril.js</label>
+                            <input type="radio" id="struts"
+                                   name="javaFramework" value="struts" />
+                            <label for="struts">Struts</label>
                         </div>
                         <div>
                             <input type="radio" id="none"
@@ -414,9 +288,7 @@
                             <label for="otherFrameworks">If Other selected:</label>
                             <input type="text" id="otherFrameworks"
                                    name="javaFramework" />
-
                         </div>
-
                     </fieldset>
                 </form>
                 <BR>
@@ -498,7 +370,7 @@
                     <legend>What domains have you built software in?<textarea type="text" class="md-textarea form-control" rows="2" id="domains"></textarea></legend>
                     <legend>What was your academic field of study? <textarea type="text" class="md-textarea form-control" rows="2" id="studyField"></textarea></legend>
                     <legend>What is your highest academic degree? <input id="degree" class="field"></legend>
-                    <legend>How many years of industrial work experience do you have?<input type="number" id="workExp" class="field"></legend>
+                    <legend>How many years of industrial work experience do you have?<input type="number" id="workExp"></legend>
                 </form>
             </div>
         </div>

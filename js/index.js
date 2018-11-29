@@ -45,6 +45,196 @@ require(['vs/editor/editor.main'], function() {
     });
 });
 
+function languageSelectionChanged() {
+    var x = document.getElementById("mySelect").value;
+    if (x === "JavaScript"){
+        let dom = "<fieldset>\n" +
+            "        <legend>Which versions of JavaScript do you regularly use?</legend>\n" +
+            "\n" +
+            "        <div>\n" +
+            "        <input type=\"radio\" id=\"js1.0\"\n" +
+            "        name=\"version\" value=\"js1.0\" checked />\n" +
+            "        <label for=\"js1.0\">JavaScript 1.0</label>\n" +
+            "        </div>\n" +
+            "        <div>\n" +
+            "        <input type=\"radio\" id=\"js1.3\"\n" +
+            "        name=\"version\" value=\"js1.3\"/>\n" +
+            "            <label for=\"js1.3\">JavaScript 1.3</label>\n" +
+            "        </div>\n" +
+            "        <div>\n" +
+            "        <input type=\"radio\" id=\"js1.5\"\n" +
+            "        name=\"version\" value=\"js1.5\"/>\n" +
+            "            <label for=\"js1.5\">JavaScript 1.5</label>\n" +
+            "        </div>\n" +
+            "        <div>\n" +
+            "        <input type=\"radio\" id=\"js1.8.5\"\n" +
+            "        name=\"version\" value=\"js1.8.5\" />\n" +
+            "            <label for=\"js1.8.5\">JavaScript1.8.5</label>\n" +
+            "        </div>\n" +
+            "\n" +
+            "        </fieldset>";
+        document.getElementById("languageVersionForm").innerHTML = dom;
+
+        let languageFrameworksForm = "<fieldset>\n" +
+            "                        <legend>Which JavaScript framework are you most familiar with? (choose one of the following or other)</legend>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"react\"\n" +
+            "                                   name=\"javaFramework\" value=\"react\" checked />\n" +
+            "                            <label for=\"react\">React.js</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"angular\"\n" +
+            "                                   name=\"javaFramework\" value=\"angular\" />\n" +
+            "                            <label for=\"angular\">Angular.js</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"vue\"\n" +
+            "                                   name=\"javaFramework\" value=\"vue\" />\n" +
+            "                            <label for=\"vue\">Vue.js</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"meteor\"\n" +
+            "                                   name=\"javaFramework\" value=\"meteor\" />\n" +
+            "                            <label for=\"meteor\">Meteor.js</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"ember\"\n" +
+            "                                   name=\"javaFramework\" value=\"ember\" />\n" +
+            "                            <label for=\"ember\">Ember.js</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"backbone\"\n" +
+            "                                   name=\"javaFramework\" value=\"backbone\" />\n" +
+            "                            <label for=\"backbone\">Backbone.js</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"aurelia\"\n" +
+            "                                   name=\"javaFramework\" value=\"aurelia\" />\n" +
+            "                            <label for=\"aurelia\">Aurelia.js</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"polymer\"\n" +
+            "                                   name=\"javaFramework\" value=\"polymer\" />\n" +
+            "                            <label for=\"polymer\">Polymer</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"mithril\"\n" +
+            "                                   name=\"javaFramework\" value=\"mithril\" />\n" +
+            "                            <label for=\"mithril\">Mithril.js</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"none\"\n" +
+            "                                   name=\"javaFramework\" value=\"none\" />\n" +
+            "                            <label for=\"none\">None</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"other\"\n" +
+            "                                   name=\"javaFramework\" value=\"other\" />\n" +
+            "                            <label for=\"other\">Other</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <label for=\"otherFrameworks\">If Other selected:</label>\n" +
+            "                            <input type=\"text\" id=\"otherFrameworks\"\n" +
+            "                                   name=\"javaFramework\" />\n" +
+            "                        </div>\n" +
+            "                    </fieldset>"
+        document.getElementById("languageFrameworksForm").innerHTML = languageFrameworksForm;
+
+    }
+    else if(x=== "Java"){
+        let languageVersionForm = "<fieldset>\n" +
+            "                        <legend>Which versions of Java do you regularly use?</legend>\n" +
+            "\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"java9\"\n" +
+            "                                   name=\"version\" value=\"java9\" checked />\n" +
+            "                            <label for=\"java9\">Java9</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"java8\"\n" +
+            "                                   name=\"version\" value=\"java8\"/>\n" +
+            "                            <label for=\"java8\">Java8</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"java7\"\n" +
+            "                                   name=\"version\" value=\"java7\"/>\n" +
+            "                            <label for=\"java7\">Java7</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"java6\"\n" +
+            "                                   name=\"version\" value=\"java6\" />\n" +
+            "                            <label for=\"java6\">Java6</label>\n" +
+            "                        </div>\n" +
+            "\n" +
+            "                    </fieldset>";
+        document.getElementById("languageVersionForm").innerHTML = languageVersionForm;
+        let languageFrameworksForm =" <fieldset>\n" +
+            "                        <legend>Which Java framework are you most familiar with? (choose one of the following or other)</legend>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"blade\"\n" +
+            "                                   name=\"javaFramework\" value=\"blade\" checked />\n" +
+            "                            <label for=\"blade\">Blade</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"dropwizard\"\n" +
+            "                                   name=\"javaFramework\" value=\"dropwizard\" />\n" +
+            "                            <label for=\"dropwizard\">Dropwizard</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"grails\"\n" +
+            "                                   name=\"javaFramework\" value=\"grails\" />\n" +
+            "                            <label for=\"grails\">Grails</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"gwt\"\n" +
+            "                                   name=\"javaFramework\" value=\"gwt\" />\n" +
+            "                            <label for=\"gwt\">GWT</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"hibernate\"\n" +
+            "                                   name=\"javaFramework\" value=\"hibernate\" />\n" +
+            "                            <label for=\"hibernate\">Hibernate</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"JSF\"\n" +
+            "                                   name=\"javaFramework\" value=\"JSF\" />\n" +
+            "                            <label for=\"JSF\">JavaServer Faces(JSF)</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"spark\"\n" +
+            "                                   name=\"javaFramework\" value=\"spark\" />\n" +
+            "                            <label for=\"spark\">Spark</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"spring\"\n" +
+            "                                   name=\"javaFramework\" value=\"spring\" />\n" +
+            "                            <label for=\"spring\">Spring</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"struts\"\n" +
+            "                                   name=\"javaFramework\" value=\"struts\" />\n" +
+            "                            <label for=\"struts\">Struts</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"none\"\n" +
+            "                                   name=\"javaFramework\" value=\"none\" />\n" +
+            "                            <label for=\"none\">None</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <input type=\"radio\" id=\"other\"\n" +
+            "                                   name=\"javaFramework\" value=\"other\" />\n" +
+            "                            <label for=\"other\">Other</label>\n" +
+            "                        </div>\n" +
+            "                        <div>\n" +
+            "                            <label for=\"otherFrameworks\">If Other selected:</label>\n" +
+            "                            <input type=\"text\" id=\"otherFrameworks\"\n" +
+            "                                   name=\"javaFramework\" />\n" +
+            "                        </div>\n" +
+            "                    </fieldset>"
+        document.getElementById("languageFrameworksForm").innerHTML = languageFrameworksForm;
+
+    }
+}
 
 $(document).ready(function () {
     var timeoutId,
@@ -87,7 +277,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -104,7 +294,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -120,7 +310,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -136,7 +326,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -153,7 +343,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -170,7 +360,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -187,7 +377,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -204,7 +394,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -221,7 +411,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -238,7 +428,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -255,7 +445,71 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#fcc'
+            backgroundColor: 'lightgoldenrodyellow'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+    $('#languages').keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: 'lightgoldenrodyellow'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+    $('#domains').keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: 'lightgoldenrodyellow'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+    $('#studyField').keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: 'lightgoldenrodyellow'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
+    $('#workExp').keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: 'lightgoldenrodyellow'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
