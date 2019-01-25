@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360bf7c5-adb1-4900-a856-b8dc980f0fe5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/slefCritique.html" afterPath="$PROJECT_DIR$/selfCritique.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,8 +75,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slefCritique.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/slefCritique.html">
+      <file leaf-file-name="selfCritique.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/selfCritique.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="461">
               <caret line="57" column="52" lean-forward="false" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
@@ -279,12 +279,12 @@
       <workItem from="1542214779491" duration="7529000" />
       <workItem from="1543335870930" duration="19838000" />
       <workItem from="1543680040826" duration="671000" />
-      <workItem from="1548444559029" duration="1098000" />
+      <workItem from="1548444559029" duration="1576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84973000" />
+    <option name="totallyTimeSpent" value="85451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="119" y="23" width="1561" height="947" extended-state="0" />
@@ -820,7 +820,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/slefCritique.html">
+    <entry file="file://$PROJECT_DIR$/selfCritique.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
           <caret line="57" column="52" lean-forward="false" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
