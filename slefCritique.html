@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Author Self Critiques</title>
+
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Tower Of Hanoi</h2>
+
+    <button class="accordion">Strategy towerOfHanoi(level source target auxiliary)</button>
+    <div class="panel">
+        <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
+        <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
+        <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+    </div>
+
+    <button class="accordion">set 'topDiscs' to 'level' minus one</button>
+    <div class="panel">
+        <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
+        <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
+        <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+    </div>
+
+    <button class="accordion">if 'level' greater than 1</button>
+    <div class="panel">
+        <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
+        <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
+        <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+    </div>
+
+    <button class="accordion" style="padding-left: 5%;"> do towerOfHanoi('topDiscs' 'source' 'auxiliary' 'target')</button>
+    <div class="panel">
+        <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
+        <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
+        <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+    </div>
+
+    <button class="accordion">Move the disc at 'source' to 'target'</button>
+    <div class="panel">
+        <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
+        <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
+        <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+    </div>
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
