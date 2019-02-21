@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Author Self Critiques</title>
 
@@ -32,50 +34,80 @@
 
 </head>
 <body style="width: 960px;  margin:0 auto;">
-    <h2> Tower of Hanoi</h2>
-    <h4>Please review your strategy while testing it with the task. Think and read aloud each step and for each, click the sentences and answer its following questions. </h4>
+    <h2 style="color: #42517F;"> Strategy Revision</h2>
+    <p>
+        Please review your strategy, stepping through it line by line and make sure your strategy is clear and a novice would understand it. In order to better understand the missing point in your strategy you can test it with the following sample of programming task.
+        Think and read aloud each step and for each, click the sentences and answer its following questions. </p>
+    <P>Please feel free to add corrections or details as you review your strategy after answering the questions.</P>
 
-    <button class="accordion">Strategy towerOfHanoi(level source target auxiliary)</button>
-    <div class="panel">
-        <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
-        <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
-        <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+    <h2 style="color: #42517F;"> Tower of Hanoi</h2>
+    <div class="media-body well well-sm research-section col-sm-12">
+        <button class="accordion">Strategy towerOfHanoi(level source target auxiliary)</button>
+        <div class="panel">
+            <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
+            <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
+            <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+        </div>
+
+        <button class="accordion">set 'topDiscs' to 'level' minus one</button>
+        <div class="panel">
+            <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
+            <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
+            <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+        </div>
+
+        <button class="accordion">if 'level' greater than 1</button>
+        <div class="panel">
+            <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
+            <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
+            <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+        </div>
+
+        <button class="accordion" style="padding-left: 5%;"> do towerOfHanoi('topDiscs' 'source' 'auxiliary' 'target')</button>
+        <div class="panel">
+            <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
+            <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
+            <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+        </div>
+
+        <button class="accordion">Move the disc at 'source' to 'target'</button>
+        <div class="panel">
+            <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
+            <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
+            <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+        </div>
     </div>
 
-    <button class="accordion">set 'topDiscs' to 'level' minus one</button>
-    <div class="panel">
-        <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
-        <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
-        <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+    <p>Please edit your strategy based on the critiques you made in the following panel:</p>
+    <div class="media-body well well-sm research-section col-sm-12">
+        <h3>Your Task Strategy</h3>
+        <textarea style=" width:100%;min-height:350px;">
+            # Enter text for the following variables below.
+            # Let 'level' be the number of discs, 'source' be A, the<br>
+            # leftmost peg, 'target' be C, the rightmost peg, and<br>
+            # 'auxiliary' be B, the center peg<br>
+            STRATEGY towerOfHanoi(level source target auxiliary)<br>
+                SET 'topDiscs' TO 'level' minus one<br>
+                IF 'level' greater than 1<br>
+                    # We will now jump to a substrategy to move some discs to the auxilary.<br>
+                    DO towerOfHanoi('topDiscs' 'source' 'auxiliary' 'target')<br>
+                Move the disc at 'source' to 'target'<br>
+                IF 'level' greater than 1<br>
+                    # We will now jump to a substrategy to move discs back from the auxilary.<br>
+                    DO towerOfHanoi('topDiscs' 'auxiliary' 'target' 'source')</textarea>
+        <!--<textarea type="text"  class="md-textarea form-control" rows="28" id = "strategyDefinition"></textarea>-->
     </div>
+    <BR><BR>
+    <div>
+    <h3 style="color: #42517F;"> Thank you for revising your strategy. Please answer the following questions and submit your answers.</h3>
+        <form>
+            <legend> What  did you find   difficult  about  writing down your strategy ?</legend><textarea style="width:60%; margin-bottom: 1%;"></textarea>
+            <legend>What  interface or tool support might   make  articulating strategy  easier?</legend><textarea style="width:60%; margin-bottom: 1%;"></textarea>
 
-    <button class="accordion">if 'level' greater than 1</button>
-    <div class="panel">
-        <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
-        <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
-        <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
+        </form>
     </div>
-
-    <button class="accordion" style="padding-left: 5%;"> do towerOfHanoi('topDiscs' 'source' 'auxiliary' 'target')</button>
-    <div class="panel">
-        <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
-        <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
-        <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
-    </div>
-
-    <button class="accordion">Move the disc at 'source' to 'target'</button>
-    <div class="panel">
-        <p>What  is  difficult  about  authoring  this  part  of  the strategy, if any?</p><textarea style="width:60%;"></textarea>
-        <p>What is missing in this step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p><textarea style="width:60%;"></textarea>
-        <p>Is it understandable enough for a novice to use and follow easily? If not, what makes it hard to articulate better for a novice?</p><textarea style="width:60%;"></textarea>
-    </div>
-
-    <h4> Please answer the following questions:</h4>
-
-    <p> What  did you find   difficult  about  writing down your strategy ?</p><textarea style="width:60%;"></textarea>
-    <p>What  interface or tool support might   make  it  easier?</p><textarea style="width:60%;"></textarea>
-
-
+    <button onclick="submit()" class="btn btn-success" style="float: right; font-weight: bold;">Submit</button>
+    <BR><BR><BR> <BR><BR>
 
 
 

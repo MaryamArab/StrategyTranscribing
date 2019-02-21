@@ -187,120 +187,29 @@
                 <form>
                     <legend>What is your full name: <input id="pname" class="field"></legend>
                     <legend>What is your participation ID: <input id="pId" class="field"></legend>
+                    <legend>How many years of industrial work experience do you have?</legend><input type="number" id="workExp">
+                    <legend>What programming languages you are familiar with?</legend><textarea style="width:60%; margin-bottom: 1%;" id="languages"></textarea>
+                    <legend>What domains have you built software in?</legend><textarea style="width:60%; margin-bottom: 1%;" id="domains"></textarea>
+                    <legend>What was your academic field of study? </legend><textarea style="width:60%; margin-bottom: 1%;" id="studyField"></textarea>
+                    <legend>What is your highest academic degree? </legend><input id="degree" class="field">
                 </form>
-                <legend>Select a language you are expert in:
+                <legend>Select a task you have more experience in:
 
-                    <select id="mySelect" onchange="languageSelectionChanged()">
-                        <option value="Java">Java
-                        <option value="JavaScript">JavaScript
-                    </select>
+                <select id="mySelect" onchange="taskSelectionChanged()">
+                <option value="Java">React Profiler
+                <option value="JavaScript">React UI Testing
+                </select>
                 </legend>
                 <BR>
-
-                <form id="languageVersionForm">
-                    <fieldset>
-                        <legend>Which versions of Java do you regularly use?</legend>
-
-                        <div>
-                            <input type="radio" id="java9"
-                                   name="version" value="java9" checked />
-                            <label for="java9">Java9</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="java8"
-                                   name="version" value="java8"/>
-                            <label for="java8">Java8</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="java7"
-                                   name="version" value="java7"/>
-                            <label for="java7">Java7</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="java6"
-                                   name="version" value="java6" />
-                            <label for="java6">Java6</label>
-                        </div>
-
-                    </fieldset>
-                </form>
-                <BR>
-                <form id ="languageFrameworksForm">
-                    <fieldset>
-                        <legend>Which Java framework are you most familiar with? (choose one of the following or other)</legend>
-                        <div>
-                            <input type="radio" id="blade"
-                                   name="javaFramework" value="blade" checked />
-                            <label for="blade">Blade</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="dropwizard"
-                                   name="javaFramework" value="dropwizard" />
-                            <label for="dropwizard">Dropwizard</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="grails"
-                                   name="javaFramework" value="grails" />
-                            <label for="grails">Grails</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="gwt"
-                                   name="javaFramework" value="gwt" />
-                            <label for="gwt">GWT</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="hibernate"
-                                   name="javaFramework" value="hibernate" />
-                            <label for="hibernate">Hibernate</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="JSF"
-                                   name="javaFramework" value="JSF" />
-                            <label for="JSF">JavaServer Faces(JSF)</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="spark"
-                                   name="javaFramework" value="spark" />
-                            <label for="spark">Spark</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="spring"
-                                   name="javaFramework" value="spring" />
-                            <label for="spring">Spring</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="struts"
-                                   name="javaFramework" value="struts" />
-                            <label for="struts">Struts</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="none"
-                                   name="javaFramework" value="none" />
-                            <label for="none">None</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="other"
-                                   name="javaFramework" value="other" />
-                            <label for="other">Other</label>
-                        </div>
-                        <div>
-                            <label for="otherFrameworks">If Other selected:</label>
-                            <input type="text" id="otherFrameworks"
-                                   name="javaFramework" />
-                        </div>
-                    </fieldset>
-                </form>
-                <BR>
-                <legend>For this framework, describe a type of defect that can be tricky to debug.</legend>
-                <textarea type="text"  class="md-textarea form-control" rows="3" id="defect"></textarea>
+                <!--<legend>For this framework, describe a type of defect that can be tricky to debug.</legend>-->
+                <!--<textarea type="text"  class="md-textarea form-control" rows="3" id="defect"></textarea>-->
                 <BR>
                 <legend>
                     <b>Guidelines for writing strategy</b>
                     <BR>
                     <BR>
-                    Imagine a novice developer came to you with this type of defect. Imagine they did not have any similar experience so far.
-                        Describe the best strategy you can offer this developer and the steps you'd take to debug this defect, being sure to include sufficient details.
+                    Imagine a novice developer came to you with this type of task. Imagine they did not have any similar experience so far.
+                    Describe the best strategy you can offer this developer and the steps you'd take to finish this task, being sure to include sufficient details.
                     <p style="margin-top:1%;"><b>Use comments to elaborate. </b>Each step in a strategy should be clear and concise, but you can use comments to help developers who may not fully know how to execute a step.Include your comments before each statement after # tag.</p>
                     <p style="margin-top:1%;"><b>Avoid wasted work. </b>Structure your strategy in a way that minimizes how much work a developer has to do </p>
                     <p style="margin-top:1%;"><b>Include explicit restarts.</b> Some strategies fail; include these failure points in your strategy, guiding developers either back to the start of a strategy, or to use a different strategy.</p>
@@ -310,7 +219,7 @@
 
                 </legend>
                 <div class="media-body well well-sm research-section col-sm-7">
-                    <h3>Your Debugging Strategy</h3>
+                    <h3>Your Task Strategy</h3>
                     <div id="strategyDefinition" style="min-height: 550px;"></div>
                     <!--<textarea type="text"  class="md-textarea form-control" rows="28" id = "strategyDefinition"></textarea>-->
                 </div>
@@ -328,51 +237,52 @@
                 <textarea type="text"  class="md-textarea form-control" rows="3" id="codebaseRequirements"></textarea>
 
                 <BR>
-                <legend>To use this strategy, what conceptual knowledge should a developer have about the way the framework works?</legend>
+                <legend>To use this strategy, what conceptual knowledge should a developer have?</legend>
                 <textarea type="text" class="md-textarea form-control" rows="3" id="knowledgeRequirements"></textarea>
 
                 <BR>
-                <legend>Thanks for writing a draft. Please step through the strategy line by line and make sure your strategy is clear and a novice would understand it. Please feel free to add corrections or details as you review your strategy.   </legend>
+                <legend>Thanks for writing a draft. Please submit the current version of strategy and let's go to the next step (revision)</legend>
+                    <!--stepping through the strategy line by line and make sure your strategy is clear and a novice would understand it. Please feel free to add corrections or details as you review your strategy.   -->
                 <br>
                 <br>
-                <h3 style="color:#42517F;">Now please share your written strategy with the other user:</h3>
-                <legend>
-                    <p>Ask them to read your strategy.</p>
-                    <p>Make sure they understand every step.</p>
-                    <p>Answer their questions, adding more details and descriptions to each step to address their questions.</p>
-                </legend>
-                <BR>
-                <BR>
-                <BR>
-                <h2 style="color:#42517F;">Post-study questions</h2>
+                <!--<h3 style="color:#42517F;">Now please share your written strategy with the other user:</h3>-->
+                <!--<legend>-->
+                    <!--<p>Ask them to read your strategy.</p>-->
+                    <!--<p>Make sure they understand every step.</p>-->
+                    <!--<p>Answer their questions, adding more details and descriptions to each step to address their questions.</p>-->
+                <!--</legend>-->
+                <!--<BR>-->
+                <!--<BR>-->
+                <!--<BR>-->
+                <!--<h2 style="color:#42517F;">Post-study questions</h2>-->
 
-                <h3 style="color: #42517F;"> Please answer the following questions about your partner strategy:</h3>
-                <div>
-                    <form>
-                        <legend>Do you think the strategy you used is clear enough? If not, specify the confusing steps. <textarea type="text" class="md-textarea form-control" rows="2" id="clarity"></textarea></legend>
-                        <legend>Is the strategy  correct? If not, mention why?<textarea type="text" class="md-textarea form-control" rows="2" id="correction"></textarea></legend>
-                        <legend>Is the strategy  complete? If not, what aspects are missing?<textarea type="text" class="md-textarea form-control" rows="2" id="completeness"></textarea></legend>
-                        <legend>Do you think a novice would understand it? If not, why?<textarea type="text" class="md-textarea form-control" rows="2" id="understandability"></textarea></legend>
-                        <legend>What are the challenges you faced in using your partner strategy?<textarea type="text" class="md-textarea form-control" rows="4" id="partnerStratChallenges"></textarea></legend>
-                    </form>
-                </div>
-                <h3 style="color:#42517F;"> Please answer the following question about your strategy.</h3>
-                <div>
-                    <form>
-                        <legend>What are the challenges you faced in writing down your strategy?<textarea type="text" class="md-textarea form-control" rows="4" id="stratWritingChallenges"></textarea></legend>
-                    </form>
-                </div>
+                <!--<h3 style="color: #42517F;"> Please answer the following questions about your partner strategy:</h3>-->
+                <!--<div>-->
+                    <!--<form>-->
+                        <!--<legend>Do you think the strategy you used is clear enough? If not, specify the confusing steps. <textarea type="text" class="md-textarea form-control" rows="2" id="clarity"></textarea></legend>-->
+                        <!--<legend>Is the strategy  correct? If not, mention why?<textarea type="text" class="md-textarea form-control" rows="2" id="correction"></textarea></legend>-->
+                        <!--<legend>Is the strategy  complete? If not, what aspects are missing?<textarea type="text" class="md-textarea form-control" rows="2" id="completeness"></textarea></legend>-->
+                        <!--<legend>Do you think a novice would understand it? If not, why?<textarea type="text" class="md-textarea form-control" rows="2" id="understandability"></textarea></legend>-->
+                        <!--<legend>What are the challenges you faced in using your partner strategy?<textarea type="text" class="md-textarea form-control" rows="4" id="partnerStratChallenges"></textarea></legend>-->
+                    <!--</form>-->
+                <!--</div>-->
+                <!--<h3 style="color:#42517F;"> Please answer the following question about your strategy.</h3>-->
+                <!--<div>-->
+                    <!--<form>-->
+                        <!--<legend>What are the challenges you faced in writing down your strategy?<textarea type="text" class="md-textarea form-control" rows="4" id="stratWritingChallenges"></textarea></legend>-->
+                    <!--</form>-->
+                <!--</div>-->
             </div>
-            <div>
-                <h3 style="color: #42517F;"> Please answer the following questions and submit your answers.</h3>
-                <form>
-                    <legend>What programming languages you are familiar with?<textarea type="text" class="md-textarea form-control" rows="2" id="languages"></textarea></legend>
-                    <legend>What domains have you built software in?<textarea type="text" class="md-textarea form-control" rows="2" id="domains"></textarea></legend>
-                    <legend>What was your academic field of study? <textarea type="text" class="md-textarea form-control" rows="2" id="studyField"></textarea></legend>
-                    <legend>What is your highest academic degree? <input id="degree" class="field"></legend>
-                    <legend>How many years of industrial work experience do you have?<input type="number" id="workExp"></legend>
-                </form>
-            </div>
+            <!--<div>-->
+                <!--<h3 style="color: #42517F;"> Please answer the following questions and submit your answers.</h3>-->
+                <!--<form>-->
+                    <!--<legend>What programming languages you are familiar with?<textarea type="text" class="md-textarea form-control" rows="2" id="languages"></textarea></legend>-->
+                    <!--<legend>What domains have you built software in?<textarea type="text" class="md-textarea form-control" rows="2" id="domains"></textarea></legend>-->
+                    <!--<legend>What was your academic field of study? <textarea type="text" class="md-textarea form-control" rows="2" id="studyField"></textarea></legend>-->
+                    <!--<legend>What is your highest academic degree? <input id="degree" class="field"></legend>-->
+                    <!--<legend>How many years of industrial work experience do you have?<input type="number" id="workExp"></legend>-->
+                <!--</form>-->
+            <!--</div>-->
         </div>
     </div>
 
