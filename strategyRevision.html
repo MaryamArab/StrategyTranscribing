@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+    <script src="monaco/node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script src="js/strategyRevision.js"></script>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Author Self Critiques</title>
+
+</head>
+<body style="width: 960px;  margin:0 auto;">
+    <h2 style="color: #42517F;"> Strategy Revision</h2>
+    <legend>Please review your strategy, stepping through it line by line and make sure your strategy is clear and a novice would understand it.
+        <p>In order to better understand the missing point in your strategy you can test it with the following sample of programming task.
+            Think and read aloud each step and for each, try to apply the strategy to the following programming task.</p>
+        <P>Please feel free to add corrections or details as you review your strategy</P>
+    </legend>
+
+    <legend>  Open the <a href="">Programming Task</a> for testing your strategy in a separate window and place them side by side to this page. This will help you reduce switching between task and strategy definition.</legend>
+
+<BR><BR>
+    <h2 id="strategyTitle" style="color: #42517F;"> </h2>
+
+        <div class="media-body well well-sm ">
+            <h3>Your Task Strategy</h3>
+            <div id="strategy" style="min-height: 550px;"></div>
+        </div>
+
+
+    <BR><BR>
+    <div>
+    <h2 style="color: #42517F;"> After you finish revising the strategy please write about the difficulties you had and add it to the grid.</h2>
+        <legend>Please think about any kind of difficulties you faced in articulating the strategy including
+            <p>What was missing in what step and need to be added? (variable  definition,  sub  steps,  description,  required tool  or  knowledge,  ...?  )</p>
+            <p>What makes it difficult to articulate in a way that is understandable by a novice.</p>
+            <p>What was hard to articulate in a specific line number</p>
+            <p>What was general difficulties you had</p>
+        </legend>
+        <form>
+            <legend> <h2>Difficulties</h2>
+                <div id="container" style="width:100%; margin-bottom: 1%;"></div>
+
+                <button onclick="add(); return false;" class="btn btn-success" style="float: right; font-weight: bold;">Add</button>
+                <textarea style="width:100%; margin-bottom: 1%;" id="difficultyTxt"></textarea>
+
+            </legend>
+        </form>
+
+
+
+    </div>
+    <button onclick="submit()" class="btn btn-success" style="float: right; font-weight: bold;">Submit</button>
+    <BR><BR><BR> <BR><BR>
+
+
+</body>
+</html>

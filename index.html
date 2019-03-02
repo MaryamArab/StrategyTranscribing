@@ -188,9 +188,7 @@
                     <legend>What is your full name: </legend><input style="width:60%; margin-bottom: 1%;" id="pname" class="field">
                     <legend>What is your participation ID: </legend><input style="width:60%; margin-bottom: 1%;" id="pId" class="field">
                     <legend>How many years of industrial work experience do you have?</legend><input style="width:60%; margin-bottom: 1%;" type="number" id="workExp">
-                    <!--<legend>What programming languages you are familiar with?</legend><textarea style="width:60%; margin-bottom: 1%;" id="languages"></textarea>-->
                     <legend>How expert you rate yourself in Developing React-based web applications? </legend><textarea style="width:60%; margin-bottom: 1%;" id="reactExp"></textarea>
-
                     <legend>What domains have you built software in?</legend><textarea style="width:60%; margin-bottom: 1%;" id="domains"></textarea>
                     <legend>What was your academic field of study? </legend><textarea style="width:60%; margin-bottom: 1%;" id="studyField"></textarea>
                     <legend>What is your highest academic degree? </legend><input style="width:60%; margin-bottom: 1%;" id="degree" class="field">
@@ -198,17 +196,21 @@
                 <h3 style="color:#42517F;">Select a task you have more experience in to write the strategy: </h3>
 
                <select id="mySelect" onchange="taskSelectionChanged()" style=" height: 40px;width: 300px; font-size: 20px;">
-                <option value="Java">React Profiler
-                <option value="JavaScript">React UI Testing
+                <option value="React Profiler">React Profiler
+                <option value="React UI Testing">React UI Testing
                 </select>
 
                 <BR>
-                <!--<legend>For this framework, describe a type of defect that can be tricky to debug.</legend>-->
-                <!--<textarea type="text"  class="md-textarea form-control" rows="3" id="defect"></textarea>-->
                 <BR>
                 <legend>
+                    Think about this task and similar problems that you had challenged with in your life programming tasks. Think about the details and steps you have taken to fix those problems.
+                    For instance think about what aspects you considered and what elements you checked and how. What tools you have used for that and what knowledge you had that is required to solve those problems.
+                    Now lets focus on the task you selected; what is the best strategy, based on your previous similar experiences, you would take to solve this problem. What steps you will take and what are the requirements for your strategy.
+                </legend>
+                <BR>
+                <legend>
+
                     <b>Guidelines for writing strategy</b>
-                    <BR>
                     <BR>
                     Imagine a novice developer came to you with this type of task. Imagine they did not have any similar experience so far.
                     Describe the best strategy you can offer this developer and the steps you'd take to finish this task, being sure to include sufficient details.
@@ -243,53 +245,20 @@
                 <textarea type="text" class="md-textarea form-control" rows="3" id="knowledgeRequirements"></textarea>
 
                 <BR>
-                <legend>Thanks for writing a draft. Please submit the current version of strategy and let's go to the next step (revision)</legend>
-                    <!--stepping through the strategy line by line and make sure your strategy is clear and a novice would understand it. Please feel free to add corrections or details as you review your strategy.   -->
-                <br>
-                <br>
-                <!--<h3 style="color:#42517F;">Now please share your written strategy with the other user:</h3>-->
-                <!--<legend>-->
-                    <!--<p>Ask them to read your strategy.</p>-->
-                    <!--<p>Make sure they understand every step.</p>-->
-                    <!--<p>Answer their questions, adding more details and descriptions to each step to address their questions.</p>-->
-                <!--</legend>-->
-                <!--<BR>-->
-                <!--<BR>-->
-                <!--<BR>-->
-                <!--<h2 style="color:#42517F;">Post-study questions</h2>-->
+                <h3 style="color: #42517F;"> Thanks for writing a draft. Please answer the following questions and submit your answers.</h3>
+                <form>
+                    <legend> What  did you find   difficult  about  writing down your strategy ?</legend><textarea id="difficulties" style="width:60%; margin-bottom: 1%;"></textarea>
+                    <legend>What  interface or tool support might   make  articulating strategy  easier?</legend><textarea id="neededSupport" style="width:60%; margin-bottom: 1%;"></textarea>
 
-                <!--<h3 style="color: #42517F;"> Please answer the following questions about your partner strategy:</h3>-->
-                <!--<div>-->
-                    <!--<form>-->
-                        <!--<legend>Do you think the strategy you used is clear enough? If not, specify the confusing steps. <textarea type="text" class="md-textarea form-control" rows="2" id="clarity"></textarea></legend>-->
-                        <!--<legend>Is the strategy  correct? If not, mention why?<textarea type="text" class="md-textarea form-control" rows="2" id="correction"></textarea></legend>-->
-                        <!--<legend>Is the strategy  complete? If not, what aspects are missing?<textarea type="text" class="md-textarea form-control" rows="2" id="completeness"></textarea></legend>-->
-                        <!--<legend>Do you think a novice would understand it? If not, why?<textarea type="text" class="md-textarea form-control" rows="2" id="understandability"></textarea></legend>-->
-                        <!--<legend>What are the challenges you faced in using your partner strategy?<textarea type="text" class="md-textarea form-control" rows="4" id="partnerStratChallenges"></textarea></legend>-->
-                    <!--</form>-->
-                <!--</div>-->
-                <!--<h3 style="color:#42517F;"> Please answer the following question about your strategy.</h3>-->
-                <!--<div>-->
-                    <!--<form>-->
-                        <!--<legend>What are the challenges you faced in writing down your strategy?<textarea type="text" class="md-textarea form-control" rows="4" id="stratWritingChallenges"></textarea></legend>-->
-                    <!--</form>-->
-                <!--</div>-->
+                </form>
+                <br>
+                <br>
             </div>
-            <!--<div>-->
-                <!--<h3 style="color: #42517F;"> Please answer the following questions and submit your answers.</h3>-->
-                <!--<form>-->
-                    <!--<legend>What programming languages you are familiar with?<textarea type="text" class="md-textarea form-control" rows="2" id="languages"></textarea></legend>-->
-                    <!--<legend>What domains have you built software in?<textarea type="text" class="md-textarea form-control" rows="2" id="domains"></textarea></legend>-->
-                    <!--<legend>What was your academic field of study? <textarea type="text" class="md-textarea form-control" rows="2" id="studyField"></textarea></legend>-->
-                    <!--<legend>What is your highest academic degree? <input id="degree" class="field"></legend>-->
-                    <!--<legend>How many years of industrial work experience do you have?<input type="number" id="workExp"></legend>-->
-                <!--</form>-->
-            <!--</div>-->
         </div>
     </div>
 
 </div>
-<button onclick="addNewStrategy()" class="btn btn-success" style="float: right; font-weight: bold;">Submit</button>
+<button onclick="addNewStrategy()" class="btn btn-success" style="margin-right: 10%; width:10%; float: right; font-weight: bold;">Submit</button>
 <BR><BR><BR> <BR><BR>
 
 
