@@ -51,6 +51,7 @@ require(['vs/editor/editor.main'], function() {
 
 
 var add;
+var remove;
 $(document).ready(function () {
 
     document.getElementById("strategyTitle").innerHTML=localStorage.getItem("taskName");
@@ -62,23 +63,77 @@ $(document).ready(function () {
          node.id = "difficulty";
         var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
-        checkbox.name = "name";
+        checkbox.name = "chkboxName";
         checkbox.value = "value";
         checkbox.id = "chkbx";
 
         var label = document.createElement('label')
         label.htmlFor = "chkbx";
+        label.className = "difficultyId";
         label.appendChild(document.createTextNode(document.getElementById("difficultyTxt").value));
 
         node.appendChild(checkbox);
         node.appendChild(label);
         container.appendChild(node);
-        
-        alert("Great Job. Do you have any other difficulties? If you have, please add another one.");
 
+        // alert("Great Job. Do you have any other difficulties? If you have, please add another one.");
+        clearContents(document.getElementById("difficultyTxt"));
+    }
+    remove= function() {
+        var checkboxes = $("div input:checkbox").parent();
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].childNodes[0] != null && checkboxes[i].childNodes[0].checked) {
+                var node =checkboxes[i].childNodes[0].parentNode;
+               console.log(checkboxes[i].childNodes[0].parentNode);
+                container.removeChild(node);
+            }
+        }
     }
 
 
 
+
+
 });
+function clearContents(element) {
+    element.value = '';
+}
+
+async function submitSecondDraft() {
+    let time = new Date();
+    var hh = time.getHours();
+    var mm = time.getMinutes();
+    var ss = time.getSeconds();
+    var timestamp = hh + ":" + mm + ":" + ss;
+    let pId =localStorage.getItem("pId");
+    let strategyDefinition = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
+    let difficultiesElements=  document.getElementsByClassName("difficultyId");
+    var difficulties = [];
+    for (var i = 0; i < difficultiesElements.length; i++) {
+        difficulties.push(difficultiesElements[i].innerHTML);
+    }
+
+    console.log("Strategy definition:   " + strategyDefinition);
+
+    if( difficulties === null || difficulties == ""|| difficulties== undefined)
+    {
+        alert("Please fill out all the required fields");
+        return;
+    }
+
+    let database = firebase.firestore();
+
+    database.collection("TestRevision").doc(pId).set({
+        Time:timestamp,
+        ParticipationId: pId,
+        StrategyDefinition:strategyDefinition,
+        Difficulties:difficulties,
+
+
+    }).catch(function (err) {
+        console.log("error saving", err);
+    });
+    alert("Congratulation.You successfully submit your second draft of strategy. Thank you so much for participating in our study.");
+
+}
 

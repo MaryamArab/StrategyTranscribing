@@ -226,37 +226,37 @@ async function addNewStrategy() {
     var mm = time.getMinutes();
     var ss = time.getSeconds();
     var timestamp = hh + ":" + mm + ":" + ss;
-    let pname = "Test";
-    let pId ="Test";
-    let workExperience ="Test";
-    let reactExperience = "Test";
-    let domains= "Test";
-    let studyField= "Test";
-    let degree = "Test";
-    var task = document.getElementById("mySelect").value;
-
-    let strategyDefinition = "Test\\n    Test\\n        Test\\n    Test\\n        Test\\n    Test\\nTest";
-    let toolsRequirements = "Test";
-    let codebaseRequirements = "Test";
-    let knowledgeRequirements = "Test";
-    let difficulties = "Test";
-    let neededSupport = "Test";
-
-    // let pname = document.getElementById("pname").value;
-    // let pId =document.getElementById("pId").value;
-    // let workExperience = document.getElementById("workExp").value;
-    // let reactExperience = document.getElementById("reactExp").value;
-    // let domains= document.getElementById("domains").value;
-    // let studyField= document.getElementById("studyField").value;
-    // let degree = document.getElementById("degree").value;
+    // let pname = "Test";
+    // let pId ="Test";
+    // let workExperience ="Test";
+    // let reactExperience = "Test";
+    // let domains= "Test";
+    // let studyField= "Test";
+    // let degree = "Test";
     // var task = document.getElementById("mySelect").value;
     //
-    // let strategyDefinition = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
-    // let toolsRequirements = document.getElementById("toolsRequirements").value;
-    // let codebaseRequirements = document.getElementById("codebaseRequirements").value;
-    // let knowledgeRequirements = document.getElementById("knowledgeRequirements").value;
-    // let difficulties = document.getElementById("difficulties").value;
-    // let neededSupport = document.getElementById("neededSupport").value;
+    // let strategyDefinition = "Test\\n    Test\\n        Test\\n    Test\\n        Test\\n    Test\\nTest";
+    // let toolsRequirements = "Test";
+    // let codebaseRequirements = "Test";
+    // let knowledgeRequirements = "Test";
+    // let difficulties = "Test";
+    // let neededSupport = "Test";
+
+    let pname = document.getElementById("pname").value;
+    let pId =document.getElementById("pId").value;
+    let workExperience = document.getElementById("workExp").value;
+    let reactExperience = document.getElementById("reactExp").value;
+    let domains= document.getElementById("domains").value;
+    let studyField= document.getElementById("studyField").value;
+    let degree = document.getElementById("degree").value;
+    var task = document.getElementById("mySelect").value;
+
+    let strategyDefinition = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
+    let toolsRequirements = document.getElementById("toolsRequirements").value;
+    let codebaseRequirements = document.getElementById("codebaseRequirements").value;
+    let knowledgeRequirements = document.getElementById("knowledgeRequirements").value;
+    let difficulties = document.getElementById("difficulties").value;
+    let neededSupport = document.getElementById("neededSupport").value;
 
     console.log("Strategy definition:   " + strategyDefinition);
 
@@ -293,6 +293,7 @@ async function addNewStrategy() {
     alert("Congratulation.You successfully submit your draft of strategy. Thank you so much for participating in our study.");
 
     var taskName = document.getElementById("mySelect").value;
+    localStorage.setItem("pId",pId);
     localStorage.setItem("taskName", taskName);
     // var writtenStrategy = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
     var writtenStrategy =strategyDefinition;

@@ -44,9 +44,13 @@
         <form>
             <legend> <h2>Difficulties</h2>
                 <div id="container" style="width:100%; margin-bottom: 1%;"></div>
+                <button onclick="remove(); return false;" class="btn btn-remove" style="float: right; font-weight: bold;">Remove</button>
 
                 <button onclick="add(); return false;" class="btn btn-success" style="float: right; font-weight: bold;">Add</button>
-                <textarea style="width:100%; margin-bottom: 1%;" id="difficultyTxt"></textarea>
+
+                <BR>
+                <BR>
+                <textarea style="width:100%; margin-bottom: 1%;" id="difficultyTxt" placeholder="Please describe your challenges" ></textarea>
 
             </legend>
         </form>
@@ -54,7 +58,7 @@
 
 
     </div>
-    <button onclick="submit()" class="btn btn-success" style="float: right; font-weight: bold;">Submit</button>
+    <button onclick="submitSecondDraft()" class="btn btn-success" style="float: right; font-weight: bold;">Submit</button>
     <BR><BR><BR> <BR><BR>
 
 

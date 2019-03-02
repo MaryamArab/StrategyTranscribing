@@ -55,3 +55,8 @@ legend {
 .red { color: #f00; }
 .green { color: #0a0;}
 /*.green { color: lightgoldenrodyellow;}*/
+.btn-remove{
+    background-color: darkred;
+    color:white;
+    margin-left:1%;
+}
