@@ -154,6 +154,22 @@ $(document).ready(function () {
         // Start a timer that will fire save when finished.
         timeoutId = setTimeout(saveRatings, 750);
     });
+    $('#neededSupport').keypress(function () {
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: 'lightgoldenrodyellow'
+        });
+
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
+
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
+
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
     $('#languages').keypress(function () {
         var $currentField = $(this);
 

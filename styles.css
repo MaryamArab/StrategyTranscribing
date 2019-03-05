@@ -51,7 +51,7 @@ legend {
     padding: 3px 6px;
 }
 
-.field { text-align: center;}
+.field { text-align: left;}
 .red { color: #f00; }
 .green { color: #0a0;}
 /*.green { color: lightgoldenrodyellow;}*/

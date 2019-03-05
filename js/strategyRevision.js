@@ -76,7 +76,7 @@ $(document).ready(function () {
         node.appendChild(label);
         container.appendChild(node);
 
-        // alert("Great Job. Do you have any other difficulties? If you have, please add another one.");
+        alert("Great Job. Do you have any other difficulties? If you have, please add another one.");
         clearContents(document.getElementById("difficultyTxt"));
     }
     remove= function() {
