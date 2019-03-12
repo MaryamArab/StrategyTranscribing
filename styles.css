@@ -7,7 +7,7 @@ body {
     background-color: white;
 }
 a {
-    color: #42517F;
+    color: #1b809e;
     font-weight: bold;
 }
 
@@ -17,11 +17,30 @@ a:hover {
 }
 
 p {
+
     font-size: 18px;
-    padding: 4px;
-    border-radius: 8px;
-    border: 2px solid #fff;
     margin: 0px;
+}
+.sideBar{
+    /*border-left: 3px solid #1b809e;*/
+    /*border-radius: 3px;*/
+    padding-left: 10px;
+    position: relative;
+    /*height:30px;*/
+    margin-top: 3%;
+    border-left: 4px solid #1b809e;
+}
+.bullet{
+    /*border-left: 3px solid #1b809e;*/
+    /*border-radius: 3px;*/
+    padding-left: 10px;
+    position: relative;
+    list-style-type:square;
+    margin-top: 3%;
+    border-left: 4px solid #1b809e;
+}
+h3{
+    color:#1b809e;
 }
 
     /*@media (min-width: 1200px) {*/
@@ -30,7 +49,7 @@ p {
         /*}*/
     /*}*/
 .titleColor{
-    color: #42517F;
+    color: #1b809e;
 }
 .RobotoPanel{
     width:780px;
@@ -40,6 +59,7 @@ p {
 }
 li{
     margin-left:30px;
+    margin-top:10px;
     font-family: Tahoma;
     font-weight: Bold;
     font-size:15px;
@@ -59,4 +79,36 @@ legend {
     background-color: darkred;
     color:white;
     margin-left:1%;
+}
+.padd6{
+    padding-right: 10%;
+    padding-left:10%;
+}
+.strategyContainer{
+    width: 70%;
+    min-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.btn-sbmt{
+    color: #ffffff;
+    background-color: #41a5c2;
+    border-color: #1b809e;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }

@@ -18,9 +18,9 @@
 
 </div>
 
-<div class="container">
+<div class="container padd6" style="width: 960px!important;">
     <BR>
-    <div class="row">
+    <div class="row test">
         <div style="float: left; padding-left: -15px!important;" class=" row col-sm-12">
             <h1 class="titleColor">Programming Strategies</h1>
 
@@ -32,19 +32,20 @@
         <div class="row" >
             <div>
                 <p> Welcome to the research study of Explicit Programming Strategies.</p>
-                <p>Software developers solve a diverse and wide range of problems. While software engineering research often focuses on tools to support this problem solving,
-                    the strategies that developers use to solve problems are at least as important as the tools they use. </p>
-                <p>In this study, we are looking for strategies expert developers use in their everyday programming tasks.</p>
+                <p>Software developers solve a diverse and wide range of problems. While software engineering research often focuses on <b>tools</b> to support this problem solving,
+                    the <b>strategies</b> that developers use to solve problems are at least as important as the <b>tools</b> they use. </p>
+                <p>In this study, we are asking developers like you to write down the strategies you use to solve problems, so that others can benefit from them.</p>
                 <p>We start with defining what we mean by Programming Strategy, then we will go through a set of tutorial steps which describe the syntax
                     of a language for describing strategies expert developers used in their everyday development life.
                     This language is called <b>Roboto</b> and  a language for writing down programming strategies.</p>
                 <p>Finally, you will be asked to write down a strategy you have used in a recent programming task.</p>
 
-                <h3 style="color:#42517F;">What is a Programming Strategy?</h3>
+                <h3>What is a Programming Strategy?</h3>
 
                 <p>A strategy is a high-level plan for accomplishing a task, describing a series of steps or actions to take to accomplish a goal.
                     Strategies are a common part of everyday life, describing steps with which to find an email in an email client, cook the perfect pizza, or tie your shoes.
                    <B>Programming strategies</B>  describe how software developers do similar everyday tasks, like different ways to debug a defect or go about software design.
+                    Some people debug by gathering lots of data about execution, then inspecting it, while others generate lots of hypotheses, testing them one by one.
                 </p>
 
             </div><BR>
@@ -65,13 +66,14 @@
                             <li>Loops</li>
                             <li>Variables</li>
                         </ol>
+                        <p>We will see a sample of strategy wirtten with Roboto language feature in the following. We will go through each feature using the statements in the sample.  </p>
 
                     </div>
                 </div>
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
                         <h3>Strategy with Roboto</h3>
-                        <h4>An example of a strategy written in Roboto. This strategy describes how to merge two branches of code, including fixing any conflicts which may arise.</h4>
+                        <h4>The text below is an example Roboto strategy. It describes how to merge two branches of code, including fixing any conflicts which may arise.</h4>
                         <BR>
                         <div class="RobotoPanel">
                             <img src="images/GitMerge.png">
@@ -81,9 +83,9 @@
                 <BR>
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>SubStrategy</h3>
-                        <p>To organize long and complex strategies, strategies can be separated into substrategies. A sub-strategy is a strategy called by another strategy.
-                            For example, strategy fixConflict is a sample of a sub-strategy which is being used and called in mergGithubBranches strategy. </p>
+                        <h3>Sub-Strategy</h3>
+                        <p>To organize long and complex strategies, strategies can be separated into sub-strategies. A sub-strategy is a strategy called by another strategy.
+                            For example, strategy fixConflict is a sample of a sub-strategy which is being used and called in mergeGithubBranches strategy above. </p>
                         <BR>
                         <div class="RobotoPanel">
                             <img src="images/SubStrategy.png">
@@ -91,38 +93,74 @@
                     </div>
                 </div>
                 <BR>
+                <h3>Let's step through this strategy piece by piece, and explain each part of it.</h3>
 
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
                         <h3>Precondition</h3>
-                        <p>Preconditions are requirements for using the strategy to fix the defect. They are the required resources, knowledge, skill, context , and any kind of requirements for using the strategy to fix the defect:
-                            <BR>
-                            <b>Context:</b> Write your strategy for a specific context, such as a defect you debugged yesterday. Describe your application domain: embedded development in C, front end development in React, desktop Java application, etc.
-                            <BR>
-                            <b>Available resources:</b> For your case, consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?
-                            <BR>
-                            <b>Specific Programming Knowledge:</b>  What programming languages are required to be familiar with
-                            <BR>
-                            <b>Expertise level:</b>  what level of expertise the user of strategy should have</p>
+                        <p>Preconditions are requirements for using the strategy to fix the defect. They are the required resources, knowledge, skill, context , and any kind of requirements for using the strategy to fix the defect:</p>
+                        <BR>
+                        <p><b class="sideBar">Context:</b> Write your strategy for a specific context, such as a defect you debugged yesterday. Describe your application domain: embedded development in C, front end development in React, desktop Java application, etc.</p>
+                        <BR>
+                        <p><b class="sideBar">Available resources:</b> For your case, consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?</p>
+                        <BR>
+                        <p><b class="sideBar">Specific Programming Knowledge:</b>  What programming languages are required to be familiar with</p>
+                        <BR>
+                        <p><b class="sideBar">Expertise level:</b>  What level of expertise the user of strategy should have</p>
+                        <BR>
                         <div class="RobotoPanel">
                             <img src="images/PreCondition.png">
+                        </div>
+                    </div>
+                </div><BR>
+
+                <div class="media row">
+                    <div class="media-body well well-sm research-section col-sm-12">
+                        <h3>Statement</h3>
+                        <p class="sideBar">Each step in strategy definition is a statement describing what should the user do in this step</p>
+                        <BR>
+                        <p class="sideBar">More description and clarification about the statement can be added before each statement after a # tag</p>
+                        <BR>
+                        <p class="sideBar">Each statement is one of:
+                            <b>Action</b>,
+                            <b>Conditional</b>,
+                            <b>Loop</b>,
+                            <b>Call</b>, which we will describe each in more detail below.
+                        </p>
+
+                        <BR>
+                    </div>
+                </div><BR>
+
+                <div class="media row">
+                    <div class="media-body well well-sm research-section col-sm-12">
+                        <h3>Action</h3>
+                        <p>Actions describe something that the user should do in the world.</p>
+                        <div class="RobotoPanel">
+                            <img src="images/action.png">
                         </div>
                     </div>
                 </div>
                 <BR>
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Statement</h3>
-                        <p>Each step in strategy definition is a statement describing what should the user do in next step</p>
-                        <p>More description and clarification about the statement can be added before each statement after a # tag
-                        <p>Each statement is one of the following:</p>
-                        <ol class="list-unstyled">
-                            <li>ACTION</li>
-                            <li>CONDITIONAL</li>
-                            <li>LOOP</li>
-                            <li>CALL</li>
-                        </ol>
-                        <BR>
+                        <h3>Conditional</h3>
+                        <p>A conditional asks the user to check if a condition is true in the world and then branch to different statements depending on the outcome.</p>
+                        <div class="RobotoPanel">
+                            <img src="images/conditional.png">
+                        </div>
+                    </div>
+                </div>
+                <BR>
+                <div class="media row">
+                    <div class="media-body well well-sm research-section col-sm-12">
+                        <h3>Loops</h3>
+                        <p>Loop helps in tracking set of steps the user should take
+                            <BR>Could be used to iterate over any set of similar actions the user should take
+                        </p>
+                        <div class="RobotoPanel">
+                            <img src="images/loop.png">
+                        </div>
                     </div>
                 </div>
                 <BR>
@@ -144,122 +182,163 @@
                 </div>
                 <BR>
 
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Conditional</h3>
-                        <p>A conditional asks the user to check if a condition is true in the world and then branch to different statements depending on the outcome.</p>
-                        <div class="RobotoPanel">
-                            <img src="images/conditional.png">
-                        </div>
-                    </div>
-                </div>
-                <BR>
 
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Action</h3>
-                        <p>Actions describe something that the user should do in the world.</p>
-                        <div class="RobotoPanel">
-                            <img src="images/action.png">
-                        </div>
+                        <h3>How to write a strategy.</h3>
+                    <p><b class="sideBar">Define strategy in a sequence of steps. </b>Describe your strategy in the form of sequence of steps a developer should follow and do some action. </p>
+                    <BR>
+                    <p><b class="sideBar">Describe required knowledge and tool for using your strategy. </b>Describe what are the preconditions a developer should have to be able to use your strategy.</p>
+                    <BR>
+                    <p><b class="sideBar">Use comments to elaborate. </b> Each step in a strategy should be clear and concise, but you can use comments to help developers who may not fully know how to execute a step.Include your comments before each statement after # tag.</p>
+                    <BR>
+                    <p><b class="sideBar">Avoid wasted work. </b>Structure your strategy in a way that minimizes how much work a developer has to do </p>
+                    <BR>
+                    <p><b class="sideBar">Include explicit restarts.</b> Some strategies fail; include these failure points in your strategy, guiding developers either back to the start of a strategy, or to use a different strategy.</p>
+                    <BR>
+                    <p><b class="sideBar">Include rationale.</b> A strategy should include an overall rationale for its approach, as well as rationale for how each step achieves the high level approach. This helps motivate a developer to follow the strategy reliably.</p>
+                    <BR>
+                    <p><b class="sideBar">Encourage externalization.</b> For any information a developer will need to reference and reuse, encourage them to capture it in a variable. This ensures they don’t lose it, but also that it’s easy to reference. It also allows the data to be used in other parts of a strategy.</p>
+                        <BR>
+
+
                     </div>
                 </div>
-                <BR>
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Loops</h3>
-                        <p>Loop helps in tracking set of steps the user should take
-                            <BR>Could be used to iterate over any set of similar actions the user should take
-                        </p>
-                        <div class="RobotoPanel">
-                            <img src="images/loop.png">
-                        </div>
-                    </div>
-                </div>
-                <BR>
             </div>
         </div>
-        <BR><BR>
-        <div class="row">
-            <h3  style="color:#42517F;">Now that you’ve learned how to write a strategy in Roboto, it’s your turn to write one.</h3>
-            <BR><BR>
+
+        <div class="row" >
             <div>
-                <form>
-                    <legend>What is your full name: </legend><input style="width:60%; margin-bottom: 1%;" id="pname" class="field">
-                    <legend>What is your participation ID: </legend><input style="width:60%; margin-bottom: 1%;" id="pId" class="field">
-                    <legend>How many years of industrial work experience do you have?</legend><input style="width:60%; margin-bottom: 1%;" type="number" id="workExp">
-                    <legend>How expert you rate yourself in Developing React-based web applications? </legend><textarea style="width:60%; margin-bottom: 1%;" id="reactExp"></textarea>
-                    <legend>What domains have you built software in?</legend><textarea style="width:60%; margin-bottom: 1%;" id="domains"></textarea>
-                    <legend>What was your academic field of study? </legend><textarea style="width:60%; margin-bottom: 1%;" id="studyField"></textarea>
-                    <legend>What is your highest academic degree? </legend><input style="width:60%; margin-bottom: 1%;" id="degree" class="field">
-                </form>
-                <h3 style="color:#42517F;">Select a task you have more experience in to write the strategy: </h3>
+                <div class="media row">
+                    <div class="media-body well well-sm research-section col-sm-12">
+                        <h3>Now that you’ve learned what a strategy is and how we can use Roboto syntax in reading and writing strategies, it’s your turn to write one.</h3>
 
-               <select id="mySelect" onchange="taskSelectionChanged()" style=" height: 40px;width: 300px; font-size: 20px;">
-                <option value="React Profiler">React Profiler
-                <option value="React UI Testing">React UI Testing
-                </select>
+                        <p><b>Please answer the following question about your background in development. In your answers count any kind of contribution you had to build a real software,
+                            including software implementation for research, company, or as an intern.</b></p><BR><BR>
+                        <form>
+                            <!--<legend>What is your full name: </legend><input style="width:60%; margin-bottom: 1%;" id="pname" class="field">-->
+                            <!--<legend>What is your participation ID: </legend><input style="width:60%; margin-bottom: 1%;" id="pId" class="field">-->
+                            <p>How many years of software development work experience do you have?</p>          <input style="width:60%; margin-bottom: 1%;" type="number" id="workExp">
+                            <p>How many years of experience do you have in building web application? </p>       <input style="width:60%; margin-bottom: 1%;" type="number" id="webExp">
+                            <p>How many years of experience do you have in building React web application?</p>  <input style="width:60%; margin-bottom: 1%;" type="number" id="reactExp">
+                            <p>How many years of experience do you have in developing with javascript?</p>      <input style="width:60%; margin-bottom: 1%;" type="number" id="jsExp">
+                        </form>
 
-                <BR>
-                <BR>
-                <legend>
-                    Think about this task and similar problems that you had challenged with in your life programming tasks. Think about the details and steps you have taken to fix those problems.
-                    For instance think about what aspects you considered and what elements you checked and how. What tools you have used for that and what knowledge you had that is required to solve those problems.
-                    Now lets focus on the task you selected; what is the best strategy, based on your previous similar experiences, you would take to solve this problem. What steps you will take and what are the requirements for your strategy.
-                </legend>
-                <BR>
-                <legend>
-
-                    <b>Guidelines for writing strategy</b>
-                    <BR>
-                    Imagine a novice developer came to you with this type of task. Imagine they did not have any similar experience so far.
-                    Describe the best strategy you can offer this developer and the steps you'd take to finish this task, being sure to include sufficient details.
-                    <p style="margin-top:1%;"><b>Use comments to elaborate. </b>Each step in a strategy should be clear and concise, but you can use comments to help developers who may not fully know how to execute a step.Include your comments before each statement after # tag.</p>
-                    <p style="margin-top:1%;"><b>Avoid wasted work. </b>Structure your strategy in a way that minimizes how much work a developer has to do </p>
-                    <p style="margin-top:1%;"><b>Include explicit restarts.</b> Some strategies fail; include these failure points in your strategy, guiding developers either back to the start of a strategy, or to use a different strategy.</p>
-                    <p style="margin-top:1%;"><b>Include rationale.</b> A strategy should include an overall rationale for its approach, as well as rationale for how each step achieves the high level approach. This helps motivate a developer to follow the strategy reliably.</p>
-                    <p style="margin-top:1%;"><b>Encourage externalization.</b> For any information a developer will need to reference and reuse, encourage them to capture it in a variable. This ensures they don’t lose it, but also that it’s easy to reference. It also allows the data to be used in other parts of a strategy.</p>
-
-
-                </legend>
-                <div class="media-body well well-sm research-section col-sm-7">
-                    <h3>Your Task Strategy</h3>
-                    <div id="strategyDefinition" style="min-height: 550px;"></div>
-                    <!--<textarea type="text"  class="md-textarea form-control" rows="28" id = "strategyDefinition"></textarea>-->
+                    </div>
                 </div>
-                <div class="media-body well well-sm research-section col-sm-5">
-                    <h4>An example strategy, for reference </h4>
-                    <BR>
-                    <img src="images/GitMerge.png">
+
+                <div class="media row">
+                    <div class="media-body well well-sm research-section col-sm-12">
+
+                        <h3>Let's start writing one</h3>
+
+                        <P class="sideBar">We sent you a task in our last email. Please read the task description and try to understand what it is asking you to write. </P>
+                        <p class="sideBar">Think about this task and similar problems that you had challenged with in your life programming tasks. Think about the details and steps you have taken to fix those problems.
+                            For instance think about what aspects you considered and what elements you checked and how. What tools you have used for that and what knowledge you had that is required to solve those problems.</p>
+                        <p class="sideBar"> Now let's focus on the task; what is the best strategy, based on your previous similar experiences, you would take to solve this problem. <BR>What steps you will take and what are the requirements for your strategy.</p>
+
+                        <p class="sideBar">Imagine a novice developer came to you with this type of task. Imagine they did not have any similar experience so far.</p>
+
+                        <p class="sideBar">Describe the best strategy you can offer this developer and the steps you'd take to finish this task, being sure to include sufficient details.</p>
+
+                        <p></p>
+                        <p class="sideBar">
+                            Make sure you apply the following guidelines in your articulation:</p><BR>
+                        <ul>
+                            <li>Define strategy in a sequence of steps.</li>
+                            <li>Describe required knowledge and tool for using your strategy.</li>
+                            <li>Use comments to elaborate.</li>
+                            <li>Avoid wasted work. </li>
+                            <li>Include explicit restarts.</li>
+                            <li>Include rationale</li>
+                            <li>Encourage externalization</li>
+                        </ul>
+
+                    </div>
                 </div>
-                <BR>
-                <legend style="clear: both">To use this strategy, what tools or tool features must a developer have access to?</legend>
-                <textarea type="text"  class="md-textarea form-control" rows="3" id="toolsRequirements"></textarea>
-
-                <BR>
-                <legend>To use this strategy, what if anything should the developer know about the codebase?</legend>
-                <textarea type="text"  class="md-textarea form-control" rows="3" id="codebaseRequirements"></textarea>
-
-                <BR>
-                <legend>To use this strategy, what conceptual knowledge should a developer have?</legend>
-                <textarea type="text" class="md-textarea form-control" rows="3" id="knowledgeRequirements"></textarea>
-
-                <BR>
-                <h3 style="color: #42517F;"> Thanks for writing a draft. Please answer the following questions and submit your answers.</h3>
-                <form>
-                    <legend> What  did you find   difficult  about  writing down your strategy ?</legend><textarea id="difficulties" style="width:60%; margin-bottom: 1%;"></textarea>
-                    <legend>What  interface or tool support might   make  articulating strategy  easier?</legend><textarea id="neededSupport" style="width:60%; margin-bottom: 1%;" ></textarea>
-
-                </form>
-                <br>
-                <br>
             </div>
         </div>
     </div>
 
 </div>
-<button onclick="addNewStrategy()" class="btn btn-success" style="margin-right: 10%; width:10%; float: right; font-weight: bold;">Submit</button>
-<BR><BR><BR> <BR><BR>
+
+<div class=" media row" style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">
+
+    <div class=" strategyContainer">
+        <div id="strategyDefinition" style="min-height: 600px;" class="media-body well well-sm research-section col-sm-6">
+            <h3>Your Task Strategy</h3>
+        </div>
+
+
+        <div class="media-body well well-sm research-section col-sm-6">
+            <h3>An example strategy, for reference </h3>
+            <BR>
+            <img src="images/GitMerge.png">
+        </div>
+
+    </div>
+    <br>
+</div>
+<div>
+    <div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;" >
+        <div class="row" style=" width:960px; margin: auto; " >
+            <h3> Please check your strategy and make sure you added the following requirements in the beginning of your strategy :</h3>
+            <p class="sideBar">Tools or tool features a developer must have access to.</p>
+            <p class="sideBar">Anything should the developer know about the codebase.</p>
+            <p class="sideBar">Conceptual knowledge should a developer have.</p>
+            <BR>
+        </div>
+    </div>
+    <div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">
+        <div class="row" style=" width:960px; margin: auto; " >
+            <h3>Thank you for writing down a strategy draft.</h3>
+
+            <p> We are conducting the study to better understand the difficulties that people face with writing down strategies.Its thus important for us to understand any of the barriers and difficulties
+                that you faced in your strategy writing process. </p>
+            <BR><BR>
+            <form>
+                <p>As much detail as possible you can tell us what each of the challenges was about writing down your strategy. Please write down at least individual difficulties that you experienced.</p>
+                <p>Then go through these difficulties and tell us about what made it difficult and aspects of strategy that brings that difficulty.</p>
+                <!--<textarea id="difficulties" style="width:100%; margin-bottom: 1%;"></textarea>-->
+
+            </form>
+
+            <form>
+                <h3>Difficulties</h3>
+                <div id="difficultiesContainer" style="width:100%; margin-bottom: 1%;"></div>
+                <button onclick="remove(); return false;" class="btn btn-remove" style="float: right; font-weight: bold;">Remove</button>
+                <button onclick="add(); return false;" class="btn btn-success" style="float: right; font-weight: bold;">Add</button>
+
+                <BR>
+                <BR>
+                <textarea style="width:100%; margin-bottom: 1%;" id="difficultyTxt" placeholder="Please describe your challenges" ></textarea>
+
+            </form>
+        </div>
+        <button onclick="addNewStrategy()" class="btn-sbmt" style=" width:10%; float: right; font-weight: bold;">Submit</button><BR><BR><BR><BR><BR>
+    </div>
+</div>
+
+<!--<div class="research-section">-->
+    <!--<div class="media-body well well-sm research-section col-sm-8">-->
+        <!--Thank you for writing down a strategy draft.-->
+
+        <!--<p> We are conducting the study to better understand the difficulties that people face with writing down strategies.Its thus important for us to understand any of the barriers and difficulties-->
+        <!--that you faced in your strategy writing process. As much detail as possible you can tell us what each of the challenges was about writting down your strategy. Please write tdown individual difficulties-->
+        <!--and for each of difficulty tell us about the difficulty and what make that.-->
+        <!--describe at least 3 difficulties that you experienced. Then go through these difficulties and tell us about what made it difficult, and aspects of strategy that brings that difficulty.</p>-->
+        <!--<form>-->
+            <!--<p> What  did you find   difficult  about  writing down your strategy ?</p><textarea id="difficulties" style="width:100%; margin-bottom: 1%;"></textarea>-->
+            <!--&lt;!&ndash;<legend>What  interface or tool support might   make  articulating strategy  easier?</legend><textarea id="neededSupport" style="width:100%; margin-bottom: 1%;" ></textarea>&ndash;&gt;-->
+        <!--</form>-->
+    <!--</div>-->
+    <!--<button onclick="addNewStrategy()" class="btn-sbmt" style=" width:10%; float: right; font-weight: bold;">Submit</button><BR>-->
+<!--</div>-->
+
+
+
+
+<BR><BR><BR>
 
 
 
