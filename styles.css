@@ -42,6 +42,9 @@ p {
 h3{
     color:#1b809e;
 }
+.light-bg{
+    border-top:1px solid #cde4ec;
+}
 
     /*@media (min-width: 1200px) {*/
         /*.container {*/

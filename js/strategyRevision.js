@@ -54,7 +54,7 @@ var add;
 var remove;
 $(document).ready(function () {
     //todo add a text box for strategy name and use int here
-    document.getElementById("strategyTitle").innerHTML=localStorage.getItem("taskName");
+    //document.getElementById("strategyTitle").innerHTML=localStorage.getItem("taskName");
 
 
     add = function ()

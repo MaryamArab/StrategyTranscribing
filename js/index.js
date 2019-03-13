@@ -74,7 +74,7 @@ $(document).ready(function () {
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: 'lightgoldenrodyellow'
+            backgroundColor: '#cde4ec'
         });
 
         // Set property on saveData object and set it equal to the current jQuery element.
@@ -86,143 +86,7 @@ $(document).ready(function () {
         // Start a timer that will fire save when finished.
         timeoutId = setTimeout(saveRatings, 750);
     });
-
-
-    $('#toolsRequirements').keypress(function () {
-        var $currentField = $(this);
-
-        $currentField.css({
-            backgroundColor: 'lightgoldenrodyellow'
-        });
-
-        // Set property on saveData object and set it equal to the current jQuery element.
-        saveData[$currentField.attr('id')] = $currentField;
-
-        // If a timer was started, clear it because they are still pressing keys like a monkey.
-        if (timeoutId) clearTimeout(timeoutId);
-
-        // Start a timer that will fire save when finished.
-        timeoutId = setTimeout(saveRatings, 750);
-    });
-    $('#codebaseRequirements').keypress(function () {
-        var $currentField = $(this);
-
-        $currentField.css({
-            backgroundColor: 'lightgoldenrodyellow'
-        });
-
-        // Set property on saveData object and set it equal to the current jQuery element.
-        saveData[$currentField.attr('id')] = $currentField;
-
-        // If a timer was started, clear it because they are still pressing keys like a monkey.
-        if (timeoutId) clearTimeout(timeoutId);
-
-        // Start a timer that will fire save when finished.
-        timeoutId = setTimeout(saveRatings, 750);
-    });
-
-    $('#knowledgeRequirements').keypress(function () {
-        var $currentField = $(this);
-
-        $currentField.css({
-            backgroundColor: 'lightgoldenrodyellow'
-        });
-
-        // Set property on saveData object and set it equal to the current jQuery element.
-        saveData[$currentField.attr('id')] = $currentField;
-
-        // If a timer was started, clear it because they are still pressing keys like a monkey.
-        if (timeoutId) clearTimeout(timeoutId);
-
-        // Start a timer that will fire save when finished.
-        timeoutId = setTimeout(saveRatings, 750);
-    });
-
-
-
-    $('#difficulties').keypress(function () {
-        var $currentField = $(this);
-
-        $currentField.css({
-            backgroundColor: 'lightgoldenrodyellow'
-        });
-
-        // Set property on saveData object and set it equal to the current jQuery element.
-        saveData[$currentField.attr('id')] = $currentField;
-
-        // If a timer was started, clear it because they are still pressing keys like a monkey.
-        if (timeoutId) clearTimeout(timeoutId);
-
-        // Start a timer that will fire save when finished.
-        timeoutId = setTimeout(saveRatings, 750);
-    });
-    $('#languages').keypress(function () {
-        var $currentField = $(this);
-
-        $currentField.css({
-            backgroundColor: 'lightgoldenrodyellow'
-        });
-
-        // Set property on saveData object and set it equal to the current jQuery element.
-        saveData[$currentField.attr('id')] = $currentField;
-
-        // If a timer was started, clear it because they are still pressing keys like a monkey.
-        if (timeoutId) clearTimeout(timeoutId);
-
-        // Start a timer that will fire save when finished.
-        timeoutId = setTimeout(saveRatings, 750);
-    });
-    $('#domains').keypress(function () {
-        var $currentField = $(this);
-
-        $currentField.css({
-            backgroundColor: 'lightgoldenrodyellow'
-        });
-
-        // Set property on saveData object and set it equal to the current jQuery element.
-        saveData[$currentField.attr('id')] = $currentField;
-
-        // If a timer was started, clear it because they are still pressing keys like a monkey.
-        if (timeoutId) clearTimeout(timeoutId);
-
-        // Start a timer that will fire save when finished.
-        timeoutId = setTimeout(saveRatings, 750);
-    });
-    $('#studyField').keypress(function () {
-        var $currentField = $(this);
-
-        $currentField.css({
-            backgroundColor: 'lightgoldenrodyellow'
-        });
-
-        // Set property on saveData object and set it equal to the current jQuery element.
-        saveData[$currentField.attr('id')] = $currentField;
-
-        // If a timer was started, clear it because they are still pressing keys like a monkey.
-        if (timeoutId) clearTimeout(timeoutId);
-
-        // Start a timer that will fire save when finished.
-        timeoutId = setTimeout(saveRatings, 750);
-    });
-    $('#workExp').keypress(function () {
-        var $currentField = $(this);
-
-        $currentField.css({
-            backgroundColor: 'lightgoldenrodyellow'
-        });
-
-        // Set property on saveData object and set it equal to the current jQuery element.
-        saveData[$currentField.attr('id')] = $currentField;
-
-        // If a timer was started, clear it because they are still pressing keys like a monkey.
-        if (timeoutId) clearTimeout(timeoutId);
-
-        // Start a timer that will fire save when finished.
-        timeoutId = setTimeout(saveRatings, 750);
-    });
-
-    add = function ()
-    {
+    add = function () {
         var node = document.createElement("DIV");
         node.id = "difficulty";
         var checkbox = document.createElement('input');
@@ -263,14 +127,9 @@ async function addNewStrategy() {
     var mm = time.getMinutes();
     var ss = time.getSeconds();
     var timestamp = hh + ":" + mm + ":" + ss;
-    // let pname = "Test";
-    // let pId ="Test";
     // let workExperience ="Test";
     // let reactExperience = "Test";
-    // let domains= "Test";
-    // let studyField= "Test";
-    // let degree = "Test";
-    // var task = document.getElementById("mySelect").value;
+
     //
     // let strategyDefinition = "Test\\n    Test\\n        Test\\n    Test\\n        Test\\n    Test\\nTest";
     // let toolsRequirements = "Test";
@@ -278,33 +137,38 @@ async function addNewStrategy() {
     // let knowledgeRequirements = "Test";
     // let difficulties = "Test";
 
-    let pname = document.getElementById("pname").value;
-    let pId =document.getElementById("pId").value;
+    //todo pid with jquery
+    // let pId =document.getElementById("pId").value;
+    let pId = "pTest"
     let workExperience = document.getElementById("workExp").value;
+    let webExperience = document.getElementById("webExp").value;
     let reactExperience = document.getElementById("reactExp").value;
-    let domains= document.getElementById("domains").value;
-    let studyField= document.getElementById("studyField").value;
-    let degree = document.getElementById("degree").value;
+    let javascriptExperience = document.getElementById("jsExp").value;
+
+  //todo add task
     // var task = document.getElementById("mySelect").value;
 
     let strategyDefinition = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
-    let toolsRequirements = document.getElementById("toolsRequirements").value;
-    let codebaseRequirements = document.getElementById("codebaseRequirements").value;
-    let knowledgeRequirements = document.getElementById("knowledgeRequirements").value;
     // let difficulties = document.getElementById("difficulties").value;
     let difficultiesElements=  document.getElementsByClassName("difficultyId");
     var difficulties = [];
     for (var i = 0; i < difficultiesElements.length; i++) {
         difficulties.push(difficultiesElements[i].innerHTML);
     }
-    // let neededSupport = document.getElementById("neededSupport").value;
 
     console.log("Strategy definition:   " + strategyDefinition);
 
-    if( pname===""|| pId ==="" || workExperience ==="" ||reactExperience ==="" ||domains===""  || studyField ===""  || degree ==="" || task==="" ||strategyDefinition===""
-        || toolsRequirements==="" || codebaseRequirements==="" || knowledgeRequirements==="" || difficulties === "")
+    if(  workExperience ==="" || webExperience ==="" || javascriptExperience === ""||reactExperience ==="" ||strategyDefinition===""
+         || difficulties === "")
     {
+        document.getElementById("submitBtn").disabled = true;
         alert("Please fill out all the required fields");
+        return;
+    }
+    if(  workExperience !=="" || webExperience !=="" || javascriptExperience !== ""||reactExperience !=="" ||strategyDefinition!==""
+        || difficulties !== "")
+    {
+        document.getElementById("submitBtn").disabled = false;
         return;
     }
 
@@ -313,20 +177,12 @@ async function addNewStrategy() {
     database.collection("Test").doc(pId).set({
         Time:timestamp,
 
-        ParticipantName: pname,
-        ParticipationId: pId,
-        Experience: workExperience,
+        SoftwareDevelopmentExperience: workExperience,
+        WebExperience: webExperience,
+        JavaScriptExperience: javascriptExperience,
         ReactExperience: reactExperience,
-        Domains:domains,
-        StudyField:studyField,
-        Degree: degree,
-        Task: task,
         StrategyDefinition:strategyDefinition,
-        ToolsRequirements:toolsRequirements,
-        CodebaseRequirements:codebaseRequirements,
-        KnowledgeRequirements: knowledgeRequirements,
         Difficulties: difficulties,
-        // NeededSupport : neededSupport
 
     }).catch(function (err) {
         console.log("error saving", err);
@@ -334,6 +190,7 @@ async function addNewStrategy() {
     alert("Congratulation.You successfully submit your draft of strategy. Thank you so much for participating in our study.");
 
     //var taskName = document.getElementById("mySelect").value;
+    //todo pass the id from html
     localStorage.setItem("pId",pId);
     //localStorage.setItem("taskName", taskName);
     // var writtenStrategy = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
