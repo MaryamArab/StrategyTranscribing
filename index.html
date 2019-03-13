@@ -31,22 +31,23 @@
     <div class="row">
         <div class="row" >
             <div>
-                <p> Welcome to the research study of Explicit Programming Strategies.</p>
+                <p> Welcome to the Explicit Programming Strategies research study.</p>
                 <p>Software developers solve a diverse and wide range of problems. While software engineering research often focuses on <b>tools</b> to support this problem solving,
                     the <b>strategies</b> that developers use to solve problems are at least as important as the <b>tools</b> they use. </p>
-                <p>In this study, we are asking developers like you to write down the strategies you use to solve problems, so that others can benefit from them.</p>
-                <p>We start with defining what we mean by Programming Strategy, then we will go through a set of tutorial steps which describe the syntax
-                    of a language for describing strategies expert developers used in their everyday development life.
-                    This language is called <b>Roboto</b> and  a language for writing down programming strategies.</p>
-                <p>Finally, you will be asked to write down a strategy you have used in a recent programming task.</p>
+                <p>In this study, we are asking developers like you to write down the strategies you use to solve problems,
+                    so that others can benefit from the strategies you have learned over time.</p>
+                <p>To help you write down strategies in a way that other developers can use, we’ve built a language for describing strategies
+                    called <b>Roboto</b>. We’ll briefly teach you how to write down a strategy in <b>Roboto</b>, walking through a few short
+                    examples to illustrate its syntax. You’ll then have the opportunity to use <b>Roboto</b> to write up one of your
+                    own strategies, illustrating to other developers how to tackle a common situation.</p>
 
                 <h3>What is a Programming Strategy?</h3>
 
                 <p>A strategy is a high-level plan for accomplishing a task, describing a series of steps or actions to take to accomplish a goal.
                     Strategies are a common part of everyday life, describing steps with which to find an email in an email client, cook the perfect pizza, or tie your shoes.
-                   <B>Programming strategies</B>  describe how software developers do similar everyday tasks, like different ways to debug a defect or go about software design.
-                    Some people debug by gathering lots of data about execution, then inspecting it, while others generate lots of hypotheses, testing them one by one.
+                   <B>Programming strategies</B>  describe how software developers do similar everyday tasks, to diagnose a performance issue or a broken control.
                 </p>
+
 
             </div><BR>
 
@@ -66,7 +67,7 @@
                             <li>Loops</li>
                             <li>Variables</li>
                         </ol>
-                        <p>We will see a sample of strategy wirtten with Roboto language feature in the following. We will go through each feature using the statements in the sample.  </p>
+                        <p>To understand how to use each of these to write down a strategy in Roboto, we’ll first take a look at a complete example of a strategy and then take a look at each one by one. </p>
 
                     </div>
                 </div>
@@ -81,24 +82,17 @@
                     </div>
                 </div>
                 <BR>
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Sub-Strategy</h3>
-                        <p>To organize long and complex strategies, strategies can be separated into sub-strategies. A sub-strategy is a strategy called by another strategy.
-                            For example, strategy fixConflict is a sample of a sub-strategy which is being used and called in mergeGithubBranches strategy above. </p>
-                        <BR>
-                        <div class="RobotoPanel">
-                            <img src="images/SubStrategy.png">
-                        </div>
-                    </div>
-                </div>
+
                 <BR>
-                <h3>Let's step through this strategy piece by piece, and explain each part of it.</h3>
+                <h3>Let’s take a look at this strategy piece by piece.</h3>
 
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
                         <h3>Precondition</h3>
-                        <p>Preconditions are requirements for using the strategy to fix the defect. They are the required resources, knowledge, skill, context , and any kind of requirements for using the strategy to fix the defect:</p>
+                        <p>Preconditions express requirements about what the developer using the strategy should first know or have access to.</p>
+                        <p><b class="sideBar">Required tools and Environment:</b> Consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?
+                        <BR>
+                        <p><b class="sideBar"> Required knowledge:</b> What level of expertise should the strategy user have? What tools, languages, or concepts should they be familiar with before using your strategy?</p>
                         <BR>
                         <p><b class="sideBar">Context:</b> Write your strategy for a specific context, such as a defect you debugged yesterday. Describe your application domain: embedded development in C, front end development in React, desktop Java application, etc.</p>
                         <BR>
@@ -117,15 +111,16 @@
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
                         <h3>Statement</h3>
-                        <p class="sideBar">Each step in strategy definition is a statement describing what should the user do in this step</p>
+                        <p class="sideBar">Each statement strategy describe what the user should do next.</p>
                         <BR>
-                        <p class="sideBar">More description and clarification about the statement can be added before each statement after a # tag</p>
+                        <p class="sideBar">Additional details about each statement can be added through a comment, indicated through a # tag.
+                        </p>
                         <BR>
-                        <p class="sideBar">Each statement is one of:
+                        <p class="sideBar">Statements can be one of four types:
                             <b>Action</b>,
                             <b>Conditional</b>,
                             <b>Loop</b>,
-                            <b>Call</b>, which we will describe each in more detail below.
+                            <b>Call</b>, which we describe in detail next.
                         </p>
 
                         <BR>
@@ -134,7 +129,7 @@
 
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Action</h3>
+                        <h3>Actions</h3>
                         <p>Actions describe something that the user should do in the world.</p>
                         <div class="RobotoPanel">
                             <img src="images/action.png">
@@ -144,8 +139,8 @@
                 <BR>
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Conditional</h3>
-                        <p>A conditional asks the user to check if a condition is true in the world and then branch to different statements depending on the outcome.</p>
+                        <h3>Conditionals</h3>
+                        <p> A conditional asks the strategy user to check if a condition is true in the world and then branch to different statements depending on the outcome.</p>
                         <div class="RobotoPanel">
                             <img src="images/conditional.png">
                         </div>
@@ -155,9 +150,9 @@
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
                         <h3>Loops</h3>
-                        <p>Loop helps in tracking set of steps the user should take
-                            <BR>Could be used to iterate over any set of similar actions the user should take
-                        </p>
+                        <p>Loops indicate a sequence of statements that the strategy user should potentially take more than once. </p>
+                        <p>In Roboto, loops take the form of a FOR EACH loop, iterating over a set of items (e.g., files, breakpoints, messages output by a tool) to take a set of actions for each.</p>
+                        <BR>
                         <div class="RobotoPanel">
                             <img src="images/loop.png">
                         </div>
@@ -169,7 +164,9 @@
                     <div class="media-body well well-sm research-section col-sm-12">
                         <h3>Variable</h3>
                         <p>
-                            Variables help users lower the burden of remembering, such as remembering lines of code or identifiers to return to. They can be defined as primitives and lists.<BR>
+                            Variables make it easier for the strategy user to keep track of things, such as remembering lines of code or functions to return to. </p>
+                        <p>Variables may be either a primitive or a list. For instance, ‘conflicted files’ in the following example indicates a list of files which have a conflict, which subsequent statements
+                            may then explicitly refer to. The helps reduce what the strategy user has to remember, making it easier for them to correctly follow the strategy.<BR>
                         </p>
                         <p>
                             For instance, <b>'conflictedFiles'</b> in the following is a variable records a set of files that have a conflict, which subsequent statements may then refer to explicitly. This helps reduce memorization burden.
@@ -181,24 +178,34 @@
                     </div>
                 </div>
                 <BR>
-
+                <div class="media row">
+                    <div class="media-body well well-sm research-section col-sm-12">
+                        <h3>Sub-Strategy</h3>
+                        <p>To organize long and complex strategies, strategies can be separated into sub-strategies. A sub-strategy is a strategy called by another strategy.
+                            For example, strategy fixConflict is a sample of a sub-strategy which is being used and called in mergeGithubBranches strategy above. </p>
+                        <BR>
+                        <div class="RobotoPanel">
+                            <img src="images/SubStrategy.png">
+                        </div>
+                    </div>
+                </div>
 
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
                         <h3>How to write a strategy.</h3>
-                    <p><b class="sideBar">Define strategy in a sequence of steps. </b>Describe your strategy in the form of sequence of steps a developer should follow and do some action. </p>
+                    <p><b class="sideBar">Define your strategy step by step. </b>Describe your strategy in the form of a sequence of statement describing steps a developer should follow. </p>
                     <BR>
-                    <p><b class="sideBar">Describe required knowledge and tool for using your strategy. </b>Describe what are the preconditions a developer should have to be able to use your strategy.</p>
+                    <p><b class="sideBar">Describe required tools, environments, and knowledge. </b>Make clear when your strategy can be used and who it is for by describing preconditions that should be true before a developer starts to use your strategy.</p>
                     <BR>
                     <p><b class="sideBar">Use comments to elaborate. </b> Each step in a strategy should be clear and concise, but you can use comments to help developers who may not fully know how to execute a step.Include your comments before each statement after # tag.</p>
                     <BR>
-                    <p><b class="sideBar">Avoid wasted work. </b>Structure your strategy in a way that minimizes how much work a developer has to do </p>
+                    <p><b class="sideBar">Avoid wasted work. </b>Structure your strategy in a way that minimizes the amount of work the developer using your strategy will have to do </p>
                     <BR>
                     <p><b class="sideBar">Include explicit restarts.</b> Some strategies fail; include these failure points in your strategy, guiding developers either back to the start of a strategy, or to use a different strategy.</p>
                     <BR>
-                    <p><b class="sideBar">Include rationale.</b> A strategy should include an overall rationale for its approach, as well as rationale for how each step achieves the high level approach. This helps motivate a developer to follow the strategy reliably.</p>
+                    <p><b class="sideBar">Include rationale.</b>At the very beginning of your strategy definition, include a one or two line comment describing the overall purpose and approach. As you describe each statement, include comments which help the user to understand why each step is being taken and how it helps realize the overall goal.</p>
                     <BR>
-                    <p><b class="sideBar">Encourage externalization.</b> For any information a developer will need to reference and reuse, encourage them to capture it in a variable. This ensures they don’t lose it, but also that it’s easy to reference. It also allows the data to be used in other parts of a strategy.</p>
+                    <p><b class="sideBar">Encourage externalization.</b>  When a developer will first collect some information (e.g., lines of code which reference a variable) that they will later make use of, have them write it down in the strategy. Ask them to write it down in a variable. This ensure they don’t lose anything and that they methodically consider each possibility. It also makes it easy to reference later in other parts of the strategy</p>
                         <BR>
 
 
@@ -211,17 +218,16 @@
             <div>
                 <div class="media row">
                     <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Now that you’ve learned what a strategy is and how we can use Roboto syntax in reading and writing strategies, it’s your turn to write one.</h3>
+                        <h3>It’s now time to write up one of your own strategies.</h3>
 
-                        <p><b>Please answer the following question about your background in development. In your answers count any kind of contribution you had to build a real software,
-                            including software implementation for research, company, or as an intern.</b></p><BR><BR>
+                        <p><b>Please help us understand your own background by answering a few quick questions.</b></p><BR><BR>
                         <form>
                             <!--<legend>What is your full name: </legend><input style="width:60%; margin-bottom: 1%;" id="pname" class="field">-->
                             <!--<legend>What is your participation ID: </legend><input style="width:60%; margin-bottom: 1%;" id="pId" class="field">-->
-                            <p>How many years of software development work experience do you have?</p>          <input style="width:60%; margin-bottom: 1%;" type="number" id="workExp">
-                            <p>How many years of experience do you have in building web application? </p>       <input style="width:60%; margin-bottom: 1%;" type="number" id="webExp">
-                            <p>How many years of experience do you have in building React web application?</p>  <input style="width:60%; margin-bottom: 1%;" type="number" id="reactExp">
-                            <p>How many years of experience do you have in developing with javascript?</p>      <input style="width:60%; margin-bottom: 1%;" type="number" id="jsExp">
+                            <p>How many years of industrial software development experience do you have (including internships and any software you implemented as part of a research project)?</p>          <input style="width:60%; margin-bottom: 1%;" type="number" id="workExp">
+                            <p>How many years experience do you have in building web application? </p>       <input style="width:60%; margin-bottom: 1%;" type="number" id="webExp">
+                            <p>How many years of experience do you have in React?</p>  <input style="width:60%; margin-bottom: 1%;" type="number" id="reactExp">
+                            <p>How many years of experience you have with JavaScript?</p>      <input style="width:60%; margin-bottom: 1%;" type="number" id="jsExp">
                         </form>
 
                     </div>
