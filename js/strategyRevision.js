@@ -123,7 +123,7 @@ async function submitSecondDraft() {
 
     let database = firebase.firestore();
 
-    database.collection("TestRevision").doc(pId).set({
+    database.collection("StrategyRevisions").doc(pId).set({
         Time:timestamp,
         ParticipationId: pId,
         StrategyDefinition:strategyDefinition,

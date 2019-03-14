@@ -139,7 +139,7 @@ async function addNewStrategy() {
 
     //todo pid with jquery
     // let pId =document.getElementById("pId").value;
-    let pId = "pTest"
+    let pId = "pilot1"
     let workExperience = document.getElementById("workExp").value;
     let webExperience = document.getElementById("webExp").value;
     let reactExperience = document.getElementById("reactExp").value;
@@ -161,20 +161,20 @@ async function addNewStrategy() {
     if(  workExperience ==="" || webExperience ==="" || javascriptExperience === ""||reactExperience ==="" ||strategyDefinition===""
          || difficulties === "")
     {
-        document.getElementById("submitBtn").disabled = true;
+        // document.getElementById("submitBtn").disabled = true;
         alert("Please fill out all the required fields");
         return;
     }
-    if(  workExperience !=="" || webExperience !=="" || javascriptExperience !== ""||reactExperience !=="" ||strategyDefinition!==""
-        || difficulties !== "")
-    {
-        document.getElementById("submitBtn").disabled = false;
-        return;
-    }
+    // if(  workExperience !=="" || webExperience !=="" || javascriptExperience !== ""||reactExperience !=="" ||strategyDefinition!==""
+    //     || difficulties !== "")
+    // {
+    //     document.getElementById("submitBtn").disabled = false;
+    //     return;
+    // }
 
     let database = firebase.firestore();
 
-    database.collection("Test").doc(pId).set({
+    database.collection("Strategies").doc(pId).set({
         Time:timestamp,
 
         SoftwareDevelopmentExperience: workExperience,
