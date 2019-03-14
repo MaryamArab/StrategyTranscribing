@@ -139,7 +139,7 @@ async function addNewStrategy() {
 
     //todo pid with jquery
     // let pId =document.getElementById("pId").value;
-    let pId = "pilot1"
+    let pId = "test"
     let workExperience = document.getElementById("workExp").value;
     let webExperience = document.getElementById("webExp").value;
     let reactExperience = document.getElementById("reactExp").value;
