@@ -98,9 +98,6 @@ $(document).ready(function () {
         checkbox.value = "value";
         checkbox.id = "chkbx";
 
-        var btn = document.createElement('BUTTON');
-        btn.backgroundImage=
-
         var label = document.createElement('label')
         label.htmlFor = "chkbx";
         label.className = "difficultyId";
