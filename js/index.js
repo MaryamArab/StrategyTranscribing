@@ -131,16 +131,23 @@ async function addNewStrategy() {
     var ss = time.getSeconds();
     var timestamp = hh + ":" + mm + ":" + ss;
     let pId =participantId;
-    let workExperience = document.getElementById("workExp").value;
-    let webExperience = document.getElementById("webExp").value;
-    let reactExperience = document.getElementById("reactExp").value;
-    let javascriptExperience = document.getElementById("jsExp").value;
+    let workExperiencePeriod = document.getElementById("workExpYear").value+" years and " + document.getElementById("workExpMonth").value + " months";
+    let softwareDevelopmentExperience = document.getElementById("softDevExp").value;
 
-  //todo add task
+    let webExperiencePeriod = document.getElementById("webExpYear").value+" years and " + document.getElementById("webExpMonth").value + " months";;
+    let webDevelopmentExperience = document.getElementById("webDevExp").value;
+
+    let reactExperiencePeriod = document.getElementById("reactExpYear").value+" years and " + document.getElementById("reactExpMonth").value + " months";;
+    let reactDevelopmentExperience = document.getElementById("reactDevExp").value;
+
+    let javascriptExperiencePeriod = document.getElementById("jsExpYear").value+" years and " + document.getElementById("jsExpMonth").value + " months";;
+    let javascriptDevelopmentExperience = document.getElementById("jsDevExp").value;
+
+
+    //todo add task
      var task = taskAssigned;
 
     let strategyDefinition = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
-    // let difficulties = document.getElementById("difficulties").value;
     let difficultiesElements=  document.getElementsByClassName("difficultyId");
     var difficulties = [];
     for (var i = 0; i < difficultiesElements.length; i++) {
@@ -149,29 +156,28 @@ async function addNewStrategy() {
 
     console.log("Strategy definition:   " + strategyDefinition);
 
-    if(  workExperience ==="" || webExperience ==="" || javascriptExperience === ""||reactExperience ==="" ||strategyDefinition===""
-         || difficulties === "")
+    if(  workExperiencePeriod ==="" || softwareDevelopmentExperience ===""|| webExperiencePeriod ==="" || webDevelopmentExperience==="" || javascriptExperiencePeriod === "" ||
+        javascriptDevelopmentExperience=="" ||reactExperiencePeriod ==="" || reactDevelopmentExperience===""||strategyDefinition==="" || difficulties === "")
     {
         // document.getElementById("submitBtn").disabled = true;
         alert("Please fill out all the required fields");
         return;
     }
-    // if(  workExperience !=="" || webExperience !=="" || javascriptExperience !== ""||reactExperience !=="" ||strategyDefinition!==""
-    //     || difficulties !== "")
-    // {
-    //     document.getElementById("submitBtn").disabled = false;
-    //     return;
-    // }
+
 
     let database = firebase.firestore();
 
     database.collection("Strategies").doc(pId).set({
         Time:timestamp,
 
-        SoftwareDevelopmentExperience: workExperience,
-        WebExperience: webExperience,
-        JavaScriptExperience: javascriptExperience,
-        ReactExperience: reactExperience,
+        DevelopmentExperiencePeriod: workExperiencePeriod,
+        WebExperiencePeriod: webExperiencePeriod,
+        JavaScriptExperiencePeriod: javascriptExperiencePeriod,
+        ReactExperiencePeriod: reactExperiencePeriod,
+        SoftwareDevelopmentExperience : softwareDevelopmentExperience,
+        WebDevelopmentExperience : webDevelopmentExperience,
+        JavaScriptDevelopmentExperience: javascriptDevelopmentExperience,
+        ReactDevelopmentExperience : reactDevelopmentExperience,
         StrategyDefinition:strategyDefinition,
         Difficulties: difficulties,
         Task:task
