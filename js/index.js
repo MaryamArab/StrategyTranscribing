@@ -98,6 +98,9 @@ $(document).ready(function () {
         checkbox.value = "value";
         checkbox.id = "chkbx";
 
+        var btn = document.createElement('BUTTON');
+        btn.backgroundImage=
+
         var label = document.createElement('label')
         label.htmlFor = "chkbx";
         label.className = "difficultyId";
@@ -140,8 +143,8 @@ async function addNewStrategy() {
     let reactExperiencePeriod = document.getElementById("reactExpYear").value+" years and " + document.getElementById("reactExpMonth").value + " months";;
     let reactDevelopmentExperience = document.getElementById("reactDevExp").value;
 
-    let javascriptExperiencePeriod = document.getElementById("jsExpYear").value+" years and " + document.getElementById("jsExpMonth").value + " months";;
-    let javascriptDevelopmentExperience = document.getElementById("jsDevExp").value;
+    // let javascriptExperiencePeriod = document.getElementById("jsExpYear").value+" years and " + document.getElementById("jsExpMonth").value + " months";;
+    // let javascriptDevelopmentExperience = document.getElementById("jsDevExp").value;
 
 
     //todo add task
@@ -172,11 +175,11 @@ async function addNewStrategy() {
 
         DevelopmentExperiencePeriod: workExperiencePeriod,
         WebExperiencePeriod: webExperiencePeriod,
-        JavaScriptExperiencePeriod: javascriptExperiencePeriod,
+        // JavaScriptExperiencePeriod: javascriptExperiencePeriod,
         ReactExperiencePeriod: reactExperiencePeriod,
         SoftwareDevelopmentExperience : softwareDevelopmentExperience,
         WebDevelopmentExperience : webDevelopmentExperience,
-        JavaScriptDevelopmentExperience: javascriptDevelopmentExperience,
+        // JavaScriptDevelopmentExperience: javascriptDevelopmentExperience,
         ReactDevelopmentExperience : reactDevelopmentExperience,
         StrategyDefinition:strategyDefinition,
         Difficulties: difficulties,
