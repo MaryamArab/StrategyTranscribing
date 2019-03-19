@@ -6,7 +6,10 @@ var config = {
     storageBucket: "expertstrategies-4f821.appspot.com",
     messagingSenderId: "255891035176"
 };
+
 firebase.initializeApp(config);
+let participantId = window.location.search.substr(1).split("?")[0];
+let taskAssigned = window.location.search.substr(1).split("?")[1];
 
 require.config({ paths: { 'vs': 'monaco/node_modules/monaco-editor/min/vs' }});
 
@@ -127,26 +130,14 @@ async function addNewStrategy() {
     var mm = time.getMinutes();
     var ss = time.getSeconds();
     var timestamp = hh + ":" + mm + ":" + ss;
-    // let workExperience ="Test";
-    // let reactExperience = "Test";
-
-    //
-    // let strategyDefinition = "Test\\n    Test\\n        Test\\n    Test\\n        Test\\n    Test\\nTest";
-    // let toolsRequirements = "Test";
-    // let codebaseRequirements = "Test";
-    // let knowledgeRequirements = "Test";
-    // let difficulties = "Test";
-
-    //todo pid with jquery
-    // let pId =document.getElementById("pId").value;
-    let pId = "test"
+    let pId =participantId;
     let workExperience = document.getElementById("workExp").value;
     let webExperience = document.getElementById("webExp").value;
     let reactExperience = document.getElementById("reactExp").value;
     let javascriptExperience = document.getElementById("jsExp").value;
 
   //todo add task
-    // var task = document.getElementById("mySelect").value;
+     var task = taskAssigned;
 
     let strategyDefinition = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
     // let difficulties = document.getElementById("difficulties").value;
@@ -183,6 +174,7 @@ async function addNewStrategy() {
         ReactExperience: reactExperience,
         StrategyDefinition:strategyDefinition,
         Difficulties: difficulties,
+        Task:task
 
     }).catch(function (err) {
         console.log("error saving", err);
@@ -190,7 +182,6 @@ async function addNewStrategy() {
     alert("Congratulation.You successfully submit your draft of strategy. Thank you so much for participating in our study.");
 
     //var taskName = document.getElementById("mySelect").value;
-    //todo pass the id from html
     localStorage.setItem("pId",pId);
     //localStorage.setItem("taskName", taskName);
     // var writtenStrategy = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
