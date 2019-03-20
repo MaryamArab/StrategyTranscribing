@@ -156,8 +156,7 @@ async function addNewStrategy() {
 
     console.log("Strategy definition:   " + strategyDefinition);
 
-    if(  workExperiencePeriod ==="" || softwareDevelopmentExperience ===""|| webExperiencePeriod ==="" || webDevelopmentExperience==="" || javascriptExperiencePeriod === "" ||
-        javascriptDevelopmentExperience=="" ||reactExperiencePeriod ==="" || reactDevelopmentExperience===""||strategyDefinition==="" || difficulties === "")
+    if(  workExperiencePeriod ==="" || softwareDevelopmentExperience ===""|| webExperiencePeriod ==="" || webDevelopmentExperience===""  ||reactExperiencePeriod ==="" || reactDevelopmentExperience===""||strategyDefinition==="" || difficulties === "")
     {
         // document.getElementById("submitBtn").disabled = true;
         alert("Please fill out all the required fields");
