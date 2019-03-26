@@ -3,12 +3,13 @@ html{
 }
 body {
     /*font-family: Cabin;*/
+    font-family: "Segoe UI","Segoe UI Web Regular","Segoe UI Symbol","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,sans-serif;
     color: #555;
     background-color: white;
 }
 a {
-    color: #1b809e;
-    font-weight: bold;
+    color: #0067b8;
+    /*font-weight: bold;*/
 }
 
 a:hover {
@@ -17,9 +18,9 @@ a:hover {
 }
 
 p {
-
-    font-size: 18px;
-    margin: 0px;
+    /*font-family: Arial !important;*/
+    font-size: 16px !important;
+    margin-top: 14px!important;
 }
 .sideBar{
     /*border-left: 3px solid #1b809e;*/
@@ -39,7 +40,7 @@ p {
     margin-top: 3%;
     border-left: 4px solid #1b809e;
 }
-h3{
+h3, h4{
     color:#1b809e;
 }
 .light-bg{
@@ -55,10 +56,14 @@ h3{
     color: #1b809e;
 }
 .RobotoPanel{
-    width:780px;
+    width:auto;
+    height:auto;
     border-color: #4CAF50!important;
     color: #000!important;
-    background-color: #ffffff!important;"
+    background-color: #ffffff!important;
+    margin:0.5%;
+    padding:5px;
+    display: flow-root;
 }
 li{
     margin-left:30px;
@@ -114,4 +119,45 @@ legend {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+.comment{
+    color:  #1b809e;
+    font-weight:bold;
+}
+.commentDetails{
+    color: forestgreen;
+    font-weight:bold;
+}
+.statement{
+    font-weight:bold;
+}
+.identifier{
+    color: darkorange;
+    float: left;
+    font-weight: bold;
+    margin-left:10px;
+    margin-right:10px;"
+}
+.subStrategy{
+    color: darkred;
+    float: left;
+    font-weight: bold;
+    margin-left:10px;
+    margin-right:10px;"
+}
+.margin-oneTab{
+    margin-left:5%!important;
+}
+.margin-twoTab{
+    margin-left: 10%!important;
+}
+.margin-threeTab{
+    margin-left: 15%!important;
+}
+.margin-fourTab{
+    margin-left: 20%!important;
+}
+
+#officeWordStrategy{
+    font-weight:bold;
 }
