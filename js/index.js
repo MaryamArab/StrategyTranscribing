@@ -10,7 +10,6 @@ var config = {
 firebase.initializeApp(config);
 let participantId = window.location.search.substr(1).split("?")[0];
 let taskAssigned = window.location.search.substr(1).split("?")[1];
-
 require.config({ paths: { 'vs': 'monaco/node_modules/monaco-editor/min/vs' }});
 
 require(['vs/editor/editor.main'], function() {
@@ -46,11 +45,19 @@ require(['vs/editor/editor.main'], function() {
         value: "",
         language: 'robotoLanguage'
     });
+    window.editor.model.onDidChangeContent((event) => {
+        document.getElementById("submitBtn").disabled = false;
+    });
 });
 
 var add;
 var remove;
 $(document).ready(function () {
+    document.getElementById("submitBtn").disabled = true;
+
+
+
+
     var timeoutId,
         saveData = {};
     // Function to save all fields that were changed.
@@ -139,13 +146,7 @@ async function addNewStrategy() {
 
     let reactExperiencePeriod = document.getElementById("reactExpYear").value+" years and " + document.getElementById("reactExpMonth").value + " months";;
     let reactDevelopmentExperience = document.getElementById("reactDevExp").value;
-
-    // let javascriptExperiencePeriod = document.getElementById("jsExpYear").value+" years and " + document.getElementById("jsExpMonth").value + " months";;
-    // let javascriptDevelopmentExperience = document.getElementById("jsDevExp").value;
-
-
-    //todo add task
-     var task = taskAssigned;
+    var task = taskAssigned;
 
     let strategyDefinition = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
     let difficultiesElements=  document.getElementsByClassName("difficultyId");
@@ -158,11 +159,13 @@ async function addNewStrategy() {
 
     if(  workExperiencePeriod ==="" || softwareDevelopmentExperience ===""|| webExperiencePeriod ==="" || webDevelopmentExperience===""  ||reactExperiencePeriod ==="" || reactDevelopmentExperience===""||strategyDefinition==="" || difficulties === "")
     {
-        // document.getElementById("submitBtn").disabled = true;
         alert("Please fill out all the required fields");
         return;
     }
-
+    if (strategyDefinition.length<20) {
+        alert("Please write down a detailed strategy");
+        return;
+    }
 
     let database = firebase.firestore();
 
