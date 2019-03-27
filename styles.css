@@ -120,6 +120,11 @@ legend {
     -o-user-select: none;
     user-select: none;
 }
+.btn-counter{
+    margin: 5px;
+    float: right;
+    font-weight: bold;
+}
 .comment{
     color:  #1b809e;
     font-weight:bold;
@@ -130,20 +135,27 @@ legend {
 }
 .statement{
     font-weight:bold;
+    clear: both;
 }
 .identifier{
     color: darkorange;
     float: left;
     font-weight: bold;
-    margin-left:10px;
-    margin-right:10px;"
+    padding-left:10px;
+    padding-right:10px;
+}
+.call{
+    padding-right:10px;
+}
+.assignment{
+    font-weight: bold;
 }
 .subStrategy{
     color: darkred;
     float: left;
     font-weight: bold;
-    margin-left:10px;
-    margin-right:10px;"
+    paddin-left:10px;
+    padding-right:10px;"
 }
 .margin-oneTab{
     margin-left:5%!important;

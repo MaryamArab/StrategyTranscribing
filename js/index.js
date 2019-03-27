@@ -1,3 +1,6 @@
+var strategyAttributes = ["strategyDescriptionDiv","preconditionsDescriptionDiv", "statementsDescriptionDiv",
+    "actionsDescriptionDiv", "definitionDescriptionDiv", "conditionalsDescriptionDiv", "loopsDescriptionDiv", "returnDiv", "callDiv"];
+
 var config = {
     apiKey: "AIzaSyAkfQNjBaedX7EG08Wov0YEQNY82CRSEbs",
     authDomain: "expertstrategies-4f821.firebaseapp.com",
@@ -52,12 +55,11 @@ require(['vs/editor/editor.main'], function() {
 
 var add;
 var remove;
+var nextFeature;
+var previousFeature;
 $(document).ready(function () {
     document.getElementById("submitBtn").disabled = true;
-
-
-
-
+    document.getElementById("prevBtn").disabled = true;
     var timeoutId,
         saveData = {};
     // Function to save all fields that were changed.
@@ -117,6 +119,8 @@ $(document).ready(function () {
         alert("Great Job. Do you have any other difficulties? If you have, please add another one.");
         clearContents(document.getElementById("difficultyTxt"));
     }
+    // "strategyDescriptionDiv","preconditionsDescriptionDiv", "statementsDescriptionDiv",
+    //     "actionsDescriptionDiv", "conditionalsDescriptionDiv", "loopsDescriptionDiv", "definitionDescriptionDiv", "returnDiv", "callDiv"];
     remove= function() {
         var checkboxes = $("div input:checkbox").parent();
         for (var i = 0; i < checkboxes.length; i++) {
@@ -125,6 +129,135 @@ $(document).ready(function () {
                 console.log(checkboxes[i].childNodes[0].parentNode);
                 difficultiesContainer.removeChild(node);
             }
+        }
+    }
+    var pc=0;
+
+    function highlight(pc) {
+        reset();
+        if(pc==0)
+            document.getElementById("panel").style.backgroundColor='white';
+        else if(pc==1)
+            document.getElementById("precondition").style.backgroundColor='rgba(43,214,131, 0.2)';
+
+        else if(pc==2){
+            document.getElementById("statement1").style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementById("statement2").style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementById("statement3").style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementById("statement4").style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementById("statement5").style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementById("statement6").style.backgroundColor='rgba(43,214,131, 0.2)';
+            // document.getElementById("statement7").style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("definition")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("identifier1")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("assignment")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementById("statement8").style.backgroundColor='rgba(43,214,131, 0.2)';
+            // document.getElementById("statement9").style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("call")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("subStrategy1")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementById("statement10").style.backgroundColor='rgba(43,214,131, 0.2)';
+
+        }
+        else if(pc==3){///action
+            document.getElementsByClassName("action")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("action")[1].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("action")[2].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("action")[3].style.backgroundColor='rgba(43,214,131, 0.2)';
+        }
+        else if(pc==4){/// definition
+            document.getElementsByClassName("definition")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("identifier1")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("assignment")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+        }
+        else if(pc==5){//conditional
+            document.getElementsByClassName("conditional")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("conditional")[1].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("conditional")[2].style.backgroundColor='rgba(43,214,131, 0.2)';
+        }
+
+        else if(pc==6){//loop
+            document.getElementsByClassName("loop")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+        }
+
+        else if(pc==7){
+            document.getElementsByClassName("return")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+
+        }
+        else if(pc==8){
+            document.getElementsByClassName("call")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+            document.getElementsByClassName("subStrategy1")[0].style.backgroundColor='rgba(43,214,131, 0.2)';
+
+        }
+
+
+
+    }
+    function reset(){
+        document.getElementById("precondition").style.backgroundColor='white';
+        document.getElementById("statement1").style.backgroundColor='white';
+        document.getElementById("statement2").style.backgroundColor='white';
+        document.getElementById("statement3").style.backgroundColor='white';
+        document.getElementById("statement4").style.backgroundColor='white';
+        document.getElementById("statement5").style.backgroundColor='white';
+        document.getElementById("statement6").style.backgroundColor='white';
+        document.getElementById("statement7").style.backgroundColor='white';
+        document.getElementById("statement8").style.backgroundColor='white';
+        document.getElementById("statement9").style.backgroundColor='white';
+        document.getElementById("statement10").style.backgroundColor='white';
+        document.getElementsByClassName("conditional")[0].style.backgroundColor='white';
+        document.getElementsByClassName("conditional")[1].style.backgroundColor='white';
+        document.getElementsByClassName("conditional")[2].style.backgroundColor='white';
+        document.getElementsByClassName("action")[0].style.backgroundColor='whitewhite';
+        document.getElementsByClassName("action")[1].style.backgroundColor='white';
+        document.getElementsByClassName("action")[2].style.backgroundColor='white';
+        document.getElementsByClassName("action")[3].style.backgroundColor='white';
+        document.getElementsByClassName("loop")[0].style.backgroundColor='white';
+        document.getElementsByClassName("definition")[0].style.backgroundColor='white';
+        document.getElementsByClassName("identifier1")[0].style.backgroundColor='white';
+        document.getElementsByClassName("assignment")[0].style.backgroundColor='white';
+        document.getElementsByClassName("return")[0].style.backgroundColor='white';
+        document.getElementsByClassName("call")[0].style.backgroundColor='white';
+        document.getElementsByClassName("subStrategy1")[0].style.backgroundColor='white';
+
+    }
+
+    nextFeature= function(){
+        if(pc<strategyAttributes.length-1){
+            document.getElementById("prevBtn").disabled = false;
+            document.getElementById("nextBtn").disabled = false;
+            var current = document.getElementById(strategyAttributes[pc]);
+            pc++;
+            if(pc==strategyAttributes.length-1){
+                document.getElementById("nextBtn").disabled = true;
+            }
+            var next = document.getElementById(strategyAttributes[pc]);
+            console.log(pc);
+            if (current.style.display === "block") {
+                current.style.display = "none";
+                next.style.display = "block";
+            }
+            highlight(pc);
+        }
+    }
+    previousFeature= function(){
+        if(pc>0){
+            document.getElementById("prevBtn").disabled = false;
+            document.getElementById("nextBtn").disabled = false;
+
+            var current = document.getElementById(strategyAttributes[pc]);
+            pc--;
+            if(pc==0){
+                document.getElementById("prevBtn").disabled = true;
+                document.getElementById("nextBtn").disabled = false;
+            }
+
+            var prev = document.getElementById(strategyAttributes[pc]);
+            console.log(pc);
+            if (current.style.display === "block") {
+                current.style.display = "none";
+                prev.style.display = "block";
+            }
+            highlight(pc);
         }
     }
 });
@@ -164,6 +297,10 @@ async function addNewStrategy() {
     }
     if (strategyDefinition.length<20) {
         alert("Please write down a detailed strategy");
+        return;
+    }
+    if(document.getElementById("difficultiesContainer").childNodes.length<3){
+        alert("Please write at least 3 difficulties you face during articulation.")
         return;
     }
 

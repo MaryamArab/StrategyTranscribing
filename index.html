@@ -102,232 +102,233 @@
                         <p>To understand how to use each of these to write down a strategy in Roboto, we’ll first take a look at a complete example of a strategy and then take a look at each one by one. </p>
                     </div>
                 </div>
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Strategy with Roboto</h3>
-                        <p>The text below is an example Roboto strategy. It describes how to merge two branches of code, including fixing any conflicts which may arise.</p>
-                        <BR>
-                        <div class="RobotoPanel">
-                            <div class="comment"># This Strategy helps you merge 2 branches in githup and resolve conflicts</div>
-                            <div class="comment">#Required Tools and Environments</div>
-                            <div class="commentDetails">Installing git</div>
-                            <div class="commentDetails">Github account</div>
-                            <div class="commentDetails">Ongoing project which is progressing in at least 2 branches</div>
-                            <div class="commentDetails">Git repository that is not associated with Github</div>
-                            <div class="comment">#Required Knowledge</div>
-                            <div class="commentDetails">Basic git command knowledge</div>
-                            <div class="commentDetails">Knowledge of how to work with terminal and run commands</div>
-
-                            <div class="statement">STRATEGY GitMerge()</div>
-                            <div class="statement margin-oneTab comment"># Open the teminal, and use cd(change directory) command to move to the local git project directory </div>
-                            <div class="statement margin-oneTab">Open the terminal and navigate to your git project directory</div>
-                            <div class="statement margin-oneTab">IF you are not in the master branch</div>
-                            <div class="statement margin-twoTab comment"># Run the command git checkout master</div>
-                            <div class="statement margin-twoTab">checkout to the master branch</div>
-                            <div class="statement margin-oneTab">IF you are in the master branch</div>
-                            <div class="statement margin-twoTab comment"># To merge the second branch with the master branch run the command "git merge secondBranch", which secondBranch is the name of your git second branch</div>
-                            <div class="statement margin-twoTab">Merge the two branches</div>
-                            <div class="statement margin-twoTab">IF the merge has a conflict</div>
-
-                            <div class="statement margin-threeTab" style="float: left;">SET</div> <div class="identifier">'conflictedFiles' </div> <div class="statement">TO the project files that have a conflict</div>
-                            <div class="statement margin-threeTab">FOR EACH 'file' IN 'conflictedFiles'</div>
-                            <div class="statement margin-fourTab" style="float: left;">DO</div><div class="subStrategy">fixConflict('file')</div>
-
-                            <div class="statement margin-twoTab comment"># Run GIT STATUS to see the latest changes</div>
-                            <div class="statement margin-twoTab comment"># Run GIT ADD </div>
-                            <div class="statement margin-twoTab comment"># Run GIT COMMIT -m ""</div>
-                            <div class="statement margin-twoTab comment"># Run GIT PUSH</div>
-                            <div class="statement margin-twoTab">Commit and push the changes</div>
-                            <div class="statement margin-oneTab">RETURN nothing</div>
-
-
-                        </div>
-                        <p>Let’s take a look at this strategy piece by piece.</p>
-                    </div>
-                </div>
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Precondition</h3>
-                        <p>Preconditions express requirements about what the developer using the strategy should first know or have access to.</p>
-                        <p><b class="sideBar">Required tools and Environment:</b> Consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?
-                        <p><b class="sideBar"> Required knowledge:</b> What level of expertise should the strategy user have? What tools, languages, or concepts should they be familiar with before using your strategy?</p>
-                        <p><b class="sideBar">Context:</b> Write your strategy for a specific context, such as a defect you debugged yesterday. Describe your application domain: embedded development in C, front end development in React, desktop Java application, etc.</p>
-                        <p><b class="sideBar">Available resources:</b> For your case, consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?</p>
-                        <p><b class="sideBar">Specific Programming Knowledge:</b>  What programming languages are required to be familiar with</p>
-                        <p><b class="sideBar">Expertise level:</b>  What level of expertise the user of strategy should have</p>
-                        <div class="RobotoPanel">
-                            <div class="comment"># This Strategy helps you merge 2 branches in githup and resolve conflicts</div>
-                            <div class="comment">#Required Tools and Environments</div>
-                            <div class="commentDetails">Installing git</div>
-                            <div class="commentDetails">Github account</div>
-                            <div class="commentDetails">Ongoing project which is progressing in at least 2 branches</div>
-                            <div class="commentDetails">Git repository that is not associated with Github</div>
-                            <div class="comment">#Required Knowledge</div>
-                            <div class="commentDetails">Basic git command knowledge</div>
-                            <div class="commentDetails">Knowledge of how to work with terminal and run commands</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Statement</h3>
-                        <p class="sideBar">Each statement strategy describe what the user should do next.</p>
-                        <p class="sideBar">Additional details about each statement can be added through a comment, indicated through a # tag.</p>
-                        <p class="sideBar">Statements can be one of four types:
-                            <b>Action</b>,
-                            <b>Conditional</b>,
-                            <b>Loop</b>,
-                            <b>Call</b>, which we describe in detail next.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Actions</h3>
-                        <p>Actions describe something that the user should do in the world.</p>
-                        <div class="RobotoPanel">
-                            <div class="statement margin-oneTab comment"># Open the teminal, and use cd(change directory) command to move to the local git project directory </div>
-                            <div class="statement margin-oneTab">Open the terminal and navigate to your git project directory</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Conditionals</h3>
-                        <p> A conditional asks the strategy user to check if a condition is true in the world and then branch to different statements depending on the outcome.</p>
-                        <div class="RobotoPanel">
-                            <div class="statement margin-oneTab">IF you are in the master branch</div>
-                            <div class="statement margin-twoTab comment"># To merge the second branch with the master branch run the command "git merge secondBranch", which secondBranch is the name of your git second branch</div>
-                            <div class="statement margin-twoTab">Merge the two branches</div>
-                            <div class="statement margin-twoTab">IF the merge has a conflict</div>
-                            <div class="statement margin-threeTab" style="float: left;">SET</div> <div class="identifier">'conflictedFiles' </div> <div class="statement">TO the project files that have a conflict</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Loops</h3>
-                        <p>Loops indicate a sequence of statements that the strategy user should potentially take more than once. </p>
-                        <p>In Roboto, loops take the form of a FOR EACH loop, iterating over a set of items (e.g., files, breakpoints, messages output by a tool) to take a set of actions for each.</p>
-                        <div class="RobotoPanel">
-                            <div class="statement margin-threeTab">FOR EACH 'file' IN 'conflictedFiles'</div>
-                            <div class="statement margin-fourTab" style="float: left;">DO</div><div class="subStrategy">fixConflict('file')</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Variable</h3>
-                        <p>Variables make it easier for the strategy user to keep track of things, such as remembering lines of code or functions to return to. </p>
-                        <p>Variables may be either a primitive or a list. For instance, ‘conflicted files’ in the following example indicates a list of files which have a conflict, which subsequent statements
-                            may then explicitly refer to. The helps reduce what the strategy user has to remember, making it easier for them to correctly follow the strategy.<BR></p>
-                        <p>For instance, <b>'conflictedFiles'</b> in the following is a variable records a set of files that have a conflict, which subsequent statements may then refer to explicitly. This helps reduce memorization burden.</p>
-                        <div class="RobotoPanel">
-                            <div class="statement margin-threeTab" style="float: left;">SET</div> <div class="identifier">'conflictedFiles' </div> <div class="statement">TO the project files that have a conflict</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Sub-Strategy</h3>
-                        <p>To organize long and complex strategies, strategies can be separated into sub-strategies. A sub-strategy is a strategy called by another strategy.
-                            For example, strategy fixConflict is a sample of a sub-strategy which is being used and called in mergeGithubBranches strategy above. </p>
-                        <div class="RobotoPanel">
-                            <div class="RobotoPanel">
-                                <div class="statement">STRATEGY fixConflict(conflictedFile)</div>
-                                <div class="statement margin-oneTab">Open the conflictedFile with your favorite text editor</div>
-                                <div class="statement margin-oneTab comment"># To find a line with conflict in your file, search the file for the conflict marker <<<<<<< HEAD </div>
-                                <div class="statement margin-oneTab" style="float: left;">SET</div> <div class="identifier">'line' </div> <div class="statement">TO a line number that has conflict</div>
-                                <div class="statement margin-oneTab comment"># until there is no line with <<<<<<< HEAD tag in the file</div>
-                                <div class="statement margin-oneTab">UNTIL the file has no lines of conflict</div>
-                                <div class="statement margin-twoTab comment"># You'll see the changes from the master branch after the line <<<<<<< HEAD</div>
-                                <div class="statement margin-twoTab comment"># Next youll see ======= which divides 2 merged lines followed by >>>>>>> SECOND branch name</div>
-                                <div class="statement margin-twoTab comment"># Decide if you want to keep only your branch's changes, keep only the other branch's changes, or make a brand new change, and edit the file by removing unwanted lines and save the file</div>
-                                <div class="statement margin-twoTab comment"># Also remove >>>>>>Head & ====== from the lines and make sure that the file has proper code syntax.</div>
-                                <div class="statement margin-twoTab ">Edit the file following the description </div>
-                                <div class="statement margin-threeTab" style="float: left;">SET</div> <div class="identifier">'line' </div> <div class="statement"> TO the next line number that has conflict</div>
-                                <div class="statement margin-oneTab">Return nothing </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>How to write a strategy.</h3>
-                        <p><b class="sideBar">Define your strategy step by step.</b> Describe your strategy in the form of a sequence of statement describing steps a developer should follow. </p>
-                        <p><b class="sideBar">Describe required tools, environments, and knowledge.</b> Make clear when your strategy can be used and who it is for by describing preconditions that should be true before a developer starts to use your strategy.</p>
-                        <p><b class="sideBar">Use comments to elaborate.</b> Each step in a strategy should be clear and concise, but you can use comments to help developers who may not fully know how to execute a step.Include your comments before each statement after # tag.</p>
-                        <p><b class="sideBar">Avoid wasted work.</b> Structure your strategy in a way that minimizes the amount of work the developer using your strategy will have to do </p>
-                        <p><b class="sideBar">Include explicit restarts.</b> Some strategies fail; include these failure points in your strategy, guiding developers either back to the start of a strategy, or to use a different strategy.</p>
-                        <p><b class="sideBar">Include rationale.</b> At the very beginning of your strategy definition, include a one or two line comment describing the overall purpose and approach. As you describe each statement, include comments which help the user to understand why each step is being taken and how it helps realize the overall goal.</p>
-                        <p><b class="sideBar">Encourage externalization.</b>  When a developer will first collect some information (e.g., lines of code which reference a variable) that they will later make use of, have them write it down in the strategy. Ask them to write it down in a variable. This ensure they don’t lose anything and that they methodically consider each possibility. It also makes it easy to reference later in other parts of the strategy</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" >
-            <div>
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>It’s now time to write up one of your own strategies.</h3>
-                        <p><b>Please help us understand your own background by answering a few quick questions.</b></p>
-                        <form>
-                            <p>How many years of industrial software development experience do you have (including internships and any software you implemented as part of a research project)?</p>
-                            <input style="width:10%; margin-bottom: 1%;" type="number" id="workExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="workExpMonth" class="field"> months.
-                            <p>How many software applications have you developed or participate in its development?(including internships and any software you implemented as part of a research project)?</p>
-                            <input style="width:30%; margin-bottom: 1%;" type="number" id="softDevExp" class="field">
-
-                            <p>How many years experience do you have in building web applications? </p>
-                            <input style="width:10%; margin-bottom: 1%;" type="number" id="webExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="webExpMonth" class="field"> months.
-                            <p>How many web-based applications have you implemented? </p>
-                            <input style="width:30%; margin-bottom: 1%;" type="number" id="webDevExp" class="field">
-
-                            <p>How many years of professional experience do you have in React?</p>
-                            <input style="width:10%; margin-bottom: 1%;" type="number" id="reactExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="reactExpMonth" class="field"> months.
-                            <p>How many React-based applications have you implemented?</p>
-                            <input style="width:30%; margin-bottom: 1%;" type="number" id="reactDevExp" class="field">
-
-                        </form>
-                    </div>
-                </div>
-
-                <div class="media row">
-                    <div class="media-body well well-sm research-section col-sm-12">
-                        <h3>Let's start writing one</h3>
-                        <P class="sideBar">You should have received a task in our last email. Please go read this task description again now. </P>
-                        <p class="sideBar">Think about the task described. Can you remember a similar challenge you experienced in your own work? What did you do? Think about the steps you took, the information you looked for, the tools you used to take these steps, and how this information ultimately helped you to make progress.</p>
-                        <p class="sideBar">Now imagine a developer who just stopped by your office who now has to do this very same task. What advice can you give them?</p>
-                        <p class="sideBar">Describe the best strategy you can offer the developer, including as much detail as you think necessary for a developer to understand how to work in the way you just did.</p>
-                        <p class="sideBar">As you’re writing down your strategy, remembering the following guidelines:</p>
-                        <ul>
-                            <li>Define your strategy step by step.</li>
-                            <li>Describe required tools, environments, and knowledge.</li>
-                            <li>Use comments to elaborate.</li>
-                            <li>Avoid wasted work. </li>
-                            <li>Include explicit restarts.</li>
-                            <li>Include rationale</li>
-                            <li>Encourage externalization</li>
-                        </ul>
-                        <p style="color: darkred;">What you have learned about Roboto is just for the sake of being precise in articulating strategy and helping to make strategies
-                            less ambiguous and clearer to users. Its should be easier to follow the Robot syntax for articulation, but if you feel it is adding some burden to your articulation, feel free to go outside of Roboto syntax.
-                            <b>To make it clear, we aren’t looking for difficulties with Roboto syntax.</b></p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </div>
 
+<!--Strategy Tutorial Container -->
 <div class=" media row" style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">
-
     <div class=" strategyContainer">
-        <div id="strategyDefinition" style="min-height: 600px;" class="media-body well well-sm research-section col-sm-6">
+        <div id="strategyDescription" style="min-height: 710px;" class="media-body well well-sm research-section col-sm-6">
+            <button onclick="nextFeature(); return false;" class="btn btn-primary btn-counter" id="nextBtn" style=" margin: 5px; float: right; font-weight: bold;">Next</button>
+            <button onclick="previousFeature(); return false;" class="btn btn-primary btn-counter" id="prevBtn" style="  float: right; font-weight: bold;">Previous</button>
+            <div id="strategyDescriptionDiv" style="display: block;">
+                <h3>A sample strategy with Roboto for merging two Github branches</h3>
+                <p>The text on the right is an example Roboto strategy. It describes how to merge two branches of code, including fixing any conflicts which may arise.</p>
+                <p>The first few colored lines describe what users need to know and what tools they need in order to use the strategy(Preconditions.)</p>
+                <p>The strategy is started by 'Strategy' keyword, followed by the name of the strategy. In the parenthesis followed by strategy name, you can define variables that you might need to use in the strategy steps.</p>
+                <p>Each line in the strategy body represents a statement. A strategy consists of a set of Statements which is represented as a sequence of steps which should be followed by a user.
+                    There are multiple different statement types which will be described in next sections.</p>
+                <p>Please overview the strategy steps and click the next button to learn these strategy steps piece by piece.</p>
+                <p></p>
+            </div>
+            <div id="preconditionsDescriptionDiv" style="display:none;">
+                <h3>Precondition</h3>
+                <p>Preconditions express requirements about what the developer using the strategy should first know or have access to.</p>
+                <p><b class="sideBar">Required tools and Environment:</b> Consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?
+                <p><b class="sideBar"> Required knowledge:</b> What level of expertise should the strategy user have? What tools, languages, or concepts should they be familiar with before using your strategy?</p>
+                <p><b class="sideBar">Context:</b> Write your strategy for a specific context, such as a defect you debugged yesterday. Describe your application domain: embedded development in C, front end development in React, desktop Java application, etc.</p>
+                <p><b class="sideBar">Available resources:</b> For your case, consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?</p>
+                <p><b class="sideBar">Specific Programming Knowledge:</b>  What programming languages are required to be familiar with</p>
+                <p><b class="sideBar">Expertise level:</b>  What level of expertise the user of strategy should have</p>
+            </div>
+            <div id="statementsDescriptionDiv" style="display:none;">
+                <h3>Statement</h3>
+                <p>Each statement in strategy describes what the user should do next.</p>
+                <p>It could be performing specified action, gathering information, or checking some parameters, fault, or situation in the program. </p>
+                <p>Statements in Robot can be one of six types:
+                    <b>Action</b>,
+                    <b>Definition</b>,
+                    <b>Conditional</b>,
+                    <b>Loop</b>,
+                    <b>Return</b>,
+                    <b>Call</b>
+                    , which we describe in detail next.
+                </p>
+                <p>Additional details about each statement can be added through a comment, indicated through a # tag. These comments should be added exactly before the statement description. In the image in the right, comments are shown in blue color.</p>
+                <p>Comments are not mandatory. If you think that you cannot describe all the details in a strategy statement, or you feel that not all users need detailed or basic information,
+                    you can add it as a comment of extra information before each statement.</p>
+                <p>Try not to repeat the same text as statement in the comments, as it will not add any further information.</p>
+
+            </div>
+            <div id="actionsDescriptionDiv" style="display:none;">
+                <h3>Actions</h3>
+                <p>Action statements describe something that the user should do in the world.</p>
+                <p>Look at the highlighted statements in the strategy. There is no predefined syntax for writing an Action statement.</p>
+                <p>They are mainly in the form of an imperative sentence, which ask user to perform some action in the world, code, tool, or environment.</p>
+            </div>
+            <div id="definitionDescriptionDiv" style="display:none;">
+                <h3>Definition</h3>
+                <p>Definition statement always start with 'SET' keyword, followed by a <b>variable</b> definition, followed by "TO" keyword and a sentence which describe what the defined variable should be assigned to.</p>
+                <p> You can see a sample of Definition statement highlighted in the GitMerge strategy</p>
+                <h4>Variable</h4>
+                <p>Variables make it easier for the strategy user to keep track of things, such as remembering lines of code or functions to return to. </p>
+                <p>Variables may be either a primitive or a list. For instance, ‘conflicted files’ in the following example indicates a list of files which have a conflict, which subsequent statements
+                    may then explicitly refer to. The helps reduce what the strategy user has to remember, making it easier for them to correctly follow the strategy.<BR></p>
+                <p>For instance, <b>'conflictedFiles'</b> in the highlightes statement is a variable records a set of files that have a conflict,
+                    which subsequent statements may then refer to explicitly. This helps reduce memorization burden.</p>
+
+            </div>
+            <div id="conditionalsDescriptionDiv" style="display:none;">
+                <h3>Conditionals</h3>
+                <p> A conditional asks the strategy user to check if a condition is true in the world and then branch to different statements depending on the outcome.</p>
+                <p>Conditional statements stat with "IF" keyword, followed by a query which ask user to check if a condition is true or false in the program or environment.</p>
+                <p> Each branch in a Conditional statement consist of a set of statements to follow.</p>
+
+            </div>
+
+            <div id="loopsDescriptionDiv" style="display:none;">
+                <h3>Loops</h3>
+                <p>Loops indicate a sequence of statements that the strategy user should potentially take more than once. </p>
+                <p>In Roboto, loops take the form of a FOR EACH loop, iterating over a set of items (e.g., files, breakpoints, messages output by a tool) to take a set of actions for each.</p>
+                <p> The items to loop through should be defined in the previous statements as an 'Identifier'.</p>
+                <p>In this strategy, the highlighted statement shows a Loop statement which iterates through the defined variable, 'conflictedFiles', in its preceding statement.</p>
+                <p>This strategy will execute the statements followed by the Foreach statement for all the 'files' being set in 'conflictedFiles'.  </p>
+            </div>
+
+            <div id="returnDiv" style="display:none;">
+                <h3>Return</h3>
+                <p> Returns indicate returning a variable, Call statement, or Action statement. </p>
+            </div>
+            <div id="callDiv" style="display:none;">
+                <h3>Call</h3>
+                <p> Call statements start with 'Do' keyword following by Sub-Strategy. </p>
+                <p>They used for making nested strategies to prevent them from being disorganized, complex, and long.</p>
+                <h4>Sub-Strategy</h4>
+                <p>To organize long and complex strategies, strategies can be separated into sub-strategies. A sub-strategy is a strategy called by another strategy.
+                    For example, strategy fixConflict is a sample of a sub-strategy which is being used and called in mergeGithubBranches strategy above. </p>
+                <div class="RobotoPanel">
+                    <div class="RobotoPanel">
+                        <div class="statement">STRATEGY fixConflict(conflictedFile)</div>
+                        <div class="statement margin-oneTab">Open the conflictedFile with your favorite text editor</div>
+                        <div class="statement margin-oneTab comment"># To find a line with conflict in your file, search the file for the conflict marker <<<<<<< HEAD </div>
+                        <div class="statement margin-oneTab" style="float: left;">SET</div> <div class="identifier">'line' </div> <div class="statement">TO a line number that has conflict</div>
+                        <div class="statement margin-oneTab comment"># until there is no line with <<<<<<< HEAD tag in the file</div>
+                        <div class="statement margin-oneTab">UNTIL the file has no lines of conflict</div>
+                        <div class="statement margin-twoTab comment"># You'll see the changes from the master branch after the line <<<<<<< HEAD</div>
+                        <div class="statement margin-twoTab comment"># Next youll see ======= which divides 2 merged lines followed by >>>>>>> SECOND branch name</div>
+                        <div class="statement margin-twoTab comment"># Decide if you want to keep only your branch's changes, keep only the other branch's changes, or make a brand new change, and edit the file by removing unwanted lines and save the file</div>
+                        <div class="statement margin-twoTab comment"># Also remove >>>>>>Head & ====== from the lines and make sure that the file has proper code syntax.</div>
+                        <div class="statement margin-twoTab ">Edit the file following the description </div>
+                        <div class="statement margin-threeTab" style="float: left;">SET</div> <div class="identifier">'line' </div> <div class="statement"> TO the next line number that has conflict</div>
+                        <div class="statement margin-oneTab">Return nothing </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="media-body well well-sm research-section col-sm-6">
+            <h3> Strategy with Roboto</h3>
+            <div class="RobotoPanel" id="panel" style="clear: both;">
+                <div id="precondition">
+                    <div class="comment precondition"># This Strategy helps you merge 2 branches in githup and resolve conflicts</div>
+                    <div class="comment precondition">#Required Tools and Environments</div>
+                    <div class="commentDetails precondition">Installing git</div>
+                    <div class="commentDetails precondition">Github account</div>
+                    <div class="commentDetails precondition">Ongoing project which is progressing in at least 2 branches</div>
+                    <div class="commentDetails precondition">Git repository that is not associated with Github</div>
+                    <div class="comment precondition">#Required Knowledge</div>
+                    <div class="commentDetails precondition">Basic git command knowledge</div>
+                    <div class="commentDetails precondition">Knowledge of how to work with terminal and run commands</div>
+                </div>
+                <div class="statement">STRATEGY GitMerge()</div>
+                <div class="statement margin-oneTab comment"># Open the teminal, and use cd(change directory) command to move to the local git project directory </div>
+                <div class="statement margin-oneTab action" id="statement1">Open the terminal and navigate to your git project directory</div>
+                <div class="statement margin-oneTab conditional" id="statement2">IF you are not in the master branch</div>
+                <div class="statement margin-twoTab comment"># Run the command git checkout master</div>
+                <div class="statement margin-twoTab action" id="statement3">checkout to the master branch</div>
+                <div class="statement margin-oneTab conditional" id="statement4">IF you are in the master branch</div>
+                <div class="statement margin-twoTab comment"># To merge the second branch with the master branch run the command "git merge secondBranch", which secondBranch is the name of your git second branch</div>
+
+                <div class="statement margin-twoTab action" id="statement5">Merge the two branches</div>
+                <div class="statement margin-twoTab conditional" id="statement6">IF the merge has a conflict</div>
+                <div class="statement margin-threeTab definition"  id="statement7" style="float: left;">SET</div>
+                <div class="identifier1 identifier">'conflictedFiles' </div>
+                <div class="assignment" style="float: left;">TO the project files that have a conflict</div>
+                <div class="statement margin-threeTab loop" id="statement8">FOR EACH 'file' IN 'conflictedFiles'</div>
+                <div id="statement9" class="statement margin-fourTab call" style="float: left;">DO</div>
+                <div class="subStrategy subStrategy1">fixConflict('file')</div>
+                <div class="statement margin-twoTab comment" style="clear:both"># Run GIT STATUS to see the latest changes</div>
+                <div class="statement margin-twoTab comment"># Run GIT ADD </div>
+                <div class="statement margin-twoTab comment"># Run GIT COMMIT -m ""</div>
+                <div class="statement margin-twoTab comment"># Run GIT PUSH</div>
+                <div class="statement margin-twoTab action">Commit and push the changes</div>
+                <div class="statement margin-oneTab return" id="statement10">RETURN nothing</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END -- Strategy Tutorial Container -->
+<BR>
+<div class="container padd6" style="width: 960px!important;">
+    <div class="row" >
+
+        <div class="media row">
+            <div class="media-body well well-sm research-section col-sm-12">
+                <h3>How to write a strategy.</h3>
+                <p><b class="sideBar">Define your strategy step by step.</b> Describe your strategy in the form of a sequence of statement describing steps a developer should follow. </p>
+                <p><b class="sideBar">Describe required tools, environments, and knowledge.</b> Make clear when your strategy can be used and who it is for by describing preconditions that should be true before a developer starts to use your strategy.</p>
+                <p><b class="sideBar">Use comments to elaborate.</b> Each step in a strategy should be clear and concise, but you can use comments to help developers who may not fully know how to execute a step.Include your comments before each statement after # tag.</p>
+                <p><b class="sideBar">Avoid wasted work.</b> Structure your strategy in a way that minimizes the amount of work the developer using your strategy will have to do </p>
+                <p><b class="sideBar">Include explicit restarts.</b> Some strategies fail; include these failure points in your strategy, guiding developers either back to the start of a strategy, or to use a different strategy.</p>
+                <p><b class="sideBar">Include rationale.</b> At the very beginning of your strategy definition, include a one or two line comment describing the overall purpose and approach. As you describe each statement, include comments which help the user to understand why each step is being taken and how it helps realize the overall goal.</p>
+                <p><b class="sideBar">Encourage externalization.</b>  When a developer will first collect some information (e.g., lines of code which reference a variable) that they will later make use of, have them write it down in the strategy. Ask them to write it down in a variable. This ensure they don’t lose anything and that they methodically consider each possibility. It also makes it easy to reference later in other parts of the strategy</p>
+            </div>
+        </div>
+        <div class="media row">
+            <div class="media-body well well-sm research-section col-sm-12">
+                <h3>It’s now time to write up one of your own strategies.</h3>
+                <p><b>Please help us understand your own background by answering a few quick questions.</b></p>
+                <form>
+                    <p>How many years of industrial software development experience do you have (including internships and any software you implemented as part of a research project)?</p>
+                    <input style="width:10%; margin-bottom: 1%;" type="number" id="workExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="workExpMonth" class="field"> months.
+                    <p>How many software applications have you developed or participate in its development?(including internships and any software you implemented as part of a research project)?</p>
+                    <input style="width:30%; margin-bottom: 1%;" type="number" id="softDevExp" class="field">
+
+                    <p>How many years experience do you have in building web applications? </p>
+                    <input style="width:10%; margin-bottom: 1%;" type="number" id="webExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="webExpMonth" class="field"> months.
+                    <p>How many web-based applications have you implemented? </p>
+                    <input style="width:30%; margin-bottom: 1%;" type="number" id="webDevExp" class="field">
+
+                    <p>How many years of professional experience do you have in React?</p>
+                    <input style="width:10%; margin-bottom: 1%;" type="number" id="reactExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="reactExpMonth" class="field"> months.
+                    <p>How many React-based applications have you implemented?</p>
+                    <input style="width:30%; margin-bottom: 1%;" type="number" id="reactDevExp" class="field">
+
+                </form>
+            </div>
+        </div>
+
+        <div class="media row">
+            <div class="media-body well well-sm research-section col-sm-12">
+                <h3>Let's start writing one</h3>
+                <P class="sideBar">You should have received a task in our last email. Please go read this task description again now. </P>
+                <p class="sideBar">Think about the task described. Can you remember a similar challenge you experienced in your own work? What did you do? Think about the steps you took, the information you looked for, the tools you used to take these steps, and how this information ultimately helped you to make progress.</p>
+                <p class="sideBar">Now imagine a developer who just stopped by your office who now has to do this very same task. What advice can you give them?</p>
+                <p class="sideBar">Describe the best strategy you can offer the developer, including as much detail as you think necessary for a developer to understand how to work in the way you just did.</p>
+                <p class="sideBar">As you’re writing down your strategy, remembering the following guidelines:</p>
+                <ul>
+                    <li>Define your strategy step by step.</li>
+                    <li>Describe required tools, environments, and knowledge.</li>
+                    <li>Use comments to elaborate.</li>
+                    <li>Avoid wasted work. </li>
+                    <li>Include explicit restarts.</li>
+                    <li>Include rationale</li>
+                    <li>Encourage externalization</li>
+                </ul>
+                <p style="color: darkred;">What you have learned about Roboto is just for the sake of being precise in articulating strategy and helping to make strategies
+                    less ambiguous and clearer to users. Its should be easier to follow the Robot syntax for articulation, but if you feel it is adding some burden to your articulation, feel free to go outside of Roboto syntax.
+                    <b>To make it clear, we aren’t looking for difficulties with Roboto syntax.</b></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class=" media row" style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">
+    <div class=" strategyContainer">
+        <div id="strategyDefinition" style="min-height: 630px;" class="media-body well well-sm research-section col-sm-6">
             <h3>Your Task Strategy</h3>
         </div>
         <div class="media-body well well-sm research-section col-sm-6">
@@ -342,30 +343,25 @@
                 <div class="comment">#Required Knowledge</div>
                 <div class="commentDetails">Basic git command knowledge</div>
                 <div class="commentDetails">Knowledge of how to work with terminal and run commands</div>
-
                 <div class="statement">STRATEGY GitMerge()</div>
                 <div class="statement margin-oneTab comment"># Open the teminal, and use cd(change directory) command to move to the local git project directory </div>
                 <div class="statement margin-oneTab">Open the terminal and navigate to your git project directory</div>
                 <div class="statement margin-oneTab">IF you are not in the master branch</div>
                 <div class="statement margin-twoTab comment"># Run the command git checkout master</div>
-                <div class="statement margin-twoTab">checkout to the master branch</div>
+                <div class="statement margin-twoTab">Checkout to the master branch</div>
                 <div class="statement margin-oneTab">IF you are in the master branch</div>
                 <div class="statement margin-twoTab comment"># To merge the second branch with the master branch run the command "git merge secondBranch", which secondBranch is the name of your git second branch</div>
                 <div class="statement margin-twoTab">Merge the two branches</div>
                 <div class="statement margin-twoTab">IF the merge has a conflict</div>
-
                 <div class="statement margin-threeTab" style="float: left;">SET</div> <div class="identifier">'conflictedFiles' </div> <div>TO the project files that have a conflict</div>
                 <div class="statement margin-threeTab">FOR EACH 'file' IN 'conflictedFiles'</div>
                 <div class="statement margin-fourTab" style="float: left;">DO</div><div class="subStrategy">fixConflict('file')</div>
-
                 <div class="statement margin-twoTab comment"># Run GIT STATUS to see the latest changes</div>
                 <div class="statement margin-twoTab comment"># Run GIT ADD </div>
                 <div class="statement margin-twoTab comment"># Run GIT COMMIT -m ""</div>
                 <div class="statement margin-twoTab comment"># Run GIT PUSH</div>
                 <div class="statement margin-twoTab comment">Commit and push the changes</div>
                 <div class="statement margin-oneTab">RETURN nothing</div>
-
-
             </div>
         </div>
     </div>
