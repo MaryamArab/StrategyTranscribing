@@ -22,7 +22,7 @@
     <BR>
     <div class="row test">
         <div style="float: left; padding-left: -15px!important;" class=" row col-sm-12">
-            <h1 class="titleColor">Programming Strategies</h1>
+            <h1 class="titleColor">Expert Programming Strategies</h1>
 
         </div>
     </div>
@@ -126,12 +126,12 @@
             <div id="preconditionsDescriptionDiv" style="display:none;">
                 <h3>Precondition</h3>
                 <p>Preconditions express requirements about what the developer using the strategy should first know or have access to.</p>
-                <p><b class="sideBar">Required tools and Environment:</b> Consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?
-                <p><b class="sideBar"> Required knowledge:</b> What level of expertise should the strategy user have? What tools, languages, or concepts should they be familiar with before using your strategy?</p>
-                <p><b class="sideBar">Context:</b> Write your strategy for a specific context, such as a defect you debugged yesterday. Describe your application domain: embedded development in C, front end development in React, desktop Java application, etc.</p>
-                <p><b class="sideBar">Available resources:</b> For your case, consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?</p>
-                <p><b class="sideBar">Specific Programming Knowledge:</b>  What programming languages are required to be familiar with</p>
-                <p><b class="sideBar">Expertise level:</b>  What level of expertise the user of strategy should have</p>
+                <p><b>Required tools and Environment:</b> Consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?
+                <p><b> Required knowledge:</b> What level of expertise should the strategy user have? What tools, languages, or concepts should they be familiar with before using your strategy?</p>
+                <p><b>Context:</b> Write your strategy for a specific context, such as a defect you debugged yesterday. Describe your application domain: embedded development in C, front end development in React, desktop Java application, etc.</p>
+                <p><b>Available resources:</b> For your case, consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?</p>
+                <p><b>Specific Programming Knowledge:</b>  What programming languages are required to be familiar with</p>
+                <p><b>Expertise level:</b>  What level of expertise the user of strategy should have</p>
             </div>
             <div id="statementsDescriptionDiv" style="display:none;">
                 <h3>Statement</h3>
@@ -267,47 +267,25 @@
         <div class="media row">
             <div class="media-body well well-sm research-section col-sm-12">
                 <h3>How to write a strategy.</h3>
-                <p><b class="sideBar">Define your strategy step by step.</b> Describe your strategy in the form of a sequence of statement describing steps a developer should follow. </p>
-                <p><b class="sideBar">Describe required tools, environments, and knowledge.</b> Make clear when your strategy can be used and who it is for by describing preconditions that should be true before a developer starts to use your strategy.</p>
-                <p><b class="sideBar">Use comments to elaborate.</b> Each step in a strategy should be clear and concise, but you can use comments to help developers who may not fully know how to execute a step.Include your comments before each statement after # tag.</p>
-                <p><b class="sideBar">Avoid wasted work.</b> Structure your strategy in a way that minimizes the amount of work the developer using your strategy will have to do </p>
-                <p><b class="sideBar">Include explicit restarts.</b> Some strategies fail; include these failure points in your strategy, guiding developers either back to the start of a strategy, or to use a different strategy.</p>
-                <p><b class="sideBar">Include rationale.</b> At the very beginning of your strategy definition, include a one or two line comment describing the overall purpose and approach. As you describe each statement, include comments which help the user to understand why each step is being taken and how it helps realize the overall goal.</p>
-                <p><b class="sideBar">Encourage externalization.</b>  When a developer will first collect some information (e.g., lines of code which reference a variable) that they will later make use of, have them write it down in the strategy. Ask them to write it down in a variable. This ensure they don’t lose anything and that they methodically consider each possibility. It also makes it easy to reference later in other parts of the strategy</p>
-            </div>
-        </div>
-        <div class="media row">
-            <div class="media-body well well-sm research-section col-sm-12">
-                <h3>It’s now time to write up one of your own strategies.</h3>
-                <p><b>Please help us understand your own background by answering a few quick questions.</b></p>
-                <form>
-                    <p>How many years of industrial software development experience do you have (including internships and any software you implemented as part of a research project)?</p>
-                    <input style="width:10%; margin-bottom: 1%;" type="number" id="workExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="workExpMonth" class="field"> months.
-                    <p>How many software applications have you developed or participate in its development?(including internships and any software you implemented as part of a research project)?</p>
-                    <input style="width:30%; margin-bottom: 1%;" type="number" id="softDevExp" class="field">
-
-                    <p>How many years experience do you have in building web applications? </p>
-                    <input style="width:10%; margin-bottom: 1%;" type="number" id="webExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="webExpMonth" class="field"> months.
-                    <p>How many web-based applications have you implemented? </p>
-                    <input style="width:30%; margin-bottom: 1%;" type="number" id="webDevExp" class="field">
-
-                    <p>How many years of professional experience do you have in React?</p>
-                    <input style="width:10%; margin-bottom: 1%;" type="number" id="reactExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="reactExpMonth" class="field"> months.
-                    <p>How many React-based applications have you implemented?</p>
-                    <input style="width:30%; margin-bottom: 1%;" type="number" id="reactDevExp" class="field">
-
-                </form>
+                <p><b>Define your strategy step by step.</b> Describe your strategy in the form of a sequence of statement describing steps a developer should follow. </p>
+                <p><b>Describe required tools, environments, and knowledge.</b> Make clear when your strategy can be used and who it is for by describing preconditions that should be true before a developer starts to use your strategy.</p>
+                <p><b>Use comments to elaborate.</b> Each step in a strategy should be clear and concise, but you can use comments to help developers who may not fully know how to execute a step.Include your comments before each statement after # tag.</p>
+                <p><b>Avoid wasted work.</b> Structure your strategy in a way that minimizes the amount of work the developer using your strategy will have to do </p>
+                <p><b>Include explicit restarts.</b> Some strategies fail; include these failure points in your strategy, guiding developers either back to the start of a strategy, or to use a different strategy.</p>
+                <p><b>Include rationale.</b> At the very beginning of your strategy definition, include a one or two line comment describing the overall purpose and approach. As you describe each statement, include comments which help the user to understand why each step is being taken and how it helps realize the overall goal.</p>
+                <p><b>Encourage externalization.</b>  When a developer will first collect some information (e.g., lines of code which reference a variable) that they will later make use of, have them write it down in the strategy. Ask them to write it down in a variable. This ensure they don’t lose anything and that they methodically consider each possibility. It also makes it easy to reference later in other parts of the strategy</p>
             </div>
         </div>
 
+
         <div class="media row">
             <div class="media-body well well-sm research-section col-sm-12">
-                <h3>Let's start writing one</h3>
-                <P class="sideBar">You should have received a task in our last email. Please go read this task description again now. </P>
-                <p class="sideBar">Think about the task described. Can you remember a similar challenge you experienced in your own work? What did you do? Think about the steps you took, the information you looked for, the tools you used to take these steps, and how this information ultimately helped you to make progress.</p>
-                <p class="sideBar">Now imagine a developer who just stopped by your office who now has to do this very same task. What advice can you give them?</p>
-                <p class="sideBar">Describe the best strategy you can offer the developer, including as much detail as you think necessary for a developer to understand how to work in the way you just did.</p>
-                <p class="sideBar">As you’re writing down your strategy, remembering the following guidelines:</p>
+                <h3>It’s now time to write up one of your own strategies. Let's start writing one.</h3>
+                <P>You should have received a task in our last email. Please go read this task description again now. </P>
+                <p>Think about the task described. Can you remember a similar challenge you experienced in your own work? What did you do? Think about the steps you took, the information you looked for, the tools you used to take these steps, and how this information ultimately helped you to make progress.</p>
+                <p>Now imagine a developer who just stopped by your office who now has to do this very same task. What advice can you give them?</p>
+                <p>Describe the best strategy you can offer the developer, including as much detail as you think necessary for a developer to understand how to work in the way you just did.</p>
+                <p>As you’re writing down your strategy, remembering the following guidelines:</p>
                 <ul>
                     <li>Define your strategy step by step.</li>
                     <li>Describe required tools, environments, and knowledge.</li>
@@ -328,6 +306,36 @@
 
 <div class=" media row" style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">
     <div class=" strategyContainer">
+        <div id="taskDef">
+            <h3>Youe Task: Chrome Performance Profiler Task</h3>
+            <p>Sophisticated web applications can have performance problems like any website.
+                To make performance profiling easier, Chrome  has introduced a Chrome DevTools: JavaScript CPU Profiling, which collects timing information about each component to be rendered, then visualizes data about rendering so that developers can identify sources of inefficiency in rendering.</p>
+
+            <p>There's just one problem: using the Chrome Profiler, just like using any profiler, requires good *strategies* to be useful. For example, a naive profiling strategy might be:</p>
+
+           <ul>
+               <li style="font-weight: normal!important;">Load the web application</li>
+               <li style="font-weight: normal!important;">Start recording performance with the profiler</li>
+               <li style="font-weight: normal!important;">Look at the flame chart, which visualizes how long various components took to render during the recording</li>
+               <li style="font-weight: normal!important;">Identify the component taking the most time to render</li>
+               <li style="font-weight: normal!important;">Optimize the slow component</li>
+           </ul>
+
+
+            <p>This isn't a particularly effective profiling strategy because it's not very intentional about what was recorded, whether that recording is representative of a performance problem, and whether enough data is gathered to actually diagnose the problem. It also ignores which parts of the application you can actually modify.</p>
+
+            <p>Your task is to write a better profiling strategy than the one above, which other developers can use to learn how to effectively profile any web application. Consider the following in the strategy you write:</p>
+
+            <ul>
+                <li>What steps should a developer follow to accurately identify slow components?</li>
+                <li>How should they diagnose why those components are slow?</li>
+                <li>What data should they look at?</li>
+            </ul>
+
+            <p>Include enough detail that someone with experience with web development and JavaScript, but no experience profiling the performance of a program, could successfully optimize a web-based application.</p>
+
+        </div>
+
         <div id="strategyDefinition" style="min-height: 630px;" class="media-body well well-sm research-section col-sm-6">
             <h3>Your Task Strategy</h3>
         </div>
@@ -370,8 +378,8 @@
     <div class="media-body  well-sm padd6 col-sm-12" class="light-bg" >
         <div class="row" style=" width:960px; margin: auto; " >
             <h3>Now that you’ve written down your strategy, double check that you’ve included all of the following at the beginning of your strategy:</h3>
-            <p><b class="sideBar">Required tools and environment:</b> Consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?.</p>
-            <p><b class="sideBar">Required knowledge:</b> What level of expertise should the strategy user have? What tools, languages, or concepts should they be familiar with before using your strategy?”</p>
+            <p><b>Required tools and environment:</b> Consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?.</p>
+            <p><b>Required knowledge:</b> What level of expertise should the strategy user have? What tools, languages, or concepts should they be familiar with before using your strategy?”</p>
         </div>
     </div>
     <div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">
@@ -379,18 +387,47 @@
             <h3>Thank you for sharing your programming strategy.</h3>
             <p> We are still learning how best to help developers like you write their strategies down. A key goal of our study is thus understanding any of the challenges you just experienced in writing down
                 your own strategy. By sharing these challenges with us, we can work to make our materials and environment better for writing down strategies. </p>
-            <p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you worked to write down your own strategy. Please try to share with us <b>at least 3</b>
-                separate challenges about what may have been most difficult in writing up a strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what
+            <p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you worked to write down your own strategy. Please try to share with us <b>at least 3
+                separate challenges </b>about what may have been most difficult in writing up a strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what
                 made this hard for you to accomplish.</p>
             <form>
                 <h3>Difficulties</h3>
                 <div id="difficultiesContainer" style="width:100%; margin-bottom: 1%; float: left;"></div>
-                <button onclick="remove(); return false;" class="btn btn-remove" style="float: right; font-weight: bold;">Remove</button>
-                <button onclick="add(); return false;" class="btn btn-success" style="float: right; font-weight: bold;">Add</button>
+                <button onclick="remove(); return false;" class="btn btn-remove" title="Select the added difficulty to remove" style="float: right; font-weight: bold;">Remove</button>
+                <button onclick="add(); return false;" class="btn btn-success"  title="Add your described difficulty one at a time" style="float: right; font-weight: bold;">Add</button>
                 <textarea style="width:100%; margin-bottom: 1%; margin-top:1%; min-height: 100px;" id="difficultyTxt" placeholder="Please describe your challenges" class="field" ></textarea>
             </form>
-            <button onclick="addNewStrategy()" class="btn-sbmt" id="submitBtn" style=" width:10%; float: right; font-weight: bold;">Submit</button>
+
+
+
+
         </div>
+        <div class="media row" style="width:960px; margin:auto">
+            <div class="media-body well well-sm research-section col-sm-12">
+                <h3></h3>
+                <p><b>Please help us understand your own background by answering a few quick questions.</b></p>
+                <form>
+                    <p>How many years of industrial software development experience do you have (including internships and any software you implemented as part of a research project)?</p>
+                    <input style="width:10%; margin-bottom: 1%;" type="number" id="workExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="workExpMonth" class="field"> months.
+                    <p>How many software applications have you developed or participate in its development?(including internships and any software you implemented as part of a research project)?</p>
+                    <input style="width:30%; margin-bottom: 1%;" type="number" id="softDevExp" class="field">
+
+                    <p>How many years experience do you have in building web applications? </p>
+                    <input style="width:10%; margin-bottom: 1%;" type="number" id="webExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="webExpMonth" class="field"> months.
+                    <p>How many web-based applications have you implemented? </p>
+                    <input style="width:30%; margin-bottom: 1%;" type="number" id="webDevExp" class="field">
+
+                    <p>How many years of professional experience do you have in React?</p>
+                    <input style="width:10%; margin-bottom: 1%;" type="number" id="reactExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="reactExpMonth" class="field"> months.
+                    <p>How many React-based applications have you implemented?</p>
+                    <input style="width:30%; margin-bottom: 1%;" type="number" id="reactDevExp" class="field">
+
+                </form>
+            </div>
+
+
+        </div>
+        <button onclick="addNewStrategy()" class="btn-sbmt" id="submitBtn" style=" width:10%; float: right; font-weight: bold;">Submit</button>
     </div>
 </div>
 </body>
