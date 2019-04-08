@@ -78,7 +78,14 @@ legend {
     color: #000;
     padding: 3px 6px;
 }
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 .field { text-align: left;}
 .red { color: #f00; }
 .green { color: #0a0;}
@@ -98,6 +105,20 @@ legend {
     margin-right: auto;
     margin-left: auto;
 }
+.tag{
+    color: #ffffff;
+    background-color: lightsalmon;
+    border-color: #1b809e;
+    display: inline-block;
+    padding: 6px 12px;
+    float: left;
+    border-radius: 5px;
+    margin:1%;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.428571429;
+}
+
 .btn-sbmt{
     color: #ffffff;
     background-color: #41a5c2;

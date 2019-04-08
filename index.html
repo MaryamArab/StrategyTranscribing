@@ -40,44 +40,79 @@
                 <p>A strategy is a high-level plan for accomplishing a task, describing a series of steps or actions to take to accomplish a goal.
                     Strategies are a common part of everyday life, describing steps with which to find an email in an email client, cook the perfect pizza, or tie your shoes.
                     <B>Programming strategies</B>  describe how software developers do similar everyday tasks, to diagnose a performance issue or a broken control.
-                    Let's take a look at a sample of strategy for installing Microsoft Office Word:
                 </p>
+                <p>Let's take a look at a sample of strategy. In React, several components need to reflect the same changing data. here is a strategy for finding those part of codes that have shared
+                    state and how to lift the shared state up to
+                    their closest common ancestor. Let’s see how this works in action:
+                </p>
+                <!--<div class="media row">-->
+                    <!--<div class="media-body well well-sm research-section">-->
+                        <!--<div id="officeWordStrategy " class="RobotoPanel">-->
+                            <!--<h4>Download and install or reinstall Office 365 or Office 2019 on a Mac</h4>-->
+                            <!--<div class="statement">1- Go to www.office.com and if you're not already signed in, select Sign in.</div>-->
+                            <!--<div class="statement">2- Sign in with the account you associated with this version of Office. This account can be a Microsoft account, or work or school account.-->
+                                <!--<a href="https://support.office.com/en-ie/article/i-forgot-the-username-or-password-for-the-account-i-use-with-office-eba0b4a2-c0ae-472c-99f6-bc63ee2425a8?wt.mc_id=scl_installoffice_home">I forgot the account I use with Office</a>-->
+                            <!--</div>-->
+                            <!--<div class="statement">3- After signing in, follow the steps that match the type of account you signed in with.-->
+                                <!--<div class="margin-oneTab"> If you signed in with a Microsoft account:-->
+                                    <!--<div class="margin-twoTab"> From the Office home page select Install Office.</div>-->
+                                    <!--<div class="margin-twoTab"> Select Install (or depending on your version, Install Office>).</div>-->
+                                <!--</div>-->
+                                <!--<div class="margin-oneTab">If you signed in with a work or school account:-->
+                                    <!--<div class="margin-twoTab">From the Office 365 home page select Install Office apps </div>-->
+                                    <!--<div class="margin-twoTab">Select Office 365 apps to begin the installation.</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="statement">4- Now it begins the download of Office. Follow the prompts on your screen to complete the install.</div>-->
+                            <!--<div class="statement">5- Once the download has completed, open Finder, go to Downloads, and double-click Microsoft Office installer.pkg file (the name might vary slightly).</div>-->
+                            <!--<div class="commentDetails"> Tip: If you see an error that says the Microsoft Office installer.pkg can't be opened because it is from an unidentified developer,-->
+                                <!--wait 10 seconds and move the downloaded file to your desktop. Hold Control + click the file to launch the installer.</div>-->
+                            <!--<div class="statement">6- On the first installation screen, select Continue to begin the installation process.</div>-->
+                            <!--<div class="statement">7- Review the software license agreement, and then click Continue.</div>-->
+                            <!--<div class="statement">8- Select Agree to agree to the terms of the software license agreement.</div>-->
+                            <!--<div class="statement">9- Choose how you want to install Office and click Continue.</div>-->
+                            <!--<div class="statement">10- Review the disk space requirements or change your install location, and then click Install.</div>-->
+                            <!--<div class="commentDetails">Note: If you want to only install specific Office apps and not the entire suite, click the Customize button and uncheck the programs you don't want.</div>-->
+                            <!--<div class="statement">11- Enter your Mac login password, if prompted, and then click Install Software. (This is the password that you use to log in to your Mac.)</div>-->
+                            <!--<div class="statement">12- The software begins to install. Click Close when the installation is finished.-->
+                                <!--If Office installation fails, see-->
+                                <!--<a href="https://support.office.com/en-ie/article/what-to-try-if-you-can-t-install-or-activate-office-for-mac-5efba2b4-b1e6-4e5f-bf3c-6ab945d03dea?wt.mc_id=scl_installoffice_mac">What to try if you can't install or activate Office for Mac.</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
                 <div class="media row">
                     <div class="media-body well well-sm research-section">
                         <div id="officeWordStrategy " class="RobotoPanel">
-                            <h4>Download and install or reinstall Office 365 or Office 2019 on a Mac</h4>
-                            <div class="statement">1- Go to www.office.com and if you're not already signed in, select Sign in.</div>
-                            <div class="statement">2- Sign in with the account you associated with this version of Office. This account can be a Microsoft account, or work or school account.
-                                <a href="https://support.office.com/en-ie/article/i-forgot-the-username-or-password-for-the-account-i-use-with-office-eba0b4a2-c0ae-472c-99f6-bc63ee2425a8?wt.mc_id=scl_installoffice_home">I forgot the account I use with Office</a>
-                            </div>
-                            <div class="statement">3- After signing in, follow the steps that match the type of account you signed in with.
-                                <div class="margin-oneTab"> If you signed in with a Microsoft account:
-                                    <div class="margin-twoTab"> From the Office home page select Install Office.</div>
-                                    <div class="margin-twoTab"> Select Install (or depending on your version, Install Office>).</div>
+                            <h4>React- Lifting State Up</h4>
+                            <div class="statement">1- Divide components into stateful “containers” and stateless “presenters”.</div>
+                            <div class="statement">2- Pass functions (“callbacks”) that change the container state as props to children</div>
+                            <div class="statement">3- If several components need to reflect the same changing data, instead of trying to sync the state between different components,
+                                rely on the top-down data flow:
+                                <div class="margin-oneTab">Lift state : writing more “boilerplate” code than two-way binding approaches, but as a benefit, it takes less work to find and isolate bugs. Since any state “lives” in some component and that component alone can change it, the surface area for bugs is greatly reduced
+                                    <div class="margin-twoTab">lift the shared state up to their closest common ancestor.</div>
+                                    <div class="margin-twoTab">Add the state to the component that needs it for rendering.</div>
+                                    <div class="margin-twoTab">Make inputs to be in sync with each other.</div>
+                                    <div class="margin-twoTab">Change the Class that owns the shared state becomes the “source of truth” for the current state in both input.</div>
+                                    <div class="margin-twoTab">Now that the shared property is coming from the parent as a prop, the input has no control over it.</div>
+                                    <div class="margin-twoTab">To handle controlling, make a component “controlled”; like the DOM 'input' accepts both a ‘value’ and an ‘onChange’ prop, so can the custom ‘calssInput’ accept  value and onChange props from its parent class.</div>
+                                    <div class="margin-twoTab">Now, when the input wants to update its property, it calls the changed property from its parent class</div>
+
                                 </div>
-                                <div class="margin-oneTab">If you signed in with a work or school account:
-                                    <div class="margin-twoTab">From the Office 365 home page select Install Office apps </div>
-                                    <div class="margin-twoTab">Select Office 365 apps to begin the installation.</div>
-                                </div>
                             </div>
-                            <div class="statement">4- Now it begins the download of Office. Follow the prompts on your screen to complete the install.</div>
-                            <div class="statement">5- Once the download has completed, open Finder, go to Downloads, and double-click Microsoft Office installer.pkg file (the name might vary slightly).</div>
-                            <div class="commentDetails"> Tip: If you see an error that says the Microsoft Office installer.pkg can't be opened because it is from an unidentified developer,
-                                wait 10 seconds and move the downloaded file to your desktop. Hold Control + click the file to launch the installer.</div>
-                            <div class="statement">6- On the first installation screen, select Continue to begin the installation process.</div>
-                            <div class="statement">7- Review the software license agreement, and then click Continue.</div>
-                            <div class="statement">8- Select Agree to agree to the terms of the software license agreement.</div>
-                            <div class="statement">9- Choose how you want to install Office and click Continue.</div>
-                            <div class="statement">10- Review the disk space requirements or change your install location, and then click Install.</div>
-                            <div class="commentDetails">Note: If you want to only install specific Office apps and not the entire suite, click the Customize button and uncheck the programs you don't want.</div>
-                            <div class="statement">11- Enter your Mac login password, if prompted, and then click Install Software. (This is the password that you use to log in to your Mac.)</div>
-                            <div class="statement">12- The software begins to install. Click Close when the installation is finished.
-                                If Office installation fails, see
-                                <a href="https://support.office.com/en-ie/article/what-to-try-if-you-can-t-install-or-activate-office-for-mac-5efba2b4-b1e6-4e5f-bf3c-6ab945d03dea?wt.mc_id=scl_installoffice_mac">What to try if you can't install or activate Office for Mac.</a>
-                            </div>
+                            <div class="statement">4- You're Done.</div>
+
+
                         </div>
                     </div>
                 </div>
+                <p>This strategy is not a sample of a good strategy;it does not have sufficient details which makes it hard to follow and understand what each step needs user to do. It includes many keywords which user might not be familiar with.
+                    It also is not very descriptive and that makes it hard for a novice developer to understand what
+                    in code they have to look at to find relevant parts. The strategy does not follow a specific syntax in steps description, so users should comprehend each sentence by themselves, which is another burden.
+                </p>
+                <p>In order to reduce these challenges and help experts author their strategy in a way to be more understandable and easier to follow for users, we devised a language with a
+                    specific syntax for writing strartegy which will be describe in next section.</p>
 
                 <h3>Roboto - A language for describing strategy</h3>
                 <p>To help you write down strategies in a way that other developers can use, we’ve built a language for describing strategies
@@ -94,9 +129,14 @@
                         <ol class="list-unstyled">
                             <li>Preconditions</li>
                             <li>Statements</li>
-                            <li>Conditionals</li>
-                            <li>Actions</li>
-                            <li>Loops</li>
+                            <ul>
+                                <li>Actions</li>
+                                <li>Definitions</li>
+                                <li>Conditionals</li>
+                                <li>Loops</li>
+                                <li>Returns</li>
+                                <li>Calls</li>
+                            </ul>
                             <li>Variables</li>
                         </ol>
                         <p>To understand how to use each of these to write down a strategy in Roboto, we’ll first take a look at a complete example of a strategy and then take a look at each one by one. </p>
@@ -116,10 +156,10 @@
             <div id="strategyDescriptionDiv" style="display: block;">
                 <h3>A sample strategy with Roboto for merging two Github branches</h3>
                 <p>The text on the right is an example Roboto strategy. It describes how to merge two branches of code, including fixing any conflicts which may arise.</p>
-                <p>The strategy is started by 'Strategy' keyword, followed by the name of the strategy. In the parenthesis followed by strategy name, you can define variables that you might need to use in the strategy steps.</p>
+                <p>The strategy is started by 'Strategy' keyword, followed by the name of the strategy. In the parenthesis followed by strategy name, you can define variables that you might need to use in the strategy statements steps.</p>
                 <p>Each line in the strategy body represents a statement. A strategy consists of a set of Statements which is represented as a sequence of steps which should be followed by a user.
                     There are multiple different statement types which will be described in next sections.</p>
-                <p>Please overview the strategy steps and click the next button to learn these strategy steps piece by piece.</p>
+                <p>Please overview the strategy and click the next button to learn about different statements piece by piece.</p>
                 <p></p>
             </div>
             <div id="preconditionsDescriptionDiv" style="display:none;">
@@ -390,10 +430,23 @@
                 separate challenges </b>about what may have been most difficult in writing up a strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what
                 made this hard for you to accomplish.</p>
             <form>
-                <h3>Difficulties</h3>
+                <div class="tag"> Time</div>
+                <div class="tag"> Keyword</div>
+                <div class="tag"> TiredSome</div>
+                <div class="tag"> Static</div>
+                <div class="tag"> Roboto</div>
+                <div class="tag"> Writing</div>
+                <div class="tag"> Remembering</div>
+                <div class="tag"> writing</div>
+                <div class="tag"> writing</div>
+                <div class="tag"> writing</div>
+                <h3 style="float: left; clear: both;">Difficulties</h3>
                 <div id="difficultiesContainer" style="width:100%; margin-bottom: 1%; float: left;"></div>
+
                 <button onclick="remove(); return false;" class="btn btn-remove" title="Select the added difficulty to remove" style="float: right; font-weight: bold;">Remove</button>
                 <button onclick="add(); return false;" class="btn btn-success"  title="Add your described difficulty one at a time" style="float: right; font-weight: bold;">Add</button>
+
+
                 <textarea style="width:100%; margin-bottom: 1%; margin-top:1%; min-height: 100px;" id="difficultyTxt" placeholder="Please describe your challenges" class="field" ></textarea>
             </form>
 

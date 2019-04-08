@@ -57,9 +57,11 @@ var add;
 var remove;
 var nextFeature;
 var previousFeature;
+
 $(document).ready(function () {
     document.getElementById("submitBtn").disabled = true;
     document.getElementById("prevBtn").disabled = true;
+
     var timeoutId,
         saveData = {};
     // Function to save all fields that were changed.
@@ -83,11 +85,14 @@ $(document).ready(function () {
 
 // Handle keypress event.
     $('.field').keypress(function (e) {
+
         var $currentField = $(this);
 
         $currentField.css({
-            backgroundColor: '#cde4ec'
+            backgroundColor: '#cde4ec',
+            border: 'none'
         });
+
 
         // Set property on saveData object and set it equal to the current jQuery element.
         saveData[$currentField.attr('id')] = $currentField;
@@ -98,6 +103,7 @@ $(document).ready(function () {
         // Start a timer that will fire save when finished.
         timeoutId = setTimeout(saveRatings, 750);
     });
+
     add = function () {
         var node = document.createElement("DIV");
         node.id = "difficulty";
@@ -114,9 +120,12 @@ $(document).ready(function () {
 
         node.appendChild(checkbox);
         node.appendChild(label);
+        if(document.getElementById("difficultyTxt").value==""){
+            alert("Please describe your challenges in the text box below and then press the add button.")
+            return;
+        }
         difficultiesContainer.appendChild(node);
 
-        alert("Great Job. Do you have any other difficulties? If you have, please add another one.");
         clearContents(document.getElementById("difficultyTxt"));
     }
     // "strategyDescriptionDiv","preconditionsDescriptionDiv", "statementsDescriptionDiv",
@@ -274,10 +283,10 @@ async function addNewStrategy() {
     let workExperiencePeriod = document.getElementById("workExpYear").value+" years and " + document.getElementById("workExpMonth").value + " months";
     let softwareDevelopmentExperience = document.getElementById("softDevExp").value;
 
-    let webExperiencePeriod = document.getElementById("webExpYear").value+" years and " + document.getElementById("webExpMonth").value + " months";;
+    let webExperiencePeriod = document.getElementById("webExpYear").value+" years and " + document.getElementById("webExpMonth").value + " months";
     let webDevelopmentExperience = document.getElementById("webDevExp").value;
 
-    let reactExperiencePeriod = document.getElementById("reactExpYear").value+" years and " + document.getElementById("reactExpMonth").value + " months";;
+    let reactExperiencePeriod = document.getElementById("reactExpYear").value+" years and " + document.getElementById("reactExpMonth").value + " months";
     let reactDevelopmentExperience = document.getElementById("reactDevExp").value;
     var task = taskAssigned;
 
@@ -290,12 +299,42 @@ async function addNewStrategy() {
 
     console.log("Strategy definition:   " + strategyDefinition);
 
-    if(  workExperiencePeriod ==="" || softwareDevelopmentExperience ===""|| webExperiencePeriod ==="" || webDevelopmentExperience===""  ||reactExperiencePeriod ==="" || reactDevelopmentExperience===""||strategyDefinition==="" || difficulties === "")
-    {
-        alert("Please fill out all the required fields");
+    if(document.getElementById("workExpYear").value ===""  ) {
+        document.getElementById("workExpYear").style.border="2px solid red";
+        alert("Please fill out industrial software development experience.");
         return;
     }
-    if (strategyDefinition.length<20) {
+    if(softwareDevelopmentExperience ===""){
+        document.getElementById("softDevExp").style.border="2px solid red";
+        alert("Please fill out Number of Software applications you have developed.");
+        return;
+    }
+    if(document.getElementById("webExpYear").value==="" ){
+        document.getElementById("webExpYear").style.border="2px solid red";
+        alert("Please fill out years of experience you have in building web applications");
+        return;
+    }
+    if(webDevelopmentExperience===""){
+        document.getElementById("webDevExp").style.border="2px solid red";
+        alert("Please fill the number of web-based applications have you implemented.");
+        return;
+    }
+    if(document.getElementById("reactExpYear").value ===""){
+        document.getElementById("reactExpYear").style.border="2px solid red";
+        alert("Please fill out years of professional experience you have in React");
+        return;
+    }
+    if(reactDevelopmentExperience===""){
+        document.getElementById("reactDevExp").style.border="2px solid red";
+        alert("Please fill out the number of React-based applications you have implemented.");
+        return;
+    }
+
+    if(difficulties === ""){
+        alert("Please describe challenges you faced during articulation.");
+        return;
+    }
+    if (strategyDefinition.length<20||strategyDefinition==="") {
         alert("Please write down a detailed strategy");
         return;
     }
@@ -309,14 +348,12 @@ async function addNewStrategy() {
     database.collection("Strategies").doc(pId).set({
         Time:timestamp,
 
-        DevelopmentExperiencePeriod: workExperiencePeriod,
+        SoftwareDevelopmentExperiencePeriod: workExperiencePeriod,
         WebExperiencePeriod: webExperiencePeriod,
-        // JavaScriptExperiencePeriod: javascriptExperiencePeriod,
         ReactExperiencePeriod: reactExperiencePeriod,
-        SoftwareDevelopmentExperience : softwareDevelopmentExperience,
-        WebDevelopmentExperience : webDevelopmentExperience,
-        // JavaScriptDevelopmentExperience: javascriptDevelopmentExperience,
-        ReactDevelopmentExperience : reactDevelopmentExperience,
+        ImplementedSoftware : softwareDevelopmentExperience,
+        ImplementedWebApplications : webDevelopmentExperience,
+        ImplementedReactApplications : reactDevelopmentExperience,
         StrategyDefinition:strategyDefinition,
         Difficulties: difficulties,
         Task:task
@@ -327,16 +364,15 @@ async function addNewStrategy() {
     alert("Congratulation.You successfully submit your draft of strategy. Thank you so much for participating in our study.");
 
     //var taskName = document.getElementById("mySelect").value;
-    localStorage.setItem("pId",pId);
-    //localStorage.setItem("taskName", taskName);
-    // var writtenStrategy = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
-    var writtenStrategy =strategyDefinition;
-    localStorage.setItem("strategyStorage",writtenStrategy);
+    // localStorage.setItem("pId",pId);
+
+    // var writtenStrategy =strategyDefinition;
+    // localStorage.setItem("strategyStorage",writtenStrategy);
 
 
 
-    setTimeout(function() {
-        window.location.href = "./strategyRevision.html";
-    }, 1000);
+    // setTimeout(function() {
+    //     window.location.href = "./strategyRevision.html";
+    // }, 1000);
 
 }
