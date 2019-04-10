@@ -360,17 +360,14 @@
                <li style="font-weight: normal!important;">Optimize the slow component</li>
            </ul>
 
-
             <p>This isn't a particularly effective profiling strategy because it's not very intentional about what was recorded, whether that recording is representative of a performance problem, and whether enough data is gathered to actually diagnose the problem. It also ignores which parts of the application you can actually modify.</p>
 
             <p>Your task is to write a better profiling strategy than the one above, which other developers can use to learn how to effectively profile any web application. Consider the following in the strategy you write:</p>
-
             <ul>
                 <li>What steps should a developer follow to accurately identify slow components?</li>
                 <li>How should they diagnose why those components are slow?</li>
                 <li>What data should they look at?</li>
             </ul>
-
             <p>Include enough detail that someone with experience with web development and JavaScript, but no experience profiling the performance of a program, could successfully optimize a web-based application.</p>
 
         </div>
@@ -429,30 +426,23 @@
             <p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you worked to write down your own strategy. Please try to share with us <b>at least 3
                 separate challenges </b>about what may have been most difficult in writing up a strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what
                 made this hard for you to accomplish.</p>
+
+            <h3> Hints:</h3>
+            <p>Think about possible challenges you might had in articulating your thought to words. What makes it hard to translate your
+                thought and strategy to words that is understandable for novice developers?</p>
+            <p>How is the process of articulating in terms of energy, time, concentration, etc ?</p>
+            <p>How Roboto helps or hinder you in articulating?</p>
+            <p>How using the provided guidelines direct you in articulating your strategy? Is it any hard to apply them? How hard is it? </p>
+            <p></p>
             <form>
-                <div class="tag"> Time</div>
-                <div class="tag"> Keyword</div>
-                <div class="tag"> TiredSome</div>
-                <div class="tag"> Static</div>
-                <div class="tag"> Roboto</div>
-                <div class="tag"> Writing</div>
-                <div class="tag"> Remembering</div>
-                <div class="tag"> writing</div>
-                <div class="tag"> writing</div>
-                <div class="tag"> writing</div>
                 <h3 style="float: left; clear: both;">Difficulties</h3>
                 <div id="difficultiesContainer" style="width:100%; margin-bottom: 1%; float: left;"></div>
-
                 <button onclick="remove(); return false;" class="btn btn-remove" title="Select the added difficulty to remove" style="float: right; font-weight: bold;">Remove</button>
                 <button onclick="add(); return false;" class="btn btn-success"  title="Add your described difficulty one at a time" style="float: right; font-weight: bold;">Add</button>
 
-
                 <textarea style="width:100%; margin-bottom: 1%; margin-top:1%; min-height: 100px;" id="difficultyTxt" placeholder="Please describe your challenges" class="field" ></textarea>
+
             </form>
-
-
-
-
         </div>
         <div class="media row" style="width:960px; margin:auto">
             <div class="media-body well well-sm research-section col-sm-12">
@@ -476,8 +466,6 @@
 
                 </form>
             </div>
-
-
         </div>
         <button onclick="addNewStrategy()" class="btn-sbmt" id="submitBtn" style=" width:10%; float: right; font-weight: bold;">Submit</button>
     </div>

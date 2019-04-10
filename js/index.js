@@ -106,7 +106,7 @@ $(document).ready(function () {
 
     add = function () {
         var node = document.createElement("DIV");
-        node.id = "difficulty";
+        //node.id = "difficulty";
         var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
         checkbox.name = "chkboxName";
@@ -116,16 +116,17 @@ $(document).ready(function () {
         var label = document.createElement('label')
         label.htmlFor = "chkbx";
         label.className = "difficultyId";
+        label.style.width = "95%";
+        label.style.margin= "1%";
         label.appendChild(document.createTextNode(document.getElementById("difficultyTxt").value));
 
         node.appendChild(checkbox);
         node.appendChild(label);
         if(document.getElementById("difficultyTxt").value==""){
-            alert("Please describe your challenges in the text box below and then press the add button.")
+            alert("Please describe your challenges in the text box below and then press the add button.");
             return;
         }
         difficultiesContainer.appendChild(node);
-
         clearContents(document.getElementById("difficultyTxt"));
     }
     // "strategyDescriptionDiv","preconditionsDescriptionDiv", "statementsDescriptionDiv",
