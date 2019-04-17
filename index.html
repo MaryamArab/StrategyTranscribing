@@ -420,21 +420,137 @@
     </div>
     <div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">
         <div class="row" style=" width:960px; margin: auto; " >
-            <h3>Thank you for sharing your programming strategy.</h3>
-            <p> We are still learning how best to help developers like you write their strategies down. A key goal of our study is thus understanding any of the challenges you just experienced in writing down
-                your own strategy. By sharing these challenges with us, we can work to make our materials and environment better for writing down strategies. </p>
-            <p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you worked to write down your own strategy. Please try to share with us <b>at least 3
-                separate challenges </b>about what may have been most difficult in writing up a strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what
-                made this hard for you to accomplish.</p>
+            <h3>Thank you for sharing your programming strategy</h3>
 
-            <h3> Hints:</h3>
-            <p>Think about possible challenges you might had in articulating your thought to words.What makes it hard to translate your thoughts and strategies into words which are understandable for novice developers?</p>
-            <p>How is the process of articulating in terms of energy, time, concentration, etc ?</p>
-            <p>In what ways does the Roboto language support or not support your ability to effectively express strategies?</p>
-            <p>In what ways does the strategy guidelines support or not support your ability to effectively express strategies? Is it any hard to apply them? How hard is it? </p>
-            <p></p>
+            <p> We are still learning how best to help developers like you write their strategies down. A key goal of our study is thus understanding any of the challenges you just experienced in writing down
+                your own strategy. By sharing these challenges with us, we can work to make our materials and environment better for writing down strategies.</p>
+            <p>Please share with us your idea about the following difficulties. Do you agree or disagree with the following statement. In as much detail as possible, please describe your reason of agreement or disagreement in the text area below each statement. </p>
+
+
+            <!--<h3>Please share your ideas about the following possible challenges. </h3>-->
+            <table style="width:100%">
+
+                <tr>
+                    <th colspan="4">Difficulties</th>
+                    <th>Strongly Agree</th>
+                    <th >Agree</th>
+                    <th >Neutral</th>
+                    <th >Disagree</th>
+                    <th>Strongly Disagree</th>
+
+                </tr>
+                <!--translationDifficulty-->
+                <tr>
+                <td colspan="4" style="font-weight: bold;">It's hard to translate thoughts and strategies into words.</td>
+                    <td><input type="radio" name="r-translationDifficulty" value="stronglyAgree"    id="stronglyAgree-translation" ></td>
+                    <td><input type="radio" name="r-translationDifficulty" value="agree"             id="agree-translation" ></td>
+                    <td><input type="radio" name="r-translationDifficulty" value="neutral"          id="neutral-translation"></td>
+                    <td><input type="radio" name="r-translationDifficulty" value="disagree"         id="disagree-translation"></td>
+                    <td><input type="radio" name="r-translationDifficulty" value="stronglyDisagree" id="stronglyDisagree-translation"></td>
+            </tr>
+                <tr>
+                    <td colspan="9">
+                        <textarea style="width:100%;  min-height: 100px;" id="translationDifficulty" placeholder="Please describe your answer here" class="field" ></textarea>
+                    </td>
+                </tr>
+
+                <!--noviceUnderstandabilityDifficulty-->
+                <tr>
+                    <td colspan="4" style="font-weight: bold;">Its hard to write strategies in a way which are understandable for novice developers.</td>
+                    <td><input type="radio" name ="r-noviceUnderstandabilityDifficulty" value="stronglyAgree"    id="stronglyAgree-noviceUnderstandable" ></td>
+                    <td><input type="radio" name ="r-noviceUnderstandabilityDifficulty" value="agree"            id="agree-noviceUnderstandable" ></td>
+                    <td><input type="radio" name ="r-noviceUnderstandabilityDifficulty" value="neutral"          id="neutral-noviceUnderstandable"></td>
+                    <td><input type="radio" name ="r-noviceUnderstandabilityDifficulty" value="disagree"         id="disagree-noviceUnderstandable"></td>
+                    <td><input type="radio" name ="r-noviceUnderstandabilityDifficulty" value="stronglyDisagree" id="stronglyDisagree-noviceUnderstandable"></td>
+                </tr>
+                <tr>
+                    <td colspan="9">
+                        <textarea style="width:100%;  min-height: 100px;" id="noviceUnderstandabilityDifficulty" placeholder="Please describe your answer here" class="field" ></textarea>
+                    </td>
+                </tr>
+
+                <!--concentrationDifficulty-->
+                <tr>
+                    <td colspan="4" style="font-weight: bold;">Writing strategies took a lot of concentration, effort and energy.</td>
+                    <td><input type="radio" name="r-concentrationDifficulty" value="stronglyAgree"    id="stronglyAgree-energy"></td>
+                    <td><input type="radio" name="r-concentrationDifficulty" value="agree"            id="agree3-energy"></td>
+                    <td><input type="radio" name="r-concentrationDifficulty" value="neutral"          id="neutral-energy"></td>
+                    <td><input type="radio" name="r-concentrationDifficulty" value="disagree"         id="disagree-energy"></td>
+                    <td><input type="radio" name="r-concentrationDifficulty" value="stronglyDisagree" id="stronglyDisagree-energy"></td>
+                </tr>
+                <tr>
+                    <td colspan="9">
+                        <textarea style="width:100%;  min-height: 100px;" id="concentrationDifficulty" placeholder="Please describe your answer here" class="field" ></textarea>
+                    </td>
+                </tr>
+
+
+                <!--timeConsumingDifficulty-->
+                <tr>
+                    <td colspan="4" style="font-weight: bold;">Articulating is time consuming and boring.</td>
+                    <td><input type="radio" name = "r-timeConsumptionDifficulty" value="stronglyAgree"    id="stronglyAgree-time"></td>
+                    <td><input type="radio" name = "r-timeConsumptionDifficulty" value="agree"            id="agree-time"></td>
+                    <td><input type="radio" name = "r-timeConsumptionDifficulty" value="neutral"          id="neutral-time"></td>
+                    <td><input type="radio" name = "r-timeConsumptionDifficulty" value="disagree"         id="disagree-time"></td>
+                    <td><input type="radio" name = "r-timeConsumptionDifficulty" value="stronglyDisagree" id="stronglyDisagree-time"></td>
+                </tr>
+                <tr>
+                    <td colspan="9">
+                        <textarea style="width:100%;  min-height: 100px;" id="timeConsumptionDifficulty" placeholder="Please describe your answer here" class="field" ></textarea>
+                    </td>
+                </tr>
+
+                <!--5-->
+                <tr>
+                    <td colspan="4" style="font-weight: bold;"> Terminating the strategy is hard. Recognizing what would be the last statement is challenging.</td>
+                    <td><input type="radio" name = "r-strategyEndingDifficulty" value="stronglyAgree"    id="stronglyAgree-strategyEnd"></td>
+                    <td><input type="radio" name = "r-strategyEndingDifficulty" value="agree"            id="agree-strategyEnd"></td>
+                    <td><input type="radio" name = "r-strategyEndingDifficulty" value="neutral"          id="neutral-strategyEnd"></td>
+                    <td><input type="radio" name = "r-strategyEndingDifficulty" value="disagree"         id="disagree-strategyEnd"></td>
+                    <td><input type="radio" name = "r-strategyEndingDifficulty" value="stronglyDisagree" id="stronglyDisagree-strategyEnd"></td>
+                </tr>
+                <tr>
+                    <td colspan="9">
+                        <textarea style="width:100%;  min-height: 100px;" id="strategyEndingDifficulty" placeholder="Please describe your answer here" class="field" ></textarea>
+                    </td>
+                </tr>
+                <!--6-->
+                <tr>
+                    <td colspan="4" style="font-weight: bold;"> The Roboto language supports your ability to effectively express strategies.</td>
+                    <td><input type="radio" name = "r-robotoSupportDifficulty" value="stronglyAgree"    id="stronglyAgree-roboto"></td>
+                    <td><input type="radio" name = "r-robotoSupportDifficulty" value="agree"            id="agree-roboto"></td>
+                    <td><input type="radio" name = "r-robotoSupportDifficulty" value="neutral"          id="neutral-roboto"></td>
+                    <td><input type="radio" name = "r-robotoSupportDifficulty" value="disagree"         id="disagree-roboto"></td>
+                    <td><input type="radio" name = "r-robotoSupportDifficulty" value="stronglyDisagree" id="stronglyDisagree-roboto"></td>
+                </tr>
+                <tr>
+                    <td colspan="9">
+                        <textarea style="width:100%;  min-height: 100px;" id="robotoSupportDifficulty" placeholder="Please describe your answer here" class="field" ></textarea>
+                    </td>
+                </tr>
+                <!--7-->
+                <tr>
+                    <td colspan="4" style="font-weight: bold;">Strategy writing guidelines helps to effectively express strategies.Its is helpful to have some guidelines to apply and consider while trying to articulate the strategy process steps</td>
+                    <td><input type="radio" name = "r-guidelinesSupportDifficulty" value="stronglyAgree"    id="stronglyAgree-guidelines"></td>
+                    <td><input type="radio" name = "r-guidelinesSupportDifficulty" value="agree"            id="agree-guidelines"></td>
+                    <td><input type="radio" name = "r-guidelinesSupportDifficulty" value="neutral"          id="neutral-guidelines"></td>
+                    <td><input type="radio" name = "r-guidelinesSupportDifficulty" value="disagree"         id="disagree-guidelines"></td>
+                    <td><input type="radio" name = "r-guidelinesSupportDifficulty" value="stronglyDisagree" id="stronglyDisagree-guidelines"></td>
+                </tr>
+                <tr>
+                    <td colspan="9">
+                        <textarea style="width:100%;  min-height: 100px;" id="guidelinesSupportDifficulty" placeholder="Please describe your answer here" class="field" ></textarea>
+                    </td>
+                </tr>
+            </table>
+
             <form>
-                <h3 style="float: left; clear: both;">Difficulties</h3>
+                <h3 style="float: left; clear: both;">Other Difficulties</h3>
+                <p style="clear: both">Did you have other challenges and difficulties which is not mentioned above? Did you have any specific problem in articulating a specific line in your strategy?</p>
+                    <p>In as much detail as you can remember,
+                    please tell us about each of the challenges you experienced as you worked to write down your own strategy. Please try to share with us about what may have been
+                    most difficult in writing up a strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what
+                    made this hard for you to accomplish.</p>
                 <div id="difficultiesContainer" style="width:100%; margin-bottom: 1%; float: left;"></div>
                 <button onclick="remove(); return false;" class="btn btn-remove" title="Select the added difficulty to remove" style="float: right; font-weight: bold;">Remove</button>
                 <button onclick="add(); return false;" class="btn btn-success"  title="Add your described difficulty one at a time" style="float: right; font-weight: bold;">Add</button>
@@ -445,8 +561,7 @@
         </div>
         <div class="media row" style="width:960px; margin:auto">
             <div class="media-body well well-sm research-section col-sm-12">
-                <h3></h3>
-                <p><b>Please help us understand your own background by answering a few quick questions.</b></p>
+                <h3>Please help us understand your own background by answering a few quick questions.</h3>
                 <form>
                     <p>How many years of industrial software development experience do you have (including internships and any software you implemented as part of a research project)?</p>
                     <input style="width:10%; margin-bottom: 1%;" type="number" id="workExpYear" class="field"> years and <input value=0 style="width:10%; margin-bottom: 1%;" type="number" id="workExpMonth" class="field"> months.

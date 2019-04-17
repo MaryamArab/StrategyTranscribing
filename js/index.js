@@ -293,6 +293,28 @@ async function addNewStrategy() {
 
     let strategyDefinition = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
     let difficultiesElements=  document.getElementsByClassName("difficultyId");
+    let r_translationDifficulty="";
+
+    if(document.querySelector('input[name="r-translationDifficulty"]:checked') == null)
+    {
+        alert("Please select your idea of agreement with this statement: \" It's hard to translate thoughts and strategies into words.\"");
+        return;
+    }
+    else
+        r_translationDifficulty= document.querySelector('input[name="r-translationDifficulty"]:checked').value;
+
+
+
+    console.log(r_translationDifficulty);
+    let translationDifficulty = document.getElementById("translationDifficulty");
+    if(translationDifficulty.value ==""){
+        alert("Please describe in a couple of sentences why you agree/disagree with: \" It's hard to translate thoughts and strategies into words.\"");
+        return;
+    }
+    else translationDifficulty= document.getElementById("translationDifficulty").value;
+
+
+
     var difficulties = [];
     for (var i = 0; i < difficultiesElements.length; i++) {
         difficulties.push(difficultiesElements[i].innerHTML);
@@ -339,8 +361,8 @@ async function addNewStrategy() {
         alert("Please write down a detailed strategy");
         return;
     }
-    if(document.getElementById("difficultiesContainer").childNodes.length<3){
-        alert("Please write at least 3 difficulties you face during articulation.")
+    if(document.getElementById("difficultiesContainer").childNodes.length<1){
+        alert("Please write at least 1 difficulty you faced during articulation.");
         return;
     }
 
@@ -357,9 +379,14 @@ async function addNewStrategy() {
         ImplementedReactApplications : reactDevelopmentExperience,
         StrategyDefinition:strategyDefinition,
         Difficulties: difficulties,
-        Task:task
+        Task:task,
+        TranslationDifficultyIdea: r_translationDifficulty,
+        TranslationDifficulty: translationDifficulty
+
 
     }).catch(function (err) {
+        alert("Something wrong while you are trying to submit your strategy. It means that your work is not saved i our database. In order to be compensated with your work, we need a record of your work. " +
+            "Please send a pdf copy of this page to marab@gmu.edu. Thank you so much for participating in our study.");
         console.log("error saving", err);
     });
     alert("Congratulation.You successfully submit your draft of strategy. Thank you so much for participating in our study.");
