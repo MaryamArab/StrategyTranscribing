@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Strategy Tutorial</title>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
@@ -345,32 +345,7 @@
 
 <div class=" media row" style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">
     <div class=" strategyContainer">
-        <div id="taskDef">
-            <h3>Task: Chrome Performance Profiler Task</h3>
-            <p>Sophisticated web applications can have performance problems like any website.
-                To make performance profiling easier, Chrome  has introduced a Chrome DevTools: JavaScript CPU Profiling, which collects timing information about each component to be rendered, then visualizes data about rendering so that developers can identify sources of inefficiency in rendering.</p>
-
-            <p>There's just one problem: using the Chrome Profiler, just like using any profiler, requires good *strategies* to be useful. For example, a naive profiling strategy might be:</p>
-
-           <ul>
-               <li style="font-weight: normal!important;">Load the web application</li>
-               <li style="font-weight: normal!important;">Start recording performance with the profiler</li>
-               <li style="font-weight: normal!important;">Look at the flame chart, which visualizes how long various components took to render during the recording</li>
-               <li style="font-weight: normal!important;">Identify the component taking the most time to render</li>
-               <li style="font-weight: normal!important;">Optimize the slow component</li>
-           </ul>
-
-            <p>This isn't a particularly effective profiling strategy because it's not very intentional about what was recorded, whether that recording is representative of a performance problem, and whether enough data is gathered to actually diagnose the problem. It also ignores which parts of the application you can actually modify.</p>
-
-            <p>Your task is to write a better profiling strategy than the one above, which other developers can use to learn how to effectively profile any web application. Consider the following in the strategy you write:</p>
-            <ul>
-                <li>What steps should a developer follow to accurately identify slow components?</li>
-                <li>How should they diagnose why those components are slow?</li>
-                <li>What data should they look at?</li>
-            </ul>
-            <p>Include enough detail that someone with experience with web development and JavaScript, but no experience profiling the performance of a program, could successfully optimize a web-based application.</p>
-
-        </div>
+        <div id="taskDefinition"></div>
 
         <div id="strategyDefinition" style="min-height: 630px;" class="media-body well well-sm research-section col-sm-6">
             <h3>Your Task Strategy</h3>
