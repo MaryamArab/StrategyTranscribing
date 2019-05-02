@@ -355,8 +355,7 @@ async function addNewStrategy() {
     let webExperiencePeriod = document.getElementById("webExpYear").value+" years and " + document.getElementById("webExpMonth").value + " months";
     let webDevelopmentExperience = document.getElementById("webDevExp").value;
 
-    let reactExperiencePeriod = document.getElementById("reactExpYear").value+" years and " + document.getElementById("reactExpMonth").value + " months";
-    let reactDevelopmentExperience = document.getElementById("reactDevExp").value;
+
     var task = taskAssigned;
 
     let strategyDefinition = window.editor.getValue().replace(/[\n\r\t]/g,"\\n");
@@ -537,16 +536,6 @@ async function addNewStrategy() {
         alert("Please fill the number of web-based applications have you implemented.");
         return;
     }
-    if(document.getElementById("reactExpYear").value ===""){
-        document.getElementById("reactExpYear").style.border="2px solid red";
-        alert("Please fill out years of professional experience you have in React");
-        return;
-    }
-    if(reactDevelopmentExperience===""){
-        document.getElementById("reactDevExp").style.border="2px solid red";
-        alert("Please fill out the number of React-based applications you have implemented.");
-        return;
-    }
 
     if(difficulties === ""){
         alert("Please describe challenges you faced during articulation.");
@@ -568,10 +557,10 @@ async function addNewStrategy() {
 
         SoftwareDevelopmentExperiencePeriod: workExperiencePeriod,
         WebExperiencePeriod: webExperiencePeriod,
-        ReactExperiencePeriod: reactExperiencePeriod,
+
         ImplementedSoftware : softwareDevelopmentExperience,
         ImplementedWebApplications : webDevelopmentExperience,
-        ImplementedReactApplications : reactDevelopmentExperience,
+
         StrategyDefinition:strategyDefinition,
         Difficulties: difficulties,
         Task:task,
