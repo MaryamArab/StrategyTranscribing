@@ -67,10 +67,11 @@ $(document).ready(function () {
 //******************* Load Task Definition **************************
         if(taskAssigned =="ProfilerTask"){
             $("#taskDefinition").append("<h3>Task: Chrome Performance Profiler Task</h3>" +
-                "<p>Sophisticated web applications can have performance problems like any website.\n" +
-                "                To make performance profiling easier, Chrome  has introduced a Chrome DevTools: JavaScript CPU Profiling, which collects timing information about each component to be rendered, then visualizes data about rendering so that developers can identify sources of inefficiency in rendering.</p>\n" +
-                "\n" +
-                "            <p>There's just one problem: using the Chrome Profiler, just like using any profiler, requires good *strategies* to be useful. For example, a naive profiling strategy might be:</p>\n" +
+                "<h4>What is Chrome profiling?</h4>\n"+
+                "<p>Sophisticated web applications may have complex performance problems. To make performance profiling easier, Chrome includes JavaScript CPU Profiling within DevTools. CPU Profiling collects timing information about each component to" +
+                " be rendered and visualizes this data so that developers can identify potential performance bottlenecks in the rendering process.\n</p>\n" +
+                "<h4>A naive profiling strategy</h4>\n"+
+                "            <p>Using the Chrome Profiler require an effective <b>strategy</b> to be successful. For example, a naive profiling strategy might be:\n</p>\n" +
                 "\n" +
                 "           <ul>\n" +
                 "               <li style=\"font-weight: normal!important;\">Load the web application</li>\n" +
@@ -80,50 +81,71 @@ $(document).ready(function () {
                 "               <li style=\"font-weight: normal!important;\">Optimize the slow component</li>\n" +
                 "           </ul>\n" +
                 "\n" +
-                "            <p>This isn't a particularly effective profiling strategy because it's not very intentional about what was recorded, whether that recording is representative of a performance problem, and whether enough data is gathered to actually diagnose the problem. It also ignores which parts of the application you can actually modify.</p>\n" +
+                "            <p>However, this strategy is not particularly effective. It is not intentional about what data to record, whether that recording is representative of a performance problem, and how to make sure sufficient data is gathered to actually diagnose the problem. " +
+                "It also ignores consideration of which parts of the application you may or may not be able to modify to address the issue.</p>\n" +
                 "\n" +
-                "            <p>Your task is to write a better profiling strategy than the one above, which other developers can use to learn how to effectively profile any web application. Consider the following in the strategy you write:</p>\n" +
+                "<h4>Your task</h4>"+
+                "            <p>Your task is to write a better profiling <b>strategy</b>. Your goal is to help other developers learn how to effectively profile any web application. Write your strategy in a way that enables other developers to use your strategy and easily identify the components responsible for slow performance.</p>\n" +
+                "<p>Consider the following in writing your strategy:\n</p>"+
                 "            <ul>\n" +
-                "                <li>What steps should a developer follow to accurately identify slow components?</li>\n" +
-                "                <li>How should they diagnose why those components are slow?</li>\n" +
-                "                <li>What data should they look at?</li>\n" +
+                "                <li style=\"font-weight: normal!important;\">What steps should a developer follow to accurately identify slow components?</li>\n" +
+                "                <li style=\"font-weight: normal!important;\">How should they diagnose why those components are slow?</li>\n" +
+                "                <li style=\"font-weight: normal!important;\">What data should they look at?</li>\n" +
                 "            </ul>\n" +
-                "            <p>Include enough detail that someone with experience with web development and JavaScript, but no experience profiling the performance of a program, could successfully optimize a web-based application.</p>\n");
+                "            <p>Include enough detail so that a developer experienced in web development and JavaScript, but not in profiling, can be successful.</p>\n");
 
         }
         else if(taskAssigned =="CssDebuggingTask"){
             $("#taskDefinition").append("<h3>Task: CSS Debugging</h3>\n" +
-                "            <p>Imagine you have designed the perfect look and feel for your new web app. You implemented these design styles through a stylesheet for your web app, but it seems it is not working\n" +
-                "                correctly, as some of the elements do not appear with the correct appearance. For example, imagine there is a specific font which should be applied to an element, but is not.\n" +
-                "                Working with CSS styles can be challenging, as styles may cascade, when multiple rules apply to the same element, be inherited, when an element inherits visual properties from\n" +
-                "                containing elements, and be manipulated, as code is used to add and remove classes or other style information. In situations where you find that CSS style rules do not work as you\n" +
-                "                intended, how do you approach this problem to identify the cause and fix it?</p>\n" +
-                "            <p><b>Your task is to write a strategy</b> describing how you would debug a problem where the visual style of an element is in some way incorrect. Imagine you are working in code written by other developers with which you are not already completely familiar.</p>\n" +
+                "<h4>What is CSS debugging?</h4>\n"+
+                "            <p>Imagine that you have successfully designed the perfect look and feel for your new web app." +
+                " This look and feel is captured in a stylesheet. However, it seems that it is not working correctly," +
+                " as some elements do not appear correctly. For example, imagine there is a specific font which should be applied to " +
+                "an element, but is not. Working with CSS styles can be challenging, as styles may cascade, when multiple rules apply" +
+                " to the same element, be inherited, when an element inherits visual properties from containing elements, and be manipulated," +
+                " as code is used to add and remove classes or other style information." +
+                " When you find that CSS style rules do not work correctly, how do you identify the cause and fix it? </p>\n" +
+                "<h4>Your task</h4>\n"+
+                "            <p>Your task is to<b> write a strategy</b> " +
+                "describing how you debug a problem in which the visual style of an element is in some way incorrect. " +
+                "Imagine you are working in code written by other developers with which you are not already completely familiar. " +
+                "What steps will you take to find the cause of the incorrect visual appearance? Your strategy <b>should not</b> include steps to " +
+                "resolve the issue, but we need you to write a strategy on the approach you would take to identify the source of fault.</p>\n" +
+                "<h4>Keep in mind</h4>\n"+
+                "<p>Write your strategy in a way that enables other developers to use your strategy and easily find out how to fix the visual style problem.</p>\n"+
                 "            <p>Consider the following in the strategy you write:</p>\n" +
                 "            <ul>\n" +
-                "               <li style=\"font-weight: normal!important;\">What potential issues could cause an element’s visual style to not appear correctly?</li>\n" +
-                "               <li style=\"font-weight: normal!important;\">What information should the developer gather as they are investigating potential issues?</li>\n" +
-                "               <li style=\"font-weight: normal!important;\">What tools or techniques should the developer use, and how can the developer use them to gather necessary information?</li>\n" +
-                "               <li style=\"font-weight: normal!important;\">Identify the component taking the most time to render</li>\n" +
+                "               <li style=\"font-weight: normal!important;\">What issues could result in an element’s visual style appearing incorrectly?</li>\n" +
+                "               <li style=\"font-weight: normal!important;\">What information should the developer gather as they investigate these issues?</li>\n" +
+                "               <li style=\"font-weight: normal!important;\">What tools or techniques should the developer use, and how can they help gather the necessary information?</li>\n" +
                 "               <li style=\"font-weight: normal!important;\">What steps should the developer follow to accurately diagnose the cause of the issue and apply a fix to resolve the issue?</li>\n" +
                 "           </ul>\n" +
-                "            <p>Include enough detail that a developer with experience with web development and JavaScript, but no experience debugging CSS styles, could successfully finish a similar programming task.</p>\n");
+                "            <p>Include enough detail that so that a developer with experience in web development and JavaScript, but not in debugging CSS styles, can be successful.</p>\n");
 
         }
         else if(taskAssigned =="ErrorHandlingTask"){
-            $("#taskDefinition").append(" <h3>Error Handling in Front-End Web Development</h3>\n" +
-                "            <p>The way a software application handles errors can have a big impact on user satisfaction and usability, and so user interface designers should pay close attention to error handling.\n" +
-                "                Errors are unexpected situations that prevent normal operation. There are many different types of errors which might occur. An error in a part of the UI might cause the whole web app to crash or become non-responsive.\n" +
-                "                As you are implementing a UI component, how would you verify that the component appropriately handles all of the potential errors that might occur? </p>\n" +
-                "            <p><b>Your task is to write a strategy</b> describing a procedure you use to identify all of the potential errors that might occur in a component you are writing and ensure that an appropriate fallback UI message is displayed instead of crashing the component tree.\n" +
-                "                Write your strategy in a way that enables other developers to learn how to implement error handling.</p>\n" +
+            $("#taskDefinition").append(" <h3>Verifying Error Handling Logic in Front-End Web Development</h3>\n" +
+                "<h4>Why Error Handling?</h4>\n"+
+                "            <p>The way a software application handles errors can have a big impact on user satisfaction and usability, and so user interface" +
+                " designers should pay close attention to error handling. Errors are unexpected situations that prevent normal operation of the " +
+                "application. There are many different types of errors which might occur. An error in a part of the UI might cause the whole web " +
+                "app to crash or become non-responsive. As you are implementing a UI component, how would you verify that the component appropriately" +
+                " handles each of the potential errors that might occur? How do you make sure that your application informs users of potential errors" +
+                " and ensures that errors do not cascade and cause the page to crash? </p>\n" +
+
+                "<h4>Error Handling Strategy</h4>\n"+
+                "            <p>Your task is to <b> write a strategy</b> describing a procedure you use to identify all of the potential errors that might occur" +
+                " in an implemented component and ensure that an appropriate fallback UI message is displayed instead of crashing the component tree." +
+                " Your strategy <b>should not</b> include steps for implementing error handling logic. It should describe how to identify potential errors and the approach you take to implement error handling for them. \n</p>\n" +
+                "<h4>Write the strategy</h4>\n"+
+                "<p>Write your strategy so that other developers can easily identify where they need to add error handling.</p>\n"+
                 "            <p>Consider the following in the strategy you write:</p>\n" +
                 "            <ul>\n" +
                 "               <li style=\"font-weight: normal!important;\">What types of errors should the developer consider?</li>\n" +
-                "               <li style=\"font-weight: normal!important;\">What information should the developer gather as they are investigating potential errors and handling of these errors?</li>\n" +
+                "               <li style=\"font-weight: normal!important;\">What information should the developer gather as they are investigating potential errors and how these are handled?</li>\n" +
                 "               <li style=\"font-weight: normal!important;\">What steps should a developer follow to appropriately handle all possible errors which might occur in the component?</li>\n" +
                 "           </ul>\n" +
-                "            <p>Include enough detail that so that a developer with some experience with web development and JavaScript, but no experience writing robust error handling, could successfully finish a similar programming task.</p>\n");
+                "            <p>Include enough detail so that a developer experienced in web development and JavaScript, but not in writing robust error handling, can be successful.</p>\n");
         }
     else {
         $("#taskDefinition").append("<h3>Task not defined</h3>")
