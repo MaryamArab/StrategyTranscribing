@@ -16,7 +16,7 @@ let taskAssigned = window.location.search.substr(1).split("?")[1];
 
 
 
-require.config({ paths: { 'vs': 'monaco/node_modules/monaco-editor/min/vs' }});
+require.config({ paths: { 'vs': '../monaco/node_modules/monaco-editor/min/vs' }});
 
 require(['vs/editor/editor.main'], function() {
 
@@ -147,7 +147,7 @@ $(document).ready(function () {
                 "           </ul>\n" +
                 "            <p>Include enough detail so that a developer experienced in web development and JavaScript, but not in writing robust error handling, can be successful.</p>\n");
         }
-    else {
+        else {
         $("#taskDefinition").append("<h3>Task not defined</h3>")
     }
 

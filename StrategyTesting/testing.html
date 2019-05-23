@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Strategy Testing</title>-->
+    <!--<script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"> </script>-->
+    <!--<script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"> </script>-->
+    <!--<script src="https://unpkg.com/@babel/standalone@7.4.4/babel.min.js"></script>-->
+    <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
+    <!--<link href="styles.css" rel="stylesheet">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container padd6" id ="root" style="width: 960px!important;">-->
+<!--</div>-->
+<!--<script type="text/babel">-->
+<!--//    const Title = (props) => <h1 className="titleColor">{props.text}</h1>-->
+    <!--const Title = (text, message) => <h1 className="titleColor">{text}</h1>-->
+
+
+    <!--ReactDOM.render(-->
+            <!--<Title text="Expert Programming Strategies" message="test"/>,-->
+            <!--document.getElementById("root")-->
+    <!--);-->
+<!--</script>-->
+
+<!--</body>-->
+<head>
+    <meta charset="UTF-8">
+    <title>Strategy Tutorial</title>
+    <!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="../monaco/node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script src="../js/testing.js"></script>
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+
+<div class="container padd6" style="width: 960px!important;">
+    <BR>
+    <div class="row test">
+        <div style="float: left; padding-left: -15px!important;" class=" row col-sm-12">
+            <h1 class="titleColor">Expert Programming Strategies</h1>
+
+        </div>
+    </div>
+    <BR>
+    <div class="row">
+        <div class="row" >
+            <div>
+                <p> Welcome to the Explicit Programming Strategies research study.</p>
+                <p>When you solve problems, you might not think much about how you go about solving them, and what strategies and steps you use for.
+                    The reason is that you have used these approaches and strategies through many years of programming experiences and they change to daily routines.</p>
+                <p>In this study, you will use expert programming strategies to complete two programming tasks. Before you get started, we have some background to help
+                    explain what is a programming strategy and how you can use one.</p>
+
+                <h3>What is a Programming Strategy?</h3>
+                <p>A strategy is a high-level plan for accomplishing a task, describing a series of steps or actions to take to accomplish a goal.</p>
+                <p> Strategies are a common part of everyday life, describing steps with which to find an email in an email client, cook the perfect pizza, or tie your shoes.
+                    <B>Programming strategies</B>  describe how software developers do similar everyday tasks, to diagnose a performance issue or a broken control.
+                </p>
+
+                <h3>Expert Programming Strategies</h3>
+                <p>Through constantly facing tricky programming situations, expert software developers developer <b>strategies</b> which enable them to perform complex programming tasks more quickly and easily.</p>
+                <p>We gathered expert software developers in web development and asked them to write down a strategy on how they would approach a challenging programming task. </p>
+                <p>In this study, you’ll have an opportunity to learn from two web development experts and use the strategies they wrote, step by step, in two programming tasks,
+                    enabling you to work in the same way the expert developer would work.</p>
+
+
+                <h3>Roboto - A language for describing strategy</h3>
+                <p>To help Experts write down strategies in a way that other developers can use, we’ve built a language for describing strategies
+                    called <b>Roboto</b>. This is a simple notation for describing procedures. Most of it is <b>natural language</b>, but there are a few parts that have a concrete meaning.
+                    Let's walk through a few short examples to illustrate its syntax. </p>
+            </div>
+
+            <div class="blog-description">
+                <div class="media row">
+                    <div class="media-body well well-sm research-section col-sm-12">
+                        <h3>Roboto language constructs</h3>
+                        <p>Roboto has several common features from imperative languages, including: </p>
+                        <ol class="list-unstyled">
+                            <li>Preconditions</li>
+                            <li>Statements</li>
+                            <ul>
+                                <li>Actions</li>
+                                <li>Definitions</li>
+                                <li>Conditionals</li>
+                                <li>Loops</li>
+                                <li>Returns</li>
+                                <li>Calls</li>
+                            </ul>
+                            <li>Variables</li>
+                        </ol>
+                        <p>To understand how each of these is being used in writing down a strategy in Roboto, we’ll first take a look at a complete example of a strategy and then take a look at each one by one. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Strategy Tutorial Container -->
+<div class=" media row" style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">
+    <div class=" strategyContainer">
+        <div id="strategyDescription" style="min-height: 710px;" class="media-body well well-sm research-section col-sm-6">
+            <button onclick="nextFeature(); return false;" class="btn btn-primary btn-counter" id="nextBtn" style=" margin: 5px; float: right; font-weight: bold;">Next</button>
+            <button onclick="previousFeature(); return false;" class="btn btn-primary btn-counter" id="prevBtn" style="  float: right; font-weight: bold;">Previous</button>
+            <div id="strategyDescriptionDiv" style="display: block;">
+                <h3>A sample strategy with Roboto for merging two Github branches</h3>
+                <p>The text on the right is an example Roboto strategy. It describes how to merge two branches of code, including fixing any conflicts which may arise.</p>
+                <p>The strategy is started by 'Strategy' keyword, followed by the name of the strategy. In the parenthesis followed by strategy name, you can define variables that you might need to use in the strategy statements steps.</p>
+                <p>Each line in the strategy body represents a statement. A strategy consists of a set of Statements which is represented as a sequence of steps which should be followed by a user.
+                    There are multiple different statement types which will be described in next sections.</p>
+                <p>Please overview the strategy and click the next button to learn about different statements piece by piece.</p>
+                <p></p>
+            </div>
+            <div id="preconditionsDescriptionDiv" style="display:none;">
+                <h3>Precondition</h3>
+                <p>Preconditions express requirements about what the developer using the strategy should first know or have access to.</p>
+                <p><b>Required tools and Environment:</b> Consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?
+                <p><b> Required knowledge:</b> What level of expertise should the strategy user have? What tools, languages, or concepts should they be familiar with before using your strategy?</p>
+                <p><b>Context:</b> Write your strategy for a specific context, such as a defect you debugged yesterday. Describe your application domain: embedded development in C, front end development in React, desktop Java application, etc.</p>
+                <p><b>Available resources:</b> For your case, consider what resources are important to your strategy. Does it require that there be a test suite? A breakpoint debugger? A detailed log file?</p>
+                <p><b>Specific Programming Knowledge:</b>  What programming languages are required to be familiar with</p>
+                <p><b>Expertise level:</b>  What level of expertise the user of strategy should have</p>
+            </div>
+            <div id="statementsDescriptionDiv" style="display:none;">
+                <h3>Statement</h3>
+                <p>Each statement in strategy describes what the user should do next.</p>
+                <p>It could be performing specified action, gathering information, or checking some parameters, fault, or situation in the program. </p>
+                <p>Statements in Robot can be one of six types:
+                    <b>Action</b>,
+                    <b>Definition</b>,
+                    <b>Conditional</b>,
+                    <b>Loop</b>,
+                    <b>Return</b>,
+                    <b>Call</b>
+                    , which we describe in detail next.
+                </p>
+                <p>Additional details about each statement can be added through a comment, indicated through a # tag. These comments should be added exactly before the statement description. In the image in the right, comments are shown in blue color.</p>
+                <p>Comments are not mandatory. If you think that you cannot describe all the details in a strategy statement, or you feel that not all users need detailed or basic information,
+                    you can add it as a comment of extra information before each statement.</p>
+                <p>Try not to repeat the same text as statement in the comments, as it will not add any further information.</p>
+
+            </div>
+            <div id="actionsDescriptionDiv" style="display:none;">
+                <h3>Actions</h3>
+                <p>Action statements describe something that the user should do in the world.</p>
+                <p>Look at the highlighted statements in the strategy. There is no predefined syntax for writing an Action statement.</p>
+                <p>They are mainly in the form of an imperative sentence, which ask user to perform some action in the world, code, tool, or environment.</p>
+            </div>
+            <div id="definitionDescriptionDiv" style="display:none;">
+                <h3>Definition</h3>
+                <p>Definition statement always start with 'SET' keyword, followed by a <b>variable</b> definition, followed by "TO" keyword and a sentence which describe what the defined variable should be assigned to.</p>
+                <p> You can see a sample of Definition statement highlighted in the GitMerge strategy</p>
+                <h4>Variable</h4>
+                <p>Variables make it easier for the strategy user to keep track of things, such as remembering lines of code or functions to return to. </p>
+                <p>Variables may be either a primitive or a list. For instance, ‘conflicted files’ in the following example indicates a list of files which have a conflict, which subsequent statements
+                    may then explicitly refer to. The helps reduce what the strategy user has to remember, making it easier for them to correctly follow the strategy.<BR></p>
+                <p>For instance, <b>'conflictedFiles'</b> in the highlightes statement is a variable records a set of files that have a conflict,
+                    which subsequent statements may then refer to explicitly. This helps reduce memorization burden.</p>
+
+            </div>
+            <div id="conditionalsDescriptionDiv" style="display:none;">
+                <h3>Conditionals</h3>
+                <p> A conditional asks the strategy user to check if a condition is true in the world and then branch to different statements depending on the outcome.</p>
+                <p>Conditional statements stat with "IF" keyword, followed by a query which ask user to check if a condition is true or false in the program or environment.</p>
+                <p> Each branch in a Conditional statement consist of a set of statements to follow.</p>
+
+            </div>
+
+            <div id="loopsDescriptionDiv" style="display:none;">
+                <h3>Loops</h3>
+                <p>Loops indicate a sequence of statements that the strategy user should potentially take more than once. </p>
+                <p>In Roboto, loops take the form of a FOR EACH loop, iterating over a set of items (e.g., files, breakpoints, messages output by a tool) to take a set of actions for each.</p>
+                <p> The items to loop through should be defined in the previous statements as an 'Identifier'.</p>
+                <p>In this strategy, the highlighted statement shows a Loop statement which iterates through the defined variable, 'conflictedFiles', in its preceding statement.</p>
+                <p>This strategy will execute the statements followed by the Foreach statement for all the 'files' being set in 'conflictedFiles'.  </p>
+            </div>
+
+            <div id="returnDiv" style="display:none;">
+                <h3>Return</h3>
+                <p> Returns indicate returning a variable, Call statement, or Action statement. </p>
+            </div>
+            <div id="callDiv" style="display:none;">
+                <h3>Call</h3>
+                <p> Call statements start with 'Do' keyword following by Sub-Strategy. </p>
+                <p>They are used for making nested strategies to prevent them from being disorganized, complex, and long.</p>
+                <h4>Sub-Strategy</h4>
+                <p>To organize long and complex strategies, strategies can be separated into sub-strategies. A sub-strategy is a strategy called by another strategy.
+                    For example, strategy fixConflict is a sample of a sub-strategy which is being used and called in mergeGithubBranches strategy above. </p>
+                <div class="RobotoPanel">
+                    <div class="RobotoPanel">
+                        <div class="statement">STRATEGY fixConflict(conflictedFile)</div>
+                        <div class="statement margin-oneTab">Open the conflictedFile with your favorite text editor</div>
+                        <div class="statement margin-oneTab comment"># To find a line with conflict in your file, search the file for the conflict marker <<<<<<< HEAD </div>
+                        <div class="statement margin-oneTab" style="float: left;">SET</div> <div class="identifier">'line' </div> <div class="statement">TO a line number that has conflict</div>
+                        <div class="statement margin-oneTab comment"># until there is no line with <<<<<<< HEAD tag in the file</div>
+                        <div class="statement margin-oneTab">UNTIL the file has no lines of conflict</div>
+                        <div class="statement margin-twoTab comment"># You'll see the changes from the master branch after the line <<<<<<< HEAD</div>
+                        <div class="statement margin-twoTab comment"># Next youll see ======= which divides 2 merged lines followed by >>>>>>> SECOND branch name</div>
+                        <div class="statement margin-twoTab comment"># Decide if you want to keep only your branch's changes, keep only the other branch's changes, or make a brand new change, and edit the file by removing unwanted lines and save the file</div>
+                        <div class="statement margin-twoTab comment"># Also remove >>>>>>Head & ====== from the lines and make sure that the file has proper code syntax.</div>
+                        <div class="statement margin-twoTab ">Edit the file following the description </div>
+                        <div class="statement margin-threeTab" style="float: left;">SET</div> <div class="identifier">'line' </div> <div class="statement"> TO the next line number that has conflict</div>
+                        <div class="statement margin-oneTab">Return nothing </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="media-body well well-sm research-section col-sm-6">
+            <h3> Strategy with Roboto</h3>
+            <div class="RobotoPanel" id="panel" style="clear: both;">
+                <div id="precondition">
+                    <div class="comment precondition"># This Strategy helps you merge 2 branches in githup and resolve conflicts</div>
+                    <div class="comment precondition">#Required Tools and Environments</div>
+                    <div class="commentDetails precondition">Installing git</div>
+                    <div class="commentDetails precondition">Github account</div>
+                    <div class="commentDetails precondition">Ongoing project which is progressing in at least 2 branches</div>
+                    <div class="commentDetails precondition">Git repository that is not associated with Github</div>
+                    <div class="comment precondition">#Required Knowledge</div>
+                    <div class="commentDetails precondition">Basic git command knowledge</div>
+                    <div class="commentDetails precondition">Knowledge of how to work with terminal and run commands</div>
+                </div>
+                <div class="statement">STRATEGY GitMerge()</div>
+                <div class="statement margin-oneTab comment"># Open the teminal, and use cd(change directory) command to move to the local git project directory </div>
+                <div class="statement margin-oneTab action" id="statement1">Open the terminal and navigate to your git project directory</div>
+                <div class="statement margin-oneTab conditional" id="statement2">IF you are not in the master branch</div>
+                <div class="statement margin-twoTab comment"># Run the command git checkout master</div>
+                <div class="statement margin-twoTab action" id="statement3">checkout to the master branch</div>
+                <div class="statement margin-oneTab conditional" id="statement4">IF you are in the master branch</div>
+                <div class="statement margin-twoTab comment"># To merge the second branch with the master branch run the command "git merge secondBranch", which secondBranch is the name of your git second branch</div>
+
+                <div class="statement margin-twoTab action" id="statement5">Merge the two branches</div>
+                <div class="statement margin-twoTab conditional" id="statement6">IF the merge has a conflict</div>
+                <div class="statement margin-threeTab definition"  id="statement7" style="float: left;">SET</div>
+                <div class="identifier1 identifier">'conflictedFiles' </div>
+                <div class="assignment" style="float: left;">TO the project files that have a conflict</div>
+                <div class="statement margin-threeTab loop" id="statement8">FOR EACH 'file' IN 'conflictedFiles'</div>
+                <div id="statement9" class="statement margin-fourTab call" style="float: left;">DO</div>
+                <div class="subStrategy subStrategy1" style=" margin-left:10px;">fixConflict('file')</div>
+                <div class="statement margin-twoTab comment" style="clear:both"># Run GIT STATUS to see the latest changes</div>
+                <div class="statement margin-twoTab comment"># Run GIT ADD </div>
+                <div class="statement margin-twoTab comment"># Run GIT COMMIT -m ""</div>
+                <div class="statement margin-twoTab comment"># Run GIT PUSH</div>
+                <div class="statement margin-twoTab action">Commit and push the changes</div>
+                <div class="statement margin-oneTab return" id="statement10">RETURN nothing</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END -- Strategy Tutorial Container -->
+
+
+<BR>
+<div class="container padd6" style="width: 960px!important;">
+    <div class="row" >
+
+        <div class="media row">
+            <div class="media-body well well-sm research-section col-sm-12">
+                <h3>Warning: Self-regulation</h3>
+                <p>When doing a programming task, you may have a strategy that you’ve always used in the past.
+                    Perhaps, when faced with a null pointer exception, the first thing you <b>always</b> do is set a breakpoint and run the code in the debugger.
+                    To successfully use and learn a strategy, you will need to stop whatever you would normally do and instead do the steps <b>exactly</b> as
+                    described in the strategy. In this way, you will be able to approach the problem just as an expert developer
+                    would approach the same problem.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="media row">
+            <div class="media-body well well-sm research-section col-sm-12">
+
+                <h3>It’s now time to test two expert strategies</h3>
+
+                <p>What you have learned about Roboto is just for the sake of being precise in articulating strategy. The following  tasks include strategies that
+                    could be written with <b>natural language</b>, <b>Roboto language</b> or mix of both. </p>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--***************    Chrome Profiler Task  **************** -->
+<div id="profilerTaskContainer">
+    <div class="container padd6" style="width: 960px!important;">
+        <div class="row">
+            <div class="media row">
+                <div class="media-body well well-sm research-section col-sm-12">
+                    <h3>Task: Chrome Profiler Task</h3>
+                    <h4>Why Chrome CPU Profiling</h4>
+                    <p>Sophisticated web applications may have complex performance problems. To make performance profiling easier, Chrome includes JavaScript CPU Profiling within DevTools. CPU Profiling collects timing information about each component to be rendered and visualizes this data so that developers can identify potential performance bottlenecks in the rendering process.</p>
+                    <p>An expert developer wrote the following strategy for finding performance problems in web applications using the Chrome Profiler Dev tool. We’d like to know if this a good strategy for finding performance issues, and what challenges you might have in using this strategy.</p>
+                    <h4>Try out an expert strategy</h4>
+                    <p>To try the strategy out, open the <a href="https://maryamarab.github.io/StrategyTranscribing/jank/"><b>Programming Task</b></a> , which is a web app with a performance issue in a separate window in Chrome.</p>
+                    <p>Place the programming task side by side with the strategy description on this page. This will make it easier for you to go back and forth between the strategy description and the web app with the performance issue. </p>
+                    <p>If you’d like to see the source code for the web app, it is available <a href="https://jsfiddle.net/marab/5nmgf1yp/">here</a> if you need it.</p>
+                    <p>Please follow the following strategy step by step to find components with performance issues in this web app.</p>
+                    <p>After you finish using the strategy, we will ask you some questions about your experience with it and the challenges you faced using it. As you work, please try to remember any of the difficulties you face using the strategy.</p>
+                    <br>
+                    <p style="color:darkred!important;"><b>We are not testing your skill or programming proficiency</b></p>
+                    <p style="color:darkred!important;">If you already know a better strategy for finding performance issues, that’s ok. But we’d like to get feedback on the suitability of this expert’s strategy, so please try out the strategy as written here. Once you’ve completed the strategy, you can move on to the next step.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- *********** Expert Strategy Container ****************-->
+    <div style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">
+        <div class="container padd6" style="width: 1360px!important;">
+            <div class="media row">
+                <div class="media-body well well-sm research-section col-sm-12">
+                    <h3>Expert Strategy</h3>
+                    <div id="strategy_ProfilerTask" style="min-height: 550px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *********** Post-task study Container ****************-->
+
+    <div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">
+        <div class="row" style=" width:960px; margin: auto; " >
+            <h3>Post-task Study</h3>
+            <p>Thank you for trying out an expert’s programming strategy.</p>
+            <p>We are still learning how best to help developers write their strategies down in a way that allows you to follow along. A key goal of our study is to understand your experiences and any of your challenges in using these strategies. By sharing your experiences with us, we can work to make it easier to share expert programming strategies.</p>
+            <p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.</p>
+            <h4> Post-task Questions</h4>
+            <p style="color:darkred!important">Please finish testing the strategy before you proceed to to these questions.</p>
+        </div>
+    </div>
+    <div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">
+        <div id="postTaskQuestions" class="row" style=" width:960px; margin: auto; " >
+
+            <p>1- What made it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you remember.</p>
+            <textarea style="width:100%;  min-height: 100px;" id="challengingToWork_Profiler" placeholder="Please describe your answer here" class="field" ></textarea>
+
+            <p>2- What do you think is missing?</p>
+            <textarea style="width:100%;  min-height: 100px;" id="missing_Profiler" placeholder="Please describe your answer here" class="field" ></textarea>
+
+            <p>3- What additional information, details, or features would make it easier for you to follow this strategy?</p>
+            <textarea style="width:100%;  min-height: 100px;" id="requiredInfo_Profiler" placeholder="Please describe your answer here" class="field" ></textarea>
+
+            <p>4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.</p>
+            <textarea style="width:100%;  min-height: 100px;" id="clarity_Profiler" placeholder="Please describe your answer here" class="field" ></textarea>
+
+            <p>Please tell us about other categories of challenges you faced which is not asked above, if any. </p>
+            <textarea style="width:100%;  min-height: 100px;" id="otherChallenges_Profiler" placeholder="Please describe your answer here" class="field" ></textarea>
+        </div>
+    </div>
+</div>
+<!-- *********** End Profiler Task  ****************-->
+
+<!--&lt;!&ndash;***************    Error Handler Task  **************** &ndash;&gt;-->
+<!--<div id="errorHandlingTaskContainer">-->
+    <!--<div class="container padd6" style="width: 960px!important;">-->
+        <!--<div class="row">-->
+            <!--<div class="media row">-->
+                <!--<div class="media-body well well-sm research-section col-sm-12">-->
+                    <!--<h3>Task: Verifying Error Handling Logic in Front-End Web Development</h3>-->
+                    <!--<h4>Why Error Handling</h4>-->
+                    <!--<p>Implementing a new user interface component can be challenging, as some user behaviours might cause the whole application to crash. Errors are unexpected situations that prevent normal operation of the application. There are many different types of errors which might occur. As you are implementing a UI component, you need to verify that the component appropriately handles all of the potential errors that might occur. </p>-->
+                    <!--<p>An expert front-end web developer wrote the following strategy they use when to handle possible errors a program might have and ensure that an appropriate fallback UI message is displayed instead of crashing the component tree.</p>-->
+                    <!--<h4>Try out an expert strategy</h4>-->
+                    <!--<p>To try the strategy out, open the <a href="https://maryamarab.github.io/StrategyTranscribing/ErrorHandling/"><b>Programming Task</b></a>in a separate window in Chrome.-->
+                    <!--The app contains a web app in which some of the elements do not work correctly: </p>-->
+                    <!--<ul>-->
+                        <!--<li>The Order Date column in the first row of the table shows ‘Invalid Date’ rather than notifying the user for this error:</li>-->
+                        <!--<img src="../images/errorHandling1.png" width=100%; style="margin-bottom: 10px;">-->
+
+                        <!--<li>Clicking on each row will pop up the detailed information of the row. If user clicks on the first row, the field ‘Winery’ is empty. If the user click on the third row, no information would pop up. See the following image for the empty field:</li>-->
+                        <!--<img src="../images/errorHandling2.png" width=100%>-->
+
+                    <!--</ul>-->
+
+                    <!--<p>Use the following strategy and test how effective it would be in handling potential errors in the programming task page. To try out the strategy, first open the Programming Task. Place the Programming Task side by side with the strategy description on this page. This will make it easier for you to go back and forth between the description of the strategy and the web app. </p>-->
+                    <!--<p>If you’d like to see the source code for the web app, it is available <a href="https://jsfiddle.net/marab/g6x9o5r0/" >here</a> if you need it.-->
+                        <!--Please follow the following strategy step by step to find the causes of these issues.-->
+                        <!--After you finish using the strategy, we will ask you some questions about your experience with the strategy and the challenges you faced using it. As you work, please try to remember any of the difficulties you face using the strategy.-->
+                    <!--</p>-->
+                    <!--<br>-->
+                    <!--<p style="color:darkred!important;"><b>We are not testing your skill or programming proficiency</b></p>-->
+                    <!--<p style="color:darkred!important;">If you already know a better strategy for finding performance issues, that’s ok. But we’d like to get feedback on the suitability of this expert’s strategy, so please try out the strategy as written here. Once you’ve completed the strategy, you can move on to the next step.</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; *********** Expert Strategy Container ****************&ndash;&gt;-->
+    <!--<div style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">-->
+        <!--<div class="container padd6" style="width: 1360px!important;">-->
+            <!--<div class="media row">-->
+                <!--<div class="media-body well well-sm research-section col-sm-12">-->
+                    <!--<h3>Expert Strategy</h3>-->
+                    <!--<div id="strategy_ErrorHandlingTask" style="min-height: 550px;"></div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; *********** Post-task study Container ****************&ndash;&gt;-->
+
+    <!--<div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">-->
+        <!--<div class="row" style=" width:960px; margin: auto; " >-->
+            <!--<h3>Post-task Study</h3>-->
+            <!--<p>Thank you for trying out an expert’s programming strategy.</p>-->
+            <!--<p>We are still learning how best to help developers write their strategies down in a way that allows you to follow along. A key goal of our study is to understand your experiences and any of your challenges in using these strategies. By sharing your experiences with us, we can work to make it easier to share expert programming strategies.</p>-->
+            <!--<p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.</p>-->
+            <!--<h4> Post-task Questions</h4>-->
+            <!--<p style="color:darkred!important">Please finish testing the strategy before you proceed to to these questions.</p>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">-->
+        <!--<div class="row" style=" width:960px; margin: auto; " >-->
+
+            <!--<p>1- What made it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you remember.</p>-->
+            <!--<textarea style="width:100%;  min-height: 100px;" id="challengingToWork_ErrorHandler" placeholder="Please describe your answer here" class="field" ></textarea>-->
+
+            <!--<p>2- What do you think is missing?</p>-->
+            <!--<textarea style="width:100%;  min-height: 100px;" id="missing_ErrorHandler" placeholder="Please describe your answer here" class="field" ></textarea>-->
+
+            <!--<p>3- What additional information, details, or features would make it easier for you to follow this strategy?</p>-->
+            <!--<textarea style="width:100%;  min-height: 100px;" id="requiredInfo_ErrorHandler" placeholder="Please describe your answer here" class="field" ></textarea>-->
+
+            <!--<p>4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.</p>-->
+            <!--<textarea style="width:100%;  min-height: 100px;" id="clarity_ErrorHandler" placeholder="Please describe your answer here" class="field" ></textarea>-->
+
+            <!--<p>Please tell us about other categories of challenges you faced which is not asked above, if any. </p>-->
+            <!--<textarea style="width:100%;  min-height: 100px;" id="otherChallenges_ErrorHandler" placeholder="Please describe your answer here" class="field" ></textarea>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; *********** End Error Handler Task  ****************&ndash;&gt;-->
+
+<!--***************    Css Debugging Task  **************** -->
+<!--<div id="cssDebuggingTaskContainer">-->
+    <!--<div class="container padd6" style="width: 960px!important;">-->
+        <!--<div class="row">-->
+            <!--<div class="media row">-->
+                <!--<div class="media-body well well-sm research-section col-sm-12">-->
+                    <!--<h3>Task: CSS Debugging</h3>-->
+                    <!--<h4>Override Styles in Subsequent CSS</h4>-->
+                    <!--<p>Working with CSS styles can be challenging, as styles may cascade, where multiple rules may apply to the same element, rules may be inherited, where an element inherits visual properties from containing elements, and rules may be manipulated, where code is used to add and remove classes or other style information. In situations where you find that CSS style rules do not work as you intended, a good strategy may help. </p>-->
+
+
+                    <!--<h4>Your task</h4>-->
+                    <!--<p><b>Your task is to write a strategy </b>describing how you debug a problem in which the visual style of an element is in some way incorrect. Imagine you are working in code written by other developers with which you are not already completely familiar. What steps will you take to find the cause of the incorrect visual appearance? Your strategy should not include steps to resolve the issue, but we need you to write a strategy on the approach you would take to identify the source of fault.</p>-->
+                    <!--<h4>Try  out an expert strategy</h4>-->
+                    <!--<p>An expert front-end web developer wrote the following strategy that they use when debugging a problem with the visual style of an element.</p>-->
+                    <!--<p>To try the strategy out, open the <a href="https://maryamarab.github.io/StrategyTranscribing/jank2/"><b>Programming Task</b></a>in a separate window in Chrome.-->
+                        <!--The page contains a web app in which some of the elements do not appear correctly: </p>-->
+                    <!--<ul>-->
+                        <!--<li>The header color should be “Dark red”, but is instead “Black”.</li>-->
+                        <!--<li>In the web app, clicking the “Add 10” button adds 10 additional elements. Each of these elements should have a border with a randomly generated color but instead have a black border.</li>-->
+                        <!--<li>Before the user clicks the buttons, the Add, Subtract, and Start buttons should have a background color the same as their border (e.g., “green” for Add 10). However, the background color for each appears as “beige”.</li>-->
+
+
+                    <!--</ul>-->
+                    <!--<p>The images below depict the current behavior (left) and the expected behavior (right)</p>-->
+                    <!--<div class="row">-->
+                        <!--<div class="media-body well well-sm research-section col-sm-6">-->
+                            <!--<img src="../images/cssDebugging-incorrect.png" width=100% height=250px;">-->
+                            <!--<b>CURRENT BEHAVIOR</b>-->
+                        <!--</div>-->
+                        <!--<div class="media-body well well-sm research-section col-sm-6">-->
+                            <!--<img src="../images/cssDebugging-correct.png" width=100%; height=250px>-->
+                            <!--<b>EXPECTED BEHAVIOR</b>-->
+                        <!--</div>-->
+                    <!--</div >-->
+
+                    <!--<p>To fix these CSS issues, please use the strategy the expert described. We’d like to know if this a good strategy for finding CSS issues, and what challenges you might have in using this strategy.</p>-->
+
+                    <!--<p>To try out the strategy, first open the Programming Task. Place the Programming Task side by side with the strategy description on this page. This will make it easier for you to go back and forth between the description of the strategy and the web app.</p>-->
+                    <!--<p>If you’d like to see the source code for the web app, it is available <a href="https://jsfiddle.net/marab/qtjdpb2a/3/">here</a> if you need it.-->
+                        <!--Please follow the following strategy step by step to find the causes of these issues.</p>-->
+                    <!--<p>After you finish using the strategy, we will ask you some questions about your experience with the strategy and the challenges you faced using it. As you work, please try to remember any of the difficulties you face using the strategy. </p>-->
+                    <!--<br>-->
+                    <!--<p style="color:darkred!important;"><b>We are not testing your skill or programming proficiency</b></p>-->
+                    <!--<p style="color:darkred!important;">If you already know a better strategy for finding performance issues, that’s ok. But we’d like to get feedback on the suitability of this expert’s strategy, so please try out the strategy as written here. Once you’ve completed the strategy, you can move on to the next step.</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; *********** Expert Strategy Container ****************&ndash;&gt;-->
+    <!--<div style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">-->
+        <!--<div class="container padd6" style="width: 1360px!important;">-->
+            <!--<div class="media row">-->
+                <!--<div class="media-body well well-sm research-section col-sm-12">-->
+                    <!--<h3>Expert Strategy</h3>-->
+                    <!--<div id="strategy_CssDebuggingTask" style="min-height: 550px;"></div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; *********** Post-task study Container ****************&ndash;&gt;-->
+
+    <!--<div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">-->
+        <!--<div class="row" style=" width:960px; margin: auto; " >-->
+            <!--<h3>Post-task Study</h3>-->
+            <!--<p>Thank you for trying out an expert’s programming strategy.</p>-->
+            <!--<p>We are still learning how best to help developers write their strategies down in a way that allows you to follow along. A key goal of our study is to understand your experiences and any of your challenges in using these strategies. By sharing your experiences with us, we can work to make it easier to share expert programming strategies.</p>-->
+            <!--<p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.</p>-->
+            <!--<h4> Post-task Questions</h4>-->
+            <!--<p style="color:darkred!important">Please finish testing the strategy before you proceed to to these questions.</p>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">-->
+        <!--<div class="row" style=" width:960px; margin: auto; " >-->
+
+            <!--<p>1- What made it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you remember.</p>-->
+            <!--<textarea style="width:100%;  min-height: 100px;" id="challengingToWork_CssDebugging" placeholder="Please describe your answer here" class="field" ></textarea>-->
+
+            <!--<p>2- What do you think is missing?</p>-->
+            <!--<textarea style="width:100%;  min-height: 100px;" id="missing_CssDebugging" placeholder="Please describe your answer here" class="field" ></textarea>-->
+
+            <!--<p>3- What additional information, details, or features would make it easier for you to follow this strategy?</p>-->
+            <!--<textarea style="width:100%;  min-height: 100px;" id="requiredInfo_CssDebugging" placeholder="Please describe your answer here" class="field" ></textarea>-->
+
+            <!--<p>4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.</p>-->
+            <!--<textarea style="width:100%;  min-height: 100px;" id="clarity_CssDebugging" placeholder="Please describe your answer here" class="field" ></textarea>-->
+
+            <!--<p>Please tell us about other categories of challenges you faced which is not asked above, if any. </p>-->
+            <!--<textarea style="width:100%;  min-height: 100px;" id="otherChallenges_CssDebugging" placeholder="Please describe your answer here" class="field" ></textarea>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!-- *********** End Css Debugging Task  ****************-->
+
+<!--***************************Thank you div ***********************-->
+
+<div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">
+    <div  class="row" style=" width:960px; margin: auto; " >
+    <p>Thank you again. Please submit your task by pushing the submit button bellow and inform us when you finished by sending us an email, and we will follow up with you.</p>
+    <p>We greatly appreciate your time and contributions to this research.</p>
+</div>
+</div>
+
+
+<button onclick="submit()"> Submit</button>
+</html>
