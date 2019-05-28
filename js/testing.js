@@ -15,6 +15,12 @@ let participantId = window.location.search.substr(1).split("?")[0];
 let firstStrategyId = window.location.search.substr(1).split("?")[1];
 let secondStrategyId = window.location.search.substr(1).split("?")[2];
 
+var firstStrategy = "";
+var firstTask="";
+var secondStrategy = "";
+var secondTask="";
+let database = firebase.firestore();
+
 //****************Monaco Editor**************************
 require.config({ paths: { 'vs': '../monaco/node_modules/monaco-editor/min/vs' }});
 
@@ -46,96 +52,9 @@ require(['vs/editor/editor.main'], function() {
         ]
     });
 
-
-    // window.editor = monaco.editor.create(document.getElementById('strategy_CssDebuggingTask'), {
-    //     theme: 'myCoolTheme',
-    //     value: "",
-    //     language: 'robotoLanguage'
-    // });
-    // editor.setValue( firstStrategy.replace(/(?:\\[n]|[\n]+)+/g, "\n"));
 });
 
 //***************************End Monaco Editor**********************************
-
-
-//*******************Retrieve Strategy *************************
-var firstStrategy = "";
-var firstTask="";
-var secondStrategy = "";
-var secondTask="";
-let database = firebase.firestore();
-
-var strat1 = database.collection("Strategies").doc(firstStrategyId);
-var getDoc1 = strat1.get()
-    .then(doc => {
-        if (!doc.exists) {
-            console.log('No such document!');
-        } else {
-            firstStrategy= doc.data().StrategyDefinition;
-            firstTask = doc.data().Task;
-            console.log('Document data:', doc.data().StrategyDefinition);
-            console.log('Task   :', doc.data().Task);
-            //Tasks checking for visibility of containers
-
-            window.editor = monaco.editor.create(document.getElementById('strategy_ProfilerTask'), {
-                theme: 'myCoolTheme',
-                value: "",
-                language: 'robotoLanguage'
-            });
-            editor.setValue( firstStrategy.replace(/(?:\\[n]|[\n]+)+/g, "\n"));
-
-
-        }
-    })
-    .catch(err => {
-        console.log('Error getting document', err);
-    });
-//
-// var strat2 = database.collection("Strategies").doc(secondStrategyId);
-// var getDoc2 = strat2.get()
-//     .then(doc => {
-//         if (!doc.exists) {
-//             console.log('No such document!');
-//         } else {
-//             secondStrategy= doc.data().StrategyDefinition;
-//             secondTask = doc.data().Task;
-//             console.log('Document data:', doc.data().StrategyDefinition);
-//             console.log('Task :', doc.data().Task);
-//
-//
-
-//
-//
-//
-//
-//
-//             // if(firstTask == "CssDebuggingTask" ||secondTask == "CssDebuggingTask" )
-//             //     document.getElementById("cssDebuggingTaskContainer").visible=true;
-//             // else
-//             //     $( "#cssDebuggingTaskContainer" ).hide();
-//             //
-//             //
-//             // if(firstTask == "ProfilerTask" ||secondTask == "ProfilerTask" )
-//             //     $("#profilerTaskContainer").show();
-//             // else
-//             //     $( "#profilerTaskContainer" ).hide();
-//             // if(firstTask == "ErrorHandlingTask" || secondTask == "ErrorHandlingTask" )
-//             //     $("#errorHandlingTaskContainer").show();
-//             // else
-//             //     $( "#errorHandlingTaskContainer" ).hide();
-//         }
-//     })
-//     .catch(err => {
-//         console.log('Error getting document', err);
-//     });
-
-
-
-
-
-
-
-
 
 
 $(document).ready(function () {
@@ -267,29 +186,317 @@ $(document).ready(function () {
         highlight(pc);
     }
 }
+    var timeoutId,
+        saveData = {};
+// Function to save all fields that were changed.
+    function saveRatings() {
+
+        // Iterate over all properties on our saveData object and populate them with data from element.
+        for (var key in saveData) {
+            // Get reference to element we stored on saveData object.
+            var $field = saveData[key];
+            // Replace value on saveData object with the current element value.
+            saveData[key] = $field.val();
+            // Change color on text box to show it was saved.
+            $field.css({
+                backgroundColor: '#cfc'
+            });
+        }
+        // Log saveData object to console, this is the object that would go to server as part of ajax call.
+        console.log(saveData);
+        saveData = {};
+    }
+
+    $('.field').keypress(function (e) {
+
+        var $currentField = $(this);
+
+        $currentField.css({
+            backgroundColor: '#cde4ec',
+            border: 'none'
+        });
 
 
+        // Set property on saveData object and set it equal to the current jQuery element.
+        saveData[$currentField.attr('id')] = $currentField;
 
-});
+        // If a timer was started, clear it because they are still pressing keys like a monkey.
+        if (timeoutId) clearTimeout(timeoutId);
 
-async function retrieve(pId) {
-    let database = firebase.firestore();
+        // Start a timer that will fire save when finished.
+        timeoutId = setTimeout(saveRatings, 750);
+    });
 
-    var x = database.collection("Strategies").doc(participantId);
-    var getDoc = x.get()
+    var strat1 = database.collection("Strategies").doc(firstStrategyId);
+    var getDoc1 = strat1.get()
         .then(doc => {
             if (!doc.exists) {
                 console.log('No such document!');
             } else {
-                console.log('Document data:', doc.data().StrategyDefinition);
+                firstStrategy= doc.data().StrategyDefinition;
+                firstTask = doc.data().Task;
+                console.log('Task   :', doc.data().Task);
+
+                var strat2 = database.collection("Strategies").doc(secondStrategyId);
+                var getDoc2 = strat2.get()
+                    .then(doc => {
+                        if (!doc.exists) {
+                            console.log('No such document!');
+                        } else {
+                            secondStrategy= doc.data().StrategyDefinition;
+                            secondTask = doc.data().Task;
+                            console.log('SecondTask :', doc.data().Task);
+                            if(firstTask == "CssDebuggingTask" ||secondTask == "CssDebuggingTask" ){
+                                $( "#cssDebuggingTaskContainer" ).show();
+                                window.editor = monaco.editor.create(document.getElementById('strategy_CssDebuggingTask'), {
+                                    theme: 'myCoolTheme',
+                                    value: "",
+                                    language: 'robotoLanguage'
+                                });
+                                if(firstTask == "CssDebuggingTask")
+                                    editor.setValue( firstStrategy.replace(/(?:\\[n]|[\n]+)+/g, "\n"));
+                                else
+                                    editor.setValue( secondStrategy.replace(/(?:\\[n]|[\n]+)+/g, "\n"));
+
+                            }
+                            else
+                                $( "#cssDebuggingTaskContainer" ).hide();
+
+                            if(firstTask == "ProfilerTask" ||secondTask == "ProfilerTask" ){
+                                $("#profilerTaskContainer").show();
+                                window.editor = monaco.editor.create(document.getElementById('strategy_ProfilerTask'), {
+                                    theme: 'myCoolTheme',
+                                    value: "",
+                                    language: 'robotoLanguage'
+                                });
+                                if(firstTask == "ProfilerTask")
+                                    editor.setValue( firstStrategy.replace(/(?:\\[n]|[\n]+)+/g, "\n"));
+                                else
+                                    editor.setValue( secondStrategy.replace(/(?:\\[n]|[\n]+)+/g, "\n"));
+                            }
+                            else
+                                $( "#profilerTaskContainer" ).hide();
+
+                            if(firstTask == "ErrorHandlingTask" || secondTask == "ErrorHandlingTask" ){
+                                $("#errorHandlingTaskContainer").show();
+                                window.editor = monaco.editor.create(document.getElementById('strategy_ErrorHandlingTask'), {
+                                    theme: 'myCoolTheme',
+                                    value: "",
+                                    language: 'robotoLanguage'
+                                });
+                                if(firstTask == "ErrorHandlingTask")
+                                    editor.setValue( firstStrategy.replace(/(?:\\[n]|[\n]+)+/g, "\n"));
+                                else
+                                    editor.setValue( secondStrategy.replace(/(?:\\[n]|[\n]+)+/g, "\n"));
+                            }
+                            else
+                                $( "#errorHandlingTaskContainer" ).hide();
+
+
+                        }
+                    })
+                    .catch(err => {
+                        console.log('Error getting document', err);
+                    });
+
+
+
             }
         })
         .catch(err => {
             console.log('Error getting document', err);
         });
+});
+
+
+async function submit(participantId){
+    let time = new Date();
+    var hh = time.getHours();
+    var mm = time.getMinutes();
+    var ss = time.getSeconds();
+    var timestamp = hh + ":" + mm + ":" + ss;
+    let pId =window.location.search.substr(1).split("?")[0];
+
+
+    var profilerChallengesToWork = document.getElementById("challengingToWork_Profiler").value;
+    var profilerMissing = document.getElementById("missing_Profiler").value;
+    var profilerRequiredInfo = document.getElementById("requiredInfo_Profiler").value;
+    var profilerClarity = document.getElementById("clarity_Profiler").value;
+    var profilerOtherChallenges = document.getElementById("otherChallenges_Profiler").value;
+
+    var cssDebuggingChallengesToWork = document.getElementById("challengingToWork_CssDebugging").value;
+    var cssDebuggingMissing = document.getElementById("missing_CssDebugging").value;
+    var cssDebuggingRequiredInfo = document.getElementById("requiredInfo_CssDebugging").value;
+    var cssDebuggingClarity = document.getElementById("clarity_CssDebugging").value;
+    var cssDebuggingOtherChallenges = document.getElementById("otherChallenges_CssDebugging").value;
+
+    var errorHandlingChallengesToWork = document.getElementById("challengingToWork_ErrorHandling").value;
+    var errorHandlingMissing = document.getElementById("missing_ErrorHandling").value;
+    var errorHandlingRequiredInfo = document.getElementById("requiredInfo_ErrorHandling").value;
+    var errorHandlingClarity = document.getElementById("clarity_ErrorHandling").value;
+    var errorHandlingOtherChallenges = document.getElementById("otherChallenges_ErrorHandling").value;
+
+    console.log("FirstTask   "+firstStrategyId);
+    console.log("FirstTask   "+firstTask);
+    //**********************Check for Empty inputs***********************
+
+    if(firstTask =="ProfilerTask" || secondTask == "ProfilerTask")
+    {
+        if(profilerChallengesToWork ==""){
+            document.getElementById("challengingToWork_Profiler").style.border="2px solid red";
+            alert("Please describe in a couple of sentences if the strategy is/is not challenging to work with.\"");
+            return;
+        }
+
+        if(profilerMissing ==""){
+            document.getElementById("missing_Profiler").style.border="2px solid red";
+            alert("Please describe in a couple of sentences if the strategy is or is'nt missing any step.\"");
+            return;
+        }
+        if(profilerRequiredInfo ==""){
+            document.getElementById("requiredInfo_Profiler").style.border="2px solid red";
+            alert("Please fill out the required fields. \"");
+            return;
+        }
+        if(profilerClarity ==""){
+            document.getElementById("clarity_Profiler").style.border="2px solid red";
+            alert("Please fill out the required fields. \"");
+            return;
+        }
+        if(profilerOtherChallenges ==""){
+            document.getElementById("otherChallenges_Profiler").style.border="2px solid red";
+            alert("Please fill out the required fields. \"");
+            return;
+        }
+    }
+    if(firstTask =="CssDebuggingTask" || secondTask == "CssDebuggingTask")
+    {
+        if(cssDebuggingChallengesToWork ==""){
+            document.getElementById("challengingToWork_CssDebugging").style.border="2px solid red";
+            alert("Please describe in a couple of sentences if the strategy is/is not challenging to work with.\"");
+            return;
+        }
+
+        if(cssDebuggingMissing ==""){
+            document.getElementById("missing_CssDebugging").style.border="2px solid red";
+            alert("Please describe in a couple of sentences if the strategy is or is'nt missing any step.\"");
+            return;
+        }
+        if(cssDebuggingRequiredInfo ==""){
+            document.getElementById("requiredInfo_CssDebugging").style.border="2px solid red";
+            alert("Please fill out the required fields. \"");
+            return;
+        }
+        if(cssDebuggingClarity ==""){
+            document.getElementById("clarity_CssDebugging").style.border="2px solid red";
+            alert("Please fill out the required fields. \"");
+            return;
+        }
+        if(cssDebuggingOtherChallenges ==""){
+            document.getElementById("otherChallenges_CssDebugging").style.border="2px solid red";
+            alert("Please fill out the required fields. \"");
+            return;
+        }
+
+    }
+    if(firstTask =="ErrorHandlingTask" || secondTask == "ErrorHandlingTask")
+    {
+        if(errorHandlingChallengesToWork ==""){
+            document.getElementById("challengingToWork_ErrorHandling").style.border="2px solid red";
+            alert("Please describe in a couple of sentences if the strategy is/is not challenging to work with.\"");
+            return;
+        }
+
+        if(errorHandlingMissing ==""){
+            document.getElementById("missing_ErrorHandling").style.border="2px solid red";
+            alert("Please describe in a couple of sentences if the strategy is or is'nt missing any step.\"");
+            return;
+        }
+        if(errorHandlingRequiredInfo ==""){
+            document.getElementById("requiredInfo_ErrorHandling").style.border="2px solid red";
+            alert("Please fill out the required fields. \"");
+            return;
+        }
+        if(errorHandlingClarity ==""){
+            document.getElementById("clarity_ErrorHandling").style.border="2px solid red";
+            alert("Please fill out the required fields. \"");
+            return;
+        }
+        if(errorHandlingOtherChallenges ==""){
+            document.getElementById("otherChallenges_ErrorHandling").style.border="2px solid red";
+            alert("Please fill out the required fields. \"");
+            return;
+        }
+    }
+    if(firstTask == "ProfilerTask"){
+        var firstStrategyChallenges=[];
+        firstStrategyChallenges.push("StrategyId: "+ firstStrategyId);
+        firstStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_Profiler").value);
+        firstStrategyChallenges.push("Missing: "+           document.getElementById("missing_Profiler").value);
+        firstStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_Profiler").value);
+        firstStrategyChallenges.push("clarity: "+           document.getElementById("clarity_Profiler").value);
+        firstStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_Profiler").value);
+    }
+    else  if(secondTask == "ProfilerTask"){
+        var secondStrategyChallenges=[];
+        secondStrategyChallenges.push("StrategyId: "+ secondStrategyId);
+        secondStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_Profiler").value);
+        secondStrategyChallenges.push("Missing: "+           document.getElementById("missing_Profiler").value);
+        secondStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_Profiler").value);
+        secondStrategyChallenges.push("clarity: "+           document.getElementById("clarity_Profiler").value);
+        secondStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_Profiler").value);
+    }
+    if(firstTask == "CssDebuggingTask"){
+        var firstStrategyChallenges=[];
+        firstStrategyChallenges.push("StrategyId: "+ firstStrategyId);
+        firstStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_CssDebugging").value);
+        firstStrategyChallenges.push("Missing: "+           document.getElementById("missing_CssDebugging").value);
+        firstStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_CssDebugging").value);
+        firstStrategyChallenges.push("clarity: "+           document.getElementById("clarity_CssDebugging").value);
+        firstStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_CssDebugging").value);
+    }
+    else  if(secondTask == "CssDebuggingTask"){
+        var secondStrategyChallenges=[];
+        secondStrategyChallenges.push("StrategyId: "+ secondStrategyId);
+        secondStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_CssDebugging").value);
+        secondStrategyChallenges.push("Missing: "+           document.getElementById("missing_CssDebugging").value);
+        secondStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_CssDebugging").value);
+        secondStrategyChallenges.push("clarity: "+           document.getElementById("clarity_CssDebugging").value);
+        secondStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_CssDebugging").value);
+    }
+    if(firstTask == "ErrorHandlingTask"){
+        var firstStrategyChallenges=[];
+        firstStrategyChallenges.push("StrategyId: "+ firstStrategyId);
+        firstStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_ErrorHandling").value);
+        firstStrategyChallenges.push("Missing: "+           document.getElementById("missing_ErrorHandling").value);
+        firstStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_ErrorHandling").value);
+        firstStrategyChallenges.push("clarity: "+           document.getElementById("clarity_ErrorHandling").value);
+        firstStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_ErrorHandling").value);
+    }
+    else  if(secondTask == "ErrorHandlingTask"){
+        var secondStrategyChallenges=[];
+        secondStrategyChallenges.push("StrategyId: "+ secondStrategyId);
+        secondStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_ErrorHandling").value);
+        secondStrategyChallenges.push("Missing: "+           document.getElementById("missing_ErrorHandling").value);
+        secondStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_ErrorHandling").value);
+        secondStrategyChallenges.push("clarity: "+           document.getElementById("clarity_ErrorHandling").value);
+        secondStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_ErrorHandling").value);
+    }
 
 
 
+    database.collection("TestedStrategies").doc(pId).set({
+        Time:timestamp,
+        ParticipantId: pId,
+        strategy1:firstStrategyChallenges,
+        strategy2: secondStrategyChallenges,
+        task1: firstTask,
+        task2: secondTask
 
-
+    }).catch(function (err) {
+        alert("Something wrong while you are trying to submit your strategy. It means that your work is not saved i our database. In order to be compensated with your work, we need a record of your work. " +
+            "Please send a pdf copy of this page to marab@gmu.edu. Thank you so much for participating in our study.");
+        console.log("error saving", err);
+    });
+    alert("Congratulation.You successfully submit your draft of strategy. Thank you so much for participating in our study.");
 }

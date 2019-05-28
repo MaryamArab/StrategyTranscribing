@@ -286,8 +286,8 @@
     </div>
 </div>
 <!--***************    Chrome Profiler Task  **************** -->
-<div id="profilerTaskContainer">
-    <div class="container padd6" style="width: 960px!important;">
+<div class="testingTaskContainer" id="profilerTaskContainer">
+    <div class="container padd6" style="width: 1360px!important;">
         <div class="row">
             <div class="media row">
                 <div class="media-body well well-sm research-section col-sm-12">
@@ -309,8 +309,8 @@
         </div>
     </div>
     <!-- *********** Expert Strategy Container ****************-->
-    <div style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">
-        <div class="container padd6" style="width: 1360px!important;">
+    <div class="container padd6" style="width: 1360px!important;">
+        <div class="row">
             <div class="media row">
                 <div class="media-body well well-sm research-section col-sm-12">
                     <h3>Expert Strategy</h3>
@@ -336,197 +336,200 @@
         <div id="postTaskQuestions" class="row" style=" width:960px; margin: auto; " >
 
             <p>1- What made it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you remember.</p>
-            <textarea style="width:100%;  min-height: 100px;" id="challengingToWork_Profiler" placeholder="Please describe your answer here" class="field" ></textarea>
+            <textarea class="answerArea field" id="challengingToWork_Profiler" placeholder="Please describe your answer here"  ></textarea>
 
             <p>2- What do you think is missing?</p>
-            <textarea style="width:100%;  min-height: 100px;" id="missing_Profiler" placeholder="Please describe your answer here" class="field" ></textarea>
+            <textarea class="answerArea field" id="missing_Profiler" placeholder="Please describe your answer here"  ></textarea>
 
             <p>3- What additional information, details, or features would make it easier for you to follow this strategy?</p>
-            <textarea style="width:100%;  min-height: 100px;" id="requiredInfo_Profiler" placeholder="Please describe your answer here" class="field" ></textarea>
+            <textarea class="answerArea field" id="requiredInfo_Profiler" placeholder="Please describe your answer here"></textarea>
 
             <p>4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.</p>
-            <textarea style="width:100%;  min-height: 100px;" id="clarity_Profiler" placeholder="Please describe your answer here" class="field" ></textarea>
+            <textarea class="answerArea field" id="clarity_Profiler" placeholder="Please describe your answer here"></textarea>
 
             <p>Please tell us about other categories of challenges you faced which is not asked above, if any. </p>
-            <textarea style="width:100%;  min-height: 100px;" id="otherChallenges_Profiler" placeholder="Please describe your answer here" class="field" ></textarea>
+            <textarea class="answerArea field" id="otherChallenges_Profiler" placeholder="Please describe your answer here"></textarea>
         </div>
     </div>
 </div>
+
 <!-- *********** End Profiler Task  ****************-->
+<div style=" clear: both; visibility: hidden">l</div>
+<!--***************    Error Handler Task  **************** -->
+<div id="errorHandlingTaskContainer" class="testingTaskContainer">
+    <div class="container padd6" style="width: 1360px!important;" >
+        <div class="row">
+            <div class="media row">
+                <div class="media-body well well-sm research-section col-sm-12">
+                    <h3>Task: Verifying Error Handling Logic in Front-End Web Development</h3>
+                    <h4>Why Error Handling</h4>
+                    <p>Implementing a new user interface component can be challenging, as some user behaviours might cause the whole application to crash. Errors are unexpected situations that prevent normal operation of the application. There are many different types of errors which might occur. As you are implementing a UI component, you need to verify that the component appropriately handles all of the potential errors that might occur. </p>
+                    <p>An expert front-end web developer wrote the following strategy they use when to handle possible errors a program might have and ensure that an appropriate fallback UI message is displayed instead of crashing the component tree.</p>
+                    <h4>Try out an expert strategy</h4>
+                    <p>To try the strategy out, open the <a href="https://maryamarab.github.io/StrategyTranscribing/ErrorHandling/"><b>Programming Task</b></a>in a separate window in Chrome.
+                    The app contains a web app in which some of the elements do not work correctly: </p>
+                    <ul>
+                        <li>The Order Date column in the first row of the table shows ‘Invalid Date’ rather than notifying the user for this error:</li>
+                        <img src="../images/errorHandling1.png" width=100%; style="margin-bottom: 10px;">
 
-<!--&lt;!&ndash;***************    Error Handler Task  **************** &ndash;&gt;-->
-<!--<div id="errorHandlingTaskContainer">-->
-    <!--<div class="container padd6" style="width: 960px!important;">-->
-        <!--<div class="row">-->
-            <!--<div class="media row">-->
-                <!--<div class="media-body well well-sm research-section col-sm-12">-->
-                    <!--<h3>Task: Verifying Error Handling Logic in Front-End Web Development</h3>-->
-                    <!--<h4>Why Error Handling</h4>-->
-                    <!--<p>Implementing a new user interface component can be challenging, as some user behaviours might cause the whole application to crash. Errors are unexpected situations that prevent normal operation of the application. There are many different types of errors which might occur. As you are implementing a UI component, you need to verify that the component appropriately handles all of the potential errors that might occur. </p>-->
-                    <!--<p>An expert front-end web developer wrote the following strategy they use when to handle possible errors a program might have and ensure that an appropriate fallback UI message is displayed instead of crashing the component tree.</p>-->
-                    <!--<h4>Try out an expert strategy</h4>-->
-                    <!--<p>To try the strategy out, open the <a href="https://maryamarab.github.io/StrategyTranscribing/ErrorHandling/"><b>Programming Task</b></a>in a separate window in Chrome.-->
-                    <!--The app contains a web app in which some of the elements do not work correctly: </p>-->
-                    <!--<ul>-->
-                        <!--<li>The Order Date column in the first row of the table shows ‘Invalid Date’ rather than notifying the user for this error:</li>-->
-                        <!--<img src="../images/errorHandling1.png" width=100%; style="margin-bottom: 10px;">-->
+                        <li>Clicking on each row will pop up the detailed information of the row. If user clicks on the first row, the field ‘Winery’ is empty. If the user click on the third row, no information would pop up. See the following image for the empty field:</li>
+                        <img src="../images/errorHandling2.png" width=100%>
 
-                        <!--<li>Clicking on each row will pop up the detailed information of the row. If user clicks on the first row, the field ‘Winery’ is empty. If the user click on the third row, no information would pop up. See the following image for the empty field:</li>-->
-                        <!--<img src="../images/errorHandling2.png" width=100%>-->
+                    </ul>
 
-                    <!--</ul>-->
+                    <p>Use the following strategy and test how effective it would be in handling potential errors in the programming task page. To try out the strategy, first open the Programming Task. Place the Programming Task side by side with the strategy description on this page. This will make it easier for you to go back and forth between the description of the strategy and the web app. </p>
+                    <p>If you’d like to see the source code for the web app, it is available <a href="https://jsfiddle.net/marab/g6x9o5r0/" >here</a> if you need it.
+                        Please follow the following strategy step by step to find the causes of these issues.
+                        After you finish using the strategy, we will ask you some questions about your experience with the strategy and the challenges you faced using it. As you work, please try to remember any of the difficulties you face using the strategy.
+                    </p>
+                    <br>
+                    <p style="color:darkred!important;"><b>We are not testing your skill or programming proficiency</b></p>
+                    <p style="color:darkred!important;">If you already know a better strategy for finding performance issues, that’s ok. But we’d like to get feedback on the suitability of this expert’s strategy, so please try out the strategy as written here. Once you’ve completed the strategy, you can move on to the next step.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- *********** Expert Strategy Container ****************-->
 
-                    <!--<p>Use the following strategy and test how effective it would be in handling potential errors in the programming task page. To try out the strategy, first open the Programming Task. Place the Programming Task side by side with the strategy description on this page. This will make it easier for you to go back and forth between the description of the strategy and the web app. </p>-->
-                    <!--<p>If you’d like to see the source code for the web app, it is available <a href="https://jsfiddle.net/marab/g6x9o5r0/" >here</a> if you need it.-->
-                        <!--Please follow the following strategy step by step to find the causes of these issues.-->
-                        <!--After you finish using the strategy, we will ask you some questions about your experience with the strategy and the challenges you faced using it. As you work, please try to remember any of the difficulties you face using the strategy.-->
-                    <!--</p>-->
-                    <!--<br>-->
-                    <!--<p style="color:darkred!important;"><b>We are not testing your skill or programming proficiency</b></p>-->
-                    <!--<p style="color:darkred!important;">If you already know a better strategy for finding performance issues, that’s ok. But we’d like to get feedback on the suitability of this expert’s strategy, so please try out the strategy as written here. Once you’ve completed the strategy, you can move on to the next step.</p>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; *********** Expert Strategy Container ****************&ndash;&gt;-->
-    <!--<div style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">-->
-        <!--<div class="container padd6" style="width: 1360px!important;">-->
-            <!--<div class="media row">-->
-                <!--<div class="media-body well well-sm research-section col-sm-12">-->
-                    <!--<h3>Expert Strategy</h3>-->
-                    <!--<div id="strategy_ErrorHandlingTask" style="min-height: 550px;"></div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
+    <div class="container padd6" style="width: 1360px!important;">
+        <div class="row">
+            <div class="media row">
+                <div class="media-body well well-sm research-section col-sm-12">
+                    <h3>Expert Strategy</h3>
+                    <div id="strategy_ErrorHandlingTask" style="min-height: 550px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!--&lt;!&ndash; *********** Post-task study Container ****************&ndash;&gt;-->
+    <!-- *********** Post-task study Container ****************-->
 
-    <!--<div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">-->
-        <!--<div class="row" style=" width:960px; margin: auto; " >-->
-            <!--<h3>Post-task Study</h3>-->
-            <!--<p>Thank you for trying out an expert’s programming strategy.</p>-->
-            <!--<p>We are still learning how best to help developers write their strategies down in a way that allows you to follow along. A key goal of our study is to understand your experiences and any of your challenges in using these strategies. By sharing your experiences with us, we can work to make it easier to share expert programming strategies.</p>-->
-            <!--<p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.</p>-->
-            <!--<h4> Post-task Questions</h4>-->
-            <!--<p style="color:darkred!important">Please finish testing the strategy before you proceed to to these questions.</p>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">-->
-        <!--<div class="row" style=" width:960px; margin: auto; " >-->
+    <div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">
+        <div class="row" style=" width:960px; margin: auto; " >
+            <h3>Post-task Study</h3>
+            <p>Thank you for trying out an expert’s programming strategy.</p>
+            <p>We are still learning how best to help developers write their strategies down in a way that allows you to follow along. A key goal of our study is to understand your experiences and any of your challenges in using these strategies. By sharing your experiences with us, we can work to make it easier to share expert programming strategies.</p>
+            <p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.</p>
+            <h4> Post-task Questions</h4>
+            <p style="color:darkred!important">Please finish testing the strategy before you proceed to to these questions.</p>
+        </div>
+    </div>
+    <div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">
+        <div class="row" style=" width:960px; margin: auto; " >
 
-            <!--<p>1- What made it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you remember.</p>-->
-            <!--<textarea style="width:100%;  min-height: 100px;" id="challengingToWork_ErrorHandler" placeholder="Please describe your answer here" class="field" ></textarea>-->
+            <p>1- What made it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you remember.</p>
+            <textarea class="answerArea field" id="challengingToWork_ErrorHandling" placeholder="Please describe your answer here"></textarea>
 
-            <!--<p>2- What do you think is missing?</p>-->
-            <!--<textarea style="width:100%;  min-height: 100px;" id="missing_ErrorHandler" placeholder="Please describe your answer here" class="field" ></textarea>-->
+            <p>2- What do you think is missing?</p>
+            <textarea class="answerArea field" id="missing_ErrorHandling" placeholder="Please describe your answer here"></textarea>
 
-            <!--<p>3- What additional information, details, or features would make it easier for you to follow this strategy?</p>-->
-            <!--<textarea style="width:100%;  min-height: 100px;" id="requiredInfo_ErrorHandler" placeholder="Please describe your answer here" class="field" ></textarea>-->
+            <p>3- What additional information, details, or features would make it easier for you to follow this strategy?</p>
+            <textarea class="answerArea field" id="requiredInfo_ErrorHandling" placeholder="Please describe your answer here"></textarea>
 
-            <!--<p>4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.</p>-->
-            <!--<textarea style="width:100%;  min-height: 100px;" id="clarity_ErrorHandler" placeholder="Please describe your answer here" class="field" ></textarea>-->
+            <p>4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.</p>
+            <textarea class="answerArea field" id="clarity_ErrorHandling" placeholder="Please describe your answer here"></textarea>
 
-            <!--<p>Please tell us about other categories of challenges you faced which is not asked above, if any. </p>-->
-            <!--<textarea style="width:100%;  min-height: 100px;" id="otherChallenges_ErrorHandler" placeholder="Please describe your answer here" class="field" ></textarea>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash; *********** End Error Handler Task  ****************&ndash;&gt;-->
+            <p>Please tell us about other categories of challenges you faced which is not asked above, if any. </p>
+            <textarea class="answerArea field" id="otherChallenges_ErrorHandling" placeholder="Please describe your answer here"></textarea>
+        </div>
+    </div>
+</div>
+<!-- *********** End Error Handler Task  ****************-->
+<div style=" clear: both; visibility: hidden">l</div>
 
 <!--***************    Css Debugging Task  **************** -->
-<!--<div id="cssDebuggingTaskContainer">-->
-    <!--<div class="container padd6" style="width: 960px!important;">-->
-        <!--<div class="row">-->
-            <!--<div class="media row">-->
-                <!--<div class="media-body well well-sm research-section col-sm-12">-->
-                    <!--<h3>Task: CSS Debugging</h3>-->
-                    <!--<h4>Override Styles in Subsequent CSS</h4>-->
-                    <!--<p>Working with CSS styles can be challenging, as styles may cascade, where multiple rules may apply to the same element, rules may be inherited, where an element inherits visual properties from containing elements, and rules may be manipulated, where code is used to add and remove classes or other style information. In situations where you find that CSS style rules do not work as you intended, a good strategy may help. </p>-->
+<div id="cssDebuggingTaskContainer" class="testingTaskContainer">
+    <div class="container padd6" style="width: 1360px!important;" >
+        <div class="row">
+            <div class="media row">
+                <div class="media-body well well-sm research-section col-sm-12">
+                    <h3>Task: CSS Debugging</h3>
+                    <h4>Override Styles in Subsequent CSS</h4>
+                    <p>Working with CSS styles can be challenging, as styles may cascade, where multiple rules may apply to the same element, rules may be inherited, where an element inherits visual properties from containing elements, and rules may be manipulated, where code is used to add and remove classes or other style information. In situations where you find that CSS style rules do not work as you intended, a good strategy may help. </p>
 
 
-                    <!--<h4>Your task</h4>-->
-                    <!--<p><b>Your task is to write a strategy </b>describing how you debug a problem in which the visual style of an element is in some way incorrect. Imagine you are working in code written by other developers with which you are not already completely familiar. What steps will you take to find the cause of the incorrect visual appearance? Your strategy should not include steps to resolve the issue, but we need you to write a strategy on the approach you would take to identify the source of fault.</p>-->
-                    <!--<h4>Try  out an expert strategy</h4>-->
-                    <!--<p>An expert front-end web developer wrote the following strategy that they use when debugging a problem with the visual style of an element.</p>-->
-                    <!--<p>To try the strategy out, open the <a href="https://maryamarab.github.io/StrategyTranscribing/jank2/"><b>Programming Task</b></a>in a separate window in Chrome.-->
-                        <!--The page contains a web app in which some of the elements do not appear correctly: </p>-->
-                    <!--<ul>-->
-                        <!--<li>The header color should be “Dark red”, but is instead “Black”.</li>-->
-                        <!--<li>In the web app, clicking the “Add 10” button adds 10 additional elements. Each of these elements should have a border with a randomly generated color but instead have a black border.</li>-->
-                        <!--<li>Before the user clicks the buttons, the Add, Subtract, and Start buttons should have a background color the same as their border (e.g., “green” for Add 10). However, the background color for each appears as “beige”.</li>-->
+                    <h4>Your task</h4>
+                    <p><b>Your task is to write a strategy </b>describing how you debug a problem in which the visual style of an element is in some way incorrect. Imagine you are working in code written by other developers with which you are not already completely familiar. What steps will you take to find the cause of the incorrect visual appearance? Your strategy should not include steps to resolve the issue, but we need you to write a strategy on the approach you would take to identify the source of fault.</p>
+                    <h4>Try  out an expert strategy</h4>
+                    <p>An expert front-end web developer wrote the following strategy that they use when debugging a problem with the visual style of an element.</p>
+                    <p>To try the strategy out, open the <a href="https://maryamarab.github.io/StrategyTranscribing/jank2/"><b>Programming Task</b></a>in a separate window in Chrome.
+                        The page contains a web app in which some of the elements do not appear correctly: </p>
+                    <ul>
+                        <li>The header color should be “Dark red”, but is instead “Black”.</li>
+                        <li>In the web app, clicking the “Add 10” button adds 10 additional elements. Each of these elements should have a border with a randomly generated color but instead have a black border.</li>
+                        <li>Before the user clicks the buttons, the Add, Subtract, and Start buttons should have a background color the same as their border (e.g., “green” for Add 10). However, the background color for each appears as “beige”.</li>
 
 
-                    <!--</ul>-->
-                    <!--<p>The images below depict the current behavior (left) and the expected behavior (right)</p>-->
-                    <!--<div class="row">-->
-                        <!--<div class="media-body well well-sm research-section col-sm-6">-->
-                            <!--<img src="../images/cssDebugging-incorrect.png" width=100% height=250px;">-->
-                            <!--<b>CURRENT BEHAVIOR</b>-->
-                        <!--</div>-->
-                        <!--<div class="media-body well well-sm research-section col-sm-6">-->
-                            <!--<img src="../images/cssDebugging-correct.png" width=100%; height=250px>-->
-                            <!--<b>EXPECTED BEHAVIOR</b>-->
-                        <!--</div>-->
-                    <!--</div >-->
+                    </ul>
+                    <p>The images below depict the current behavior (left) and the expected behavior (right)</p>
+                    <div class="row">
+                        <div class="media-body well well-sm research-section col-sm-6">
+                            <img src="../images/cssDebugging-incorrect.png" width=100% height=250px;">
+                            <b>CURRENT BEHAVIOR</b>
+                        </div>
+                        <div class="media-body well well-sm research-section col-sm-6">
+                            <img src="../images/cssDebugging-correct.png" width=100%; height=250px>
+                            <b>EXPECTED BEHAVIOR</b>
+                        </div>
+                    </div >
 
-                    <!--<p>To fix these CSS issues, please use the strategy the expert described. We’d like to know if this a good strategy for finding CSS issues, and what challenges you might have in using this strategy.</p>-->
+                    <p>To fix these CSS issues, please use the strategy the expert described. We’d like to know if this a good strategy for finding CSS issues, and what challenges you might have in using this strategy.</p>
 
-                    <!--<p>To try out the strategy, first open the Programming Task. Place the Programming Task side by side with the strategy description on this page. This will make it easier for you to go back and forth between the description of the strategy and the web app.</p>-->
-                    <!--<p>If you’d like to see the source code for the web app, it is available <a href="https://jsfiddle.net/marab/qtjdpb2a/3/">here</a> if you need it.-->
-                        <!--Please follow the following strategy step by step to find the causes of these issues.</p>-->
-                    <!--<p>After you finish using the strategy, we will ask you some questions about your experience with the strategy and the challenges you faced using it. As you work, please try to remember any of the difficulties you face using the strategy. </p>-->
-                    <!--<br>-->
-                    <!--<p style="color:darkred!important;"><b>We are not testing your skill or programming proficiency</b></p>-->
-                    <!--<p style="color:darkred!important;">If you already know a better strategy for finding performance issues, that’s ok. But we’d like to get feedback on the suitability of this expert’s strategy, so please try out the strategy as written here. Once you’ve completed the strategy, you can move on to the next step.</p>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; *********** Expert Strategy Container ****************&ndash;&gt;-->
-    <!--<div style="border-top:1px solid #cde4ec; background-color: #f1f7f9; padding-top:2%;">-->
-        <!--<div class="container padd6" style="width: 1360px!important;">-->
-            <!--<div class="media row">-->
-                <!--<div class="media-body well well-sm research-section col-sm-12">-->
-                    <!--<h3>Expert Strategy</h3>-->
-                    <!--<div id="strategy_CssDebuggingTask" style="min-height: 550px;"></div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
+                    <p>To try out the strategy, first open the Programming Task. Place the Programming Task side by side with the strategy description on this page. This will make it easier for you to go back and forth between the description of the strategy and the web app.</p>
+                    <p>If you’d like to see the source code for the web app, it is available <a href="https://jsfiddle.net/marab/qtjdpb2a/3/">here</a> if you need it.
+                        Please follow the following strategy step by step to find the causes of these issues.</p>
+                    <p>After you finish using the strategy, we will ask you some questions about your experience with the strategy and the challenges you faced using it. As you work, please try to remember any of the difficulties you face using the strategy. </p>
+                    <br>
+                    <p style="color:darkred!important;"><b>We are not testing your skill or programming proficiency</b></p>
+                    <p style="color:darkred!important;">If you already know a better strategy for finding performance issues, that’s ok. But we’d like to get feedback on the suitability of this expert’s strategy, so please try out the strategy as written here. Once you’ve completed the strategy, you can move on to the next step.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- *********** Expert Strategy Container ****************-->
+        <div class="container padd6" style="width: 1360px!important;">
+            <div class="row">
+            <div class="media row">
+                <div class="media-body well well-sm research-section col-sm-12">
+                    <h3>Expert Strategy</h3>
+                    <div id="strategy_CssDebuggingTask" style="min-height: 550px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!--&lt;!&ndash; *********** Post-task study Container ****************&ndash;&gt;-->
+    <!-- *********** Post-task study Container ****************-->
 
-    <!--<div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">-->
-        <!--<div class="row" style=" width:960px; margin: auto; " >-->
-            <!--<h3>Post-task Study</h3>-->
-            <!--<p>Thank you for trying out an expert’s programming strategy.</p>-->
-            <!--<p>We are still learning how best to help developers write their strategies down in a way that allows you to follow along. A key goal of our study is to understand your experiences and any of your challenges in using these strategies. By sharing your experiences with us, we can work to make it easier to share expert programming strategies.</p>-->
-            <!--<p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.</p>-->
-            <!--<h4> Post-task Questions</h4>-->
-            <!--<p style="color:darkred!important">Please finish testing the strategy before you proceed to to these questions.</p>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">-->
-        <!--<div class="row" style=" width:960px; margin: auto; " >-->
+    <div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">
+        <div class="row" style=" width:960px; margin: auto; " >
+            <h3>Post-task Study</h3>
+            <p>Thank you for trying out an expert’s programming strategy.</p>
+            <p>We are still learning how best to help developers write their strategies down in a way that allows you to follow along. A key goal of our study is to understand your experiences and any of your challenges in using these strategies. By sharing your experiences with us, we can work to make it easier to share expert programming strategies.</p>
+            <p>In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.</p>
+            <h4> Post-task Questions</h4>
+            <p style="color:darkred!important">Please finish testing the strategy before you proceed to to these questions.</p>
+        </div>
+    </div>
+    <div class="media-body  well-sm padd6 col-sm-12" style="border-top:1px solid #cde4ec;">
+        <div class="row" style=" width:960px; margin: auto; " >
 
-            <!--<p>1- What made it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you remember.</p>-->
-            <!--<textarea style="width:100%;  min-height: 100px;" id="challengingToWork_CssDebugging" placeholder="Please describe your answer here" class="field" ></textarea>-->
+            <p>1- What made it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you remember.</p>
+            <textarea class="answerArea field" id="challengingToWork_CssDebugging" placeholder="Please describe your answer here"></textarea>
 
-            <!--<p>2- What do you think is missing?</p>-->
-            <!--<textarea style="width:100%;  min-height: 100px;" id="missing_CssDebugging" placeholder="Please describe your answer here" class="field" ></textarea>-->
+            <p>2- What do you think is missing?</p>
+            <textarea class="answerArea field" id="missing_CssDebugging" placeholder="Please describe your answer here"></textarea>
 
-            <!--<p>3- What additional information, details, or features would make it easier for you to follow this strategy?</p>-->
-            <!--<textarea style="width:100%;  min-height: 100px;" id="requiredInfo_CssDebugging" placeholder="Please describe your answer here" class="field" ></textarea>-->
+            <p>3- What additional information, details, or features would make it easier for you to follow this strategy?</p>
+            <textarea class="answerArea field" id="requiredInfo_CssDebugging" placeholder="Please describe your answer here"></textarea>
 
-            <!--<p>4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.</p>-->
-            <!--<textarea style="width:100%;  min-height: 100px;" id="clarity_CssDebugging" placeholder="Please describe your answer here" class="field" ></textarea>-->
+            <p>4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.</p>
+            <textarea class="answerArea field" id="clarity_CssDebugging" placeholder="Please describe your answer here" ></textarea>
 
-            <!--<p>Please tell us about other categories of challenges you faced which is not asked above, if any. </p>-->
-            <!--<textarea style="width:100%;  min-height: 100px;" id="otherChallenges_CssDebugging" placeholder="Please describe your answer here" class="field" ></textarea>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+            <p>Please tell us about other categories of challenges you faced which is not asked above, if any. </p>
+            <textarea class="answerArea field" id="otherChallenges_CssDebugging" placeholder="Please describe your answer here"></textarea>
+        </div>
+    </div>
+</div>
 <!-- *********** End Css Debugging Task  ****************-->
 
 <!--***************************Thank you div ***********************-->

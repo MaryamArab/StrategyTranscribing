@@ -120,6 +120,18 @@ th{
     margin-right: auto;
     margin-left: auto;
 }
+.answerArea{
+    width:100%;  min-height: 100px;
+}
+
+.testingTaskContainer{
+    clear: both;
+    margin-top: 5%;
+    padding-top:3%;
+    background-color: #f1f7f9;
+    border-top:2px solid #cde4ec;
+
+}
 .tag{
     color: #ffffff;
     background-color: lightsalmon;
