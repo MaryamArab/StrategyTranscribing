@@ -19,8 +19,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="673">
-              <caret line="552" column="127" lean-forward="true" selection-start-line="552" selection-start-column="43" selection-end-line="552" selection-end-column="127" />
+            <state relative-caret-position="593">
+              <caret line="551" column="14" lean-forward="true" selection-start-line="535" selection-start-column="7" selection-end-line="551" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -95,8 +95,8 @@
       <file leaf-file-name="testing.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StrategyTesting/testing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="540" column="4" lean-forward="false" selection-start-line="540" selection-start-column="4" selection-end-line="540" selection-end-column="4" />
+            <state relative-caret-position="734">
+              <caret line="552" column="78" lean-forward="false" selection-start-line="552" selection-start-column="78" selection-end-line="552" selection-end-column="78" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
@@ -165,9 +165,28 @@
                 <element signature="n#style#0;n#div#3;n#div#7;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#7;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#8;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#3;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#4;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#5;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#6;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#9;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#9;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#9;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consent.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StrategyTesting/consent.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -277,7 +296,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>deffe</find>
       <find>CssDebuggingTaskContainer</find>
       <find>document.rea</find>
       <find>visi</find>
@@ -307,6 +325,7 @@
       <find>strategyCOn</find>
       <find>Profiler</find>
       <find>hide</find>
+      <find>Please</find>
     </findStrings>
     <replaceStrings>
       <replace>field</replace>
@@ -515,12 +534,12 @@
       <workItem from="1558461483378" duration="29000" />
       <workItem from="1558463020913" duration="857000" />
       <workItem from="1558464006577" duration="46476000" />
-      <workItem from="1559073368908" duration="2068000" />
+      <workItem from="1559073368908" duration="2851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349213000" />
+    <option name="totallyTimeSpent" value="349996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1671" y="23" width="1724" height="946" extended-state="0" />
@@ -1109,13 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StrategyTesting/consent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consent.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-172">
@@ -1226,10 +1238,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/StrategyTesting/consent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="552" column="127" lean-forward="true" selection-start-line="552" selection-start-column="43" selection-end-line="552" selection-end-column="127" />
+        <state relative-caret-position="593">
+          <caret line="551" column="14" lean-forward="true" selection-start-line="535" selection-start-column="7" selection-end-line="551" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1302,8 +1322,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StrategyTesting/testing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="540" column="4" lean-forward="false" selection-start-line="540" selection-start-column="4" selection-end-line="540" selection-end-column="4" />
+        <state relative-caret-position="734">
+          <caret line="552" column="78" lean-forward="false" selection-start-line="552" selection-start-column="78" selection-end-line="552" selection-end-column="78" />
           <folding>
             <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
@@ -1372,8 +1392,17 @@
             <element signature="n#style#0;n#div#3;n#div#7;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#3;n#div#7;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#8;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#3;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#4;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#5;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#6;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#div#8;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#9;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#9;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
