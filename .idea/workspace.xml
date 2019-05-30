@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360bf7c5-adb1-4900-a856-b8dc980f0fe5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StrategyRevision/strategyRevision.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StrategyAuthoring/index.html" afterPath="$PROJECT_DIR$/StrategyAuthoring/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StrategyAuthoring/js/index.js" afterPath="$PROJECT_DIR$/StrategyAuthoring/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StrategyTesting/consent.html" afterPath="$PROJECT_DIR$/StrategyTesting/consent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StrategyTesting/js/consent.js" afterPath="$PROJECT_DIR$/StrategyTesting/js/consent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StrategyTesting/js/testing.js" afterPath="$PROJECT_DIR$/StrategyTesting/js/testing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StrategyTesting/testing.html" afterPath="$PROJECT_DIR$/StrategyTesting/testing.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -99,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testing.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="testing.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StrategyTesting/testing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="137" column="31" lean-forward="true" selection-start-line="137" selection-start-column="31" selection-end-line="137" selection-end-column="31" />
+            <state relative-caret-position="349">
+              <caret line="465" column="105" lean-forward="false" selection-start-line="465" selection-start-column="105" selection-end-line="465" selection-end-column="105" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#0;n#html#0;n#!!top" expanded="false" />
@@ -145,7 +139,6 @@
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#5;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#0;n#div#5;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#img#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#html#0;n#!!top" expanded="true" />
@@ -160,8 +153,6 @@
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#5;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#6;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#7;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#10;n#div#0;n#div#0;n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#7;n#html#0;n#!!top" expanded="true" />
@@ -218,10 +209,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consent.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="consent.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StrategyTesting/consent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
+            <state relative-caret-position="53">
               <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding />
             </state>
@@ -364,10 +355,10 @@
         <option value="$PROJECT_DIR$/StrategyAuthoring/index.html" />
         <option value="$PROJECT_DIR$/StrategyAuthoring/js/index.js" />
         <option value="$PROJECT_DIR$/StrategyTesting/js/testing.js" />
-        <option value="$PROJECT_DIR$/StrategyTesting/testing.html" />
         <option value="$PROJECT_DIR$/StrategyRevision/strategyRevision.html" />
         <option value="$PROJECT_DIR$/StrategyTesting/consent.html" />
         <option value="$PROJECT_DIR$/StrategyTesting/js/consent.js" />
+        <option value="$PROJECT_DIR$/StrategyTesting/testing.html" />
       </list>
     </option>
   </component>
@@ -530,12 +521,12 @@
       <workItem from="1558461483378" duration="29000" />
       <workItem from="1558463020913" duration="857000" />
       <workItem from="1558464006577" duration="46476000" />
-      <workItem from="1559073368908" duration="12381000" />
+      <workItem from="1559073368908" duration="12793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359526000" />
+    <option name="totallyTimeSpent" value="359938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1814" y="38" width="1724" height="946" extended-state="0" />
@@ -1272,10 +1263,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/StrategyAuthoring/consent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="48" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="13" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StrategyTesting/js/consent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StrategyTesting/consent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/StrategyTesting/testing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="137" column="31" lean-forward="true" selection-start-line="137" selection-start-column="31" selection-end-line="137" selection-end-column="31" />
+        <state relative-caret-position="349">
+          <caret line="465" column="105" lean-forward="false" selection-start-line="465" selection-start-column="105" selection-end-line="465" selection-end-column="105" />
           <folding>
             <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#html#0;n#!!top" expanded="false" />
@@ -1317,7 +1332,6 @@
             <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#5;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#div#5;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#img#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#html#0;n#!!top" expanded="true" />
@@ -1332,8 +1346,6 @@
             <element signature="n#style#0;n#div#0;n#div#3;n#div#5;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#6;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#7;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#10;n#div#0;n#div#0;n#div#0;n#div#0;n#div#7;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#7;n#html#0;n#!!top" expanded="true" />
@@ -1354,30 +1366,6 @@
             <element signature="n#style#0;n#div#0;n#div#9;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#9;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StrategyAuthoring/consent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="48" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="13" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StrategyTesting/js/consent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StrategyTesting/consent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
