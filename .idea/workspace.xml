@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360bf7c5-adb1-4900-a856-b8dc980f0fe5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/consent.js" afterPath="$PROJECT_DIR$/js/consent.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -179,11 +178,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consent.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="consent.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="30" column="176" lean-forward="true" selection-start-line="30" selection-start-column="176" selection-end-line="30" selection-end-column="176" />
+            <state relative-caret-position="637">
+              <caret line="63" column="28" lean-forward="false" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -271,11 +270,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consent.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="consent.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/consent.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
-              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+              <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -542,12 +541,12 @@
       <workItem from="1558461483378" duration="29000" />
       <workItem from="1558463020913" duration="857000" />
       <workItem from="1558464006577" duration="46476000" />
-      <workItem from="1559073368908" duration="5942000" />
+      <workItem from="1559073368908" duration="6114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353087000" />
+    <option name="totallyTimeSpent" value="353259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1671" y="23" width="1724" height="946" extended-state="0" />
@@ -1302,6 +1301,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/StrategyTesting/consent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/StrategyTesting/testing.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1386,10 +1393,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StrategyTesting/consent.html">
+    <entry file="file://$PROJECT_DIR$/consent.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="637">
-          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <caret line="63" column="28" lean-forward="false" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1397,15 +1404,7 @@
     <entry file="file://$PROJECT_DIR$/js/consent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="30" column="176" lean-forward="true" selection-start-line="30" selection-start-column="176" selection-end-line="30" selection-end-column="176" />
+          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
           <folding />
         </state>
       </provider>

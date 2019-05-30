@@ -31,7 +31,7 @@ async function beginStudy() {
 
 
     setTimeout(function() {
-        window.location.href = "index.html/?"+participantId+"?"+taskAssigned;
+        window.location.href = "index.html?"+participantId+"?"+taskAssigned;
     }, 1000);
 
 
