@@ -291,16 +291,11 @@ $(document).ready(function () {
                             }
                             else
                                 $( "#errorHandlingTaskContainer" ).hide();
-
-
                         }
                     })
                     .catch(err => {
                         console.log('Error getting document', err);
                     });
-
-
-
             }
         })
         .catch(err => {
@@ -336,8 +331,6 @@ async function submit(participantId){
     var errorHandlingClarity = document.getElementById("clarity_ErrorHandling").value;
     var errorHandlingOtherChallenges = document.getElementById("otherChallenges_ErrorHandling").value;
 
-    console.log("FirstTask   "+firstStrategyId);
-    console.log("FirstTask   "+firstTask);
     //**********************Check for Empty inputs***********************
 
     if(firstTask =="ProfilerTask" || secondTask == "ProfilerTask")
@@ -483,15 +476,63 @@ async function submit(participantId){
         secondStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_ErrorHandling").value);
     }
 
+    //**************************BACKGROUND SURVEY*************************
+    let workExperiencePeriod = document.getElementById("workExpYear").value+" years and " + document.getElementById("workExpMonth").value + " months";
+    let softwareDevelopmentExperience = document.getElementById("softDevExp").value;
+    let biggestSoftware = document.getElementById("biggestSoftware").value;
 
+    let webExperiencePeriod = document.getElementById("webExpYear").value+" years and " + document.getElementById("webExpMonth").value + " months";
+    let webDevelopmentExperience = document.getElementById("webDevExp").value;
+    let biggestWebApplication= document.getElementById("biggestWebApplication");
+
+    if(document.getElementById("workExpYear").value ===""  ) {
+        document.getElementById("workExpYear").style.border="2px solid red";
+        alert("Please fill out industrial software development experience.");
+        return;
+    }
+    if(softwareDevelopmentExperience ===""){
+        document.getElementById("softDevExp").style.border="2px solid red";
+        alert("Please fill out Number of Software applications you have developed.");
+        return;
+    }
+    if(biggestSoftware ===""){
+        document.getElementById("biggestSoftware").style.border="2px solid red";
+        alert("Please describe what is the biggest software applications you have developed.");
+        return;
+    }
+    if(document.getElementById("webExpYear").value==="" ){
+        document.getElementById("webExpYear").style.border="2px solid red";
+        alert("Please fill out years of experience you have in building web applications");
+        return;
+    }
+    if(webDevelopmentExperience===""){
+        document.getElementById("webDevExp").style.border="2px solid red";
+        alert("Please fill the number of web-based applications have you implemented.");
+        return;
+    }
+    if(biggestWebApplication ===""){
+        document.getElementById("biggestWebApplication").style.border="2px solid red";
+        alert("Please describe what is the biggest web applications you have developed.");
+        return;
+    }
+
+    let workExperiences=[];
+    workExperiences.push("workExperiencePeriod: "+workExperiencePeriod);
+    workExperiences.push("softwareDevelopmentExperience: "+softwareDevelopmentExperience);
+    workExperiences.push("biggestSoftware: "+biggestSoftware);
+    workExperiences.push("webExperiencePeriod: "+webExperiencePeriod);
+    workExperiences.push("webDevelopmentExperience: "+webDevelopmentExperience);
+    workExperiences.push("biggestWebApplication: "+biggestWebApplication);
+    //********************END COLLECTING BACKGROUND SURVEY*************************
 
     database.collection("TestedStrategies").doc(pId).set({
         Time:timestamp,
         ParticipantId: pId,
-        strategy1:firstStrategyChallenges,
-        strategy2: secondStrategyChallenges,
-        task1: firstTask,
-        task2: secondTask
+        Strategy1:firstStrategyChallenges,
+        Strategy2: secondStrategyChallenges,
+        Task1: firstTask,
+        Task2: secondTask,
+        WorkExperiences: workExperiences,
 
     }).catch(function (err) {
         alert("Something wrong while you are trying to submit your strategy. It means that your work is not saved i our database. In order to be compensated with your work, we need a record of your work. " +

@@ -373,10 +373,19 @@ async function addNewStrategy() {
     let pId =participantId;
     let workExperiencePeriod = document.getElementById("workExpYear").value+" years and " + document.getElementById("workExpMonth").value + " months";
     let softwareDevelopmentExperience = document.getElementById("softDevExp").value;
+    let biggestSoftware = document.getElementById("biggestSoftware").value;
 
     let webExperiencePeriod = document.getElementById("webExpYear").value+" years and " + document.getElementById("webExpMonth").value + " months";
     let webDevelopmentExperience = document.getElementById("webDevExp").value;
+    let biggestWebApplication= document.getElementById("biggestWebApplication");
 
+    let workExperiences=[];
+    workExperiences.push("workExperiencePeriod: "+workExperiencePeriod);
+    workExperiences.push("softwareDevelopmentExperience: "+softwareDevelopmentExperience);
+    workExperiences.push("biggestSoftware: "+biggestSoftware);
+    workExperiences.push("webExperiencePeriod: "+webExperiencePeriod);
+    workExperiences.push("webDevelopmentExperience: "+webDevelopmentExperience);
+    workExperiences.push("biggestWebApplication: "+biggestWebApplication);
 
     var task = taskAssigned;
 
@@ -410,7 +419,7 @@ async function addNewStrategy() {
         r_translationDifficulty= document.querySelector('input[name="r-translationDifficulty"]:checked').value;
 
 
-    if(translationDifficulty.value ==""){
+    if(translationDifficulty.value =="" || translationDifficulty.value.length<10){
         document.getElementById("translationDifficulty").style.border="2px solid red";
         alert("Please describe in a couple of sentences why you agree/disagree with: \" It's hard to translate thoughts and strategies into words.\"");
         return;
@@ -426,7 +435,7 @@ async function addNewStrategy() {
         r_noviceUnderstandabilityDifficulty= document.querySelector('input[name="r-noviceUnderstandabilityDifficulty"]:checked').value;
 
 
-    if(noviceUnderstandabilityDifficulty.value ==""){
+    if(noviceUnderstandabilityDifficulty.value =="" || noviceUnderstandabilityDifficulty.value.length<10){
         document.getElementById("noviceUnderstandabilityDifficulty").style.border="2px solid red";
         alert("Please describe in a couple of sentences why you agree/disagree with: \" Its hard to write strategies in a way which are understandable for novice developers.\"");
         return;
@@ -446,7 +455,7 @@ async function addNewStrategy() {
         r_concentrationDifficulty= document.querySelector('input[name="r-concentrationDifficulty"]:checked').value;
 
 
-    if(concentrationDifficulty.value ==""){
+    if(concentrationDifficulty.value =="" || concentrationDifficulty.value.length<10){
         document.getElementById("concentrationDifficulty").style.border="2px solid red";
         alert("Please describe in a couple of sentences why you agree/disagree with: \" Writing strategies took a lot of concentration, effort and energy.\"");
         return;
@@ -465,7 +474,7 @@ async function addNewStrategy() {
         r_timeConsumptionDifficulty= document.querySelector('input[name="r-timeConsumptionDifficulty"]:checked').value;
 
 
-    if(timeConsumptionDifficulty.value ==""){
+    if(timeConsumptionDifficulty.value =="" ||timeConsumptionDifficulty.value.length<10){
         document.getElementById("timeConsumptionDifficulty").style.border="2px solid red";
         alert("Please describe in a couple of sentences why you agree/disagree with: \" Articulating is time consuming and boring.\"");
         return;
@@ -484,7 +493,7 @@ async function addNewStrategy() {
         r_strategyEndingDifficulty= document.querySelector('input[name="r-strategyEndingDifficulty"]:checked').value;
 
 
-    if(strategyEndingDifficulty.value ==""){
+    if(strategyEndingDifficulty.value =="" || strategyEndingDifficulty.value.length<10){
         document.getElementById("strategyEndingDifficulty").style.border="2px solid red";
         alert("Please describe in a couple of sentences why you agree/disagree with: \" Terminating the strategy is hard. Recognizing what would be the last statement is challenging.\"");
         return;
@@ -503,7 +512,7 @@ async function addNewStrategy() {
         r_robotoSupportDifficulty= document.querySelector('input[name="r-robotoSupportDifficulty"]:checked').value;
 
 
-    if(robotoSupportDifficulty.value ==""){
+    if(robotoSupportDifficulty.value =="" || robotoSupportDifficulty.value.length<10){
         document.getElementById("robotoSupportDifficulty").style.border="2px solid red";
         alert("Please describe in a couple of sentences why you agree/disagree with: \" The Roboto language supports your ability to effectively express strategies.\"");
         return;
@@ -522,7 +531,7 @@ async function addNewStrategy() {
         r_guidelinesSupportDifficulty= document.querySelector('input[name="r-guidelinesSupportDifficulty"]:checked').value;
 
 
-    if(guidelinesSupportDifficulty.value ==""){
+    if(guidelinesSupportDifficulty.value =="" || guidelinesSupportDifficulty.value.length<10){
         document.getElementById("guidelinesSupportDifficulty").style.border="2px solid red";
         alert("Please describe in a couple of sentences why you agree/disagree with: \" Strategy writing guidelines helps to effectively express strategies.Its is helpful to have some guidelines to apply and consider while trying to articulate the strategy process steps.\"");
         return;
@@ -531,12 +540,10 @@ async function addNewStrategy() {
 
 ////****************************END Proposed difficulties section *********************************
 
-    var difficulties = [];
+    var otherDifficulties = [];
     for (var i = 0; i < difficultiesElements.length; i++) {
-        difficulties.push(difficultiesElements[i].innerHTML);
+        otherDifficulties.push(difficultiesElements[i].innerHTML);
     }
-
-    console.log("Strategy definition:   " + strategyDefinition);
 
     if(document.getElementById("workExpYear").value ===""  ) {
         document.getElementById("workExpYear").style.border="2px solid red";
@@ -546,6 +553,11 @@ async function addNewStrategy() {
     if(softwareDevelopmentExperience ===""){
         document.getElementById("softDevExp").style.border="2px solid red";
         alert("Please fill out Number of Software applications you have developed.");
+        return;
+    }
+    if(biggestSoftware ===""){
+        document.getElementById("biggestSoftware").style.border="2px solid red";
+        alert("Please describe what is the biggest software applications you have developed.");
         return;
     }
     if(document.getElementById("webExpYear").value==="" ){
@@ -558,8 +570,13 @@ async function addNewStrategy() {
         alert("Please fill the number of web-based applications have you implemented.");
         return;
     }
+    if(biggestWebApplication ===""){
+        document.getElementById("biggestWebApplication").style.border="2px solid red";
+        alert("Please describe what is the biggest web applications you have developed.");
+        return;
+    }
 
-    if(difficulties === ""){
+    if(otherDifficulties === ""){
         alert("Please describe challenges you faced during articulation.");
         return;
     }
@@ -567,44 +584,33 @@ async function addNewStrategy() {
         alert("Please write down a detailed strategy");
         return;
     }
-    // if(document.getElementById("difficultiesContainer").childNodes.length<1){
-    //     alert("Please write at least 1 difficulty you faced during articulation.");
-    //     return;
-    // }
+    let commonDifficulties=[];
+        commonDifficulties.push("TranslationDifficultyIdea: "+ r_translationDifficulty);
+        commonDifficulties.push("TranslationDifficulty: "+translationDifficulty);
+        commonDifficulties.push("NoviceUnderstandabilityDifficulty_Idea: "+r_noviceUnderstandabilityDifficulty);
+        commonDifficulties.push("NoviceUnderstandabilityDifficulty : "+noviceUnderstandabilityDifficulty);
+        commonDifficulties.push("ConcentrationDifficulty_Idea: "+r_concentrationDifficulty);
+        commonDifficulties.push("ConcentrationDifficulty: "+concentrationDifficulty);
+        commonDifficulties.push("TimeConsumptionDifficulty_Idea: "+r_timeConsumptionDifficulty);
+        commonDifficulties.push("TimeConsumptionDifficulty: "+timeConsumptionDifficulty);
+        commonDifficulties.push("StrategyEndingDifficulty_Idea: "+r_strategyEndingDifficulty);
+        commonDifficulties.push("StrategyEndingDifficulty: "+strategyEndingDifficulty);
+        commonDifficulties.push("RobotoSupportDifficulty_Idea: "+r_robotoSupportDifficulty);
+        commonDifficulties.push("RobotoSupportDifficulty: "+robotoSupportDifficulty);
+        commonDifficulties.push("GuidelinesSupportDifficulty_Idea: "+r_guidelinesSupportDifficulty);
+        commonDifficulties.push("GuidelinesSupportDifficulty: "+guidelinesSupportDifficulty);
+
 
     let database = firebase.firestore();
 
     database.collection("Strategies").doc(pId).set({
         Time:timestamp,
-
-        SoftwareDevelopmentExperiencePeriod: workExperiencePeriod,
-        WebExperiencePeriod: webExperiencePeriod,
-
-        ImplementedSoftware : softwareDevelopmentExperience,
-        ImplementedWebApplications : webDevelopmentExperience,
-
+        WorkExperiences: workExperiences,
         StrategyDefinition:strategyDefinition,
-        Difficulties: difficulties,
+        OtherDifficulties: otherDifficulties,
+        CommonDifficulties: commonDifficulties,
         Task:task,
-
-        TranslationDifficultyIdea: r_translationDifficulty,
-        TranslationDifficulty: translationDifficulty,
-        NoviceUnderstandabilityDifficulty_Idea: r_noviceUnderstandabilityDifficulty,
-        NoviceUnderstandabilityDifficulty : noviceUnderstandabilityDifficulty,
-        ConcentrationDifficulty_Idea: r_concentrationDifficulty,
-        ConcentrationDifficulty: concentrationDifficulty,
-        TimeConsumptionDifficulty_Idea: r_timeConsumptionDifficulty,
-        TimeConsumptionDifficulty: timeConsumptionDifficulty,
-        StrategyEndingDifficulty_Idea: r_strategyEndingDifficulty,
-        StrategyEndingDifficulty: strategyEndingDifficulty,
-        RobotoSupportDifficulty_Idea: r_robotoSupportDifficulty,
-        RobotoSupportDifficulty: robotoSupportDifficulty,
-        GuidelinesSupportDifficulty_Idea: r_guidelinesSupportDifficulty,
-        GuidelinesSupportDifficulty: guidelinesSupportDifficulty,
-
-
-
-    }).catch(function (err) {
+        }).catch(function (err) {
         alert("Something wrong while you are trying to submit your strategy. It means that your work is not saved i our database. In order to be compensated with your work, we need a record of your work. " +
             "Please send a pdf copy of this page to marab@gmu.edu. Thank you so much for participating in our study.");
         console.log("error saving", err);
