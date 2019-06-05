@@ -85,7 +85,9 @@ $(document).ready(function () {
                 "It also ignores consideration of which parts of the application you may or may not be able to modify to address the issue.</p>\n" +
                 "\n" +
                 "<h4>Your task</h4>"+
-                "            <p>Your task is to write a better profiling <b>strategy</b>. Your goal is to help other developers learn how to effectively profile any web application. Write your strategy in a way that enables other developers to use your strategy and easily identify the components responsible for slow performance.</p>\n" +
+                "            <p>Your task is to write a better profiling <b>strategy</b>. Your goal is to help other developers learn how to effectively profile any web application." +
+                " Write your strategy in a way that enables other developers to use your strategy and easily identify the components responsible for slow performance. Write the strategy " +
+                "in a way that can be used on a code on <b>web IDE</b></p>\n" +
                 "<p>Consider the following in writing your strategy:\n</p>"+
                 "            <ul>\n" +
                 "                <li style=\"font-weight: normal!important;\">What steps should a developer follow to accurately identify slow components?</li>\n" +
@@ -112,7 +114,8 @@ $(document).ready(function () {
                 "What steps will you take to find the cause of the incorrect visual appearance? Your strategy <b>should not</b> include steps to " +
                 "resolve the issue, but we need you to write a strategy on the approach you would take to identify the source of fault.</p>\n" +
                 "<h4>Keep in mind</h4>\n"+
-                "<p>Write your strategy in a way that enables other developers to use your strategy and easily find out how to fix the visual style problem.</p>\n"+
+                "<p>Write your strategy in a way that enables other developers to use your strategy and easily find out how to fix the visual style problem. Write the strategy \" +\n" +
+                "                \"in a way that can be used on a code on <b>web IDE</b></p>\n"+
                 "            <p>Consider the following in the strategy you write:</p>\n" +
                 "            <ul>\n" +
                 "               <li style=\"font-weight: normal!important;\">What issues could result in an element’s visual style appearing incorrectly?</li>\n" +
@@ -138,7 +141,8 @@ $(document).ready(function () {
                 " in an implemented component and ensure that an appropriate fallback UI message is displayed instead of crashing the component tree." +
                 " Your strategy <b>should not</b> include steps for implementing error handling logic. It should describe how to identify potential errors and the approach you take to implement error handling for them. \n</p>\n" +
                 "<h4>Write the strategy</h4>\n"+
-                "<p>Write your strategy so that other developers can easily identify where they need to add error handling.</p>\n"+
+                "<p>Write your strategy so that other developers can easily identify where they need to add error handling. Write the strategy \" +\n" +
+                "                \"in a way that can be used on a code on <b>web IDE</b></p>\n"+
                 "            <p>Consider the following in the strategy you write:</p>\n" +
                 "            <ul>\n" +
                 "               <li style=\"font-weight: normal!important;\">What types of errors should the developer consider?</li>\n" +
@@ -377,15 +381,17 @@ async function addNewStrategy() {
 
     let webExperiencePeriod = document.getElementById("webExpYear").value+" years and " + document.getElementById("webExpMonth").value + " months";
     let webDevelopmentExperience = document.getElementById("webDevExp").value;
-    let biggestWebApplication= document.getElementById("biggestWebApplication");
+    let biggestWebApplication= document.getElementById("biggestWebApplication").value;
 
-    let workExperiences=[];
-    workExperiences.push("workExperiencePeriod: "+workExperiencePeriod);
-    workExperiences.push("softwareDevelopmentExperience: "+softwareDevelopmentExperience);
-    workExperiences.push("biggestSoftware: "+biggestSoftware);
-    workExperiences.push("webExperiencePeriod: "+webExperiencePeriod);
-    workExperiences.push("webDevelopmentExperience: "+webDevelopmentExperience);
-    workExperiences.push("biggestWebApplication: "+biggestWebApplication);
+    let workExperiences={
+        "workExperiencePeriod" : workExperiencePeriod,
+        "softwareDevelopmentExperience" : softwareDevelopmentExperience,
+        "biggestSoftware" : biggestSoftware,
+        "webExperiencePeriod" : webExperiencePeriod,
+        "webDevelopmentExperience" : webDevelopmentExperience,
+        "biggestWebApplication" : biggestWebApplication,
+
+    };
 
     var task = taskAssigned;
 

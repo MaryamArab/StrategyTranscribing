@@ -221,3 +221,10 @@ th{
 #officeWordStrategy{
     font-weight:bold;
 }
+.quote {
+    font-family: fantasy;
+    font-style: italic;
+}
+.question{
+    font-weight:bold;
+}

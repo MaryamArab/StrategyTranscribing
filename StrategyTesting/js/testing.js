@@ -422,58 +422,69 @@ async function submit(participantId){
         }
     }
     if(firstTask == "ProfilerTask"){
-        var firstStrategyChallenges=[];
-        firstStrategyChallenges.push("StrategyId: "+ firstStrategyId);
-        firstStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_Profiler").value);
-        firstStrategyChallenges.push("Missing: "+           document.getElementById("missing_Profiler").value);
-        firstStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_Profiler").value);
-        firstStrategyChallenges.push("clarity: "+           document.getElementById("clarity_Profiler").value);
-        firstStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_Profiler").value);
+
+
+        var firstStrategyChallenges={
+            "StrategyId": firstStrategyId,
+            "ChallengingToWork":   document.getElementById("challengingToWork_Profiler").value,
+            "Missing":           document.getElementById("missing_Profiler").value,
+            "RequiredInfo":      document.getElementById("requiredInfo_Profiler").value,
+            "Clarity":           document.getElementById("clarity_Profiler").value,
+            "OtherChallenges":   document.getElementById("otherChallenges_Profiler").value,
+        };
     }
     else  if(secondTask == "ProfilerTask"){
-        var secondStrategyChallenges=[];
-        secondStrategyChallenges.push("StrategyId: "+ secondStrategyId);
-        secondStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_Profiler").value);
-        secondStrategyChallenges.push("Missing: "+           document.getElementById("missing_Profiler").value);
-        secondStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_Profiler").value);
-        secondStrategyChallenges.push("clarity: "+           document.getElementById("clarity_Profiler").value);
-        secondStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_Profiler").value);
+        var secondStrategyChallenges={
+            "StrategyId": secondStrategyId,
+            "ChallengingToWork": document.getElementById("challengingToWork_Profiler").value,
+            "Missing":           document.getElementById("missing_Profiler").value,
+            "RequiredInfo":      document.getElementById("requiredInfo_Profiler").value,
+            "Clarity":           document.getElementById("clarity_Profiler").value,
+            "OtherChallenges":   document.getElementById("otherChallenges_Profiler").value,
+
+        };
     }
     if(firstTask == "CssDebuggingTask"){
-        var firstStrategyChallenges=[];
-        firstStrategyChallenges.push("StrategyId: "+ firstStrategyId);
-        firstStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_CssDebugging").value);
-        firstStrategyChallenges.push("Missing: "+           document.getElementById("missing_CssDebugging").value);
-        firstStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_CssDebugging").value);
-        firstStrategyChallenges.push("clarity: "+           document.getElementById("clarity_CssDebugging").value);
-        firstStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_CssDebugging").value);
+        var firstStrategyChallenges= {
+            "StrategyId" : firstStrategyId,
+            "ChallengingToWork" : document.getElementById("challengingToWork_CssDebugging").value,
+            "Missing" : document.getElementById("missing_CssDebugging").value,
+            "requiredInfo" : document.getElementById("requiredInfo_CssDebugging").value,
+            "Clarity" : document.getElementById("clarity_CssDebugging").value,
+            "OtherChallenges" : document.getElementById("otherChallenges_CssDebugging").value
+        };
     }
     else  if(secondTask == "CssDebuggingTask"){
-        var secondStrategyChallenges=[];
-        secondStrategyChallenges.push("StrategyId: "+ secondStrategyId);
-        secondStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_CssDebugging").value);
-        secondStrategyChallenges.push("Missing: "+           document.getElementById("missing_CssDebugging").value);
-        secondStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_CssDebugging").value);
-        secondStrategyChallenges.push("clarity: "+           document.getElementById("clarity_CssDebugging").value);
-        secondStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_CssDebugging").value);
+        var secondStrategyChallenges={
+            "StrategyId": secondStrategyId,
+            "ChallengingToWork": document.getElementById("challengingToWork_CssDebugging").value,
+            "Missing":           document.getElementById("missing_CssDebugging").value,
+            "RequiredInfo":      document.getElementById("requiredInfo_CssDebugging").value,
+            "Clarity":           document.getElementById("clarity_CssDebugging").value,
+            "OtherChallenges":   document.getElementById("otherChallenges_CssDebugging").value,
+        }
+
     }
     if(firstTask == "ErrorHandlingTask"){
-        var firstStrategyChallenges=[];
-        firstStrategyChallenges.push("StrategyId: "+ firstStrategyId);
-        firstStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_ErrorHandling").value);
-        firstStrategyChallenges.push("Missing: "+           document.getElementById("missing_ErrorHandling").value);
-        firstStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_ErrorHandling").value);
-        firstStrategyChallenges.push("clarity: "+           document.getElementById("clarity_ErrorHandling").value);
-        firstStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_ErrorHandling").value);
+        var firstStrategyChallenges={
+            "StrategyId": firstStrategyId,
+            "ChallengingToWork": document.getElementById("challengingToWork_ErrorHandling").value,
+            "Missing":           document.getElementById("missing_ErrorHandling").value,
+            "RequiredInfo":      document.getElementById("requiredInfo_ErrorHandling").value,
+            "Clarity":           document.getElementById("clarity_ErrorHandling").value,
+            "OtherChallenges":   document.getElementById("otherChallenges_ErrorHandling").value,
+        };
+
     }
     else  if(secondTask == "ErrorHandlingTask"){
-        var secondStrategyChallenges=[];
-        secondStrategyChallenges.push("StrategyId: "+ secondStrategyId);
-        secondStrategyChallenges.push("challengingToWork: "+ document.getElementById("challengingToWork_ErrorHandling").value);
-        secondStrategyChallenges.push("Missing: "+           document.getElementById("missing_ErrorHandling").value);
-        secondStrategyChallenges.push("requiredInfo: "+      document.getElementById("requiredInfo_ErrorHandling").value);
-        secondStrategyChallenges.push("clarity: "+           document.getElementById("clarity_ErrorHandling").value);
-        secondStrategyChallenges.push("otherChallenges: "+   document.getElementById("otherChallenges_ErrorHandling").value);
+        var secondStrategyChallenges={
+            "StrategyId": secondStrategyId,
+            "ChallengingToWork": document.getElementById("challengingToWork_ErrorHandling").value,
+            "Missing":           document.getElementById("missing_ErrorHandling").value,
+            "RequiredInfo":      document.getElementById("requiredInfo_ErrorHandling").value,
+            "Clarity":           document.getElementById("clarity_ErrorHandling").value,
+            "OtherChallenges":   document.getElementById("otherChallenges_ErrorHandling").value,
+        }
     }
 
     //**************************BACKGROUND SURVEY*************************
@@ -483,7 +494,7 @@ async function submit(participantId){
 
     let webExperiencePeriod = document.getElementById("webExpYear").value+" years and " + document.getElementById("webExpMonth").value + " months";
     let webDevelopmentExperience = document.getElementById("webDevExp").value;
-    let biggestWebApplication= document.getElementById("biggestWebApplication");
+    let biggestWebApplication= document.getElementById("biggestWebApplication").value;
 
     if(document.getElementById("workExpYear").value ===""  ) {
         document.getElementById("workExpYear").style.border="2px solid red";
@@ -516,13 +527,14 @@ async function submit(participantId){
         return;
     }
 
-    let workExperiences=[];
-    workExperiences.push("workExperiencePeriod: "+workExperiencePeriod);
-    workExperiences.push("softwareDevelopmentExperience: "+softwareDevelopmentExperience);
-    workExperiences.push("biggestSoftware: "+biggestSoftware);
-    workExperiences.push("webExperiencePeriod: "+webExperiencePeriod);
-    workExperiences.push("webDevelopmentExperience: "+webDevelopmentExperience);
-    workExperiences.push("biggestWebApplication: "+biggestWebApplication);
+    let workExperiences={
+        "workExperiencePeriod":workExperiencePeriod,
+        "softwareDevelopmentExperience":softwareDevelopmentExperience,
+        "biggestSoftware":biggestSoftware,
+        "webExperiencePeriod":webExperiencePeriod,
+        "webDevelopmentExperience":webDevelopmentExperience,
+        "biggestWebApplication":biggestWebApplication
+    };
     //********************END COLLECTING BACKGROUND SURVEY*************************
 
     database.collection("TestedStrategies").doc(pId).set({
@@ -539,5 +551,5 @@ async function submit(participantId){
             "Please send a pdf copy of this page to marab@gmu.edu. Thank you so much for participating in our study.");
         console.log("error saving", err);
     });
-    alert("Congratulation.You successfully submit your draft of strategy. Thank you so much for participating in our study.");
+    alert("Congratulation.You successfully submit your work. Thank you so much for participating in our study.");
 }
