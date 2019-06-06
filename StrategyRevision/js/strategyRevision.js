@@ -62,6 +62,8 @@ $(document).ready(function () {
             if (!doc.exists) {
                 console.log('No such document!');
             } else {
+                var test = doc.data();
+                console.log("test   "+JSON.stringify(test));
                 yourStrategy = doc.data().StrategyDefinition;
                 firstTask = doc.data().Task;
                 console.log('Task   :', doc.data().Task);
@@ -102,6 +104,8 @@ $(document).ready(function () {
             if (!doc.exists) {
                 console.log('No such document!');
             } else {
+                var test2 = doc.data();
+                console.log("test2   "+JSON.stringify(test2));
                  if(doc.data().Strategy1.StrategyId==participantId)
                      strat1=doc.data().Strategy1;
                  else

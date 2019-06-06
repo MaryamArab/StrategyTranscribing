@@ -1,0 +1,30 @@
+{
+  "ParticipantId": "T1",
+  "Strategy1": {
+    "ChallengingToWork": "qqqqqqqqqq",
+    "Clarity": "rrrrrr",
+    "Missing": "wwwwwww",
+    "OtherChallenges": "rttttttt",
+    "RequiredInfo": "eeeeeee",
+    "StrategyId": "Pilot3"
+  },
+  "Strategy2": {
+    "ChallengingToWork": "yyyyyyy",
+    "Clarity": "ppppppp",
+    "Missing": "uuuuuuu",
+    "OtherChallenges": "[[[[[[[[[[",
+    "RequiredInfo": "iiiiii",
+    "StrategyId": "Pilot7"
+  },
+  "Task1": "ProfilerTask",
+  "Task2": "CssDebuggingTask",
+  "Time": "23:2:16",
+  "WorkExperiences": {
+    "biggestSoftware": "54",
+    "biggestWebApplication": "4",
+    "softwareDevelopmentExperience": "4",
+    "webDevelopmentExperience": "4",
+    "webExperiencePeriod": "24 years and 5 months",
+    "workExperiencePeriod": "5 years and 8 months"
+  }
+}
