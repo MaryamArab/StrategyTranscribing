@@ -231,3 +231,101 @@ $(document).ready(function () {
 
 
 });
+
+async function submit(participantId) {
+    let time = new Date();
+    var hh = time.getHours();
+    var mm = time.getMinutes();
+    var ss = time.getSeconds();
+    var timestamp = hh + ":" + mm + ":" + ss;
+    let pId = window.location.search.substr(1).split("?")[0];;
+    let firstTester = window.location.search.substr(1).split("?")[1];
+    let secondTester = window.location.search.substr(2).split("?")[2];
+
+
+    let firstTestedStrategy = {
+        "ChallengingToWork":
+            {
+                "MakeSense": document.getElementById("challengingToWork1-makeSense").value,
+                "HardAddressing": document.getElementById("challengingToWork1-hardAddressing").value,
+                "AspectForgotten": document.getElementById("challengingToWork1-aspectForgotten").value
+            },
+        "Missing":
+            {
+                "MakeSense": document.getElementById("missing1-makeSense").value,
+                "HardAddressing": document.getElementById("missing1-hardAddressing").value,
+                "AspectForgotten": document.getElementById("missing1-aspectForgotten").value
+            },
+        "RequiredInfo":
+            {
+                "MakeSense": document.getElementById("requiredInfo1-makeSense").value,
+                "HardAddressing": document.getElementById("requiredInfo1-hardAddressing").value,
+                "AspectForgotten": document.getElementById("requiredInfo1-aspectForgotten").value
+            },
+        "Clarity":
+            {
+                "MakeSense": document.getElementById("clarity1-makeSense").value,
+                "HardAddressing": document.getElementById("clarity1-hardAddressing").value,
+                "AspectForgotten": document.getElementById("clarity1-aspectForgotten").value
+            },
+
+        "OtherChallenges":
+            {
+                "MakeSense": document.getElementById("otherChallenges1-makeSense").value,
+                "HardAddressing": document.getElementById("otherChallenges1-hardAddressing").value,
+                "AspectForgotten": document.getElementById("otherChallenges1-aspectForgotten").value
+            },
+
+
+    };
+    let secondTestedStrategy = {
+        "ChallengingToWork":
+            {
+                "MakeSense": document.getElementById("challengingToWork2-makeSense").value,
+                "HardAddressing": document.getElementById("challengingToWork2-hardAddressing").value,
+                "AspectForgotten": document.getElementById("challengingToWork2-aspectForgotten").value
+            },
+        "Missing":
+            {
+                "MakeSense": document.getElementById("missing2-makeSense").value,
+                "HardAddressing": document.getElementById("missing2-hardAddressing").value,
+                "AspectForgotten": document.getElementById("missing2-aspectForgotten").value
+            },
+        "RequiredInfo":
+            {
+                "MakeSense": document.getElementById("requiredInfo2-makeSense").value,
+                "HardAddressing": document.getElementById("requiredInfo2-hardAddressing").value,
+                "AspectForgotten": document.getElementById("requiredInfo2-aspectForgotten").value
+            },
+        "Clarity":
+            {
+                "MakeSense": document.getElementById("clarity2-makeSense").value,
+                "HardAddressing": document.getElementById("clarity2-hardAddressing").value,
+                "AspectForgotten": document.getElementById("clarity2-aspectForgotten").value
+            },
+
+        "OtherChallenges":
+            {
+                "MakeSense": document.getElementById("otherChallenges2-makeSense").value,
+                "HardAddressing": document.getElementById("otherChallenges2-hardAddressing").value,
+                "AspectForgotten": document.getElementById("otherChallenges2-aspectForgotten").value
+            },
+
+
+    };
+    database.collection("StrategyRevisions").doc(pId).set({
+        Time:timestamp,
+        ParticipantId: pId,
+        Strategy1:firstTestedStrategy,
+        Strategy2: secondTestedStrategy,
+        Tester1: firstTester,
+        Tester2: secondTester
+
+
+    }).catch(function (err) {
+        alert("Something wrong while you are trying to submit your strategy. It means that your work is not saved i our database. In order to be compensated with your work, we need a record of your work. " +
+            "Please send a pdf copy of this page to marab@gmu.edu. Thank you so much for participating in our study.");
+        console.log("error saving", err);
+    });
+    alert("Congratulation.You successfully submit your work. Thank you so much for participating in our study.");
+}
