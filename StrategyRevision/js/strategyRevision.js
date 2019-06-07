@@ -55,7 +55,7 @@ $(document).ready(function () {
 
     var strategy = database.collection("Strategies").doc(participantId);
     var testedStrategy1 = database.collection("TestedStrategies").doc(firstTestedStrategyId);
-    var testedStrategy2 = database.collection("TestedStrategies").doc(secondTestedStrategyId);
+    var testedStrategy2 = "";
 
     var getDoc = strategy.get()
         .then(doc => {
@@ -106,10 +106,10 @@ $(document).ready(function () {
             } else {
                 var test2 = doc.data();
                 console.log("test2   "+JSON.stringify(test2));
-                 if(doc.data().Strategy1.StrategyId==participantId)
-                     strat1=doc.data().Strategy1;
-                 else
-                     strat1=doc.data().Strategy2;
+                if(doc.data().Strategy1.StrategyId==participantId)
+                    strat1=doc.data().Strategy1;
+                else
+                    strat1=doc.data().Strategy2;
                 console.log(strat1);
                 $("#challengingToWork").append("<br><h4>Tester1:</h4>" +"<p class=\"quote\">\""+strat1.ChallengingToWork+"\"</p>"+
                     "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>"+
@@ -128,24 +128,24 @@ $(document).ready(function () {
                     "<textarea class=\"answerArea field\" id=\"missing1-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
 
                 $("#requiredInfo").append("<br><h4>Tester1:</h4>" +"<p class=\"quote\">\""+strat1.RequiredInfo+"\"</p>"+
-                "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>"+
-                "<textarea class=\"answerArea field\" id=\"requiredInfo1-makeSense\" placeholder=\"Please describe your answer here\"></textarea>"+
+                    "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>"+
+                    "<textarea class=\"answerArea field\" id=\"requiredInfo1-makeSense\" placeholder=\"Please describe your answer here\"></textarea>"+
                     "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>"+
                     "<textarea class=\"answerArea field\" id=\"requiredInfo1-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>"+
                     "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>"+
                     "<textarea class=\"answerArea field\" id=\"requiredInfo1-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
 
                 $("#clarity").append("<br><h4>Tester1:</h4>" +"<p class=\"quote\">\""+strat1.Clarity+"\"</p>"+
-                "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>"+
-                "<textarea class=\"answerArea field\" id=\"clarity1-makeSense\" placeholder=\"Please describe your answer here\"></textarea>"+
+                    "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>"+
+                    "<textarea class=\"answerArea field\" id=\"clarity1-makeSense\" placeholder=\"Please describe your answer here\"></textarea>"+
                     "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>"+
                     "<textarea class=\"answerArea field\" id=\"clarity1-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>"+
                     "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>"+
                     "<textarea class=\"answerArea field\" id=\"clarity1-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
 
                 $("#otherChallenges").append("<br><h4>Tester1:</h4>" +"<p class=\"quote\">\""+strat1.OtherChallenges+"\"</p>"+
-                "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>"+
-                "<textarea class=\"answerArea field\" id=\"otherChallenges1-makeSense\" placeholder=\"Please describe your answer here\"></textarea>"+
+                    "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>"+
+                    "<textarea class=\"answerArea field\" id=\"otherChallenges1-makeSense\" placeholder=\"Please describe your answer here\"></textarea>"+
                     "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>"+
                     "<textarea class=\"answerArea field\" id=\"otherChallenges1-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>"+
                     "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>"+
@@ -156,61 +156,65 @@ $(document).ready(function () {
         .catch(err => {
             console.log('Error getting document', err);
         });
+    if(secondTestedStrategyId != undefined){
+        testedStrategy2 = database.collection("TestedStrategies").doc(secondTestedStrategyId);
+        var getTestedStrategy2 = testedStrategy2.get()
+            .then(doc => {
+                if (!doc.exists) {
+                    console.log('No such document!');
+                } else {
+                    if (doc.data().Strategy1.StrategyId == participantId)
+                        strat2 = doc.data().Strategy1;
+                    else if (doc.data().Strategy2.StrategyId == participantId)
+                        strat2 = doc.data().Strategy2;
+                    console.log(strat2);
+                    $("#challengingToWork").append("<br><br><h4>Tester2:</h4>" + "<p class=\"quote\">\"" + strat2.ChallengingToWork + "\"</p>" +
+                        "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"challengingToWork2-makeSense\" placeholder=\"Please describe your answer here\"></textarea>" +
+                        "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"challengingToWork2-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>" +
+                        "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"challengingToWork2-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
 
-    var getTestedStrategy2 = testedStrategy2.get()
-        .then(doc => {
-            if (!doc.exists) {
-                console.log('No such document!');
-            } else {
-                if (doc.data().Strategy1.StrategyId == participantId)
-                    strat2 = doc.data().Strategy1;
-                else if (doc.data().Strategy2.StrategyId == participantId)
-                    strat2 = doc.data().Strategy2;
-                console.log(strat2);
-                $("#challengingToWork").append("<br><br><h4>Tester2:</h4>" + "<p class=\"quote\">\"" + strat2.ChallengingToWork + "\"</p>" +
-                    "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"challengingToWork2-makeSense\" placeholder=\"Please describe your answer here\"></textarea>" +
-                    "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"challengingToWork2-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>" +
-                    "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"challengingToWork2-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
+                    $("#missing").append("<br><br><h4>Tester2:</h4>" + "<p class=\"quote\">\"" + strat2.Missing + "\"</p>" +
+                        "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"missing2-makeSense\" placeholder=\"Please describe your answer here\"></textarea>" +
+                        "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"missing2-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>" +
+                        "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"missing2-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
 
-                $("#missing").append("<br><br><h4>Tester2:</h4>" + "<p class=\"quote\">\"" + strat2.Missing + "\"</p>" +
-                    "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"missing2-makeSense\" placeholder=\"Please describe your answer here\"></textarea>" +
-                    "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"missing2-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>" +
-                    "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"missing2-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
+                    $("#requiredInfo").append("<br><br><h4>Tester2:</h4>" + "<p class=\"quote\">\"" + strat2.RequiredInfo + "\"</p>" +
+                        "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"requiredInfo2-makeSense\" placeholder=\"Please describe your answer here\"></textarea>" +
+                        "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"requiredInfo2-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>" +
+                        "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"requiredInfo2-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
 
-                $("#requiredInfo").append("<br><br><h4>Tester2:</h4>" + "<p class=\"quote\">\"" + strat2.RequiredInfo + "\"</p>" +
-                    "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"requiredInfo2-makeSense\" placeholder=\"Please describe your answer here\"></textarea>" +
-                    "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"requiredInfo2-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>" +
-                    "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"requiredInfo2-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
+                    $("#clarity").append("<br><br><h4>Tester2:</h4>" + "<p class=\"quote\">\"" + strat2.Clarity + "\"</p>" +
+                        "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"clarity2-makeSense\" placeholder=\"Please describe your answer here\"></textarea>" +
+                        "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"clarity2-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>" +
+                        "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"clarity2-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
 
-                $("#clarity").append("<br><br><h4>Tester2:</h4>" + "<p class=\"quote\">\"" + strat2.Clarity + "\"</p>" +
-                    "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"clarity2-makeSense\" placeholder=\"Please describe your answer here\"></textarea>" +
-                    "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"clarity2-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>" +
-                    "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"clarity2-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
+                    $("#otherChallenges").append("<br><br><h4>Tester2:</h4>" + "<p class=\"quote\">\"" + strat2.OtherChallenges + "\"</p>" +
+                        "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"otherChallenges2-makeSense\" placeholder=\"Please describe your answer here\"></textarea>" +
+                        "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"otherChallenges2-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>" +
+                        "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>" +
+                        "<textarea class=\"answerArea field\" id=\"otherChallenges2-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
+                }
+            })
+            .catch(err => {
+                console.log('Error getting document', err);
+            });
+    }
 
-                $("#otherChallenges").append("<br><br><h4>Tester2:</h4>" + "<p class=\"quote\">\"" + strat2.OtherChallenges + "\"</p>" +
-                    "<br><p class=\"question\">Does this comment make sense to you? Why or why not?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"otherChallenges2-makeSense\" placeholder=\"Please describe your answer here\"></textarea>" +
-                    "<br><p class=\"question\">What, if anything, makes this comment hard to address?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"otherChallenges2-hardAddressing\" placeholder=\"Please describe your answer here\"></textarea>" +
-                    "<br><p class=\"question\">As you were writing the strategy, was there an aspect related to this comment of your strategy which you forgot to consider? What made this aspect hard to consider?</p>" +
-                    "<textarea class=\"answerArea field\" id=\"otherChallenges2-aspectForgotten\" placeholder=\"Please describe your answer here\"></textarea>");
-            }
-        })
-        .catch(err => {
-            console.log('Error getting document', err);
-        });
+
 
     var timeoutId,
         saveData = {};
@@ -244,7 +248,7 @@ async function submit(participantId) {
     var timestamp = hh + ":" + mm + ":" + ss;
     let pId = window.location.search.substr(1).split("?")[0];;
     let firstTester = window.location.search.substr(1).split("?")[1];
-    let secondTester = window.location.search.substr(2).split("?")[2];
+    let secondTester = "";
 
 
     let firstTestedStrategy = {
@@ -282,41 +286,45 @@ async function submit(participantId) {
 
 
     };
-    let secondTestedStrategy = {
-        "ChallengingToWork":
+    let secondTestedStrategy ={};
+    if(window.location.search.substr(2).split("?")[2] != undefined){
+        secondTester = window.location.search.substr(2).split("?")[2];
+
+        secondTestedStrategy = {
+            "ChallengingToWork":
             {
                 "MakeSense": document.getElementById("challengingToWork2-makeSense").value,
                 "HardAddressing": document.getElementById("challengingToWork2-hardAddressing").value,
                 "AspectForgotten": document.getElementById("challengingToWork2-aspectForgotten").value
             },
-        "Missing":
+            "Missing":
             {
                 "MakeSense": document.getElementById("missing2-makeSense").value,
                 "HardAddressing": document.getElementById("missing2-hardAddressing").value,
                 "AspectForgotten": document.getElementById("missing2-aspectForgotten").value
             },
-        "RequiredInfo":
+            "RequiredInfo":
             {
                 "MakeSense": document.getElementById("requiredInfo2-makeSense").value,
                 "HardAddressing": document.getElementById("requiredInfo2-hardAddressing").value,
                 "AspectForgotten": document.getElementById("requiredInfo2-aspectForgotten").value
             },
-        "Clarity":
+            "Clarity":
             {
                 "MakeSense": document.getElementById("clarity2-makeSense").value,
                 "HardAddressing": document.getElementById("clarity2-hardAddressing").value,
                 "AspectForgotten": document.getElementById("clarity2-aspectForgotten").value
             },
 
-        "OtherChallenges":
+            "OtherChallenges":
             {
                 "MakeSense": document.getElementById("otherChallenges2-makeSense").value,
                 "HardAddressing": document.getElementById("otherChallenges2-hardAddressing").value,
                 "AspectForgotten": document.getElementById("otherChallenges2-aspectForgotten").value
             },
+        };
+    }
 
-
-    };
     database.collection("StrategyRevisions").doc(pId).set({
         Time:timestamp,
         ParticipantId: pId,
