@@ -373,7 +373,7 @@ async function addNewStrategy() {
     var hh = time.getHours();
     var mm = time.getMinutes();
     var ss = time.getSeconds();
-    var timestamp = hh + ":" + mm + ":" + ss;
+    var timestamp = time +", " + hh + ":" + mm + ":" + ss;
     let pId =participantId;
     let workExperiencePeriod = document.getElementById("workExpYear").value+" years and " + document.getElementById("workExpMonth").value + " months";
     let softwareDevelopmentExperience = document.getElementById("softDevExp").value;

@@ -35,7 +35,7 @@ var allAutorsData = strategy.get()
            // console.log(doc.id, '=>', doc.data());
             var test = JSON.stringify(doc.data());
 
-            console.log("\""+doc.id+"\"" +  ':'+ test +",");
+            //console.log("\""+doc.id+"\"" +  ':'+ test +",");
             // try {
             //     //FIXME: Simply write the entire request body for now
             //
@@ -54,3 +54,30 @@ var allAutorsData = strategy.get()
         console.log('Error getting documents', err);
     });
 
+var testers = database.collection("TestedStrategies");
+
+var allTesters = testers.get()
+    .then(snapshot => {
+        snapshot.forEach(doc => {
+            // console.log(doc.id, '=>', doc.data());
+            var test = JSON.stringify(doc.data());
+
+            console.log("\""+doc.id+"\"" +  ':'+ test +",");
+            // try {
+            //     //FIXME: Simply write the entire request body for now
+            //
+            //     WriteTextToFileAsync(test);
+            //     return res.status(200).send( { message: 'File written successfully!' });
+            // } catch (err) {
+            //     throw new Error(`Could not write file because of {err}`);
+            // }
+            // fs.writeFile('myjsonfile.json', test, 'utf8', function(err) {
+            //     if (err) throw err;
+            //     console.log('complete');
+            // });
+        });
+    })
+    .catch(err => {
+        console.log('Error getting documents', err);
+    });
+console.log(allTesters);
