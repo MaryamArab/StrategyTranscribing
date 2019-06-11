@@ -250,6 +250,14 @@ async function submit(participantId) {
     let firstTester = window.location.search.substr(1).split("?")[1];
     let secondTester = "";
 
+    let challengingToWorkMakeSense1 = document.getElementById("challengingToWork1-makeSense").value;
+    if(challengingToWorkMakeSense1 =="" || challengingToWorkMakeSense1.length<5){
+        document.getElementById("challengingToWork1-makeSense").style.border="2px solid red";
+        alert("Please fill out the required fields or type nothing.\"");
+        return;
+    }
+
+
 
     let firstTestedStrategy = {
         "ChallengingToWork":

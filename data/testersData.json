@@ -1,10 +1,94 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+  "TESTERS": {
+    "T1": {
+      "ParticipantId": "T1",
+      "Strategy1": {
+        "ChallengingToWork": "\nLine # 17: \"Change the desired style to have higher precedence or the shown style to have lower precedence, or change the inheritance structure\" has 2 branches of action but it is not specified when which condition should be selected and perform. \nStatement \"return done\" is used to terminate the strategy, but it seems not telling the user if they finished successfully or cannot find the bug. ",
+        "Clarity": "Its clear, but some sentences are a bit confusing at the first step. For instance \" Move to the portion of the page with the bug\" is a bit confusing what exactly it asked me to do. Maybe using clear keywords helps reducing ambiguity. For instance it can be transcribed as \"Navigate to the elements with defective appearance\"",
+        "Missing": "The strategy just works for one defect at a time. For the pages that have more than one defective style feature, the user should rerun the strategy from the beginning. Maybe having a loop to run the strategy on all the defective elements in a list might be helpful",
+        "OtherChallenges": "Some strategy statements are very general and have many substeps inside them. Maybe having break the big step to small steps may help easier following the strategy without missing any point. \nThe strategy needs a better approach to tell the user if they finished successfully or they should redo the strategy. \nStrategy is not very comprehensive and is just for one defect fixing at a time",
+        "StrategyId": "Pilot9",
+        "requiredInfo": "Having a method to keep variables and list."
+      },
+      "Strategy2": {
+        "ChallengingToWork": "There are many variables in the strategy that were confusing and hard to follow. For example defining 'irregularComponent' seems redundant.\n",
+        "Clarity": "Not in the first glance. Initially I assumed the task is to fix the bugs. So I was looking for ‘fixing’ statements. Aside that, Still I am not sure why in Strategy createErrorHandleCase the variable allErrors' is getting values, specially when the strategy is returning nothing at the end. \n",
+        "Missing": "The type of output from each strategy. It was not clear what is the outcome of each strategy/sub-strategy. Adding that information on top of the strategy as a comment will help.\n",
+        "OtherChallenges": "None.",
+        "RequiredInfo": "I got lost in the strategy mainly because it was hard to distinguish the comment and the statement specially that the natural language is also used in the statements. Using a different coloring or font helps. The same argument holds for strategy calls and variable names.",
+        "StrategyId": "Pilot8"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "15:18:22",
+      "WorkExperiences": {
+        "biggestSoftware": "Bank transaction management application. The app includes querying form database, processing, applying calculations and visualizing data.",
+        "biggestWebApplication": "Bank transaction management web base application. The app includes querying form database, processing, applying calculations and visualizing data.",
+        "softwareDevelopmentExperience": "8",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "2 years and 0 months",
+        "workExperiencePeriod": "7 years and 0 months"
+      }
+    },
+    "T2": {
+      "ParticipantId": "T2",
+      "Strategy1": {
+        "ChallengingToWork": "slhfdnassf",
+        "Clarity": " you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
+        "OtherChallenges": " you think the strategy ys of challenges you faced which is not asked above, if any.\n\n",
+        "StrategyId": "Pilot9",
+        "requiredInfo": "dditional information, details, or features would make it easier for you to follow this strategy?"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "otherChallenges",
+        "Clarity": "its not cleare at all",
+        "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
+        "OtherChallenges": "its context relevant",
+        "RequiredInfo": "Additional",
+        "StrategyId": "Pilot3"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "23:4:2",
+      "WorkExperiences": {
+        "biggestSoftware": "5",
+        "biggestWebApplication": "5",
+        "softwareDevelopmentExperience": "5",
+        "webDevelopmentExperience": "5",
+        "webExperiencePeriod": "5 years and 5 months",
+        "workExperiencePeriod": "5 years and 5 months"
+      }
+    },
+    "T4": {
+      "ParticipantId": "T4",
+      "Strategy1": {
+        "ChallengingToWork": "other categories of challenghallenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as",
+        "Clarity": "ed is clear? If not, please specify what w",
+        "Missing": "Missinhg",
+        "OtherChallenges": "about other categories of challenges you faced which is not asked above",
+        "RequiredInfo": "on, details, or features would make it easier for you to follow this strategy?\n\n",
+        "StrategyId": "Pilot8"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "de it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you rememb",
+        "Clarity": "wqewddscasdf\n4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "Missing": "cdsgrdsf",
+        "OtherChallenges": "4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "RequiredInfo": "al information, details, or features would make i",
+        "StrategyId": "Pilot7"
+      },
+      "Task1": "ErrorHandlingTask",
+      "Task2": "CssDebuggingTask",
+      "Time": "17:17:1",
+      "WorkExperiences": {
+        "biggestSoftware": "2dsdg4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "biggestWebApplication": "Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "softwareDevelopmentExperience": "0",
+        "webDevelopmentExperience": "1",
+        "webExperiencePeriod": "22 years and 0 months",
+        "workExperiencePeriod": "3 years and 0 months"
+      }
+    }
+  }
 }
