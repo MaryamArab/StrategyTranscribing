@@ -590,21 +590,43 @@ async function addNewStrategy() {
         alert("Please write down a detailed strategy");
         return;
     }
-    let commonDifficulties=[];
-        commonDifficulties.push("TranslationDifficultyIdea: "+ r_translationDifficulty);
-        commonDifficulties.push("TranslationDifficulty: "+translationDifficulty);
-        commonDifficulties.push("NoviceUnderstandabilityDifficulty_Idea: "+r_noviceUnderstandabilityDifficulty);
-        commonDifficulties.push("NoviceUnderstandabilityDifficulty : "+noviceUnderstandabilityDifficulty);
-        commonDifficulties.push("ConcentrationDifficulty_Idea: "+r_concentrationDifficulty);
-        commonDifficulties.push("ConcentrationDifficulty: "+concentrationDifficulty);
-        commonDifficulties.push("TimeConsumptionDifficulty_Idea: "+r_timeConsumptionDifficulty);
-        commonDifficulties.push("TimeConsumptionDifficulty: "+timeConsumptionDifficulty);
-        commonDifficulties.push("StrategyEndingDifficulty_Idea: "+r_strategyEndingDifficulty);
-        commonDifficulties.push("StrategyEndingDifficulty: "+strategyEndingDifficulty);
-        commonDifficulties.push("RobotoSupportDifficulty_Idea: "+r_robotoSupportDifficulty);
-        commonDifficulties.push("RobotoSupportDifficulty: "+robotoSupportDifficulty);
-        commonDifficulties.push("GuidelinesSupportDifficulty_Idea: "+r_guidelinesSupportDifficulty);
-        commonDifficulties.push("GuidelinesSupportDifficulty: "+guidelinesSupportDifficulty);
+    if(document.getElementById("difficultyTxt").value.length != 0)
+    {
+        alert("Please press the add button to save your difficulties to the list of difficulties.");
+        return;
+    }
+
+    var commonDifficulties={
+        "TranslationDifficultyIdea":  r_translationDifficulty,
+        "TranslationDifficulty": translationDifficulty,
+        "NoviceUnderstandabilityDifficulty_Idea: ":r_noviceUnderstandabilityDifficulty,
+        "NoviceUnderstandabilityDifficulty : ":noviceUnderstandabilityDifficulty,
+        "ConcentrationDifficulty_Idea: ":r_concentrationDifficulty,
+        "ConcentrationDifficulty: ":concentrationDifficulty,
+        "TimeConsumptionDifficulty_Idea: ":r_timeConsumptionDifficulty,
+        "TimeConsumptionDifficulty: ":timeConsumptionDifficulty,
+        "StrategyEndingDifficulty_Idea: ":r_strategyEndingDifficulty,
+        "StrategyEndingDifficulty: ":strategyEndingDifficulty,
+        "RobotoSupportDifficulty_Idea: ":r_robotoSupportDifficulty,
+        "RobotoSupportDifficulty: ":robotoSupportDifficulty,
+        "GuidelinesSupportDifficulty_Idea: ":r_guidelinesSupportDifficulty,
+        "GuidelinesSupportDifficulty: ":guidelinesSupportDifficulty,
+    }
+    // let commonDifficulties=[];
+    //     commonDifficulties.push("TranslationDifficultyIdea: "+ r_translationDifficulty);
+    //     commonDifficulties.push("TranslationDifficulty: "+translationDifficulty);
+    //     commonDifficulties.push("NoviceUnderstandabilityDifficulty_Idea: "+r_noviceUnderstandabilityDifficulty);
+    //     commonDifficulties.push("NoviceUnderstandabilityDifficulty : "+noviceUnderstandabilityDifficulty);
+    //     commonDifficulties.push("ConcentrationDifficulty_Idea: "+r_concentrationDifficulty);
+    //     commonDifficulties.push("ConcentrationDifficulty: "+concentrationDifficulty);
+    //     commonDifficulties.push("TimeConsumptionDifficulty_Idea: "+r_timeConsumptionDifficulty);
+    //     commonDifficulties.push("TimeConsumptionDifficulty: "+timeConsumptionDifficulty);
+    //     commonDifficulties.push("StrategyEndingDifficulty_Idea: "+r_strategyEndingDifficulty);
+    //     commonDifficulties.push("StrategyEndingDifficulty: "+strategyEndingDifficulty);
+    //     commonDifficulties.push("RobotoSupportDifficulty_Idea: "+r_robotoSupportDifficulty);
+    //     commonDifficulties.push("RobotoSupportDifficulty: "+robotoSupportDifficulty);
+    //     commonDifficulties.push("GuidelinesSupportDifficulty_Idea: "+r_guidelinesSupportDifficulty);
+    //     commonDifficulties.push("GuidelinesSupportDifficulty: "+guidelinesSupportDifficulty);
 
 
     let database = firebase.firestore();
