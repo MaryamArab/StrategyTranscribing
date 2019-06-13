@@ -449,7 +449,7 @@ async function submit(participantId){
             "StrategyId" : firstStrategyId,
             "ChallengingToWork" : document.getElementById("challengingToWork_CssDebugging").value,
             "Missing" : document.getElementById("missing_CssDebugging").value,
-            "requiredInfo" : document.getElementById("requiredInfo_CssDebugging").value,
+            "RequiredInfo" : document.getElementById("requiredInfo_CssDebugging").value,
             "Clarity" : document.getElementById("clarity_CssDebugging").value,
             "OtherChallenges" : document.getElementById("otherChallenges_CssDebugging").value
         };
