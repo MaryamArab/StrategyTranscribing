@@ -382,6 +382,7 @@ async function addNewStrategy() {
     let webExperiencePeriod = document.getElementById("webExpYear").value+" years and " + document.getElementById("webExpMonth").value + " months";
     let webDevelopmentExperience = document.getElementById("webDevExp").value;
     let biggestWebApplication= document.getElementById("biggestWebApplication").value;
+    let background = document.getElementById("background").value;
 
     let workExperiences={
         "workExperiencePeriod" : workExperiencePeriod,
@@ -390,6 +391,7 @@ async function addNewStrategy() {
         "webExperiencePeriod" : webExperiencePeriod,
         "webDevelopmentExperience" : webDevelopmentExperience,
         "biggestWebApplication" : biggestWebApplication,
+        "background":background,
 
     };
 
@@ -564,6 +566,11 @@ async function addNewStrategy() {
     if(biggestSoftware ===""){
         document.getElementById("biggestSoftware").style.border="2px solid red";
         alert("Please describe what is the biggest software applications you have developed.");
+        return;
+    }
+    if(background ===""){
+        document.getElementById("background").style.border="2px solid red";
+        alert("Please describe a little about your background in programming.");
         return;
     }
     if(document.getElementById("webExpYear").value==="" ){

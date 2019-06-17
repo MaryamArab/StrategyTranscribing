@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360bf7c5-adb1-4900-a856-b8dc980f0fe5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StrategyTesting/js/testing.js" afterPath="$PROJECT_DIR$/StrategyTesting/js/testing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/backup-all-06-15-2019.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/backup-all-06-17-2019-11am.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StrategyAuthoring/index.html" afterPath="$PROJECT_DIR$/StrategyAuthoring/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StrategyAuthoring/js/index.js" afterPath="$PROJECT_DIR$/StrategyAuthoring/js/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,43 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="strategyRevision.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StrategyRevision/js/strategyRevision.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strategyRevision.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StrategyRevision/strategyRevision.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="66" column="34" lean-forward="false" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testing.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StrategyTesting/testing.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="375" column="58" lean-forward="false" selection-start-line="375" selection-start-column="44" selection-end-line="375" selection-end-column="58" />
-              <folding>
-                <element signature="n#div#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#3;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#3;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#5;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#5;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="backup-all-06-10-2019.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/backup-all-06-10-2019.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,26 +33,26 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StrategyAuthoring/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="595" column="8" lean-forward="false" selection-start-line="595" selection-start-column="8" selection-end-line="595" selection-end-column="8" />
+            <state relative-caret-position="344">
+              <caret line="572" column="77" lean-forward="false" selection-start-line="572" selection-start-column="77" selection-end-line="572" selection-end-column="77" />
               <folding>
                 <element signature="e#11792#11864#0" expanded="false" />
                 <element signature="e#18665#20734#0" expanded="false" />
-                <marker date="1560353172908" expanded="true" signature="3289:3319" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="3401:3431" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="3534:3564" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="3727:3757" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="3868:3898" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="5116:5146" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="5281:5311" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="5425:5455" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="7952:7982" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="8116:8146" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="8282:8312" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="8476:8506" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="11038:11068" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="11177:11207" ph="..." />
-                <marker date="1560353172908" expanded="true" signature="11379:11409" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="3289:3319" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="3401:3431" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="3534:3564" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="3727:3757" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="3868:3898" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="5116:5146" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="5281:5311" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="5425:5455" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="7952:7982" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="8116:8146" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="8282:8312" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="8476:8506" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="11038:11068" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="11177:11207" ph="..." />
+                <marker date="1560784621688" expanded="true" signature="11379:11409" ph="..." />
               </folding>
             </state>
           </provider>
@@ -94,8 +61,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StrategyAuthoring/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="531" column="116" lean-forward="false" selection-start-line="531" selection-start-column="103" selection-end-line="531" selection-end-column="116" />
+            <state relative-caret-position="661">
+              <caret line="552" column="85" lean-forward="false" selection-start-line="552" selection-start-column="85" selection-end-line="552" selection-end-column="85" />
               <folding>
                 <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -104,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testing.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StrategyTesting/js/testing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="3435">
               <caret line="451" column="14" lean-forward="false" selection-start-line="451" selection-start-column="14" selection-end-line="451" selection-end-column="14" />
               <folding>
                 <element signature="e#2171#5700#0" expanded="false" />
@@ -119,6 +86,16 @@
                 <element signature="e#17771#19029#0" expanded="false" />
                 <element signature="e#19111#20378#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="revisionsData.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/revisionsData.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1260">
+              <caret line="84" column="188" lean-forward="false" selection-start-line="84" selection-start-column="188" selection-end-line="84" selection-end-column="188" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,7 +113,7 @@
       <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/js/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
+            <state relative-caret-position="684">
               <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding />
             </state>
@@ -146,8 +123,28 @@
       <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="180">
+              <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="backup-all-06-17-2019-11am.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/backup-all-06-17-2019-11am.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="757">
+              <caret line="415" column="1" lean-forward="false" selection-start-line="415" selection-start-column="1" selection-end-line="415" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="backup-all-06-15-2019.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/backup-all-06-15-2019.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="757">
+              <caret line="410" column="1" lean-forward="false" selection-start-line="410" selection-start-column="1" selection-end-line="410" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -162,17 +159,12 @@
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="tsconfig.json" />
+        <option value="package_json" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>biggestWeb</find>
-      <find>append</find>
-      <find>.biggest</find>
-      <find>var t</find>
-      <find>challengingToWork-makeSense</find>
-      <find>requiredInfo1</find>
       <find>database</find>
       <find>subm</find>
       <find>1</find>
@@ -195,8 +187,14 @@
       <find>submit</find>
       <find>},}</find>
       <find>translatu</find>
-      <find>add()</find>
       <find>);</find>
+      <find>requiredI</find>
+      <find>Auth2</find>
+      <find>Auth3</find>
+      <find>add()</find>
+      <find>workExperiences</find>
+      <find>biggestSoftware</find>
+      <find>background</find>
     </findStrings>
     <replaceStrings>
       <replace>field</replace>
@@ -222,8 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/bootstrap/js/dataManagement.js" />
         <option value="$PROJECT_DIR$/bootstrap/js/index.js" />
         <option value="$PROJECT_DIR$/js/monaco.js" />
         <option value="$PROJECT_DIR$/js/transform.js" />
@@ -248,7 +244,6 @@
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/js/testing.js" />
         <option value="$PROJECT_DIR$/js/consent.js" />
-        <option value="$PROJECT_DIR$/StrategyAuthoring/index.html" />
         <option value="$PROJECT_DIR$/StrategyTesting/js/consent.js" />
         <option value="$PROJECT_DIR$/StrategyTesting/consent.html" />
         <option value="$PROJECT_DIR$/StrategyAuthoring/consent.html" />
@@ -270,8 +265,12 @@
         <option value="$PROJECT_DIR$/data/revisionsData.json" />
         <option value="$PROJECT_DIR$/data/tsconfig.json" />
         <option value="$PROJECT_DIR$/data/backup-all-06-11-2019-5pm.json" />
-        <option value="$PROJECT_DIR$/StrategyAuthoring/js/index.js" />
         <option value="$PROJECT_DIR$/StrategyTesting/js/testing.js" />
+        <option value="$PROJECT_DIR$/StrategyAuthoring/js/index.js" />
+        <option value="$PROJECT_DIR$/StrategyAuthoring/index.html" />
+        <option value="$PROJECT_DIR$/data/package.json" />
+        <option value="$PROJECT_DIR$/data/backup-all-06-17-2019-11am.json" />
+        <option value="$PROJECT_DIR$/data/backup-all-06-15-2019.json" />
       </list>
     </option>
   </component>
@@ -284,9 +283,9 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/monaco/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1779" />
-    <option name="y" value="88" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2450" />
+    <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="946" />
   </component>
@@ -308,8 +307,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -462,15 +461,16 @@
       <workItem from="1559355777527" duration="10270000" />
       <workItem from="1559678516246" duration="11545000" />
       <workItem from="1559752791740" duration="23154000" />
-      <workItem from="1560088379907" duration="12452000" />
+      <workItem from="1560088379907" duration="14391000" />
+      <workItem from="1560779905415" duration="2056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="419095000" />
+    <option name="totallyTimeSpent" value="423090000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1779" y="88" width="1680" height="946" extended-state="0" />
+    <frame x="1768" y="52" width="1680" height="946" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30535713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -502,7 +502,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/StrategyAuthoring/js/index.js</url>
-          <line>633</line>
+          <line>640</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/StrategyTesting/js/testing.js</url>
@@ -520,14 +520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/strategyRevision.html" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="237" column="16" lean-forward="false" selection-start-line="237" selection-start-column="16" selection-end-line="237" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMCore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -705,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,30 +721,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/hello.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/js/bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/file.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/hello.txt" />
+    <entry file="file://$PROJECT_DIR$/Admin/js/bundle.js" />
+    <entry file="file://$PROJECT_DIR$/Admin/file.txt" />
     <entry file="file://$PROJECT_DIR$/StrategyRevision/js/strategyRevision.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -772,7 +742,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StrategyTesting/testing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="3735">
           <caret line="375" column="58" lean-forward="false" selection-start-line="375" selection-start-column="44" selection-end-line="375" selection-end-column="58" />
           <folding>
             <element signature="n#div#0;n#html#0;n#!!top" expanded="false" />
@@ -782,14 +752,6 @@
             <element signature="n#div#2;n#div#5;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#div#5;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/js/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -805,23 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
           <caret line="108" column="6" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/revisionsData.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="84" column="188" lean-forward="false" selection-start-line="84" selection-start-column="188" selection-end-line="84" selection-end-column="188" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,46 +786,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StrategyAuthoring/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="531" column="116" lean-forward="false" selection-start-line="531" selection-start-column="103" selection-end-line="531" selection-end-column="116" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StrategyAuthoring/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="595" column="8" lean-forward="false" selection-start-line="595" selection-start-column="8" selection-end-line="595" selection-end-column="8" />
-          <folding>
-            <element signature="e#11792#11864#0" expanded="false" />
-            <element signature="e#18665#20734#0" expanded="false" />
-            <marker date="1560353172908" expanded="true" signature="3289:3319" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="3401:3431" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="3534:3564" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="3727:3757" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="3868:3898" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="5116:5146" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="5281:5311" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="5425:5455" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="7952:7982" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="8116:8146" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="8282:8312" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="8476:8506" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="11038:11068" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="11177:11207" ph="..." />
-            <marker date="1560353172908" expanded="true" signature="11379:11409" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StrategyTesting/js/testing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="3435">
           <caret line="451" column="14" lean-forward="false" selection-start-line="451" selection-start-column="14" selection-end-line="451" selection-end-column="14" />
           <folding>
             <element signature="e#2171#5700#0" expanded="false" />
@@ -892,6 +800,83 @@
             <element signature="e#17771#19029#0" expanded="false" />
             <element signature="e#19111#20378#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/revisionsData.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="188" lean-forward="false" selection-start-line="84" selection-start-column="188" selection-end-line="84" selection-end-column="188" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StrategyAuthoring/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="572" column="77" lean-forward="false" selection-start-line="572" selection-start-column="77" selection-end-line="572" selection-end-column="77" />
+          <folding>
+            <element signature="e#11792#11864#0" expanded="false" />
+            <element signature="e#18665#20734#0" expanded="false" />
+            <marker date="1560784621688" expanded="true" signature="3289:3319" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="3401:3431" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="3534:3564" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="3727:3757" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="3868:3898" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="5116:5146" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="5281:5311" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="5425:5455" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="7952:7982" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="8116:8146" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="8282:8312" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="8476:8506" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="11038:11068" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="11177:11207" ph="..." />
+            <marker date="1560784621688" expanded="true" signature="11379:11409" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StrategyAuthoring/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="552" column="85" lean-forward="false" selection-start-line="552" selection-start-column="85" selection-end-line="552" selection-end-column="85" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/backup-all-06-17-2019-11am.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="415" column="1" lean-forward="false" selection-start-line="415" selection-start-column="1" selection-end-line="415" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/backup-all-06-15-2019.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="410" column="1" lean-forward="false" selection-start-line="410" selection-start-column="1" selection-end-line="410" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
