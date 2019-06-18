@@ -495,6 +495,7 @@ async function submit(participantId){
     let webExperiencePeriod = document.getElementById("webExpYear").value+" years and " + document.getElementById("webExpMonth").value + " months";
     let webDevelopmentExperience = document.getElementById("webDevExp").value;
     let biggestWebApplication= document.getElementById("biggestWebApplication").value;
+    let background = document.getElementById("background").value;
 
     if(document.getElementById("workExpYear").value ===""  ) {
         document.getElementById("workExpYear").style.border="2px solid red";
@@ -526,6 +527,11 @@ async function submit(participantId){
         alert("Please describe what is the biggest web applications you have developed.");
         return;
     }
+    if(background ===""){
+        document.getElementById("background").style.border="2px solid red";
+        alert("Please describe a little about your background in programming.");
+        return;
+    }
 
     let workExperiences={
         "workExperiencePeriod":workExperiencePeriod,
@@ -533,7 +539,8 @@ async function submit(participantId){
         "biggestSoftware":biggestSoftware,
         "webExperiencePeriod":webExperiencePeriod,
         "webDevelopmentExperience":webDevelopmentExperience,
-        "biggestWebApplication":biggestWebApplication
+        "biggestWebApplication":biggestWebApplication,
+        "background":background
     };
     //********************END COLLECTING BACKGROUND SURVEY*************************
 
