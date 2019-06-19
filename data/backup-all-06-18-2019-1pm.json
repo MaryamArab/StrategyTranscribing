@@ -216,5 +216,281 @@
       "Time": "11:53:51",
       "WebExperience": "7"
     }
+  },
+  "TESTERS": {
+    "T1": {
+      "ParticipantId": "T1",
+      "Strategy1": {
+        "ChallengingToWork": "\nLine # 17: \"Change the desired style to have higher precedence or the shown style to have lower precedence, or change the inheritance structure\" has 2 branches of action but it is not specified when which condition should be selected and perform. \nStatement \"return done\" is used to terminate the strategy, but it seems not telling the user if they finished successfully or cannot find the bug. ",
+        "Clarity": "Its clear, but some sentences are a bit confusing at the first step. For instance \" Move to the portion of the page with the bug\" is a bit confusing what exactly it asked me to do. Maybe using clear keywords helps reducing ambiguity. For instance it can be transcribed as \"Navigate to the elements with defective appearance\"",
+        "Missing": "The strategy just works for one defect at a time. For the pages that have more than one defective style feature, the user should rerun the strategy from the beginning. Maybe having a loop to run the strategy on all the defective elements in a list might be helpful",
+        "OtherChallenges": "Some strategy statements are very general and have many substeps inside them. Maybe having break the big step to small steps may help easier following the strategy without missing any point. \nThe strategy needs a better approach to tell the user if they finished successfully or they should redo the strategy. \nStrategy is not very comprehensive and is just for one defect fixing at a time",
+        "StrategyId": "Pilot9",
+        "requiredInfo": "Having a method to keep variables and list."
+      },
+      "Strategy2": {
+        "ChallengingToWork": "There are many variables in the strategy that were confusing and hard to follow. For example defining 'irregularComponent' seems redundant.\n",
+        "Clarity": "Not in the first glance. Initially I assumed the task is to fix the bugs. So I was looking for ‘fixing’ statements. Aside that, Still I am not sure why in Strategy createErrorHandleCase the variable allErrors' is getting values, specially when the strategy is returning nothing at the end. \n",
+        "Missing": "The type of output from each strategy. It was not clear what is the outcome of each strategy/sub-strategy. Adding that information on top of the strategy as a comment will help.\n",
+        "OtherChallenges": "None.",
+        "RequiredInfo": "I got lost in the strategy mainly because it was hard to distinguish the comment and the statement specially that the natural language is also used in the statements. Using a different coloring or font helps. The same argument holds for strategy calls and variable names.",
+        "StrategyId": "Pilot8"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "15:18:22",
+      "WorkExperiences": {
+        "biggestSoftware": "Bank transaction management application. The app includes querying form database, processing, applying calculations and visualizing data.",
+        "biggestWebApplication": "Bank transaction management web base application. The app includes querying form database, processing, applying calculations and visualizing data.",
+        "softwareDevelopmentExperience": "8",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "2 years and 0 months",
+        "workExperiencePeriod": "7 years and 0 months"
+      }
+    },
+    "T2": {
+      "ParticipantId": "T2",
+      "Strategy1": {
+        "ChallengingToWork": "slhfdnassf",
+        "Clarity": " you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
+        "OtherChallenges": " you think the strategy ys of challenges you faced which is not asked above, if any.\n\n",
+        "StrategyId": "Pilot9",
+        "requiredInfo": "dditional information, details, or features would make it easier for you to follow this strategy?"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "otherChallenges",
+        "Clarity": "its not cleare at all",
+        "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
+        "OtherChallenges": "its context relevant",
+        "RequiredInfo": "Additional",
+        "StrategyId": "Pilot3"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "23:4:2",
+      "WorkExperiences": {
+        "biggestSoftware": "5",
+        "biggestWebApplication": "5",
+        "softwareDevelopmentExperience": "5",
+        "webDevelopmentExperience": "5",
+        "webExperiencePeriod": "5 years and 5 months",
+        "workExperiencePeriod": "5 years and 5 months"
+      }
+    },
+    "T4": {
+      "ParticipantId": "T4",
+      "Strategy1": {
+        "ChallengingToWork": "other categories of challenghallenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as",
+        "Clarity": "ed is clear? If not, please specify what w",
+        "Missing": "Missinhg",
+        "OtherChallenges": "about other categories of challenges you faced which is not asked above",
+        "RequiredInfo": "on, details, or features would make it easier for you to follow this strategy?\n\n",
+        "StrategyId": "Pilot8"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "de it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you rememb",
+        "Clarity": "wqewddscasdf\n4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "Missing": "cdsgrdsf",
+        "OtherChallenges": "4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "RequiredInfo": "al information, details, or features would make i",
+        "StrategyId": "Pilot7"
+      },
+      "Task1": "ErrorHandlingTask",
+      "Task2": "CssDebuggingTask",
+      "Time": "17:17:1",
+      "WorkExperiences": {
+        "biggestSoftware": "2dsdg4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "biggestWebApplication": "Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "softwareDevelopmentExperience": "0",
+        "webDevelopmentExperience": "1",
+        "webExperiencePeriod": "22 years and 0 months",
+        "workExperiencePeriod": "3 years and 0 months"
+      }
+    },
+    "Tester1": {
+      "ParticipantId": "Tester1",
+      "Strategy1": {
+        "ChallengingToWork": "Line #2 just says you may point to the component. Instead, it could be specific to click ctrl+shift+C to inspect the highlighted element. Doing this would show the respective element in the styles tab where we can quickly make changes. ",
+        "Clarity": "Yes, it is clear. ",
+        "Missing": "There is nothing missing but the instructions could be more clear on what to look for. ",
+        "OtherChallenges": "NA",
+        "RequiredInfo": "3.The right side corner of the Developer Tool window highlights\n\nThis is true for Chrome Browser. The IE opens the developer tool at the bottom of the webpage and not on the right. ",
+        "StrategyId": "Auth3"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task. ",
+        "Clarity": "Very much Clear",
+        "Missing": "Nothing. The details were pretty straight forward. I had never used Performance profile when I inspect element but was clear when I followed the steps. ",
+        "OtherChallenges": "I did not know how to use Performance profiler so I had difficulties figuring out the current frame state, network requests, animations but when I followed it twice, I was able to get to it. ",
+        "RequiredInfo": "Nothing. I think it provided with all the details needed to look at the performance. ",
+        "StrategyId": "Auth5"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "13:11:56",
+      "WorkExperiences": {
+        "background": "I have worked for about 4 years in the industry in technologies like ColdFusion, HTML5, CSS, Bootstrap, JQuery, JavaScript, Ajax. In my Master's, I am working on creating web applications using Node.js, Java, Bootstrap, HTML5. \n\nGit Hub: https://github.com/Bhargavicm ",
+        "biggestSoftware": "https://www.healthcaresource.com/pm10ncu_m/index.cfm?fuseaction=search.categoryList&template=dsp_job_categories.cfm\n\nAbove is the demo website. I was part of building the majority of the features for the Job Portal for Hospitals across the US. I worked from India to construct a website that was mobile-friendly using Bootstrap, CSS, and JavaScript.  ",
+        "biggestWebApplication": "There are two biggest web applications that I worked on\n1) Job Portal for the Hospital staffing.\n2) VMWare e-learning and Certifications module. \n\nBoth were built using ColdFusion 5. I helped them to migrate from ColdFusion 5 to ColdFusion 2016 along with a Mobile solution to web applications with advanced features. ",
+        "softwareDevelopmentExperience": "3",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "4 years and 0 months",
+        "workExperiencePeriod": "4 years and 0 months"
+      }
+    }
+  },
+  "REVISIONS": {
+    "Pilot2": {
+      "Difficulties": ["Since this is just plain English, why not integrate a grammar checker :)\nbetter tools to author these stratgies "],
+      "ParticipationId": "Pilot2",
+      "StrategyDefinition": "#This Strategy helps you identify bottleneck  in your web application.\\n#Required Tools and Environments\\nChrome web browser\\nA JavaScript project\\n#Required Knowledge\\nBasic knowledge of how to use Chrome DevTools\\nBasic knowledge of javaScript\\nSTRATEGY performanceProfiler()\\n    # You need to first identify potential line of code\\n    # that might cause the performance overhead.\\n    # Look at data structures for any memory leaks\\n    # Look at loops and the code inside them.\\n    # Look at third party APIs calls.\\nHypothesize where in your code the bottleneck are\\nSet 'suspectLines' To the line of code that might cause the bottleneck \\nFor EACH line in 'suspectLines'\\n    # Add large numbers to data structures\\n    # Make the loop execute thousands of time\\n    # Call that third-party API hundreds of time\\n    # If  you do so, you do not need to execute your code for long time\\n    # so that the memory leak surfaces or the bottleneck is obvious  \\n    Amplify line impact\\nSet 'randomLine' to random line of code that IS NOT IN 'suspectLines'\\nFor EACH line in 'randomLine'\\n# These lines are your baseline for how should the code work\\n# Make sure that you set similar values to that \\n# you set to 'suspectLine'  \\n    Amplify line impact\\n#Lood your javaScript through the Chrome web browser\\n#Open up the Chrome DevTools and head to the profiler\\n# Run the application and wait until all the code execute\\nRun the web application through google DevTools\\nFor EACH line in 'suspectLines'\\n    #check how the code you suspect is the problem is acting comparing to \\n    #the code that you are pretty sure has nothing to do \\n    #with the performance issue\\n    check their CPU time and Memory usage and compare to the similar line in randomLine\\n    IF the line in 'suspectLines' has more overhead than the line in 'randomLine'\\n        Fix\\nRETURN nothing\\n",
+      "Time": "18:5:13"
+    },
+    "Pilot3": {
+      "Difficulties": ["", "none", "none", "=)"],
+      "ParticipationId": "Pilot3",
+      "StrategyDefinition": "#Required Tools and Environments\\nBrowser Performance Profiler\\nPerformance problem example\\n#Required Knowledge\\nUnderstandinng of memory leaks, CPU performance hotspot, and chart analysis\\nSTRATEGY findPerformanceHotSpot()\\n    Load web application\\n    cleare previous recording and start recording performance\\n    IF perfomance dive is observable at load time\\n        # perhaps is not CPU related\\n        observe Network Profiler for unusual load times for app's libraries\\n    ELSE\\n       excercise UI to replicate slowdown\\n       stop recording performance\\n       IF UI actions triggers slowdown\\n            go to Performance tab and find frame that matches the slowdown actions\\n            Find timestamp for action start and end, and narrow down the timeline analysis window\\n            Look at the Main thread tab and analyze the call stack\\n            Inspect for unusual calls in the stackframe\\n            IF unusual call behavior found\\n                go to responsible code and comment\\n                repeat this process and compare results\\n            ELSE\\n                Inspect Unexpectedly long local calls in the stackframe \\n                or Event Log where rendering or function call type activities take more time than expected\\n                IF unusual rendering behavior found\\n                    go to responsible code and comment\\n                    repeat this process and compare results\\n                    ELSE\\n                     Try frames before the current one to backtrack the fault and repeat from this STRATEGY from the begining\\n                \\n     \\n",
+      "Time": "16:42:16"
+    },
+    "Pilot4": {
+      "Difficulties": ["Depending on example used to devise the strategy, the description may be different. First I was using my own example, which had problems in the top level of the call stack. But, your example has errors deep down the stack, which added more things to look for.", "Lack of pictures. The help page you give is much better than what I wrote."],
+      "ParticipationId": "Pilot4",
+      "StrategyDefinition": "#Required tools and environment\\nChrome/Chromium Browser\\n#Required knowledge\\nHTML tags\\nJS/CSS proficiency: professional\\nSTRATEGY Profile()\\n    Open the webpage that you want to profile.\\n    Open DevTools and navigate to the Performance tab.\\n    Comprehend the actions you want to profile.\\n    IF you want to only profile the page load time\\n        Click on the \"Start Profiling and reload page\" button.\\n        # Profiling will stop few seconds after page load.\\n        Wait for profiling to finish.\\n    ELSE\\n        Click on the \"Start Profiling button\"\\n        Perform your actions and click \"Stop\" when done\\n    # Each event is a rectangle box. Scrolling should zoom in and out\\n    Observe that the profiler produces a graph of events captured\\n    # Top right red corners indicate events with potential performance issues\\n    SET 'problems' TO events with red top right corners \\n    FOR EACH 'problem' IN 'problems'\\n        click on the event for the problem\\n        # The description should begin with \"Warning\" in red text.\\n        On the pane below, look for a description of the problem.\\n        IF description is not helpful\\n            # Use the child events to drill deep into the stack\\n            Click on the red events below the current event. \\n        Use the link to understand the problem.\\n        Use the Call Stack to locate the source of problem.\\n        Fix it.\\n    Return \"You Did It\"\\n",
+      "Time": "9:52:53"
+    },
+    "Pilot7": {
+      "ParticipantId": "Pilot7",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        }
+      },
+      "Tester1": "T1",
+      "Tester2": "T4",
+      "Time": "18:0:49"
+    },
+    "Pilot9": {
+      "ParticipantId": "Pilot9",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "It's a broad problem with language as a whole, but it was challenging to anticipate how my words would be read. If I had uncertainty when writing a strategy, it's almost certain that whoever read my strategy would also feel uncertain.",
+          "HardAddressing": "I don't know if it'd be particularly hard to address, but I worry about making the strategy too long. I feel like, similar with functions, it's useful to have modularity and succinctness, and I may struggle to maintain that when addressing the comment.",
+          "MakeSense": "It does! I struggled to express the specifics of that action into a strategy, so it ended up being too much information for a single line. I also could have used \"return success\" or \"return failure\" in my strategy, instead of \"return done\"."
+        },
+        "Clarity": {
+          "AspectForgotten": "Again, considering many possible interpretations of my language. It's easier when writing a programming language -- there's a shared context in keywords, but since most of Roboto isn't keywords, it's hard to define a shared context between the writer and the reader. I think that writing in a programming language-esq syntax primes me to write with brevity over clarity, since I can always append with comments instead of writing long-form prose, which might make a better strategy description (and it'd be good to do the comparison).",
+          "HardAddressing": "It takes substantial effort to write a really good, concise, well-written strategies!",
+          "MakeSense": "It does! Again, I totally understand that the language that I choose to use might have a different interpretation or clarity when read."
+        },
+        "Missing": {
+          "AspectForgotten": "It's challenging to have the entire problem domain in my head at once when writing a strategy. There's probably a cognitive load/working-memory argument for why writing strategies is hard.",
+          "HardAddressing": "This is easy to address, I just didn't think to address it when I was writing the strategy.",
+          "MakeSense": "It does! Tester1 recognizes a part of the problem domain that I didn't consider when writing the strategy."
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "I forgot to consider how to make the strategy comprehensive, I also didn't consider how many ways my language would be interpreted and how long steps are hard to parse.",
+          "HardAddressing": "Again, it'd just be effort to write a really really good strategy. There's a lot of care that should be taken with language that I didn't put as much effort into.",
+          "MakeSense": "Yes! It encapsulates many of the other comments that were given -- my strategy encapsulated too much inside a single step and didn't take care of the case of multiple bugs."
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "This question isn't super relevant to a single word response.",
+          "HardAddressing": "It's hard to address a comment that I don't understand!",
+          "MakeSense": "This one doesn't -- it's hard to glean meaning from a single word."
+        }
+      },
+      "Strategy2": {},
+      "Tester1": "T1",
+      "Tester2": "",
+      "Time": "11:13:25"
+    }
+  },
+  "AUTHORS_CONSENT": {
+    "Auth2": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "Auth3": {
+      "Agreement": "agree",
+      "Task": "CssDebuggingTask"
+    },
+    "Auth4": {
+      "Agreement": "agree",
+      "Task": "ProfilerTask"
+    },
+    "Auth5": {
+      "Agreement": "agree",
+      "Task": "ProfilerTask"
+    },
+    "Pilot9": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "T2": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    }
+  },
+  "TESTERS_CONSENT": {
+    "Tester1": {
+      "Agreement": "agree",
+      "Strategy1": "Auth3",
+      "Strategy2": "Auth5"
+    },
+    "Tester2": {
+      "Agreement": "agree",
+      "Strategy1": "Auth3",
+      "Strategy2": "Auth5"
+    },
+    "rJv5Vf5lQahz4XWayvRJ": {}
   }
 }

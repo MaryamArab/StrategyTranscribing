@@ -89,6 +89,37 @@
         "webExperiencePeriod": "22 years and 0 months",
         "workExperiencePeriod": "3 years and 0 months"
       }
+    },
+    "Tester1": {
+      "ParticipantId": "Tester1",
+      "Strategy1": {
+        "ChallengingToWork": "Line #2 just says you may point to the component. Instead, it could be specific to click ctrl+shift+C to inspect the highlighted element. Doing this would show the respective element in the styles tab where we can quickly make changes. ",
+        "Clarity": "Yes, it is clear. ",
+        "Missing": "There is nothing missing but the instructions could be more clear on what to look for. ",
+        "OtherChallenges": "NA",
+        "RequiredInfo": "3.The right side corner of the Developer Tool window highlights\n\nThis is true for Chrome Browser. The IE opens the developer tool at the bottom of the webpage and not on the right. ",
+        "StrategyId": "Auth3"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task. ",
+        "Clarity": "Very much Clear",
+        "Missing": "Nothing. The details were pretty straight forward. I had never used Performance profile when I inspect element but was clear when I followed the steps. ",
+        "OtherChallenges": "I did not know how to use Performance profiler so I had difficulties figuring out the current frame state, network requests, animations but when I followed it twice, I was able to get to it. ",
+        "RequiredInfo": "Nothing. I think it provided with all the details needed to look at the performance. ",
+        "StrategyId": "Auth5"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "13:11:56",
+      "WorkExperiences": {
+        "background": "I have worked for about 4 years in the industry in technologies like ColdFusion, HTML5, CSS, Bootstrap, JQuery, JavaScript, Ajax. In my Master's, I am working on creating web applications using Node.js, Java, Bootstrap, HTML5. \n\nGit Hub: https://github.com/Bhargavicm ",
+        "biggestSoftware": "https://www.healthcaresource.com/pm10ncu_m/index.cfm?fuseaction=search.categoryList&template=dsp_job_categories.cfm\n\nAbove is the demo website. I was part of building the majority of the features for the Job Portal for Hospitals across the US. I worked from India to construct a website that was mobile-friendly using Bootstrap, CSS, and JavaScript.  ",
+        "biggestWebApplication": "There are two biggest web applications that I worked on\n1) Job Portal for the Hospital staffing.\n2) VMWare e-learning and Certifications module. \n\nBoth were built using ColdFusion 5. I helped them to migrate from ColdFusion 5 to ColdFusion 2016 along with a Mobile solution to web applications with advanced features. ",
+        "softwareDevelopmentExperience": "3",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "4 years and 0 months",
+        "workExperiencePeriod": "4 years and 0 months"
+      }
     }
   }
 }
