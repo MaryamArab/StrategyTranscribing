@@ -5,11 +5,42 @@
       "Defect": "Using a Metal backed core image context to render to a MTKView",
       "Experience": "3",
       "JavaFramework": "blade",
-      "JavaVersion": "java8",
+      "JavaV{rsion": "java8",
       "KnowledgeRequirements": "The developer should have basic knowledge about the high level structures provided by Metal and how they work. This includes: the Metal Device, Command Queue, Command Buffers, and Render Encoders.",
       "ParticipationId": "7",
       "StrategyDefenition": "#Apple has recently moved to using the Metal programming language for GPU programming on iOS, replacing CoreImage and OpenGL.\n#While Metal offers many good features, sometimes it is quicker to use image processing features that have already been written\n#using CoreImage instead of taking the time to rewrite them in Metal. Apple provides an MTKView as a solution for easily rendering\n#Metal backed content to a view. This Strategy helps you to use CoreImage to render to a MTKView on iOS.\n\n#Required Tools and Environment\n- Assuming XCode is already installed on the system, project is checked out,\nand successfully building/running.\n- Assuming a Metal backed image processing pipeline has already been set up \nin the project\n\n#Required Knowledge\n- basic knowlege of Metal and CoreImage on iOS\n- experience with Swift or Objective-C \n\nSTRATEGY useCoreImageToRenderToMetalView()\n    #create a CoreImage Context using the Metal device\n    Find where the Metal device is being created in the project\n    IF a CoreImage Context has not already been created\n        Immediately after creating the metal device, create a CoreImage Context, passing the device in as the parameter\n    #verify the MTKView is framebufferOnly propety configured properly\n    IF the MTKView's framebufferOnly property is not set OR the MTKViews framebufferOnly property == TRUE\n        #this is a very important step as it allows a CIImage to be written directly \n        #to the MTKView's texture. Otherwise, the output will display a solid purple/pink color.\n        set the MTKView's framebufferOnly property to FALSE\n    #A new command buffer will be created on each render pass \n    Create a new command buffer using the Metal device's command queue\n    Create a new CIImage from the given pixel buffer you would like to render\n    #apply whatever CIFilters you would like to use on the CIImage (one after another)\n    FOR EACH 'filter' IN 'CIFilters'\n        DO applyFilter(CIImage)\n    #after the filters have been applied to the CIImage, render the CIImage to the MTKView\n    Use the CoreImage Context created earlier to render the CIImage directly to the MTKView's current drawable\n    #submit the command buffer to be executed by the GPU\n    Present the command buffer \n    Commit the commmand buffer\n    RETURN nothing\n    ",
       "ToolsRequirements": "Mac computer, XCode, an iPhone device to run the code on"
+    },
+    "Auth13": {
+      "CommonDifficulties": {
+        "ConcentrationDifficulty: ": "I spent far more 45 minutes to write this strategy, although generally speaking, css debugging is amongst the easiest ones",
+        "ConcentrationDifficulty_Idea: ": "agree",
+        "GuidelinesSupportDifficulty: ": "It helped for sure. ",
+        "GuidelinesSupportDifficulty_Idea: ": "stronglyAgree",
+        "NoviceUnderstandabilityDifficulty : ": "Some general concepts can be strategized, but development comes with some unexpected outcomes that it is hard to write strategies when outcome is unexpected ",
+        "NoviceUnderstandabilityDifficulty_Idea: ": "neutral",
+        "RobotoSupportDifficulty: ": "It is a new idea and it can be effective. Roboto language can make it more opinionated to write strategies. It is some kind of standardizing for writing strategies.",
+        "RobotoSupportDifficulty_Idea: ": "agree",
+        "StrategyEndingDifficulty: ": "I don't think so, It is like writing a program. every good programmer comes with a plan how to wire its code. programming strategies is no exception.",
+        "StrategyEndingDifficulty_Idea: ": "disagree",
+        "TimeConsumptionDifficulty: ": "It is tiring because you need to check if you have included all the cases could happen",
+        "TimeConsumptionDifficulty_Idea: ": "agree",
+        "TranslationDifficulty": "Some edge cases is hard to include in a strategy as a general recipe. Also, sometimes you need to show a demo or some sort of an example to make your point.",
+        "TranslationDifficultyIdea": "agree"
+      },
+      "OtherDifficulties": ["When going through tutorials about how to use Roboto, I found it difficult when a statement is finished (I mean, some times I thought the statement sentence is just wrapped to the next line, because not enough space was there). Maybe if you could add some sort of line termination like semicolon \";\" or just period \".\", since the statement will be read by humans. "],
+      "StrategyDefinition": "# This Strategy helps developer fix the issue of an element with undesired visual/position style.\\n#Required Tool and Environment\\nWeb Browser(Google chrome is preferred)\\n#Required Knowledge\\nBasic Knowledge of css and html\\nSTRATEGY DebugCss()\\n    Open your web app and go to the page with undesired element\\n    SET 'buggedElement' TO element with undesired style and positioning\\n    # The \"inspect\" action name might be different from Browser to Browser\\n    Right click on 'buggedElement' and click on inspect\\n    # An extra window opens with some tabs like Element, Console and Styles\\n    Click on Styles tab in the inspect window\\n    # Make sure your buggedElement is highlighted or chosen\\n    # you will be able to see a list of stylings applied to element\\n    IF 'buggedElement' has issue when hovering or focusin on it\\n        # When clicking on :hov, few checkboxes appears\\n        # :hover, :focus, :active  are amongst them\\n        Click on \":hov\" and check all the boxes that applies\\n    \\n    IF 'buggedElement' issue is positioning\\n        SET 'position' TO 'buggedElement' position proptery value\\n        IF 'position' is not absolute\\n            DO FixCss('buggedElement')\\n            RETURN nothing\\n        \\n        # element with position absolute is positioned relative to the nearest positioned ancestor\\n        # Note: A \"positioned\" element is one whose position is anything except static.\\n        IF 'position' is absolute\\n            # desired parent means the parent element that buggedElement was supposed to be relative to\\n            Look up at element's ancestors and find the desired parent\\n            SET 'parent' TO desired parent element\\n            Change the 'parent' position proptery to relative\\n            RETURN nothing\\n    \\n    IF 'buggedElement' issue is styling\\n        DO FixCss('buggedElement')\\n        RETURN nothing\\n\\nSTRATEGY FixCss(buggedElement)\\n    # You can use filter input to search for it\\n        # Or you can scroll through the styles manually\\n        Search through the stylings to find where it gets its undesired value\\n        SET 'undesiredStyling' TO the line number and css file found in the search\\n        IF 'undesiredStyling' is not found\\n            # You will find all stylings applied to the element here\\n            # Once you found the stylings you were looking for\\n            # You can click small arrow to jump to the place it gets its value\\n            Click on Computed tab and use filter to search\\n            SET 'undesiredStyling' TO line number found here\\n        SET 'perfectStyleList' TO an empty list of css properties\\n        UNTIL buggedElement has desired styling\\n            # you can add or change different css styles to the element\\n            # it then applies instantly to element stylings\\n            Use element.Style to apply css to buggedElement\\n            add the style proptery to 'perfectStyleList'\\n        DO ApplyCssToElement(buggedElement, 'perfectStyleList')\\n      \\nSTRATEGY ApplyCssToElement(element, style)\\n    # Css rules are cascading. The one with most priority applies\\n    # This is how priority gets evaluated\\n    # !important |  style=\"\" | id selector | class attribute, psudo class selector | type selector and psudo element\\n    # For easy explanation: use this url: http://qnimate.com/dive-into-css-specificity/\\n    # Also the if there are two css files having the same selector, the file placed last in order is evaluated\\n    IF style has to be applied to only this element\\n        # e.g. choose last css file in order, use id selector and so on\\n        Use strogest selector, apply style to element\\n        RETURN nothing\\n    IF style has to be applied on many elements\\n        use class selector, apply style to element\\n        RETURN nothing\\n    \\n",
+      "Task": "CssDebuggingTask",
+      "Time": "Sat Jun 22 2019 12:41:48 GMT-0400 (Eastern Daylight Time), 12:41:48",
+      "WorkExperiences": {
+        "background": "I am working as senior software developer in ITS department at Old Dominion University. I have been involved in many projects such as student attendance project, web portal application. \nMy LinkedIn account: https://www.linkedin.com/in/meysam-abolghasemi-7b867998/\nMy Github account: meysamabl@gmail.com",
+        "biggestSoftware": "I have been developing in web portal application for my university where students, staffs and faculties can interact with it as dashboard.",
+        "biggestWebApplication": "Same answer as above. All my industrial experience was involved in web application development of some sort developing with different technologies. Any non web application development that I have been involved was mostly limited to course based projects or some self-learning projects. ",
+        "softwareDevelopmentExperience": "10",
+        "webDevelopmentExperience": "10",
+        "webExperiencePeriod": "5 years and 0 months",
+        "workExperiencePeriod": "5 years and 0 months"
+      }
     },
     "Auth3": {
       "CommonDifficulties": {
@@ -312,10 +343,10 @@
       "ParticipantId": "Tester1",
       "Strategy1": {
         "ChallengingToWork": "Line #2 just says you may point to the component. Instead, it could be specific to click ctrl+shift+C to inspect the highlighted element. Doing this would show the respective element in the styles tab where we can quickly make changes. ",
-        "Clarity": "Yes, it is clear. ",
-        "Missing": "There is nothing missing but the instructions could be more clear on what to look for. ",
+        "Clarity": "I felt it was clear because I am very much familiar with using this mechanism in the browser. Steps are pretty clear but adding more specifications like I mentioned in my first question’s comment would help.",
+        "Missing": "Not sure if I am right. Here is my observation. Some instructions on how to look for particular element to inspect was missing. I thought that would be clear if you said in Point 2 that, use the arrow in the Inspect element window to select particular element.",
         "OtherChallenges": "NA",
-        "RequiredInfo": "3.The right side corner of the Developer Tool window highlights\n\nThis is true for Chrome Browser. The IE opens the developer tool at the bottom of the webpage and not on the right. ",
+        "RequiredInfo": "I think it has everything covered. Pre-conditions, Post-conditions(if necessary) and notes of what a keyword means. So it looks good. ",
         "StrategyId": "Auth3"
       },
       "Strategy2": {
@@ -337,6 +368,37 @@
         "webDevelopmentExperience": "3",
         "webExperiencePeriod": "4 years and 0 months",
         "workExperiencePeriod": "4 years and 0 months"
+      }
+    },
+    "Tester2": {
+      "ParticipantId": "Tester2",
+      "Strategy1": {
+        "ChallengingToWork": "No, actually this was very straight forward to work with.",
+        "Clarity": "Yes, it was clear. ",
+        "Missing": "The following is missing 1. Make changes and see if they are appropriate. 2. Take those changes and make it back in the IDE",
+        "OtherChallenges": "None",
+        "RequiredInfo": "No nothing required.",
+        "StrategyId": "Auth3"
+      },
+      "Strategy2": {
+        "ChallengingToWork": " Hover over the NET section to view the CSS component utilized The above line was too confusing for me to understand and also difficult to find. The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task.",
+        "Clarity": "Yes, it was a little confusing for me. But many sections were clear.",
+        "Missing": "The optimization is missing from this.\n",
+        "OtherChallenges": "N/A",
+        "RequiredInfo": "Please try to implement as many steps as you can in the program.",
+        "StrategyId": "Auth5"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "11:11:1",
+      "WorkExperiences": {
+        "background": "I am working as a web developer for the last 3 years and have developed more than 10 web applications and supporting 20+ already developed web applications.",
+        "biggestSoftware": "It is about the loan application for my client.",
+        "biggestWebApplication": "loan application for my client",
+        "softwareDevelopmentExperience": "10",
+        "webDevelopmentExperience": "4",
+        "webExperiencePeriod": "3 years and 0 months",
+        "workExperiencePeriod": "3 years and 0 months"
       }
     }
   },
@@ -455,6 +517,10 @@
     }
   },
   "AUTHORS_CONSENT": {
+    "Auth13": {
+      "Agreement": "agree",
+      "Task": "CssDebuggingTask"
+    },
     "Auth2": {
       "Agreement": "agree",
       "Task": "ErrorHandlingTask"

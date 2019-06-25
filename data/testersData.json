@@ -1,125 +1,154 @@
-{
-  "TESTERS": {
-    "T1": {
-      "ParticipantId": "T1",
-      "Strategy1": {
-        "ChallengingToWork": "\nLine # 17: \"Change the desired style to have higher precedence or the shown style to have lower precedence, or change the inheritance structure\" has 2 branches of action but it is not specified when which condition should be selected and perform. \nStatement \"return done\" is used to terminate the strategy, but it seems not telling the user if they finished successfully or cannot find the bug. ",
-        "Clarity": "Its clear, but some sentences are a bit confusing at the first step. For instance \" Move to the portion of the page with the bug\" is a bit confusing what exactly it asked me to do. Maybe using clear keywords helps reducing ambiguity. For instance it can be transcribed as \"Navigate to the elements with defective appearance\"",
-        "Missing": "The strategy just works for one defect at a time. For the pages that have more than one defective style feature, the user should rerun the strategy from the beginning. Maybe having a loop to run the strategy on all the defective elements in a list might be helpful",
-        "OtherChallenges": "Some strategy statements are very general and have many substeps inside them. Maybe having break the big step to small steps may help easier following the strategy without missing any point. \nThe strategy needs a better approach to tell the user if they finished successfully or they should redo the strategy. \nStrategy is not very comprehensive and is just for one defect fixing at a time",
-        "StrategyId": "Pilot9",
-        "requiredInfo": "Having a method to keep variables and list."
-      },
-      "Strategy2": {
-        "ChallengingToWork": "There are many variables in the strategy that were confusing and hard to follow. For example defining 'irregularComponent' seems redundant.\n",
-        "Clarity": "Not in the first glance. Initially I assumed the task is to fix the bugs. So I was looking for ‘fixing’ statements. Aside that, Still I am not sure why in Strategy createErrorHandleCase the variable allErrors' is getting values, specially when the strategy is returning nothing at the end. \n",
-        "Missing": "The type of output from each strategy. It was not clear what is the outcome of each strategy/sub-strategy. Adding that information on top of the strategy as a comment will help.\n",
-        "OtherChallenges": "None.",
-        "RequiredInfo": "I got lost in the strategy mainly because it was hard to distinguish the comment and the statement specially that the natural language is also used in the statements. Using a different coloring or font helps. The same argument holds for strategy calls and variable names.",
-        "StrategyId": "Pilot8"
-      },
-      "Task1": "CssDebuggingTask",
-      "Task2": "ErrorHandlingTask",
-      "Time": "15:18:22",
-      "WorkExperiences": {
-        "biggestSoftware": "Bank transaction management application. The app includes querying form database, processing, applying calculations and visualizing data.",
-        "biggestWebApplication": "Bank transaction management web base application. The app includes querying form database, processing, applying calculations and visualizing data.",
-        "softwareDevelopmentExperience": "8",
-        "webDevelopmentExperience": "3",
-        "webExperiencePeriod": "2 years and 0 months",
-        "workExperiencePeriod": "7 years and 0 months"
-      }
+{"TESTERS": {
+  "T1": {
+    "ParticipantId": "T1",
+    "Strategy1": {
+      "ChallengingToWork": "\nLine # 17: \"Change the desired style to have higher precedence or the shown style to have lower precedence, or change the inheritance structure\" has 2 branches of action but it is not specified when which condition should be selected and perform. \nStatement \"return done\" is used to terminate the strategy, but it seems not telling the user if they finished successfully or cannot find the bug. ",
+      "Clarity": "Its clear, but some sentences are a bit confusing at the first step. For instance \" Move to the portion of the page with the bug\" is a bit confusing what exactly it asked me to do. Maybe using clear keywords helps reducing ambiguity. For instance it can be transcribed as \"Navigate to the elements with defective appearance\"",
+      "Missing": "The strategy just works for one defect at a time. For the pages that have more than one defective style feature, the user should rerun the strategy from the beginning. Maybe having a loop to run the strategy on all the defective elements in a list might be helpful",
+      "OtherChallenges": "Some strategy statements are very general and have many substeps inside them. Maybe having break the big step to small steps may help easier following the strategy without missing any point. \nThe strategy needs a better approach to tell the user if they finished successfully or they should redo the strategy. \nStrategy is not very comprehensive and is just for one defect fixing at a time",
+      "StrategyId": "Pilot9",
+      "requiredInfo": "Having a method to keep variables and list."
     },
-    "T2": {
-      "ParticipantId": "T2",
-      "Strategy1": {
-        "ChallengingToWork": "slhfdnassf",
-        "Clarity": " you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
-        "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
-        "OtherChallenges": " you think the strategy ys of challenges you faced which is not asked above, if any.\n\n",
-        "StrategyId": "Pilot9",
-        "requiredInfo": "dditional information, details, or features would make it easier for you to follow this strategy?"
-      },
-      "Strategy2": {
-        "ChallengingToWork": "otherChallenges",
-        "Clarity": "its not cleare at all",
-        "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
-        "OtherChallenges": "its context relevant",
-        "RequiredInfo": "Additional",
-        "StrategyId": "Pilot3"
-      },
-      "Task1": "CssDebuggingTask",
-      "Task2": "ProfilerTask",
-      "Time": "23:4:2",
-      "WorkExperiences": {
-        "biggestSoftware": "5",
-        "biggestWebApplication": "5",
-        "softwareDevelopmentExperience": "5",
-        "webDevelopmentExperience": "5",
-        "webExperiencePeriod": "5 years and 5 months",
-        "workExperiencePeriod": "5 years and 5 months"
-      }
+    "Strategy2": {
+      "ChallengingToWork": "There are many variables in the strategy that were confusing and hard to follow. For example defining 'irregularComponent' seems redundant.\n",
+      "Clarity": "Not in the first glance. Initially I assumed the task is to fix the bugs. So I was looking for ‘fixing’ statements. Aside that, Still I am not sure why in Strategy createErrorHandleCase the variable allErrors' is getting values, specially when the strategy is returning nothing at the end. \n",
+      "Missing": "The type of output from each strategy. It was not clear what is the outcome of each strategy/sub-strategy. Adding that information on top of the strategy as a comment will help.\n",
+      "OtherChallenges": "None.",
+      "RequiredInfo": "I got lost in the strategy mainly because it was hard to distinguish the comment and the statement specially that the natural language is also used in the statements. Using a different coloring or font helps. The same argument holds for strategy calls and variable names.",
+      "StrategyId": "Pilot8"
     },
-    "T4": {
-      "ParticipantId": "T4",
-      "Strategy1": {
-        "ChallengingToWork": "other categories of challenghallenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as",
-        "Clarity": "ed is clear? If not, please specify what w",
-        "Missing": "Missinhg",
-        "OtherChallenges": "about other categories of challenges you faced which is not asked above",
-        "RequiredInfo": "on, details, or features would make it easier for you to follow this strategy?\n\n",
-        "StrategyId": "Pilot8"
-      },
-      "Strategy2": {
-        "ChallengingToWork": "de it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you rememb",
-        "Clarity": "wqewddscasdf\n4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
-        "Missing": "cdsgrdsf",
-        "OtherChallenges": "4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
-        "RequiredInfo": "al information, details, or features would make i",
-        "StrategyId": "Pilot7"
-      },
-      "Task1": "ErrorHandlingTask",
-      "Task2": "CssDebuggingTask",
-      "Time": "17:17:1",
-      "WorkExperiences": {
-        "biggestSoftware": "2dsdg4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
-        "biggestWebApplication": "Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
-        "softwareDevelopmentExperience": "0",
-        "webDevelopmentExperience": "1",
-        "webExperiencePeriod": "22 years and 0 months",
-        "workExperiencePeriod": "3 years and 0 months"
-      }
+    "Task1": "CssDebuggingTask",
+    "Task2": "ErrorHandlingTask",
+    "Time": "15:18:22",
+    "WorkExperiences": {
+      "biggestSoftware": "Bank transaction management application. The app includes querying form database, processing, applying calculations and visualizing data.",
+      "biggestWebApplication": "Bank transaction management web base application. The app includes querying form database, processing, applying calculations and visualizing data.",
+      "softwareDevelopmentExperience": "8",
+      "webDevelopmentExperience": "3",
+      "webExperiencePeriod": "2 years and 0 months",
+      "workExperiencePeriod": "7 years and 0 months"
+    }
+  },
+  "T2": {
+    "ParticipantId": "T2",
+    "Strategy1": {
+      "ChallengingToWork": "slhfdnassf",
+      "Clarity": " you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+      "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
+      "OtherChallenges": " you think the strategy ys of challenges you faced which is not asked above, if any.\n\n",
+      "StrategyId": "Pilot9",
+      "requiredInfo": "dditional information, details, or features would make it easier for you to follow this strategy?"
     },
-    "Tester1": {
-      "ParticipantId": "Tester1",
-      "Strategy1": {
-        "ChallengingToWork": "Line #2 just says you may point to the component. Instead, it could be specific to click ctrl+shift+C to inspect the highlighted element. Doing this would show the respective element in the styles tab where we can quickly make changes. ",
-        "Clarity": "Yes, it is clear. ",
-        "Missing": "There is nothing missing but the instructions could be more clear on what to look for. ",
-        "OtherChallenges": "NA",
-        "RequiredInfo": "3.The right side corner of the Developer Tool window highlights\n\nThis is true for Chrome Browser. The IE opens the developer tool at the bottom of the webpage and not on the right. ",
-        "StrategyId": "Auth3"
-      },
-      "Strategy2": {
-        "ChallengingToWork": "The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task. ",
-        "Clarity": "Very much Clear",
-        "Missing": "Nothing. The details were pretty straight forward. I had never used Performance profile when I inspect element but was clear when I followed the steps. ",
-        "OtherChallenges": "I did not know how to use Performance profiler so I had difficulties figuring out the current frame state, network requests, animations but when I followed it twice, I was able to get to it. ",
-        "RequiredInfo": "Nothing. I think it provided with all the details needed to look at the performance. ",
-        "StrategyId": "Auth5"
-      },
-      "Task1": "CssDebuggingTask",
-      "Task2": "ProfilerTask",
-      "Time": "13:11:56",
-      "WorkExperiences": {
-        "background": "I have worked for about 4 years in the industry in technologies like ColdFusion, HTML5, CSS, Bootstrap, JQuery, JavaScript, Ajax. In my Master's, I am working on creating web applications using Node.js, Java, Bootstrap, HTML5. \n\nGit Hub: https://github.com/Bhargavicm ",
-        "biggestSoftware": "https://www.healthcaresource.com/pm10ncu_m/index.cfm?fuseaction=search.categoryList&template=dsp_job_categories.cfm\n\nAbove is the demo website. I was part of building the majority of the features for the Job Portal for Hospitals across the US. I worked from India to construct a website that was mobile-friendly using Bootstrap, CSS, and JavaScript.  ",
-        "biggestWebApplication": "There are two biggest web applications that I worked on\n1) Job Portal for the Hospital staffing.\n2) VMWare e-learning and Certifications module. \n\nBoth were built using ColdFusion 5. I helped them to migrate from ColdFusion 5 to ColdFusion 2016 along with a Mobile solution to web applications with advanced features. ",
-        "softwareDevelopmentExperience": "3",
-        "webDevelopmentExperience": "3",
-        "webExperiencePeriod": "4 years and 0 months",
-        "workExperiencePeriod": "4 years and 0 months"
-      }
+    "Strategy2": {
+      "ChallengingToWork": "otherChallenges",
+      "Clarity": "its not cleare at all",
+      "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
+      "OtherChallenges": "its context relevant",
+      "RequiredInfo": "Additional",
+      "StrategyId": "Pilot3"
+    },
+    "Task1": "CssDebuggingTask",
+    "Task2": "ProfilerTask",
+    "Time": "23:4:2",
+    "WorkExperiences": {
+      "biggestSoftware": "5",
+      "biggestWebApplication": "5",
+      "softwareDevelopmentExperience": "5",
+      "webDevelopmentExperience": "5",
+      "webExperiencePeriod": "5 years and 5 months",
+      "workExperiencePeriod": "5 years and 5 months"
+    }
+  },
+  "T4": {
+    "ParticipantId": "T4",
+    "Strategy1": {
+      "ChallengingToWork": "other categories of challenghallenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as",
+      "Clarity": "ed is clear? If not, please specify what w",
+      "Missing": "Missinhg",
+      "OtherChallenges": "about other categories of challenges you faced which is not asked above",
+      "RequiredInfo": "on, details, or features would make it easier for you to follow this strategy?\n\n",
+      "StrategyId": "Pilot8"
+    },
+    "Strategy2": {
+      "ChallengingToWork": "de it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you rememb",
+      "Clarity": "wqewddscasdf\n4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+      "Missing": "cdsgrdsf",
+      "OtherChallenges": "4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+      "RequiredInfo": "al information, details, or features would make i",
+      "StrategyId": "Pilot7"
+    },
+    "Task1": "ErrorHandlingTask",
+    "Task2": "CssDebuggingTask",
+    "Time": "17:17:1",
+    "WorkExperiences": {
+      "biggestSoftware": "2dsdg4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+      "biggestWebApplication": "Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+      "softwareDevelopmentExperience": "0",
+      "webDevelopmentExperience": "1",
+      "webExperiencePeriod": "22 years and 0 months",
+      "workExperiencePeriod": "3 years and 0 months"
+    }
+  },
+  "Tester1": {
+    "ParticipantId": "Tester1",
+    "Strategy1": {
+      "ChallengingToWork": "Line #2 just says you may point to the component. Instead, it could be specific to click ctrl+shift+C to inspect the highlighted element. Doing this would show the respective element in the styles tab where we can quickly make changes. ",
+      "Clarity": "I felt it was clear because I am very much familiar with using this mechanism in the browser. Steps are pretty clear but adding more specifications like I mentioned in my first question’s comment would help.",
+      "Missing": "Not sure if I am right. Here is my observation. Some instructions on how to look for particular element to inspect was missing. I thought that would be clear if you said in Point 2 that, use the arrow in the Inspect element window to select particular element.",
+      "OtherChallenges": "NA",
+      "RequiredInfo": "I think it has everything covered. Pre-conditions, Post-conditions(if necessary) and notes of what a keyword means. So it looks good. ",
+      "StrategyId": "Auth3"
+    },
+    "Strategy2": {
+      "ChallengingToWork": "The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task. ",
+      "Clarity": "Very much Clear",
+      "Missing": "Nothing. The details were pretty straight forward. I had never used Performance profile when I inspect element but was clear when I followed the steps. ",
+      "OtherChallenges": "I did not know how to use Performance profiler so I had difficulties figuring out the current frame state, network requests, animations but when I followed it twice, I was able to get to it. ",
+      "RequiredInfo": "Nothing. I think it provided with all the details needed to look at the performance. ",
+      "StrategyId": "Auth5"
+    },
+    "Task1": "CssDebuggingTask",
+    "Task2": "ProfilerTask",
+    "Time": "13:11:56",
+    "WorkExperiences": {
+      "background": "I have worked for about 4 years in the industry in technologies like ColdFusion, HTML5, CSS, Bootstrap, JQuery, JavaScript, Ajax. In my Master's, I am working on creating web applications using Node.js, Java, Bootstrap, HTML5. \n\nGit Hub: https://github.com/Bhargavicm ",
+      "biggestSoftware": "https://www.healthcaresource.com/pm10ncu_m/index.cfm?fuseaction=search.categoryList&template=dsp_job_categories.cfm\n\nAbove is the demo website. I was part of building the majority of the features for the Job Portal for Hospitals across the US. I worked from India to construct a website that was mobile-friendly using Bootstrap, CSS, and JavaScript.  ",
+      "biggestWebApplication": "There are two biggest web applications that I worked on\n1) Job Portal for the Hospital staffing.\n2) VMWare e-learning and Certifications module. \n\nBoth were built using ColdFusion 5. I helped them to migrate from ColdFusion 5 to ColdFusion 2016 along with a Mobile solution to web applications with advanced features. ",
+      "softwareDevelopmentExperience": "3",
+      "webDevelopmentExperience": "3",
+      "webExperiencePeriod": "4 years and 0 months",
+      "workExperiencePeriod": "4 years and 0 months"
+    }
+  },
+  "Tester2": {
+    "ParticipantId": "Tester2",
+    "Strategy1": {
+      "ChallengingToWork": "No, actually this was very straight forward to work with.",
+      "Clarity": "Yes, it was clear. ",
+      "Missing": "The following is missing 1. Make changes and see if they are appropriate. 2. Take those changes and make it back in the IDE",
+      "OtherChallenges": "None",
+      "RequiredInfo": "No nothing required.",
+      "StrategyId": "Auth3"
+    },
+    "Strategy2": {
+      "ChallengingToWork": " Hover over the NET section to view the CSS component utilized The above line was too confusing for me to understand and also difficult to find. The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task.",
+      "Clarity": "Yes, it was a little confusing for me. But many sections were clear.",
+      "Missing": "The optimization is missing from this.\n",
+      "OtherChallenges": "N/A",
+      "RequiredInfo": "Please try to implement as many steps as you can in the program.",
+      "StrategyId": "Auth5"
+    },
+    "Task1": "CssDebuggingTask",
+    "Task2": "ProfilerTask",
+    "Time": "11:11:1",
+    "WorkExperiences": {
+      "background": "I am working as a web developer for the last 3 years and have developed more than 10 web applications and supporting 20+ already developed web applications.",
+      "biggestSoftware": "It is about the loan application for my client.",
+      "biggestWebApplication": "loan application for my client",
+      "softwareDevelopmentExperience": "10",
+      "webDevelopmentExperience": "4",
+      "webExperiencePeriod": "3 years and 0 months",
+      "workExperiencePeriod": "3 years and 0 months"
     }
   }
-}
+}}

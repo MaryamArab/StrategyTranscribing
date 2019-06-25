@@ -312,10 +312,10 @@
       "ParticipantId": "Tester1",
       "Strategy1": {
         "ChallengingToWork": "Line #2 just says you may point to the component. Instead, it could be specific to click ctrl+shift+C to inspect the highlighted element. Doing this would show the respective element in the styles tab where we can quickly make changes. ",
-        "Clarity": "Yes, it is clear. ",
-        "Missing": "There is nothing missing but the instructions could be more clear on what to look for. ",
+        "Clarity": "I felt it was clear because I am very much familiar with using this mechanism in the browser. Steps are pretty clear but adding more specifications like I mentioned in my first question’s comment would help.",
+        "Missing": "Not sure if I am right. Here is my observation. Some instructions on how to look for particular element to inspect was missing. I thought that would be clear if you said in Point 2 that, use the arrow in the Inspect element window to select particular element.",
         "OtherChallenges": "NA",
-        "RequiredInfo": "3.The right side corner of the Developer Tool window highlights\n\nThis is true for Chrome Browser. The IE opens the developer tool at the bottom of the webpage and not on the right. ",
+        "RequiredInfo": "I think it has everything covered. Pre-conditions, Post-conditions(if necessary) and notes of what a keyword means. So it looks good. ",
         "StrategyId": "Auth3"
       },
       "Strategy2": {
@@ -337,6 +337,37 @@
         "webDevelopmentExperience": "3",
         "webExperiencePeriod": "4 years and 0 months",
         "workExperiencePeriod": "4 years and 0 months"
+      }
+    },
+    "Tester2": {
+      "ParticipantId": "Tester2",
+      "Strategy1": {
+        "ChallengingToWork": "No, actually this was very straight forward to work with.",
+        "Clarity": "Yes, it was clear. ",
+        "Missing": "The following is missing 1. Make changes and see if they are appropriate. 2. Take those changes and make it back in the IDE",
+        "OtherChallenges": "None",
+        "RequiredInfo": "No nothing required.",
+        "StrategyId": "Auth3"
+      },
+      "Strategy2": {
+        "ChallengingToWork": " Hover over the NET section to view the CSS component utilized The above line was too confusing for me to understand and also difficult to find. The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task.",
+        "Clarity": "Yes, it was a little confusing for me. But many sections were clear.",
+        "Missing": "The optimization is missing from this.\n",
+        "OtherChallenges": "N/A",
+        "RequiredInfo": "Please try to implement as many steps as you can in the program.",
+        "StrategyId": "Auth5"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "11:11:1",
+      "WorkExperiences": {
+        "background": "I am working as a web developer for the last 3 years and have developed more than 10 web applications and supporting 20+ already developed web applications.",
+        "biggestSoftware": "It is about the loan application for my client.",
+        "biggestWebApplication": "loan application for my client",
+        "softwareDevelopmentExperience": "10",
+        "webDevelopmentExperience": "4",
+        "webExperiencePeriod": "3 years and 0 months",
+        "workExperiencePeriod": "3 years and 0 months"
       }
     }
   },
