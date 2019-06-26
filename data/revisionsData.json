@@ -1,4 +1,124 @@
 {"REVISIONS": {
+  "Auth3": {
+    "ParticipantId": "Auth3",
+    "Strategy1": {
+      "ChallengingToWork": {
+        "AspectForgotten": "I was for the most part of my work using Firefox browser so I was explaining at a high level rather than getting into details of each step.",
+        "HardAddressing": "An image with a sample webpage would be more beneficial to explain better.\nI use snipping tool a lot to capture something like else for better explanation.",
+        "MakeSense": "Yes.When I say \"point\" to what I meant is ... use the small icon on the  top left  of the browser debugger to pick an element of the webpage.The small pointer icon to the left of \"inspector\" can be used to inspect any part of the webpage.Also I agree that this can be done using ctrl+shift+C.\n"
+      },
+      "Clarity": {
+        "AspectForgotten": "",
+        "HardAddressing": "",
+        "MakeSense": "My comments for Tester#1 applies here as well."
+      },
+      "Missing": {
+        "AspectForgotten": "",
+        "HardAddressing": "N/A",
+        "MakeSense": "100% agree.Should have explained better."
+      },
+      "OtherChallenges": {
+        "AspectForgotten": "",
+        "HardAddressing": "",
+        "MakeSense": ""
+      },
+      "RequiredInfo": {
+        "AspectForgotten": "",
+        "HardAddressing": "",
+        "MakeSense": "CSS Debugging has greatly improved with the tons of features provided by the browsers itself.\nSince ALL of the CSS issues except for importing the right CSS files can be debugged and resolved using Browser tools there is not much to write in terms of strategy except for highlighting different types of CSS issues like complex CSS issues vs simple CSS issues and then use concrete examples of how to resolve each one."
+      }
+    },
+    "Strategy2": {
+      "ChallengingToWork": {
+        "AspectForgotten": "N/A",
+        "HardAddressing": "N/A",
+        "MakeSense": "My guess is Tester2 is familiar with the debugging process so tester2 was able to understand what I mentioned."
+      },
+      "Clarity": {
+        "AspectForgotten": "",
+        "HardAddressing": "",
+        "MakeSense": "My comments for Tester#1 applies here as well."
+      },
+      "Missing": {
+        "AspectForgotten": "",
+        "HardAddressing": "",
+        "MakeSense": "Yes but I was assuming that at this point the developer of the code is aware of the fact that the new changes should be replaced with the buggy code in the IDE and push the code to GIT after successful testing."
+      },
+      "OtherChallenges": {
+        "AspectForgotten": "",
+        "HardAddressing": "",
+        "MakeSense": ""
+      },
+      "RequiredInfo": {
+        "AspectForgotten": "",
+        "HardAddressing": "",
+        "MakeSense": "My comments for Tester#1 applies here as well."
+      }
+    },
+    "Tester1": "Tester1",
+    "Tester2": "Tester2",
+    "Time": "13:36:31"
+  },
+  "Auth5": {
+    "ParticipantId": "Auth5",
+    "Strategy1": {
+      "ChallengingToWork": {
+        "AspectForgotten": "NA",
+        "HardAddressing": "There is nothing to address",
+        "MakeSense": "Yes.  Shows that the tester followed the procedure in full"
+      },
+      "Clarity": {
+        "AspectForgotten": "NA",
+        "HardAddressing": "Nothing to address",
+        "MakeSense": "Yes shows understanding"
+      },
+      "Missing": {
+        "AspectForgotten": "NA",
+        "HardAddressing": "Nothing to address",
+        "MakeSense": "Yes it shows understanding"
+      },
+      "OtherChallenges": {
+        "AspectForgotten": "I could have added more pre-reqs, possibly.  Hard to consider ALL backgrounds of every developer",
+        "HardAddressing": "Specifying all the pre-reqs can sometimes be hard to predict. ",
+        "MakeSense": "Yes, shows the tester had to familiarize with the profiler "
+      },
+      "RequiredInfo": {
+        "AspectForgotten": "NA",
+        "HardAddressing": "Nothing to address",
+        "MakeSense": "Yes, shows understanding"
+      }
+    },
+    "Strategy2": {
+      "ChallengingToWork": {
+        "AspectForgotten": "NA",
+        "HardAddressing": "There is nothing to address",
+        "MakeSense": "Yes.  Shows that the tester followed the procedure in full"
+      },
+      "Clarity": {
+        "AspectForgotten": "I did not consider all the different sections the user would be looking for.  There are a lot of sections in the profile so it could be challenging and time consuming to consider ever deviation. ",
+        "HardAddressing": "Nothing.  It can be addressed",
+        "MakeSense": "Yes.  Shows the user had a hard time finding the NET section"
+      },
+      "Missing": {
+        "AspectForgotten": "I'm not sure since I do not understand where the tester deviated from the strategy",
+        "HardAddressing": "I do not know what button the tester is referring to.  Screen shots would be helpful",
+        "MakeSense": "No.  I don't understand what button the tester is referring to.  The strategy does not mention an optimize button"
+      },
+      "OtherChallenges": {
+        "AspectForgotten": "NA",
+        "HardAddressing": "NA",
+        "MakeSense": "NA"
+      },
+      "RequiredInfo": {
+        "AspectForgotten": "Perhaps I forgot to include something related to an optimize button.  I'm not sure about the optimize button or where I am supposed to use it. ",
+        "HardAddressing": "I'm not sure what additional steps the tester feels he/she needs for this specific strategy. ",
+        "MakeSense": "Yes. The tester is asking for more steps"
+      }
+    },
+    "Tester1": "Tester1",
+    "Tester2": "Tester2",
+    "Time": "15:8:50"
+  },
   "Pilot2": {
     "Difficulties": ["Since this is just plain English, why not integrate a grammar checker :)\nbetter tools to author these stratgies "],
     "ParticipationId": "Pilot2",

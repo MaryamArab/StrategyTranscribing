@@ -1,14 +1,45 @@
-{ "AUTHORS": {
+{"AUTHORS": {
   "0jfziD4HY6xwCE0FKfO0": {
     "CodebaseRequirements": "The developer should know where the metal image processing pipeline exists in the codebase",
     "Defect": "Using a Metal backed core image context to render to a MTKView",
     "Experience": "3",
     "JavaFramework": "blade",
-    "JavaVersion": "java8",
+    "JavaV{rsion": "java8",
     "KnowledgeRequirements": "The developer should have basic knowledge about the high level structures provided by Metal and how they work. This includes: the Metal Device, Command Queue, Command Buffers, and Render Encoders.",
     "ParticipationId": "7",
     "StrategyDefenition": "#Apple has recently moved to using the Metal programming language for GPU programming on iOS, replacing CoreImage and OpenGL.\n#While Metal offers many good features, sometimes it is quicker to use image processing features that have already been written\n#using CoreImage instead of taking the time to rewrite them in Metal. Apple provides an MTKView as a solution for easily rendering\n#Metal backed content to a view. This Strategy helps you to use CoreImage to render to a MTKView on iOS.\n\n#Required Tools and Environment\n- Assuming XCode is already installed on the system, project is checked out,\nand successfully building/running.\n- Assuming a Metal backed image processing pipeline has already been set up \nin the project\n\n#Required Knowledge\n- basic knowlege of Metal and CoreImage on iOS\n- experience with Swift or Objective-C \n\nSTRATEGY useCoreImageToRenderToMetalView()\n    #create a CoreImage Context using the Metal device\n    Find where the Metal device is being created in the project\n    IF a CoreImage Context has not already been created\n        Immediately after creating the metal device, create a CoreImage Context, passing the device in as the parameter\n    #verify the MTKView is framebufferOnly propety configured properly\n    IF the MTKView's framebufferOnly property is not set OR the MTKViews framebufferOnly property == TRUE\n        #this is a very important step as it allows a CIImage to be written directly \n        #to the MTKView's texture. Otherwise, the output will display a solid purple/pink color.\n        set the MTKView's framebufferOnly property to FALSE\n    #A new command buffer will be created on each render pass \n    Create a new command buffer using the Metal device's command queue\n    Create a new CIImage from the given pixel buffer you would like to render\n    #apply whatever CIFilters you would like to use on the CIImage (one after another)\n    FOR EACH 'filter' IN 'CIFilters'\n        DO applyFilter(CIImage)\n    #after the filters have been applied to the CIImage, render the CIImage to the MTKView\n    Use the CoreImage Context created earlier to render the CIImage directly to the MTKView's current drawable\n    #submit the command buffer to be executed by the GPU\n    Present the command buffer \n    Commit the commmand buffer\n    RETURN nothing\n    ",
     "ToolsRequirements": "Mac computer, XCode, an iPhone device to run the code on"
+  },
+  "Auth1": {
+    "CommonDifficulties": {
+      "ConcentrationDifficulty: ": "Not really because I had to think about the scenarios I run into and then try to write something which is generic enough without knowing the problem. However, there may be issues where you really have to concentrate to write down a proper strategy. ",
+      "ConcentrationDifficulty_Idea: ": "neutral",
+      "GuidelinesSupportDifficulty: ": "It gives it a standardized and structured format which could be easier for any developer to follow. They need to be familiar with some programming style though. \nFor example, a developer who mainly works with HTML and CSS may not quickly grasp the syntaxes and format mentioned for Roboto strategy. ",
+      "GuidelinesSupportDifficulty_Idea: ": "stronglyAgree",
+      "NoviceUnderstandabilityDifficulty : ": "It's a bit hard because there may be multiple ways to troubleshoot and debug an issue and some general strategy may not give an accurate way of diagnosing a problem. \nAlso, a part of strategy could be to ask the question to a novice developer about the problem to come up with a proper strategy. ",
+      "NoviceUnderstandabilityDifficulty_Idea: ": "agree",
+      "RobotoSupportDifficulty: ": "For the most part, yes, but there might be something that it's missing. For example, I didn't see anything about ELSE condition along with IF",
+      "RobotoSupportDifficulty_Idea: ": "agree",
+      "StrategyEndingDifficulty: ": "It depends on the problem. ",
+      "StrategyEndingDifficulty_Idea: ": "disagree",
+      "TimeConsumptionDifficulty: ": "It takes time to write something down in a proper, strucutured format over just talking to someone or even writing it down based on the exact issue. ",
+      "TimeConsumptionDifficulty_Idea: ": "stronglyAgree",
+      "TranslationDifficulty": "It's not hard to translate thoughts and strategies into works but also it's not easy either. It's much easier if it's done in person or you are talking to that person over writing it down.",
+      "TranslationDifficultyIdea": "disagree"
+    },
+    "OtherDifficulties": ["I didn't see if Roboto supports ELSE conditions so I think that would be helpful. \nHaving something like tagging an action could be beneficial. E.g. if you tag a specific line or action with something, you can reference that tag somewhere else in the strategy. The concept may be similar to Calls but there's no function or sub-strategy in there\nMaybe having something like GOTO could be helpful in instances where you want the user to go to a specific line in the strategy, it could use tag name to point the user to"],
+    "StrategyDefinition": "# This strategy is to troubleshoot and debug CSS issues on a web page where appropriate styling is not being applied on an element\\n\\n# Required Knowledge\\n\\nBasic HTML knowledge\\n\\nBasic CSS knowledge\\n\\nBasic familiarity with broswer dev tools\\n\\n\\n\\n#Required Tools and Environments\\n\\n#Any of the modern browsers would work: Chrome, Firefox, IE Edge, Safari as all come with dev tools these days\\n\\n#For this strategy I am going to go with Chrome but the strategy applies to other browsers as well\\n\\nChrome or Firefox\\n\\n#IDE environment like Visual Studio Code, Brackets, Notepad++\\n\\n#For this strategy, I am going to consider Notepad++\\n\\n\\n\\nSTRATEGY DebugCSS()\\n\\n\\n#Open the web page in your browser where you have CSS issue\\n\\n\\nOpen web page in Chrome\\n\\n\\nSET 'wrongCSSElements' to the elements that have wrong styling applied\\n\\n\\nFOR EACH 'wrongCSSElement' IN 'wrongCSSElements'\\n\\n\\n\\nRight-click on the element that doesn't have the right styling \\n\\n\\n\\nClick on \"Inspect Element\"\\n\\n\\n\\n#This will open the chrome dev tools either on the side or in the bottom by default\\n\\n\\n\\nThis shows Chrome developer tools \\n\\n\\n\\nThe element will be highlighted in there\\n\\n\\n\\n# Left side shows HTML and right side shows the styling for that element\\n\\n\\n\\nOn the right side, it shows the styling applied to that element\\n\\n\\n\\n# Sometimes the wrong styling is coming from an element's parent or something defined at a global level\\n\\n\\n\\nIF you see the incorrect styling in there\\n\\n\\n\\n\\nChange it in the dev tools to see the changes in your browser in real-time\\n\\n\\n\\nELSE \\n\\n\\n\\n\\nscroll down to other styles to identify the style that is overwriting the right style\\n\\n\\n\\n\\nChange it in the dev tools to see the changes in your browser in real-time\\n\\n\\n\\n#The site could be using multiple css files, dev tools shows the CSS file name where the style comes from\\n\\n\\n\\nCheck the CSS file where the wrong style is coming from\\n\\n\\n\\nOpen the CSS file in Notepad++\\n\\n\\n\\nFind the CSS class in this file and update it\\n\\n\\n\\n\\nRETURN nothing",
+    "Task": "CssDebuggingTask",
+    "Time": "Mon Jun 24 2019 22:49:05 GMT-0400 (Eastern Daylight Time), 22:49:5",
+    "WorkExperiences": {
+      "background": "I am a full stack developer with an experience of over 8 years. For back-end, I am proficient with ASP.NET and SQL DB. ",
+      "biggestSoftware": "Created an application that syncs the user data and their permissions to access the website between the CMS, Database and Salesforce. The application and its features were role and access based, so depending on the roles of a user and permissions set on the pages, a user will have access to. A user has to pay to get access to different roles, so it is very critical that they have access to only what is required, and shouldn't be able to access other stuff. \nThe application runs through all users and ensures everything is in sync and also logs everything with timestamp. \n",
+      "biggestWebApplication": "We got new conference registration vendor which handles conference logistics and registration. They should check if a user already exists in the database, if not, it reates their record and order in the vendor database, and should do the same in our systems. \nI created APIs for them to check if a user exists, create users, create orders, apply payment records etc, along with some detailed logging to create reports to be analyzed later to ensure the integration worked well.  ",
+      "softwareDevelopmentExperience": "3",
+      "webDevelopmentExperience": "7",
+      "webExperiencePeriod": "8 years and 0 months",
+      "workExperiencePeriod": "8 years and 0 months"
+    }
   },
   "Auth13": {
     "CommonDifficulties": {
@@ -102,6 +133,37 @@
       "workExperiencePeriod": "15 years and 5 months"
     }
   },
+  "Auth6": {
+    "CommonDifficulties": {
+      "ConcentrationDifficulty: ": "It needs an understanding of the problems. Asking 3 core questions in any strategies. Why What and How.\nConcentration to keep the key points. The effort to make sure all the use cases are addresses and energy to keep the team going. ",
+      "ConcentrationDifficulty_Idea: ": "stronglyDisagree",
+      "GuidelinesSupportDifficulty: ": "Yes. Always. The issue comes in once it's done its challenging to keep on the path.",
+      "GuidelinesSupportDifficulty_Idea: ": "stronglyAgree",
+      "NoviceUnderstandabilityDifficulty : ": "Depends on novice developer, who is working with. Tools are mere tools, the way we think it counts. ",
+      "NoviceUnderstandabilityDifficulty_Idea: ": "neutral",
+      "RobotoSupportDifficulty: ": "Every strategy for each problem, business is different. The way we address issues depending on experience is different. \nYes to help with organizing strategy would be nice. With apps to do everything like Jira, AHA, Google sheets its good to have a common tool to manage ideas. Would be good to have toolkit or template handy to begun strategizing issues. ",
+      "RobotoSupportDifficulty_Idea: ": "stronglyAgree",
+      "StrategyEndingDifficulty: ": "Depends on the tram, business goals, financial impact, leadership vision. It can be hard as it happens in many startup or organization with new ideas but it makes us better for next challenge. ",
+      "StrategyEndingDifficulty_Idea: ": "neutral",
+      "TimeConsumptionDifficulty: ": "No, it's not. It helps to communicate problems more clearly. Shows experience, makes us think out of box.",
+      "TimeConsumptionDifficulty_Idea: ": "disagree",
+      "TranslationDifficulty": "So many tools are available to translate thoughts into words. Using flow diagrams, sketches or even list of tasks can do the job. More we understand and dissect the problems more easy or efficient it is to solve.",
+      "TranslationDifficultyIdea": "stronglyAgree"
+    },
+    "OtherDifficulties": ["This is a very common issue within any organization. Any strategy is a simple path to solve a specific problem, not a solution to solve a problem. "],
+    "StrategyDefinition": "Insalling git\\nLogin into github account\\n\\nInstall favorite IDE\\nInstall IDE extensions for CSS debug \\nSetup prefer debug environment\\n\\nOpen files into IDE\\n\\nExtension integrated into debug have specific way of debugging issues, would require set of features\\n    To debug CSS style\\n    To highlight, add notations, add comments where the issues are\\n    To view CSS live data with live feedback or solution \\n    To view summary of all css issues\\n    To share myfinding to review with someone wth more in-depth knnowdlege \\n    To gives hints, highlights and do recommendation where the issues are\\n    To submit the list of issues as such it points to issue points within CSS single or multiple files\\n\\nOnce the developer is ok with the issues wihtin single/multiple files\\n    Launch github from within IDE   \\n    Installed extension formates the debug outcome in more presentation way\\n    Commit the changes with debug report file/s\\n    Check status of each issue  \\n\\n\\n\\n\\n\\n",
+    "Task": "CssDebuggingTask",
+    "Time": "Tue Jun 25 2019 08:41:39 GMT-0400 (Eastern Daylight Time), 8:41:39",
+    "WorkExperiences": {
+      "background": "Tools to do job and tools to find solutions. Every project or tasks are different. \nGithub, UML, R, Python, C/C++, Java, HTML/CSS, Javascript, MSON, XAML, C#...etc ",
+      "biggestSoftware": "Android OS on new hardware\nAi architecture and data visualization ",
+      "biggestWebApplication": "Intranet system for a bank with access to several departments.\n\n",
+      "softwareDevelopmentExperience": "30",
+      "webDevelopmentExperience": "30",
+      "webExperiencePeriod": "20 years and 1 months",
+      "workExperiencePeriod": "20 years and 1 months"
+    }
+  },
   "Auth7": {
     "CommonDifficulties": {
       "ConcentrationDifficulty: ": "100% agree.",
@@ -131,6 +193,37 @@
       "webDevelopmentExperience": "12",
       "webExperiencePeriod": "10 years and 0 months",
       "workExperiencePeriod": "11 years and 0 months"
+    }
+  },
+  "Auth9": {
+    "CommonDifficulties": {
+      "ConcentrationDifficulty: ": "Using Roboto was new.",
+      "ConcentrationDifficulty_Idea: ": "neutral",
+      "GuidelinesSupportDifficulty: ": "Yes having an SOP is very helpful for knowledge transfer.",
+      "GuidelinesSupportDifficulty_Idea: ": "neutral",
+      "NoviceUnderstandabilityDifficulty : ": "Using screen shots helps with beginners",
+      "NoviceUnderstandabilityDifficulty_Idea: ": "disagree",
+      "RobotoSupportDifficulty: ": "I need to get used to it",
+      "RobotoSupportDifficulty_Idea: ": "disagree",
+      "StrategyEndingDifficulty: ": "All strategies are an endless WIP as they are never \"complete\"",
+      "StrategyEndingDifficulty_Idea: ": "disagree",
+      "TimeConsumptionDifficulty: ": "Yes, but it helps in the long run.",
+      "TimeConsumptionDifficulty_Idea: ": "agree",
+      "TranslationDifficulty": "I write SOP documents often so I am used to this sort of thing",
+      "TranslationDifficultyIdea": "disagree"
+    },
+    "OtherDifficulties": [],
+    "StrategyDefinition": "# This Strategy helps impliment error handling for a web application\\n\\n#Considerations\\n\\nUser input\\n\\nDatabase Errors \\n\\n#Required Knowledge\\n\\nWeb application language\\n\\nDatabase SQL\\n\\n\\n\\nSTRATEGY UserInput()\\n\\n# Goal is to limit free-hand input and use strong typing\\n\\nUse list-boxes as much as possible\\n\\nUse Try-Catch and log errors\\n\\nIF list-boxes cannot be used, validate textboxes\\n\\n    Validate datatypes for all enteries\\n\\n    IF numberic reject alpha\\n\\n    IF date validate dates and reject invalid dates\\n\\n    IF character Check for injection (SQL and script) AND\\n\\n       Check for spcial characters\\n\\n    FOR EACH 'textbox' On Page\\n\\n        Validate\\n\\n\\n\\n    IF Error Found    \\n\\n       RETURN Error \\n\\n    ELSE\\n\\n       Submit Page\\n\\n\\n\\nSTRATEGY Database()\\n\\n# Handle null values, data truncation, invalid datatypes\\n\\nIn Queries check values before performing Substring functions\\n\\nUse stored procedures to limit SQL injection\\n\\nUse IsNull (or NVL) for nulls. \\n\\nCheck for blank values using len(trim(<columnName>)) = 0\\n\\nDO NOT USE \"where 1 = 1\" in queries as this allows for \\n\\nSQL injection\\n\\nUse Try-Catch and log all errors\\n\\n\\n\\n",
+    "Task": "ErrorHandlingTask",
+    "Time": "Tue Jun 25 2019 15:07:10 GMT-0400 (Eastern Daylight Time), 15:7:10",
+    "WorkExperiences": {
+      "background": "Full stack web developer. Currently using SQL Server and C#.\n\nwww.linkedin.com/in/thoraya-zedan-0576692",
+      "biggestSoftware": "I do not write industrial software",
+      "biggestWebApplication": "Application used by the Department of State for all software acquisitions ",
+      "softwareDevelopmentExperience": "0",
+      "webDevelopmentExperience": "40",
+      "webExperiencePeriod": "23 years and 0 months",
+      "workExperiencePeriod": "0 years and 0 months"
     }
   },
   "Pilot2": {

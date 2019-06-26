@@ -59,36 +59,7 @@
       "workExperiencePeriod": "5 years and 5 months"
     }
   },
-  "T4": {
-    "ParticipantId": "T4",
-    "Strategy1": {
-      "ChallengingToWork": "other categories of challenghallenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as",
-      "Clarity": "ed is clear? If not, please specify what w",
-      "Missing": "Missinhg",
-      "OtherChallenges": "about other categories of challenges you faced which is not asked above",
-      "RequiredInfo": "on, details, or features would make it easier for you to follow this strategy?\n\n",
-      "StrategyId": "Pilot8"
-    },
-    "Strategy2": {
-      "ChallengingToWork": "de it challenging to work with the strategy? If the challenge is related to a specific line of the strategy, please specify the line with the related challenge. Please write as many challenges as you rememb",
-      "Clarity": "wqewddscasdf\n4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
-      "Missing": "cdsgrdsf",
-      "OtherChallenges": "4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
-      "RequiredInfo": "al information, details, or features would make i",
-      "StrategyId": "Pilot7"
-    },
-    "Task1": "ErrorHandlingTask",
-    "Task2": "CssDebuggingTask",
-    "Time": "17:17:1",
-    "WorkExperiences": {
-      "biggestSoftware": "2dsdg4- Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
-      "biggestWebApplication": "Do you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
-      "softwareDevelopmentExperience": "0",
-      "webDevelopmentExperience": "1",
-      "webExperiencePeriod": "22 years and 0 months",
-      "workExperiencePeriod": "3 years and 0 months"
-    }
-  },
+  "T4": {},
   "Tester1": {
     "ParticipantId": "Tester1",
     "Strategy1": {
@@ -131,9 +102,9 @@
       "StrategyId": "Auth3"
     },
     "Strategy2": {
-      "ChallengingToWork": " Hover over the NET section to view the CSS component utilized The above line was too confusing for me to understand and also difficult to find. The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task.",
-      "Clarity": "Yes, it was a little confusing for me. But many sections were clear.",
-      "Missing": "The optimization is missing from this.\n",
+      "ChallengingToWork": "The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task.",
+      "Clarity": "Yes, it was a little confusing for me. But many sections were clear. The section especially finding the CSS component. I used chrome but still I was not able to find the NET section to find the CSS component. It took me a long time to find the component. Overall I meant that it was a little difficult to find the NET section while following the instructions.",
+      "Missing": "The optimization is missing from this. The optimize button had no effect when I tried clicking it and I failed to understand the functionality.I was clicking on the optimize button to see what effect it has but I couldn't find any difference when I clicked it.  When You click on the screen on any button, you should get the result. I was trying to see what optimize button is doing But i couldn't see any effect after clicking the button. If the Button has no effect then the Button should not be there on the screen. ",
       "OtherChallenges": "N/A",
       "RequiredInfo": "Please try to implement as many steps as you can in the program.",
       "StrategyId": "Auth5"
