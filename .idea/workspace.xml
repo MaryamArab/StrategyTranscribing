@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360bf7c5-adb1-4900-a856-b8dc980f0fe5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/backup-all-06-30-2019-11am.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/backup-all-06-30-2019-8pm.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/backup-all-06-30-2019-9pm.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/authorsData.json" afterPath="$PROJECT_DIR$/data/authorsData.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/testersData.json" afterPath="$PROJECT_DIR$/data/testersData.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -60,21 +58,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testersData.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="testersData.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/testersData.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="16017" lean-forward="false" selection-start-line="0" selection-start-column="16017" selection-end-line="0" selection-end-column="16017" />
+              <caret line="0" column="16738" lean-forward="false" selection-start-line="0" selection-start-column="16738" selection-end-line="0" selection-end-column="16738" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategyRevision.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="strategyRevision.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StrategyRevision/strategyRevision.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="backup-all-06-30-2019-9pm.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/backup-all-06-30-2019-9pm.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="16737" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="16737" />
               <folding />
             </state>
           </provider>
@@ -151,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ErrorHandling/app_.js" />
         <option value="$PROJECT_DIR$/ErrorHandling/app.js" />
         <option value="$PROJECT_DIR$/StrategyTesting/consent.js" />
         <option value="$PROJECT_DIR$/js/admin.js" />
@@ -201,6 +208,7 @@
         <option value="$PROJECT_DIR$/data/backup-all-06-30-2019-11am.json" />
         <option value="$PROJECT_DIR$/data/backup-all-06-30-2019-8pm.json" />
         <option value="$PROJECT_DIR$/data/authorsData.json" />
+        <option value="$PROJECT_DIR$/data/backup-all-06-30-2019-9pm.json" />
         <option value="$PROJECT_DIR$/data/testersData.json" />
       </list>
     </option>
@@ -256,6 +264,11 @@
               <item name="StrategyTutorial" type="462c0819:PsiDirectoryNode" />
               <item name="Admin" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StrategyTutorial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StrategyTutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StrategyTutorial" type="b2602c69:ProjectViewProjectNode" />
@@ -361,12 +374,12 @@
       <workItem from="1559752791740" duration="23154000" />
       <workItem from="1560088379907" duration="14391000" />
       <workItem from="1560779905415" duration="9627000" />
-      <workItem from="1561060829187" duration="12446000" />
+      <workItem from="1561060829187" duration="13031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="443107000" />
+    <option name="totallyTimeSpent" value="443692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="23" width="1680" height="946" extended-state="0" />
@@ -419,7 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ErrorHandling/app_error.js" />
     <entry file="file://$PROJECT_DIR$/ErrorHandling/app_.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -797,18 +809,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/testersData.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16017" lean-forward="false" selection-start-line="0" selection-start-column="16017" selection-end-line="0" selection-end-column="16017" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StrategyRevision/strategyRevision.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/backup-all-06-30-2019-9pm.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16737" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="16737" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/testersData.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16738" lean-forward="false" selection-start-line="0" selection-start-column="16738" selection-end-line="0" selection-end-column="16738" />
           <folding />
         </state>
       </provider>
