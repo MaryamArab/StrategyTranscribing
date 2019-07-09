@@ -1,1 +1,220 @@
-{"TESTERS":{"T1":{"ParticipantId":"T1","Strategy1":{"ChallengingToWork":"\nLine # 17: \"Change the desired style to have higher precedence or the shown style to have lower precedence, or change the inheritance structure\" has 2 branches of action but it is not specified when which condition should be selected and perform. \nStatement \"return done\" is used to terminate the strategy, but it seems not telling the user if they finished successfully or cannot find the bug. ","Clarity":"Its clear, but some sentences are a bit confusing at the first step. For instance \" Move to the portion of the page with the bug\" is a bit confusing what exactly it asked me to do. Maybe using clear keywords helps reducing ambiguity. For instance it can be transcribed as \"Navigate to the elements with defective appearance\"","Missing":"The strategy just works for one defect at a time. For the pages that have more than one defective style feature, the user should rerun the strategy from the beginning. Maybe having a loop to run the strategy on all the defective elements in a list might be helpful","OtherChallenges":"Some strategy statements are very general and have many substeps inside them. Maybe having break the big step to small steps may help easier following the strategy without missing any point. \nThe strategy needs a better approach to tell the user if they finished successfully or they should redo the strategy. \nStrategy is not very comprehensive and is just for one defect fixing at a time","StrategyId":"Pilot9","requiredInfo":"Having a method to keep variables and list."},"Strategy2":{"ChallengingToWork":"There are many variables in the strategy that were confusing and hard to follow. For example defining 'irregularComponent' seems redundant.\n","Clarity":"Not in the first glance. Initially I assumed the task is to fix the bugs. So I was looking for ‘fixing’ statements. Aside that, Still I am not sure why in Strategy createErrorHandleCase the variable allErrors' is getting values, specially when the strategy is returning nothing at the end. \n","Missing":"The type of output from each strategy. It was not clear what is the outcome of each strategy/sub-strategy. Adding that information on top of the strategy as a comment will help.\n","OtherChallenges":"None.","RequiredInfo":"I got lost in the strategy mainly because it was hard to distinguish the comment and the statement specially that the natural language is also used in the statements. Using a different coloring or font helps. The same argument holds for strategy calls and variable names.","StrategyId":"Pilot8"},"Task1":"CssDebuggingTask","Task2":"ErrorHandlingTask","Time":"15:18:22","WorkExperiences":{"biggestSoftware":"Bank transaction management application. The app includes querying form database, processing, applying calculations and visualizing data.","biggestWebApplication":"Bank transaction management web base application. The app includes querying form database, processing, applying calculations and visualizing data.","softwareDevelopmentExperience":"8","webDevelopmentExperience":"3","webExperiencePeriod":"2 years and 0 months","workExperiencePeriod":"7 years and 0 months"}},"T2":{"ParticipantId":"T2","Strategy1":{"ChallengingToWork":"slhfdnassf","Clarity":" you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n","Missing":"In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n","OtherChallenges":" you think the strategy ys of challenges you faced which is not asked above, if any.\n\n","StrategyId":"Pilot9","requiredInfo":"dditional information, details, or features would make it easier for you to follow this strategy?"},"Strategy2":{"ChallengingToWork":"otherChallenges","Clarity":"its not cleare at all","Missing":"In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n","OtherChallenges":"its context relevant","RequiredInfo":"Additional","StrategyId":"Pilot3"},"Task1":"CssDebuggingTask","Task2":"ProfilerTask","Time":"23:4:2","WorkExperiences":{"biggestSoftware":"5","biggestWebApplication":"5","softwareDevelopmentExperience":"5","webDevelopmentExperience":"5","webExperiencePeriod":"5 years and 5 months","workExperiencePeriod":"5 years and 5 months"}},"T4":{},"Tester1":{"ParticipantId":"Tester1","Strategy1":{"ChallengingToWork":"Line #2 just says you may point to the component. Instead, it could be specific to click ctrl+shift+C to inspect the highlighted element. Doing this would show the respective element in the styles tab where we can quickly make changes. ","Clarity":"I felt it was clear because I am very much familiar with using this mechanism in the browser. Steps are pretty clear but adding more specifications like I mentioned in my first question’s comment would help.","Missing":"Not sure if I am right. Here is my observation. Some instructions on how to look for particular element to inspect was missing. I thought that would be clear if you said in Point 2 that, use the arrow in the Inspect element window to select particular element.","OtherChallenges":"NA","RequiredInfo":"I think it has everything covered. Pre-conditions, Post-conditions(if necessary) and notes of what a keyword means. So it looks good. ","StrategyId":"Auth3"},"Strategy2":{"ChallengingToWork":"The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task. ","Clarity":"Very much Clear","Missing":"Nothing. The details were pretty straight forward. I had never used Performance profile when I inspect element but was clear when I followed the steps. ","OtherChallenges":"I did not know how to use Performance profiler so I had difficulties figuring out the current frame state, network requests, animations but when I followed it twice, I was able to get to it. ","RequiredInfo":"Nothing. I think it provided with all the details needed to look at the performance. ","StrategyId":"Auth5"},"Task1":"CssDebuggingTask","Task2":"ProfilerTask","Time":"13:11:56","WorkExperiences":{"background":"I have worked for about 4 years in the industry in technologies like ColdFusion, HTML5, CSS, Bootstrap, JQuery, JavaScript, Ajax. In my Master's, I am working on creating web applications using Node.js, Java, Bootstrap, HTML5. \n\nGit Hub: https://github.com/Bhargavicm ","biggestSoftware":"https://www.healthcaresource.com/pm10ncu_m/index.cfm?fuseaction=search.categoryList&template=dsp_job_categories.cfm\n\nAbove is the demo website. I was part of building the majority of the features for the Job Portal for Hospitals across the US. I worked from India to construct a website that was mobile-friendly using Bootstrap, CSS, and JavaScript.  ","biggestWebApplication":"There are two biggest web applications that I worked on\n1) Job Portal for the Hospital staffing.\n2) VMWare e-learning and Certifications module. \n\nBoth were built using ColdFusion 5. I helped them to migrate from ColdFusion 5 to ColdFusion 2016 along with a Mobile solution to web applications with advanced features. ","softwareDevelopmentExperience":"3","webDevelopmentExperience":"3","webExperiencePeriod":"4 years and 0 months","workExperiencePeriod":"4 years and 0 months"}},"Tester2":{"ParticipantId":"Tester2","Strategy1":{"ChallengingToWork":"No, actually this was very straight forward to work with.","Clarity":"Yes, it was clear. ","Missing":"The following is missing 1. Make changes and see if they are appropriate. 2. Take those changes and make it back in the IDE","OtherChallenges":"None","RequiredInfo":"No nothing required.","StrategyId":"Auth3"},"Strategy2":{"ChallengingToWork":"Hover over the NET section to view the CSS component utilized The above line was too confusing for me to understand and also difficult to find.","Clarity":"Yes, it was a little confusing for me. But many sections were clear. The section especially finding the CSS component. I used chrome but still I was not able to find the NET section to find the CSS component. It took me a long time to find the component. Overall I meant that it was a little difficult to find the NET section while following the instructions.","Missing":"The optimization is missing from this. The optimize button had no effect when I tried clicking it and I failed to understand the functionality.I was clicking on the optimize button to see what effect it has but I couldn't find any difference when I clicked it.  When You click on the screen on any button, you should get the result. I was trying to see what optimize button is doing But i couldn't see any effect after clicking the button. If the Button has no effect then the Button should not be there on the screen. ","OtherChallenges":"N/A","RequiredInfo":"Please try to implement as many steps as you can in the program.","StrategyId":"Auth5"},"Task1":"CssDebuggingTask","Task2":"ProfilerTask","Time":"11:11:1","WorkExperiences":{"background":"I am working as a web developer for the last 3 years and have developed more than 10 web applications and supporting 20+ already developed web applications.","biggestSoftware":"It is about the loan application for my client.","biggestWebApplication":"loan application for my client","softwareDevelopmentExperience":"10","webDevelopmentExperience":"4","webExperiencePeriod":"3 years and 0 months","workExperiencePeriod":"3 years and 0 months"}},"Tester5":{"ParticipantId":"Tester5","Strategy1":{"ChallengingToWork":"# This Strategy helps impliment error handling for a web application --- But also some stuff about SQLi and databases?\n#Considerations\nUser input\nDatabase Errors \n#Required Knowledge\nWeb application language\nDatabase SQL\nSTRATEGY UserInput()\n# Goal is to limit free-hand input and use strong typing\nUse list-boxes as much as possible   --- What's a list-box?\nUse Try-Catch and log errors\nIF list-boxes cannot be used, validate textboxes\n    Validate datatypes for all enteries\n    IF numberic reject alpha  --- It seems like it would be ok here to specify \"alphabetical characters\". Alpha can also mean a specific symbol, if I'm being nitpicky.\n    IF date validate dates and reject invalid dates\n    IF character Check for injection (SQL and script) AND   --- How? Probably by parameterizing queries / stored procedures.\n       Check for spcial characters   --- Like what? \n    FOR EACH 'textbox' On Page\n        Validate\n    IF Error Found    \n       RETURN Error --- To user? Where?\n    ELSE\n       Submit Page\nSTRATEGY Database()\n# Handle null values, data truncation, invalid datatypes\nIn Queries check values before performing Substring functions   --- Check what about the values? Too vague to be helpful for me.\nUse stored procedures to limit SQL injection --- Don't just limit SQLi. Prevent it entirely using prepared statements or parameterized queries, which actually can prevent it. Stored procedures do not prevent SQLi by default.\nUse IsNull (or NVL) for nulls.  --- Why? In what situation? Does this mean put a string \"IsNull\" in values that will be null in the database instead of leaving them empty?\nCheck for blank values using len(trim(<columnName>)) = 0\nDO NOT USE \"where 1 = 1\" in queries as this allows for --- Factually incorrect, see below. \nSQL injection\nUse Try-Catch and log all errors --- Where? To console? To an internal error log? To somewhere only developers can see? No consideration for what errors to be logged to the user. \n","Clarity":"\"Use list-boxes as much as possible\" -- I don't know what a list box is.\nThis lacks explanation of why the things in the strategy would be done.","Missing":"More detail on what to do, ex. \"check\" what? Security depth of knowledge is also missing, especially around SQL injection.","OtherChallenges":"It is incorrect to state \"DO NOT USE \"where 1 = 1\" in queries as this allows for SQL injection\". This DOES NOT allow for SQL injection inherently. \"1=1\" is a common attack string when testing for SQL injection, but including that as part of a query does not make you any more vulnerable if you have otherwise parameterized your query. source: I am a security engineer...","RequiredInfo":"See above.","StrategyId":"Auth9"},"Strategy2":{"ChallengingToWork":"I wasn't able to change the background color to a random color using this strategy, since it's CSS specific and I think that would need to happen in the JavaScript to set the CSS. However, this can help narrow down which style piece needs to be adjusted to set a color like that.\n\nI usually inspect elements by clicking on them and then opening the editor. I can't easily right click on the quickly moving boxes-- I need them to be moving slower to click on. Thus, I would not have been able to resolve this if I hadn't gone to look at the source HTML of the page and select an individual box.","Clarity":"I think it's fine in clarity. Needs a spell check though.","Missing":"See below.","OtherChallenges":"n/a","RequiredInfo":"This strategy is primarily applicable with Google Chrome. There should be a note on it stating the specific capabilities GC has that allow this strategy to be used. Be explicit about browser capabilities so that it saves people time.\n\n\"element.Style\" -- this is just setting the style property. It might be useful to say how to do that in a bit more detail, or to say something like style property instead of element.Style.","StrategyId":"Auth13"},"Task1":"ErrorHandlingTask","Task2":"CssDebuggingTask","Time":"21:19:2","WorkExperiences":{"background":"Backend developer + new security engineer. Teaching assistant in R class 3x. Teaching assistant in Python data science class 2x. Teaching assistant in Django Python backend course 1x. Informatics student at University of Washington. ","biggestSoftware":"n/a","biggestWebApplication":"Reviewing application using Firebase and React. Create, edit, delete reviews. User login / logout / signup. ","softwareDevelopmentExperience":"0","webDevelopmentExperience":"6","webExperiencePeriod":"1 years and 6 months","workExperiencePeriod":"0 years and 0 months"}},"Tester6":{"ParticipantId":"Tester6","Strategy1":{"ChallengingToWork":"line 14 'numberic' --> 'numeric'.   Problem is incomplete json file, but instructions don’t mention to check json file","Clarity":"yes it was clear.","Missing":"if statements in the Database() section. more imperative statements instead of functional statements. Never said to check json file. Incomplete data in json file is why some data is displaying while others is not.","OtherChallenges":"n/a","RequiredInfo":"color coding headers . more if statements/ imperative statements","StrategyId":"Auth9"},"Strategy2":{"ChallengingToWork":"The ‘fixCSS’ section seems overly vague. For example this line is not clear to me.         SET 'undesiredStyling' TO the line number and css file found in the search. This  task the html had a typo ( The title was red because ‘class’ was misspelled ‘calss’) and the css file had an extra line that made the background of the buttons beige instead of the colors they are supposed to be. The instructions provide a nice outline of what to do. ","Clarity":"yes it is clear. ","Missing":"color coding or some sort of clearer directions. ","OtherChallenges":"no other challenges","RequiredInfo":"more elaboration in the STRATEGY ApplyCssToElement(element, style) section. More elaboration on how to find the issue in the js code or how to get the rainbow borders for the blue squares. ","StrategyId":"Auth13"},"Task1":"ErrorHandlingTask","Task2":"CssDebuggingTask","Time":"12:54:27","WorkExperiences":{"background":"https://github.com/mkMcMahon\n\nwww.matthewkmcmahon.com","biggestSoftware":"software to test and evaluate different market conditions. needed complex front and back end. multiple types of front end users so many interfaces. ","biggestWebApplication":"booking and scheduling app for private company","softwareDevelopmentExperience":"4","webDevelopmentExperience":"2","webExperiencePeriod":"5 years and 0 months","workExperiencePeriod":"7 years and 0 months"}}}}
+{
+  "TESTERS": {
+    "T1": {
+      "ParticipantId": "T1",
+      "Strategy1": {
+        "ChallengingToWork": "\nLine # 17: \"Change the desired style to have higher precedence or the shown style to have lower precedence, or change the inheritance structure\" has 2 branches of action but it is not specified when which condition should be selected and perform. \nStatement \"return done\" is used to terminate the strategy, but it seems not telling the user if they finished successfully or cannot find the bug. ",
+        "Clarity": "Its clear, but some sentences are a bit confusing at the first step. For instance \" Move to the portion of the page with the bug\" is a bit confusing what exactly it asked me to do. Maybe using clear keywords helps reducing ambiguity. For instance it can be transcribed as \"Navigate to the elements with defective appearance\"",
+        "Missing": "The strategy just works for one defect at a time. For the pages that have more than one defective style feature, the user should rerun the strategy from the beginning. Maybe having a loop to run the strategy on all the defective elements in a list might be helpful",
+        "OtherChallenges": "Some strategy statements are very general and have many substeps inside them. Maybe having break the big step to small steps may help easier following the strategy without missing any point. \nThe strategy needs a better approach to tell the user if they finished successfully or they should redo the strategy. \nStrategy is not very comprehensive and is just for one defect fixing at a time",
+        "StrategyId": "Pilot9",
+        "requiredInfo": "Having a method to keep variables and list."
+      },
+      "Strategy2": {
+        "ChallengingToWork": "There are many variables in the strategy that were confusing and hard to follow. For example defining 'irregularComponent' seems redundant.\n",
+        "Clarity": "Not in the first glance. Initially I assumed the task is to fix the bugs. So I was looking for ‘fixing’ statements. Aside that, Still I am not sure why in Strategy createErrorHandleCase the variable allErrors' is getting values, specially when the strategy is returning nothing at the end. \n",
+        "Missing": "The type of output from each strategy. It was not clear what is the outcome of each strategy/sub-strategy. Adding that information on top of the strategy as a comment will help.\n",
+        "OtherChallenges": "None.",
+        "RequiredInfo": "I got lost in the strategy mainly because it was hard to distinguish the comment and the statement specially that the natural language is also used in the statements. Using a different coloring or font helps. The same argument holds for strategy calls and variable names.",
+        "StrategyId": "Pilot8"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "15:18:22",
+      "WorkExperiences": {
+        "biggestSoftware": "Bank transaction management application. The app includes querying form database, processing, applying calculations and visualizing data.",
+        "biggestWebApplication": "Bank transaction management web base application. The app includes querying form database, processing, applying calculations and visualizing data.",
+        "softwareDevelopmentExperience": "8",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "2 years and 0 months",
+        "workExperiencePeriod": "7 years and 0 months"
+      }
+    },
+    "T2": {
+      "ParticipantId": "T2",
+      "Strategy1": {
+        "ChallengingToWork": "slhfdnassf",
+        "Clarity": " you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
+        "OtherChallenges": " you think the strategy ys of challenges you faced which is not asked above, if any.\n\n",
+        "StrategyId": "Pilot9",
+        "requiredInfo": "dditional information, details, or features would make it easier for you to follow this strategy?"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "otherChallenges",
+        "Clarity": "its not cleare at all",
+        "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
+        "OtherChallenges": "its context relevant",
+        "RequiredInfo": "Additional",
+        "StrategyId": "Pilot3"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "23:4:2",
+      "WorkExperiences": {
+        "biggestSoftware": "5",
+        "biggestWebApplication": "5",
+        "softwareDevelopmentExperience": "5",
+        "webDevelopmentExperience": "5",
+        "webExperiencePeriod": "5 years and 5 months",
+        "workExperiencePeriod": "5 years and 5 months"
+      }
+    },
+    "T4": {},
+    "Tester1": {
+      "ParticipantId": "Tester1",
+      "Strategy1": {
+        "ChallengingToWork": "Line #2 just says you may point to the component. Instead, it could be specific to click ctrl+shift+C to inspect the highlighted element. Doing this would show the respective element in the styles tab where we can quickly make changes. ",
+        "Clarity": "I felt it was clear because I am very much familiar with using this mechanism in the browser. Steps are pretty clear but adding more specifications like I mentioned in my first question’s comment would help.",
+        "Missing": "Not sure if I am right. Here is my observation. Some instructions on how to look for particular element to inspect was missing. I thought that would be clear if you said in Point 2 that, use the arrow in the Inspect element window to select particular element.",
+        "OtherChallenges": "NA",
+        "RequiredInfo": "I think it has everything covered. Pre-conditions, Post-conditions(if necessary) and notes of what a keyword means. So it looks good. ",
+        "StrategyId": "Auth3"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task. ",
+        "Clarity": "Very much Clear",
+        "Missing": "Nothing. The details were pretty straight forward. I had never used Performance profile when I inspect element but was clear when I followed the steps. ",
+        "OtherChallenges": "I did not know how to use Performance profiler so I had difficulties figuring out the current frame state, network requests, animations but when I followed it twice, I was able to get to it. ",
+        "RequiredInfo": "Nothing. I think it provided with all the details needed to look at the performance. ",
+        "StrategyId": "Auth5"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "13:11:56",
+      "WorkExperiences": {
+        "background": "I have worked for about 4 years in the industry in technologies like ColdFusion, HTML5, CSS, Bootstrap, JQuery, JavaScript, Ajax. In my Master's, I am working on creating web applications using Node.js, Java, Bootstrap, HTML5. \n\nGit Hub: https://github.com/Bhargavicm ",
+        "biggestSoftware": "https://www.healthcaresource.com/pm10ncu_m/index.cfm?fuseaction=search.categoryList&template=dsp_job_categories.cfm\n\nAbove is the demo website. I was part of building the majority of the features for the Job Portal for Hospitals across the US. I worked from India to construct a website that was mobile-friendly using Bootstrap, CSS, and JavaScript.  ",
+        "biggestWebApplication": "There are two biggest web applications that I worked on\n1) Job Portal for the Hospital staffing.\n2) VMWare e-learning and Certifications module. \n\nBoth were built using ColdFusion 5. I helped them to migrate from ColdFusion 5 to ColdFusion 2016 along with a Mobile solution to web applications with advanced features. ",
+        "softwareDevelopmentExperience": "3",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "4 years and 0 months",
+        "workExperiencePeriod": "4 years and 0 months"
+      }
+    },
+    "Tester2": {
+      "ParticipantId": "Tester2",
+      "Strategy1": {
+        "ChallengingToWork": "No, actually this was very straight forward to work with.",
+        "Clarity": "Yes, it was clear. ",
+        "Missing": "The following is missing 1. Make changes and see if they are appropriate. 2. Take those changes and make it back in the IDE",
+        "OtherChallenges": "None",
+        "RequiredInfo": "No nothing required.",
+        "StrategyId": "Auth3"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "Hover over the NET section to view the CSS component utilized The above line was too confusing for me to understand and also difficult to find.",
+        "Clarity": "Yes, it was a little confusing for me. But many sections were clear. The section especially finding the CSS component. I used chrome but still I was not able to find the NET section to find the CSS component. It took me a long time to find the component. Overall I meant that it was a little difficult to find the NET section while following the instructions.",
+        "Missing": "The optimization is missing from this. The optimize button had no effect when I tried clicking it and I failed to understand the functionality.I was clicking on the optimize button to see what effect it has but I couldn't find any difference when I clicked it.  When You click on the screen on any button, you should get the result. I was trying to see what optimize button is doing But i couldn't see any effect after clicking the button. If the Button has no effect then the Button should not be there on the screen. ",
+        "OtherChallenges": "N/A",
+        "RequiredInfo": "Please try to implement as many steps as you can in the program.",
+        "StrategyId": "Auth5"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "11:11:1",
+      "WorkExperiences": {
+        "background": "I am working as a web developer for the last 3 years and have developed more than 10 web applications and supporting 20+ already developed web applications.",
+        "biggestSoftware": "It is about the loan application for my client.",
+        "biggestWebApplication": "loan application for my client",
+        "softwareDevelopmentExperience": "10",
+        "webDevelopmentExperience": "4",
+        "webExperiencePeriod": "3 years and 0 months",
+        "workExperiencePeriod": "3 years and 0 months"
+      }
+    },
+    "Tester5": {
+      "ParticipantId": "Tester5",
+      "Strategy1": {
+        "ChallengingToWork": "# This Strategy helps impliment error handling for a web application --- But also some stuff about SQLi and databases?\n#Considerations\nUser input\nDatabase Errors \n#Required Knowledge\nWeb application language\nDatabase SQL\nSTRATEGY UserInput()\n# Goal is to limit free-hand input and use strong typing\nUse list-boxes as much as possible   --- What's a list-box?\nUse Try-Catch and log errors\nIF list-boxes cannot be used, validate textboxes\n    Validate datatypes for all enteries\n    IF numberic reject alpha  --- It seems like it would be ok here to specify \"alphabetical characters\". Alpha can also mean a specific symbol, if I'm being nitpicky.\n    IF date validate dates and reject invalid dates\n    IF character Check for injection (SQL and script) AND   --- How? Probably by parameterizing queries / stored procedures.\n       Check for spcial characters   --- Like what? \n    FOR EACH 'textbox' On Page\n        Validate\n    IF Error Found    \n       RETURN Error --- To user? Where?\n    ELSE\n       Submit Page\nSTRATEGY Database()\n# Handle null values, data truncation, invalid datatypes\nIn Queries check values before performing Substring functions   --- Check what about the values? Too vague to be helpful for me.\nUse stored procedures to limit SQL injection --- Don't just limit SQLi. Prevent it entirely using prepared statements or parameterized queries, which actually can prevent it. Stored procedures do not prevent SQLi by default.\nUse IsNull (or NVL) for nulls.  --- Why? In what situation? Does this mean put a string \"IsNull\" in values that will be null in the database instead of leaving them empty?\nCheck for blank values using len(trim(<columnName>)) = 0\nDO NOT USE \"where 1 = 1\" in queries as this allows for --- Factually incorrect, see below. \nSQL injection\nUse Try-Catch and log all errors --- Where? To console? To an internal error log? To somewhere only developers can see? No consideration for what errors to be logged to the user. \n",
+        "Clarity": "\"Use list-boxes as much as possible\" -- I don't know what a list box is.\nThis lacks explanation of why the things in the strategy would be done.",
+        "Missing": "More detail on what to do, ex. \"check\" what? Security depth of knowledge is also missing, especially around SQL injection.",
+        "OtherChallenges": "It is incorrect to state \"DO NOT USE \"where 1 = 1\" in queries as this allows for SQL injection\". This DOES NOT allow for SQL injection inherently. \"1=1\" is a common attack string when testing for SQL injection, but including that as part of a query does not make you any more vulnerable if you have otherwise parameterized your query. source: I am a security engineer...",
+        "RequiredInfo": "See above.",
+        "StrategyId": "Auth9"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "I wasn't able to change the background color to a random color using this strategy, since it's CSS specific and I think that would need to happen in the JavaScript to set the CSS. However, this can help narrow down which style piece needs to be adjusted to set a color like that.\n\nI usually inspect elements by clicking on them and then opening the editor. I can't easily right click on the quickly moving boxes-- I need them to be moving slower to click on. Thus, I would not have been able to resolve this if I hadn't gone to look at the source HTML of the page and select an individual box.",
+        "Clarity": "I think it's fine in clarity. Needs a spell check though.",
+        "Missing": "See below.",
+        "OtherChallenges": "n/a",
+        "RequiredInfo": "This strategy is primarily applicable with Google Chrome. There should be a note on it stating the specific capabilities GC has that allow this strategy to be used. Be explicit about browser capabilities so that it saves people time.\n\n\"element.Style\" -- this is just setting the style property. It might be useful to say how to do that in a bit more detail, or to say something like style property instead of element.Style.",
+        "StrategyId": "Auth13"
+      },
+      "Task1": "ErrorHandlingTask",
+      "Task2": "CssDebuggingTask",
+      "Time": "21:19:2",
+      "WorkExperiences": {
+        "background": "Backend developer + new security engineer. Teaching assistant in R class 3x. Teaching assistant in Python data science class 2x. Teaching assistant in Django Python backend course 1x. Informatics student at University of Washington. ",
+        "biggestSoftware": "n/a",
+        "biggestWebApplication": "Reviewing application using Firebase and React. Create, edit, delete reviews. User login / logout / signup. ",
+        "softwareDevelopmentExperience": "0",
+        "webDevelopmentExperience": "6",
+        "webExperiencePeriod": "1 years and 6 months",
+        "workExperiencePeriod": "0 years and 0 months"
+      }
+    },
+    "Tester6": {
+      "ParticipantId": "Tester6",
+      "Strategy1": {
+        "ChallengingToWork": "line 14 'numberic' --> 'numeric'.   Problem is incomplete json file, but instructions don’t mention to check json file",
+        "Clarity": "yes it was clear.",
+        "Missing": "if statements in the Database() section. more imperative statements instead of functional statements. Never said to check json file. Incomplete data in json file is why some data is displaying while others is not.",
+        "OtherChallenges": "n/a",
+        "RequiredInfo": "color coding headers . more if statements/ imperative statements",
+        "StrategyId": "Auth9"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "The ‘fixCSS’ section seems overly vague. For example this line is not clear to me.         SET 'undesiredStyling' TO the line number and css file found in the search. This  task the html had a typo ( The title was red because ‘class’ was misspelled ‘calss’) and the css file had an extra line that made the background of the buttons beige instead of the colors they are supposed to be. The instructions provide a nice outline of what to do. ",
+        "Clarity": "yes it is clear. ",
+        "Missing": "color coding or some sort of clearer directions. ",
+        "OtherChallenges": "no other challenges",
+        "RequiredInfo": "more elaboration in the STRATEGY ApplyCssToElement(element, style) section. More elaboration on how to find the issue in the js code or how to get the rainbow borders for the blue squares. ",
+        "StrategyId": "Auth13"
+      },
+      "Task1": "ErrorHandlingTask",
+      "Task2": "CssDebuggingTask",
+      "Time": "12:54:27",
+      "WorkExperiences": {
+        "background": "https://github.com/mkMcMahon\n\nwww.matthewkmcmahon.com",
+        "biggestSoftware": "software to test and evaluate different market conditions. needed complex front and back end. multiple types of front end users so many interfaces. ",
+        "biggestWebApplication": "booking and scheduling app for private company",
+        "softwareDevelopmentExperience": "4",
+        "webDevelopmentExperience": "2",
+        "webExperiencePeriod": "5 years and 0 months",
+        "workExperiencePeriod": "7 years and 0 months"
+      }
+    },
+    "Tester8": {
+      "ParticipantId": "Tester8",
+      "Strategy1": {
+        "ChallengingToWork": "The boxes were moving very fast and it was almost impossible to right click on them. I had to go through the DOM hierarchy to find them.",
+        "Clarity": "The strategy was easy to follow. ",
+        "Missing": "I think, in this case, animated elements were not considered in this strategy. Plus, only external styling was specified. Also, I could not find the issue with the header class in the dev tools, which happens to be a typo \"calss\" in the html",
+        "OtherChallenges": "Nothing",
+        "RequiredInfo": "Some explanation on how to debug edge cases could make it easier to follow, like how to debug animated elements or how to debug when element's style is manipulated with js. Also, debugging on inline styling could be helpful. ",
+        "StrategyId": "Auth1"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "Some statements were vague like the line \"If the timeout is not defined in a central, configurable location\" and its \"Code:\" part. Also the block with \"syntax or casing\", was not clear at first glance. ",
+        "Clarity": "Overall, The strategy was clear, well organized and easy to follow. ",
+        "Missing": "I think some of the \"Code:\" lines needed more details or explanation. ",
+        "OtherChallenges": "Nothing",
+        "RequiredInfo": "I think it would make it much easier to follow if there were some elaborations on some lines with more comments or example comments. It was much easier much easier to understand the lines with comments specially with example comments.",
+        "StrategyId": "Auth7"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "22:54:22",
+      "WorkExperiences": {
+        "background": "I am senior software developer in Old Dominion University and I am involved in many active development projects, such as Student attendance system, web portal application development and CI/CD projects. \nMy LinkedIn url: https://www.linkedin.com/in/meysam-abolghasemi-7b867998/\n",
+        "biggestSoftware": "Student portal web app amongst others. It involved on implementing a micro-service architecture to integrate the portal with many different services in the university. ",
+        "biggestWebApplication": "Same as above ",
+        "softwareDevelopmentExperience": "10",
+        "webDevelopmentExperience": "7",
+        "webExperiencePeriod": "5 years and 0 months",
+        "workExperiencePeriod": "5 years and 0 months"
+      }
+    }
+  }
+}
