@@ -1,5 +1,65 @@
 {
   "REVISIONS": {
+    "Auth1": {
+      "ParticipantId": "Auth1",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "I think I did consider writing the strategy in very simple language. ",
+          "HardAddressing": "I think not being specific and providing enough details in the comment about why the strategy action was ambiguous and didn't make much sense to them makes it hard to address. \nIf the tester had specified why it doesn't make much sense, it could have been easier to address. ",
+          "MakeSense": "Not clearly because I am not sure if the ambiguity is related to the action I wrote, the language I used or because of the variable names I used i.e. \"wrongCSSElements\" and \"wrongCSSElement\". It would have been clear if the tester had mentioned what they thought the action meant to them and what they interpreted off of it.  "
+        },
+        "Clarity": {
+          "AspectForgotten": "I did try to write the strategy in simple terms. ",
+          "HardAddressing": "Nothing",
+          "MakeSense": "Yes, it does and makes sense but again similar to the first question's answer by this tester, providing some details like why they thought certain lines in the strategy were ambiguous and how they interpreted it would be very helpful."
+        },
+        "Missing": {
+          "AspectForgotten": "I think I did consider it. ",
+          "HardAddressing": "Not providing enough details or some example about not having enough info in the strategy makes it hard to understand what could have helped the tester. ",
+          "MakeSense": "Not clear about this comment either. I did provide info at the top of the strategy about what is needed in order to proceed with the strategy task, so I think giving an example like what kind of preconditions and statements the tester was expecting would be helpful. \nIf I'd provided an example would that have made things more clear? \n\nAnd not sure what the tester means by \"What is missing here is the same with what the first programming task is missing.\" as I don't know what is the first programming task here. "
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "N/A",
+          "HardAddressing": "N/A",
+          "MakeSense": "N/A"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "No as I was thinking the colors I saw while writing the strategy would appear the same way to others as well. ",
+          "HardAddressing": "Nothing",
+          "MakeSense": "Yes, it totally does and I would think the same as well but I think this is more about how the strategy was provided to the tester. While writing the strategy, I could see the colors in there. I think Monaco editor was used on that page but I am guessing it wasn't there for the tester. "
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "I didn't consider the animation aspect of html elements for troubleshooting and debugging. ",
+          "HardAddressing": "I think it's not hard to address, I just didn't think of that scenario and should have clarified it in my prerequisites. ",
+          "MakeSense": "Based on the tester's comment in the second question about \"what do you think is missing\" makes this comment clear. Yes, this comment does make sense as it doesn't take animated elements into consideration. "
+        },
+        "Clarity": {
+          "AspectForgotten": "No",
+          "HardAddressing": "N/A",
+          "MakeSense": "Yes"
+        },
+        "Missing": {
+          "AspectForgotten": "Yes, specifying that it doesn't take into consideration animated elements and hover over elements as well. ",
+          "HardAddressing": "If the tested had provided info about why they think this strategy considers only external styling could have been helpful to understand what needs to be done differently to include inline styling in there as well. \n",
+          "MakeSense": "Partially, yes, the first sentence about animated elements not being considered as part of strategy is correct as I didn't consider it, however, it considers inline styling as well as styling specified in the header. Same strategy would apply on troubleshooting inline CSS for elements as those styles would show up on inspecting the element.\nI really didn't understand what the tester is referring to about the header class. "
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "N/A",
+          "HardAddressing": "N/A",
+          "MakeSense": "N/A"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "Yes, it's not a very common scenario so forgot to consider it. ",
+          "HardAddressing": "Writing a strategy that works in all cases is hard to address without making it very generic at which point it may not be helpful to troubleshoot something. ",
+          "MakeSense": "Yes, it does. It's hard to consider all cases while writing a strategy as one may not be a fit-all solution. I think if I had mentioned it covers only specific type of scenarios could have been helpful though. \nOr maybe I could have add animated element section in an if-else. "
+        }
+      },
+      "Tester1": "Tester7",
+      "Tester2": "Tester8",
+      "Time": "19:8:27"
+    },
     "Auth13": {
       "ParticipantId": "Auth13",
       "Strategy1": {
@@ -179,6 +239,66 @@
       "Tester1": "Tester1",
       "Tester2": "Tester2",
       "Time": "15:8:50"
+    },
+    "Auth9": {
+      "ParticipantId": "Auth9",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "I assumed a certain level of experience in full stack web development.",
+          "HardAddressing": "The need to explain basic null handling in SQL Server and explain web controls.",
+          "MakeSense": "It makes sense and tells me that the reader it not a web developer and not familiar with web control object like list-boxes (drop down list boxes) and the term alpha for alphabetical. Web application do not take symbols as input at the as most user are not aware of the extended ASCII set and more text boxes (or textareas) like the one I am entering this text in now, will not access the keyboard entry of Alt-214 for the alpha character.  "
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "Reader does not know about web-controls.",
+          "MakeSense": "Yes"
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "What to do next is up to the developer as each situation is different.",
+          "MakeSense": "No. "
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "1=1 is a security issue. Best practice not to use it at all",
+          "MakeSense": "Yes"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": "No."
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "",
+          "HardAddressing": "I did not address JSON files.",
+          "MakeSense": "I spelled the word numeric wrong. Not sure where all the JSON file references are coming from."
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "SQL Server is not JSON file based.",
+          "MakeSense": "Does not make sense"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        }
+      },
+      "Tester1": "Tester5",
+      "Tester2": "Tester6",
+      "Time": "13:42:44"
     },
     "Pilot2": {
       "Difficulties": ["Since this is just plain English, why not integrate a grammar checker :)\nbetter tools to author these stratgies "],

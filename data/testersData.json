@@ -92,6 +92,68 @@
         "workExperiencePeriod": "4 years and 0 months"
       }
     },
+    "Tester10": {
+      "ParticipantId": "Tester10",
+      "Strategy1": {
+        "ChallengingToWork": "Precondition for having IDE extension but doesn't specify specific CSS extension on line 4\n",
+        "Clarity": "Insalling git\nLogin into github account\nInstall favorite IDE\nInstall IDE extensions for CSS debug \nSetup prefer debug environment\nOpen files into IDE\nExtension integrated into debug have specific way of debugging issues, would require set of features\n    To debug CSS style\n    To highlight, add notations, add comments where the issues are\n    To view CSS live data with live feedback or solution \n\nMost of the strategy instructions were pretty clear, however, some lines such as line 5 could have been more specific\n",
+        "Missing": "Insalling git\nLogin into github account\nInstall favorite IDE\nInstall IDE extensions for CSS debug \nSetup prefer debug environment\nOpen files into IDE\nExtension integrated into debug have specific way of debugging issues, would require set of features\n    To debug CSS style\n    To highlight, add notations, add comments where the issues are\n    To view CSS live data with live feedback or solution",
+        "OtherChallenges": "None",
+        "RequiredInfo": "Information about what specific extension to install, but the list of features they describe was adequate for me to find an appropriate extension to install\nDetails about how to address the status of each issue\nUsing more of the syntax with Roboto, such as IF, SET, RETURN commands",
+        "StrategyId": "Auth6"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "Install IDE\nImport code base for ErrorHandling\nSTRATEGY ErrorHandling()\n    Add checks for possible error scenarios. Example null pointer exception or out of bounds exception\n          # This line was not very specific and I didn't really know what I should have been looking for in terms of \"possible error scenarios\"\n    Implement a logical flow to notify stakeholders in case of error situation\n          # In order to implement a logical flow the expert's strategy and wording might have been lost on more beginner programmers\n    Write the statements that should get executed regardless of any error scenario \n          # Again, I feel that this statement could be more specific and is difficult for beginner programmers to understand\n",
+        "Clarity": "The strategy is not very clear as it is not very specific in terms of what part of the code to check or how to implement certain strategies such as a \"logical flow\".",
+        "Missing": "Install IDE\nImport code base for ErrorHandling\nSTRATEGY ErrorHandling()\n    Add checks for possible error scenarios. Example null pointer exception or out of bounds exception\n    Create a breakpoint in foreach loops and test the bounds\n    Implement a logical flow to notify stakeholders in case of error situation\n    Write the statements that should get executed regardless of any error scenario\n    \n",
+        "OtherChallenges": "none",
+        "RequiredInfo": "Additional details about what it means to \"implement a logical flow\" and creating the statements for each error scenario would make it easier to follow this strategy. Also if the expert had defined their terms better it would be easier to follow in a step-by-step manner. ",
+        "StrategyId": "Auth8"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "17:54:39",
+      "WorkExperiences": {
+        "background": "I have years of experience in my classes implementing software applications in Java and Python. I also have created several websites using React, Firebase, and Javascript. My work at my internship with Mist systems involved creating an AI-based interactive program with APs for the company.\n\nFinal school year project:\nhttps://info340d-au18.github.io/project-moffotto/index.html#/",
+        "biggestSoftware": "Slack bot for my internship involving wifi access points that use AI to interpret messages from each server and outputs data according to user input. Allows for users to pinpoint problems and update software remotely using Slack commands. ",
+        "biggestWebApplication": "Web application for medical researchers and bio engineers to use scientific tools and formulas for research and projects. Included dynamic and responsive webpage with ability to store information using React and Firebase. ",
+        "softwareDevelopmentExperience": "3",
+        "webDevelopmentExperience": "5",
+        "webExperiencePeriod": "3 years and 0 months",
+        "workExperiencePeriod": "1 years and 3 months"
+      }
+    },
+    "Tester12": {
+      "ParticipantId": "Tester12",
+      "Strategy1": {
+        "ChallengingToWork": "No challenges. It was pretty straightforward and well-described",
+        "Clarity": "Yes, it was clear for this task, but not applicable as a general solution (where other UI technologies like SPAs are involved). Comparing to the first task, it was very easy, and mostly is a common sense for any UI developer.",
+        "Missing": "Apart from other developers code that may sound confusing to find a CSS style issue, those problems may also occurs when a third-party library is added to UI applications. Such libraries may create conflict with the developer's CSS files. \nIn this strategy a step is missing to check for existing sources of external (in this case Bootstrap) libraries for possible overridden styles in Janky Movement CSS. Although in this task, the cause of the issue was the opposite (style.css was overriding expected bootstrap style), there could have been a heads-up step to watch for such overriding problems by Bootstrap.",
+        "OtherChallenges": "Looking at the \"Sources\" tab in Chrome's developer view to check for the file name and location of the CSS to apply the fix to code base",
+        "RequiredInfo": "I would add an extra step to watch for third-party libraries where it might override existing component styles as well.\nCSS problem solving strategies could consider external sources statements.",
+        "StrategyId": "Auth14"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "Strategy is too broad and not formatted in Roboto.\nApplication is changing on client side through app.js file. I could not capture rendering changes in JMeter nor would it generate a Http response object when a button was clicked. \nBy recording UI changes through Chrome profiling, it was clear that the increasing number of animated images accounts for performance and rendering delays (Animation Frame Fire response time). However, I didn't find the relevant piece of code in Profiling responsible for this action ",
+        "Clarity": "No, it was a hint rather a problem solving strategy. It requires a long Roboto strategy file instead",
+        "Missing": "Detailed steps on how to configure JMeter and setting up a component listener on UI buttons",
+        "OtherChallenges": "-Setting up JMeter, browser proxy and Apache certificates\n-Using Chrome's profiler to try to see for the exact place where rendering delays would occur\n-Inspecting http response with Postman",
+        "RequiredInfo": "How to capture javascript changes in JMeter. ",
+        "StrategyId": "Auth17"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "16:25:8",
+      "WorkExperiences": {
+        "background": "A senior software developer worked on different commercial projects as individual full stack developer, team player or technical lead. Hands-on experience in Java, shell scripting, javascript and SQL languages.\nhttps://www.linkedin.com/in/hootanv/",
+        "biggestSoftware": "Integration and business flow orchestration application at enterprise level with messaging capabilities using microservices",
+        "biggestWebApplication": "An ERP web application consisting of financial, logistics, commercial, and more modules. Client-side development on javascript and jquery, as well as third-party UI components (Oracle ADF). \nDevelopment was around all business related web pages in jspx format, user roles and security modules, custom component with JSTL and taglib, and more.",
+        "softwareDevelopmentExperience": "10",
+        "webDevelopmentExperience": "4",
+        "webExperiencePeriod": "5 years and 0 months",
+        "workExperiencePeriod": "9 years and 0 months"
+      }
+    },
     "Tester2": {
       "ParticipantId": "Tester2",
       "Strategy1": {
@@ -183,6 +245,37 @@
         "webDevelopmentExperience": "2",
         "webExperiencePeriod": "5 years and 0 months",
         "workExperiencePeriod": "7 years and 0 months"
+      }
+    },
+    "Tester7": {
+      "ParticipantId": "Tester7",
+      "Strategy1": {
+        "ChallengingToWork": "Some slight ambiguity regarding the information and explanation regarding the code actions in listed in the expert strategy text. I thought the statements \"SET 'wrongCSSElements' to the elements that have wrong styling appliedFOR EACH 'wrongCSSElement' IN 'wrongCSSElements'\" didn't make much sense and it took me a few more minutes to firmly understand it.",
+        "Clarity": "I thought the strategy I used was clear to some extent. The statements surrounding the wrong CSS elements threw me off guard because of the ambiguity but other than that there really wasn't any more challenges I would say/ ",
+        "Missing": "I think more specific context regarding the preconditions and statements would be better. What is missing here is the same with what the first programming task is missing. ",
+        "OtherChallenges": "None",
+        "RequiredInfo": "Color coding would be better in pointing out which statements are explanations or coding actions. ",
+        "StrategyId": "Auth1"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "What made it challenging to work with this strategy was the fact that the approach didn't make sense to me. Assuming the back-end doesn't work at all is one good way to first approach this issue, but I believe beginning this mindset first may be limiting for other users as they just want to get straight to the point in terms of fixing the issue. I think the first line to insert code, line 24, presented a challenge as it wasn't specific enough nor did it provide insight on why inserting error handling on the timeout was necessary. ",
+        "Clarity": "No I do not think so. I believe the information surrounding the first action presented was ambiguous and lacked clarity. I also believe the statements and actions surrounding line 40 where I am told to insert the error list did not make enough sense especially the statement \"This does not always mean a failure. You will need to decide on context whether to stop the application here, or proceed\"\n            ",
+        "Missing": "More steps and more specific terms as to what errors can arise and why are they caused. I believe color-coding would be extremely crucial as it would be visibly easier to see for the user in terms of what is code, preconditions, statements, and actions.",
+        "OtherChallenges": "None",
+        "RequiredInfo": "Like I mentioned before, I believe that color-coding would and more explanation regarding preconditions and actions would be more suitable in order for one to better understand and follow this strategy. ",
+        "StrategyId": "Auth7"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "0:34:24",
+      "WorkExperiences": {
+        "background": "I've taken several programming classes ranging from front end development like HTML/CSS, JavaScript, to back end like SQL and JAVA.\nhttps://github.com/Jose08101",
+        "biggestSoftware": "The biggest software application I have developed is an application that searches senators, and mayors given on a city or zip code that is typed in the search bar. ",
+        "biggestWebApplication": "The biggest web application I have developed is an application that searches senators, and mayors given on a city or zip code that is typed in the search bar. ",
+        "softwareDevelopmentExperience": "0",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "1 years and 0 months",
+        "workExperiencePeriod": "1 years and 0 months"
       }
     },
     "Tester8": {
