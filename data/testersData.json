@@ -123,6 +123,37 @@
         "workExperiencePeriod": "1 years and 3 months"
       }
     },
+    "Tester11": {
+      "ParticipantId": "Tester11",
+      "Strategy1": {
+        "ChallengingToWork": "I was able to understand this strategy and task as I used the similar strategy \"hovering over the defected html element\" using inspect element. It usually helps identifying and resolving the CSS issue. ",
+        "Clarity": "Yes it was clear to me.",
+        "Missing": "To me this task was well explained.",
+        "OtherChallenges": "None.",
+        "RequiredInfo": "A visual representation of an element will make it easier and faster way for me to understand things. ",
+        "StrategyId": "Auth14"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "I had hard time understanding the strategy such as whats my task or what strategies I need to follow. It was little confusing for me. The reason about not understanding the task is not having a prior experience in analyzing the performance. I tried testing using Jmeter tool for one of the web application which I developed using React js. I was unable to setup it correctly.  ",
+        "Clarity": "It was not clear to me as I mentioned above. I was loosing the context as I was reading more. Too many different things to catch up and this can be because of no prior knowledge in analyzing the performance of web applications.  ",
+        "Missing": "In the expert strategy section, there are two points explained. Its not clear are they related to each other or both are different things.",
+        "OtherChallenges": "It seems an easy task but I was unable to understand it clearly. ",
+        "RequiredInfo": "I would say a detail example for performing this task would be helpful for students like me who develop applications but didn't care about application performance. \n",
+        "StrategyId": "Auth17"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "10:56:26",
+      "WorkExperiences": {
+        "background": "I have been in the field of software development from last 5-6 years. Both of my internships are in web development. \nLindedIn Link: https://www.linkedin.com/in/hassan93 ",
+        "biggestSoftware": "I developed a smart chat using C# language and socket programming in my undergrad. That was my solo project. I used cryptography algorithms such as Vigenere and RSA to make the chat secured over the network. ",
+        "biggestWebApplication": "recently, I developed an application using MVC framework, JavaScript, Java Beans, HTML, CSS, JSP and Oracle SQL server. Basically, it was getting data in the form from the students and based on the entrance of data it navigates the user to a particular JSP page. For navigation, I used Servlet technology. \n",
+        "softwareDevelopmentExperience": "6",
+        "webDevelopmentExperience": "2",
+        "webExperiencePeriod": "0 years and 7 months",
+        "workExperiencePeriod": "0 years and 5 months"
+      }
+    },
     "Tester12": {
       "ParticipantId": "Tester12",
       "Strategy1": {

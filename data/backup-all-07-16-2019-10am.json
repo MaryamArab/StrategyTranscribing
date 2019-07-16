@@ -527,5 +527,901 @@
       "Time": "11:53:51",
       "WebExperience": "7"
     }
+  },
+  "TESTERS": {
+    "T1": {
+      "ParticipantId": "T1",
+      "Strategy1": {
+        "ChallengingToWork": "\nLine # 17: \"Change the desired style to have higher precedence or the shown style to have lower precedence, or change the inheritance structure\" has 2 branches of action but it is not specified when which condition should be selected and perform. \nStatement \"return done\" is used to terminate the strategy, but it seems not telling the user if they finished successfully or cannot find the bug. ",
+        "Clarity": "Its clear, but some sentences are a bit confusing at the first step. For instance \" Move to the portion of the page with the bug\" is a bit confusing what exactly it asked me to do. Maybe using clear keywords helps reducing ambiguity. For instance it can be transcribed as \"Navigate to the elements with defective appearance\"",
+        "Missing": "The strategy just works for one defect at a time. For the pages that have more than one defective style feature, the user should rerun the strategy from the beginning. Maybe having a loop to run the strategy on all the defective elements in a list might be helpful",
+        "OtherChallenges": "Some strategy statements are very general and have many substeps inside them. Maybe having break the big step to small steps may help easier following the strategy without missing any point. \nThe strategy needs a better approach to tell the user if they finished successfully or they should redo the strategy. \nStrategy is not very comprehensive and is just for one defect fixing at a time",
+        "StrategyId": "Pilot9",
+        "requiredInfo": "Having a method to keep variables and list."
+      },
+      "Strategy2": {
+        "ChallengingToWork": "There are many variables in the strategy that were confusing and hard to follow. For example defining 'irregularComponent' seems redundant.\n",
+        "Clarity": "Not in the first glance. Initially I assumed the task is to fix the bugs. So I was looking for ‘fixing’ statements. Aside that, Still I am not sure why in Strategy createErrorHandleCase the variable allErrors' is getting values, specially when the strategy is returning nothing at the end. \n",
+        "Missing": "The type of output from each strategy. It was not clear what is the outcome of each strategy/sub-strategy. Adding that information on top of the strategy as a comment will help.\n",
+        "OtherChallenges": "None.",
+        "RequiredInfo": "I got lost in the strategy mainly because it was hard to distinguish the comment and the statement specially that the natural language is also used in the statements. Using a different coloring or font helps. The same argument holds for strategy calls and variable names.",
+        "StrategyId": "Pilot8"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "15:18:22",
+      "WorkExperiences": {
+        "biggestSoftware": "Bank transaction management application. The app includes querying form database, processing, applying calculations and visualizing data.",
+        "biggestWebApplication": "Bank transaction management web base application. The app includes querying form database, processing, applying calculations and visualizing data.",
+        "softwareDevelopmentExperience": "8",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "2 years and 0 months",
+        "workExperiencePeriod": "7 years and 0 months"
+      }
+    },
+    "T2": {
+      "ParticipantId": "T2",
+      "Strategy1": {
+        "ChallengingToWork": "slhfdnassf",
+        "Clarity": " you think the strategy you used is clear? If not, please specify what was confusing or ambiguous.\n\n",
+        "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
+        "OtherChallenges": " you think the strategy ys of challenges you faced which is not asked above, if any.\n\n",
+        "StrategyId": "Pilot9",
+        "requiredInfo": "dditional information, details, or features would make it easier for you to follow this strategy?"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "otherChallenges",
+        "Clarity": "its not cleare at all",
+        "Missing": "In as much detail as you can remember, please tell us about each of the challenges you experienced as you used this strategy. Please try to share with us what you found to be most difficult in understanding and using the strategy. For each difficulty, be as specific as possible in describing what you wanted to do and what made this hard for you to accomplish.\n\n",
+        "OtherChallenges": "its context relevant",
+        "RequiredInfo": "Additional",
+        "StrategyId": "Pilot3"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "23:4:2",
+      "WorkExperiences": {
+        "biggestSoftware": "5",
+        "biggestWebApplication": "5",
+        "softwareDevelopmentExperience": "5",
+        "webDevelopmentExperience": "5",
+        "webExperiencePeriod": "5 years and 5 months",
+        "workExperiencePeriod": "5 years and 5 months"
+      }
+    },
+    "T4": {},
+    "Tester1": {
+      "ParticipantId": "Tester1",
+      "Strategy1": {
+        "ChallengingToWork": "Line #2 just says you may point to the component. Instead, it could be specific to click ctrl+shift+C to inspect the highlighted element. Doing this would show the respective element in the styles tab where we can quickly make changes. ",
+        "Clarity": "I felt it was clear because I am very much familiar with using this mechanism in the browser. Steps are pretty clear but adding more specifications like I mentioned in my first question’s comment would help.",
+        "Missing": "Not sure if I am right. Here is my observation. Some instructions on how to look for particular element to inspect was missing. I thought that would be clear if you said in Point 2 that, use the arrow in the Inspect element window to select particular element.",
+        "OtherChallenges": "NA",
+        "RequiredInfo": "I think it has everything covered. Pre-conditions, Post-conditions(if necessary) and notes of what a keyword means. So it looks good. ",
+        "StrategyId": "Auth3"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "The steps to be followed were precise and easy to follow and I did not have any difficulty getting through the process. I liked the Line 22 how it explains what we are actually looking for. The preconditions part were apt to move forward with the task. ",
+        "Clarity": "Very much Clear",
+        "Missing": "Nothing. The details were pretty straight forward. I had never used Performance profile when I inspect element but was clear when I followed the steps. ",
+        "OtherChallenges": "I did not know how to use Performance profiler so I had difficulties figuring out the current frame state, network requests, animations but when I followed it twice, I was able to get to it. ",
+        "RequiredInfo": "Nothing. I think it provided with all the details needed to look at the performance. ",
+        "StrategyId": "Auth5"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "13:11:56",
+      "WorkExperiences": {
+        "background": "I have worked for about 4 years in the industry in technologies like ColdFusion, HTML5, CSS, Bootstrap, JQuery, JavaScript, Ajax. In my Master's, I am working on creating web applications using Node.js, Java, Bootstrap, HTML5. \n\nGit Hub: https://github.com/Bhargavicm ",
+        "biggestSoftware": "https://www.healthcaresource.com/pm10ncu_m/index.cfm?fuseaction=search.categoryList&template=dsp_job_categories.cfm\n\nAbove is the demo website. I was part of building the majority of the features for the Job Portal for Hospitals across the US. I worked from India to construct a website that was mobile-friendly using Bootstrap, CSS, and JavaScript.  ",
+        "biggestWebApplication": "There are two biggest web applications that I worked on\n1) Job Portal for the Hospital staffing.\n2) VMWare e-learning and Certifications module. \n\nBoth were built using ColdFusion 5. I helped them to migrate from ColdFusion 5 to ColdFusion 2016 along with a Mobile solution to web applications with advanced features. ",
+        "softwareDevelopmentExperience": "3",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "4 years and 0 months",
+        "workExperiencePeriod": "4 years and 0 months"
+      }
+    },
+    "Tester10": {
+      "ParticipantId": "Tester10",
+      "Strategy1": {
+        "ChallengingToWork": "Precondition for having IDE extension but doesn't specify specific CSS extension on line 4\n",
+        "Clarity": "Insalling git\nLogin into github account\nInstall favorite IDE\nInstall IDE extensions for CSS debug \nSetup prefer debug environment\nOpen files into IDE\nExtension integrated into debug have specific way of debugging issues, would require set of features\n    To debug CSS style\n    To highlight, add notations, add comments where the issues are\n    To view CSS live data with live feedback or solution \n\nMost of the strategy instructions were pretty clear, however, some lines such as line 5 could have been more specific\n",
+        "Missing": "Insalling git\nLogin into github account\nInstall favorite IDE\nInstall IDE extensions for CSS debug \nSetup prefer debug environment\nOpen files into IDE\nExtension integrated into debug have specific way of debugging issues, would require set of features\n    To debug CSS style\n    To highlight, add notations, add comments where the issues are\n    To view CSS live data with live feedback or solution",
+        "OtherChallenges": "None",
+        "RequiredInfo": "Information about what specific extension to install, but the list of features they describe was adequate for me to find an appropriate extension to install\nDetails about how to address the status of each issue\nUsing more of the syntax with Roboto, such as IF, SET, RETURN commands",
+        "StrategyId": "Auth6"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "Install IDE\nImport code base for ErrorHandling\nSTRATEGY ErrorHandling()\n    Add checks for possible error scenarios. Example null pointer exception or out of bounds exception\n          # This line was not very specific and I didn't really know what I should have been looking for in terms of \"possible error scenarios\"\n    Implement a logical flow to notify stakeholders in case of error situation\n          # In order to implement a logical flow the expert's strategy and wording might have been lost on more beginner programmers\n    Write the statements that should get executed regardless of any error scenario \n          # Again, I feel that this statement could be more specific and is difficult for beginner programmers to understand\n",
+        "Clarity": "The strategy is not very clear as it is not very specific in terms of what part of the code to check or how to implement certain strategies such as a \"logical flow\".",
+        "Missing": "Install IDE\nImport code base for ErrorHandling\nSTRATEGY ErrorHandling()\n    Add checks for possible error scenarios. Example null pointer exception or out of bounds exception\n    Create a breakpoint in foreach loops and test the bounds\n    Implement a logical flow to notify stakeholders in case of error situation\n    Write the statements that should get executed regardless of any error scenario\n    \n",
+        "OtherChallenges": "none",
+        "RequiredInfo": "Additional details about what it means to \"implement a logical flow\" and creating the statements for each error scenario would make it easier to follow this strategy. Also if the expert had defined their terms better it would be easier to follow in a step-by-step manner. ",
+        "StrategyId": "Auth8"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "17:54:39",
+      "WorkExperiences": {
+        "background": "I have years of experience in my classes implementing software applications in Java and Python. I also have created several websites using React, Firebase, and Javascript. My work at my internship with Mist systems involved creating an AI-based interactive program with APs for the company.\n\nFinal school year project:\nhttps://info340d-au18.github.io/project-moffotto/index.html#/",
+        "biggestSoftware": "Slack bot for my internship involving wifi access points that use AI to interpret messages from each server and outputs data according to user input. Allows for users to pinpoint problems and update software remotely using Slack commands. ",
+        "biggestWebApplication": "Web application for medical researchers and bio engineers to use scientific tools and formulas for research and projects. Included dynamic and responsive webpage with ability to store information using React and Firebase. ",
+        "softwareDevelopmentExperience": "3",
+        "webDevelopmentExperience": "5",
+        "webExperiencePeriod": "3 years and 0 months",
+        "workExperiencePeriod": "1 years and 3 months"
+      }
+    },
+    "Tester11": {
+      "ParticipantId": "Tester11",
+      "Strategy1": {
+        "ChallengingToWork": "I was able to understand this strategy and task as I used the similar strategy \"hovering over the defected html element\" using inspect element. It usually helps identifying and resolving the CSS issue. ",
+        "Clarity": "Yes it was clear to me.",
+        "Missing": "To me this task was well explained.",
+        "OtherChallenges": "None.",
+        "RequiredInfo": "A visual representation of an element will make it easier and faster way for me to understand things. ",
+        "StrategyId": "Auth14"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "I had hard time understanding the strategy such as whats my task or what strategies I need to follow. It was little confusing for me. The reason about not understanding the task is not having a prior experience in analyzing the performance. I tried testing using Jmeter tool for one of the web application which I developed using React js. I was unable to setup it correctly.  ",
+        "Clarity": "It was not clear to me as I mentioned above. I was loosing the context as I was reading more. Too many different things to catch up and this can be because of no prior knowledge in analyzing the performance of web applications.  ",
+        "Missing": "In the expert strategy section, there are two points explained. Its not clear are they related to each other or both are different things.",
+        "OtherChallenges": "It seems an easy task but I was unable to understand it clearly. ",
+        "RequiredInfo": "I would say a detail example for performing this task would be helpful for students like me who develop applications but didn't care about application performance. \n",
+        "StrategyId": "Auth17"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "10:56:26",
+      "WorkExperiences": {
+        "background": "I have been in the field of software development from last 5-6 years. Both of my internships are in web development. \nLindedIn Link: https://www.linkedin.com/in/hassan93 ",
+        "biggestSoftware": "I developed a smart chat using C# language and socket programming in my undergrad. That was my solo project. I used cryptography algorithms such as Vigenere and RSA to make the chat secured over the network. ",
+        "biggestWebApplication": "recently, I developed an application using MVC framework, JavaScript, Java Beans, HTML, CSS, JSP and Oracle SQL server. Basically, it was getting data in the form from the students and based on the entrance of data it navigates the user to a particular JSP page. For navigation, I used Servlet technology. \n",
+        "softwareDevelopmentExperience": "6",
+        "webDevelopmentExperience": "2",
+        "webExperiencePeriod": "0 years and 7 months",
+        "workExperiencePeriod": "0 years and 5 months"
+      }
+    },
+    "Tester12": {
+      "ParticipantId": "Tester12",
+      "Strategy1": {
+        "ChallengingToWork": "No challenges. It was pretty straightforward and well-described",
+        "Clarity": "Yes, it was clear for this task, but not applicable as a general solution (where other UI technologies like SPAs are involved). Comparing to the first task, it was very easy, and mostly is a common sense for any UI developer.",
+        "Missing": "Apart from other developers code that may sound confusing to find a CSS style issue, those problems may also occurs when a third-party library is added to UI applications. Such libraries may create conflict with the developer's CSS files. \nIn this strategy a step is missing to check for existing sources of external (in this case Bootstrap) libraries for possible overridden styles in Janky Movement CSS. Although in this task, the cause of the issue was the opposite (style.css was overriding expected bootstrap style), there could have been a heads-up step to watch for such overriding problems by Bootstrap.",
+        "OtherChallenges": "Looking at the \"Sources\" tab in Chrome's developer view to check for the file name and location of the CSS to apply the fix to code base",
+        "RequiredInfo": "I would add an extra step to watch for third-party libraries where it might override existing component styles as well.\nCSS problem solving strategies could consider external sources statements.",
+        "StrategyId": "Auth14"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "Strategy is too broad and not formatted in Roboto.\nApplication is changing on client side through app.js file. I could not capture rendering changes in JMeter nor would it generate a Http response object when a button was clicked. \nBy recording UI changes through Chrome profiling, it was clear that the increasing number of animated images accounts for performance and rendering delays (Animation Frame Fire response time). However, I didn't find the relevant piece of code in Profiling responsible for this action ",
+        "Clarity": "No, it was a hint rather a problem solving strategy. It requires a long Roboto strategy file instead",
+        "Missing": "Detailed steps on how to configure JMeter and setting up a component listener on UI buttons",
+        "OtherChallenges": "-Setting up JMeter, browser proxy and Apache certificates\n-Using Chrome's profiler to try to see for the exact place where rendering delays would occur\n-Inspecting http response with Postman",
+        "RequiredInfo": "How to capture javascript changes in JMeter. ",
+        "StrategyId": "Auth17"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "16:25:8",
+      "WorkExperiences": {
+        "background": "A senior software developer worked on different commercial projects as individual full stack developer, team player or technical lead. Hands-on experience in Java, shell scripting, javascript and SQL languages.\nhttps://www.linkedin.com/in/hootanv/",
+        "biggestSoftware": "Integration and business flow orchestration application at enterprise level with messaging capabilities using microservices",
+        "biggestWebApplication": "An ERP web application consisting of financial, logistics, commercial, and more modules. Client-side development on javascript and jquery, as well as third-party UI components (Oracle ADF). \nDevelopment was around all business related web pages in jspx format, user roles and security modules, custom component with JSTL and taglib, and more.",
+        "softwareDevelopmentExperience": "10",
+        "webDevelopmentExperience": "4",
+        "webExperiencePeriod": "5 years and 0 months",
+        "workExperiencePeriod": "9 years and 0 months"
+      }
+    },
+    "Tester2": {
+      "ParticipantId": "Tester2",
+      "Strategy1": {
+        "ChallengingToWork": "No, actually this was very straight forward to work with.",
+        "Clarity": "Yes, it was clear. ",
+        "Missing": "The following is missing 1. Make changes and see if they are appropriate. 2. Take those changes and make it back in the IDE",
+        "OtherChallenges": "None",
+        "RequiredInfo": "No nothing required.",
+        "StrategyId": "Auth3"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "Hover over the NET section to view the CSS component utilized The above line was too confusing for me to understand and also difficult to find.",
+        "Clarity": "Yes, it was a little confusing for me. But many sections were clear. The section especially finding the CSS component. I used chrome but still I was not able to find the NET section to find the CSS component. It took me a long time to find the component. Overall I meant that it was a little difficult to find the NET section while following the instructions.",
+        "Missing": "The optimization is missing from this. The optimize button had no effect when I tried clicking it and I failed to understand the functionality.I was clicking on the optimize button to see what effect it has but I couldn't find any difference when I clicked it.  When You click on the screen on any button, you should get the result. I was trying to see what optimize button is doing But i couldn't see any effect after clicking the button. If the Button has no effect then the Button should not be there on the screen. ",
+        "OtherChallenges": "N/A",
+        "RequiredInfo": "Please try to implement as many steps as you can in the program.",
+        "StrategyId": "Auth5"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ProfilerTask",
+      "Time": "11:11:1",
+      "WorkExperiences": {
+        "background": "I am working as a web developer for the last 3 years and have developed more than 10 web applications and supporting 20+ already developed web applications.",
+        "biggestSoftware": "It is about the loan application for my client.",
+        "biggestWebApplication": "loan application for my client",
+        "softwareDevelopmentExperience": "10",
+        "webDevelopmentExperience": "4",
+        "webExperiencePeriod": "3 years and 0 months",
+        "workExperiencePeriod": "3 years and 0 months"
+      }
+    },
+    "Tester5": {
+      "ParticipantId": "Tester5",
+      "Strategy1": {
+        "ChallengingToWork": "# This Strategy helps impliment error handling for a web application --- But also some stuff about SQLi and databases?\n#Considerations\nUser input\nDatabase Errors \n#Required Knowledge\nWeb application language\nDatabase SQL\nSTRATEGY UserInput()\n# Goal is to limit free-hand input and use strong typing\nUse list-boxes as much as possible   --- What's a list-box?\nUse Try-Catch and log errors\nIF list-boxes cannot be used, validate textboxes\n    Validate datatypes for all enteries\n    IF numberic reject alpha  --- It seems like it would be ok here to specify \"alphabetical characters\". Alpha can also mean a specific symbol, if I'm being nitpicky.\n    IF date validate dates and reject invalid dates\n    IF character Check for injection (SQL and script) AND   --- How? Probably by parameterizing queries / stored procedures.\n       Check for spcial characters   --- Like what? \n    FOR EACH 'textbox' On Page\n        Validate\n    IF Error Found    \n       RETURN Error --- To user? Where?\n    ELSE\n       Submit Page\nSTRATEGY Database()\n# Handle null values, data truncation, invalid datatypes\nIn Queries check values before performing Substring functions   --- Check what about the values? Too vague to be helpful for me.\nUse stored procedures to limit SQL injection --- Don't just limit SQLi. Prevent it entirely using prepared statements or parameterized queries, which actually can prevent it. Stored procedures do not prevent SQLi by default.\nUse IsNull (or NVL) for nulls.  --- Why? In what situation? Does this mean put a string \"IsNull\" in values that will be null in the database instead of leaving them empty?\nCheck for blank values using len(trim(<columnName>)) = 0\nDO NOT USE \"where 1 = 1\" in queries as this allows for --- Factually incorrect, see below. \nSQL injection\nUse Try-Catch and log all errors --- Where? To console? To an internal error log? To somewhere only developers can see? No consideration for what errors to be logged to the user. \n",
+        "Clarity": "\"Use list-boxes as much as possible\" -- I don't know what a list box is.\nThis lacks explanation of why the things in the strategy would be done.",
+        "Missing": "More detail on what to do, ex. \"check\" what? Security depth of knowledge is also missing, especially around SQL injection.",
+        "OtherChallenges": "It is incorrect to state \"DO NOT USE \"where 1 = 1\" in queries as this allows for SQL injection\". This DOES NOT allow for SQL injection inherently. \"1=1\" is a common attack string when testing for SQL injection, but including that as part of a query does not make you any more vulnerable if you have otherwise parameterized your query. source: I am a security engineer...",
+        "RequiredInfo": "See above.",
+        "StrategyId": "Auth9"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "I wasn't able to change the background color to a random color using this strategy, since it's CSS specific and I think that would need to happen in the JavaScript to set the CSS. However, this can help narrow down which style piece needs to be adjusted to set a color like that.\n\nI usually inspect elements by clicking on them and then opening the editor. I can't easily right click on the quickly moving boxes-- I need them to be moving slower to click on. Thus, I would not have been able to resolve this if I hadn't gone to look at the source HTML of the page and select an individual box.",
+        "Clarity": "I think it's fine in clarity. Needs a spell check though.",
+        "Missing": "See below.",
+        "OtherChallenges": "n/a",
+        "RequiredInfo": "This strategy is primarily applicable with Google Chrome. There should be a note on it stating the specific capabilities GC has that allow this strategy to be used. Be explicit about browser capabilities so that it saves people time.\n\n\"element.Style\" -- this is just setting the style property. It might be useful to say how to do that in a bit more detail, or to say something like style property instead of element.Style.",
+        "StrategyId": "Auth13"
+      },
+      "Task1": "ErrorHandlingTask",
+      "Task2": "CssDebuggingTask",
+      "Time": "21:19:2",
+      "WorkExperiences": {
+        "background": "Backend developer + new security engineer. Teaching assistant in R class 3x. Teaching assistant in Python data science class 2x. Teaching assistant in Django Python backend course 1x. Informatics student at University of Washington. ",
+        "biggestSoftware": "n/a",
+        "biggestWebApplication": "Reviewing application using Firebase and React. Create, edit, delete reviews. User login / logout / signup. ",
+        "softwareDevelopmentExperience": "0",
+        "webDevelopmentExperience": "6",
+        "webExperiencePeriod": "1 years and 6 months",
+        "workExperiencePeriod": "0 years and 0 months"
+      }
+    },
+    "Tester6": {
+      "ParticipantId": "Tester6",
+      "Strategy1": {
+        "ChallengingToWork": "line 14 'numberic' --> 'numeric'.   Problem is incomplete json file, but instructions don’t mention to check json file",
+        "Clarity": "yes it was clear.",
+        "Missing": "if statements in the Database() section. more imperative statements instead of functional statements. Never said to check json file. Incomplete data in json file is why some data is displaying while others is not.",
+        "OtherChallenges": "n/a",
+        "RequiredInfo": "color coding headers . more if statements/ imperative statements",
+        "StrategyId": "Auth9"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "The ‘fixCSS’ section seems overly vague. For example this line is not clear to me.         SET 'undesiredStyling' TO the line number and css file found in the search. This  task the html had a typo ( The title was red because ‘class’ was misspelled ‘calss’) and the css file had an extra line that made the background of the buttons beige instead of the colors they are supposed to be. The instructions provide a nice outline of what to do. ",
+        "Clarity": "yes it is clear. ",
+        "Missing": "color coding or some sort of clearer directions. ",
+        "OtherChallenges": "no other challenges",
+        "RequiredInfo": "more elaboration in the STRATEGY ApplyCssToElement(element, style) section. More elaboration on how to find the issue in the js code or how to get the rainbow borders for the blue squares. ",
+        "StrategyId": "Auth13"
+      },
+      "Task1": "ErrorHandlingTask",
+      "Task2": "CssDebuggingTask",
+      "Time": "12:54:27",
+      "WorkExperiences": {
+        "background": "https://github.com/mkMcMahon\n\nwww.matthewkmcmahon.com",
+        "biggestSoftware": "software to test and evaluate different market conditions. needed complex front and back end. multiple types of front end users so many interfaces. ",
+        "biggestWebApplication": "booking and scheduling app for private company",
+        "softwareDevelopmentExperience": "4",
+        "webDevelopmentExperience": "2",
+        "webExperiencePeriod": "5 years and 0 months",
+        "workExperiencePeriod": "7 years and 0 months"
+      }
+    },
+    "Tester7": {
+      "ParticipantId": "Tester7",
+      "Strategy1": {
+        "ChallengingToWork": "Some slight ambiguity regarding the information and explanation regarding the code actions in listed in the expert strategy text. I thought the statements \"SET 'wrongCSSElements' to the elements that have wrong styling appliedFOR EACH 'wrongCSSElement' IN 'wrongCSSElements'\" didn't make much sense and it took me a few more minutes to firmly understand it.",
+        "Clarity": "I thought the strategy I used was clear to some extent. The statements surrounding the wrong CSS elements threw me off guard because of the ambiguity but other than that there really wasn't any more challenges I would say/ ",
+        "Missing": "I think more specific context regarding the preconditions and statements would be better. What is missing here is the same with what the first programming task is missing. ",
+        "OtherChallenges": "None",
+        "RequiredInfo": "Color coding would be better in pointing out which statements are explanations or coding actions. ",
+        "StrategyId": "Auth1"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "What made it challenging to work with this strategy was the fact that the approach didn't make sense to me. Assuming the back-end doesn't work at all is one good way to first approach this issue, but I believe beginning this mindset first may be limiting for other users as they just want to get straight to the point in terms of fixing the issue. I think the first line to insert code, line 24, presented a challenge as it wasn't specific enough nor did it provide insight on why inserting error handling on the timeout was necessary. ",
+        "Clarity": "No I do not think so. I believe the information surrounding the first action presented was ambiguous and lacked clarity. I also believe the statements and actions surrounding line 40 where I am told to insert the error list did not make enough sense especially the statement \"This does not always mean a failure. You will need to decide on context whether to stop the application here, or proceed\"\n            ",
+        "Missing": "More steps and more specific terms as to what errors can arise and why are they caused. I believe color-coding would be extremely crucial as it would be visibly easier to see for the user in terms of what is code, preconditions, statements, and actions.",
+        "OtherChallenges": "None",
+        "RequiredInfo": "Like I mentioned before, I believe that color-coding would and more explanation regarding preconditions and actions would be more suitable in order for one to better understand and follow this strategy. ",
+        "StrategyId": "Auth7"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "0:34:24",
+      "WorkExperiences": {
+        "background": "I've taken several programming classes ranging from front end development like HTML/CSS, JavaScript, to back end like SQL and JAVA.\nhttps://github.com/Jose08101",
+        "biggestSoftware": "The biggest software application I have developed is an application that searches senators, and mayors given on a city or zip code that is typed in the search bar. ",
+        "biggestWebApplication": "The biggest web application I have developed is an application that searches senators, and mayors given on a city or zip code that is typed in the search bar. ",
+        "softwareDevelopmentExperience": "0",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "1 years and 0 months",
+        "workExperiencePeriod": "1 years and 0 months"
+      }
+    },
+    "Tester8": {
+      "ParticipantId": "Tester8",
+      "Strategy1": {
+        "ChallengingToWork": "The boxes were moving very fast and it was almost impossible to right click on them. I had to go through the DOM hierarchy to find them.",
+        "Clarity": "The strategy was easy to follow. ",
+        "Missing": "I think, in this case, animated elements were not considered in this strategy. Plus, only external styling was specified. Also, I could not find the issue with the header class in the dev tools, which happens to be a typo \"calss\" in the html",
+        "OtherChallenges": "Nothing",
+        "RequiredInfo": "Some explanation on how to debug edge cases could make it easier to follow, like how to debug animated elements or how to debug when element's style is manipulated with js. Also, debugging on inline styling could be helpful. ",
+        "StrategyId": "Auth1"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "Some statements were vague like the line \"If the timeout is not defined in a central, configurable location\" and its \"Code:\" part. Also the block with \"syntax or casing\", was not clear at first glance. ",
+        "Clarity": "Overall, The strategy was clear, well organized and easy to follow. ",
+        "Missing": "I think some of the \"Code:\" lines needed more details or explanation. ",
+        "OtherChallenges": "Nothing",
+        "RequiredInfo": "I think it would make it much easier to follow if there were some elaborations on some lines with more comments or example comments. It was much easier much easier to understand the lines with comments specially with example comments.",
+        "StrategyId": "Auth7"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "22:54:22",
+      "WorkExperiences": {
+        "background": "I am senior software developer in Old Dominion University and I am involved in many active development projects, such as Student attendance system, web portal application development and CI/CD projects. \nMy LinkedIn url: https://www.linkedin.com/in/meysam-abolghasemi-7b867998/\n",
+        "biggestSoftware": "Student portal web app amongst others. It involved on implementing a micro-service architecture to integrate the portal with many different services in the university. ",
+        "biggestWebApplication": "Same as above ",
+        "softwareDevelopmentExperience": "10",
+        "webDevelopmentExperience": "7",
+        "webExperiencePeriod": "5 years and 0 months",
+        "workExperiencePeriod": "5 years and 0 months"
+      }
+    }
+  },
+  "REVISIONS": {
+    "Auth1": {
+      "ParticipantId": "Auth1",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "I think I did consider writing the strategy in very simple language. ",
+          "HardAddressing": "I think not being specific and providing enough details in the comment about why the strategy action was ambiguous and didn't make much sense to them makes it hard to address. \nIf the tester had specified why it doesn't make much sense, it could have been easier to address. ",
+          "MakeSense": "Not clearly because I am not sure if the ambiguity is related to the action I wrote, the language I used or because of the variable names I used i.e. \"wrongCSSElements\" and \"wrongCSSElement\". It would have been clear if the tester had mentioned what they thought the action meant to them and what they interpreted off of it.  "
+        },
+        "Clarity": {
+          "AspectForgotten": "I did try to write the strategy in simple terms. ",
+          "HardAddressing": "Nothing",
+          "MakeSense": "Yes, it does and makes sense but again similar to the first question's answer by this tester, providing some details like why they thought certain lines in the strategy were ambiguous and how they interpreted it would be very helpful."
+        },
+        "Missing": {
+          "AspectForgotten": "I think I did consider it. ",
+          "HardAddressing": "Not providing enough details or some example about not having enough info in the strategy makes it hard to understand what could have helped the tester. ",
+          "MakeSense": "Not clear about this comment either. I did provide info at the top of the strategy about what is needed in order to proceed with the strategy task, so I think giving an example like what kind of preconditions and statements the tester was expecting would be helpful. \nIf I'd provided an example would that have made things more clear? \n\nAnd not sure what the tester means by \"What is missing here is the same with what the first programming task is missing.\" as I don't know what is the first programming task here. "
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "N/A",
+          "HardAddressing": "N/A",
+          "MakeSense": "N/A"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "No as I was thinking the colors I saw while writing the strategy would appear the same way to others as well. ",
+          "HardAddressing": "Nothing",
+          "MakeSense": "Yes, it totally does and I would think the same as well but I think this is more about how the strategy was provided to the tester. While writing the strategy, I could see the colors in there. I think Monaco editor was used on that page but I am guessing it wasn't there for the tester. "
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "I didn't consider the animation aspect of html elements for troubleshooting and debugging. ",
+          "HardAddressing": "I think it's not hard to address, I just didn't think of that scenario and should have clarified it in my prerequisites. ",
+          "MakeSense": "Based on the tester's comment in the second question about \"what do you think is missing\" makes this comment clear. Yes, this comment does make sense as it doesn't take animated elements into consideration. "
+        },
+        "Clarity": {
+          "AspectForgotten": "No",
+          "HardAddressing": "N/A",
+          "MakeSense": "Yes"
+        },
+        "Missing": {
+          "AspectForgotten": "Yes, specifying that it doesn't take into consideration animated elements and hover over elements as well. ",
+          "HardAddressing": "If the tested had provided info about why they think this strategy considers only external styling could have been helpful to understand what needs to be done differently to include inline styling in there as well. \n",
+          "MakeSense": "Partially, yes, the first sentence about animated elements not being considered as part of strategy is correct as I didn't consider it, however, it considers inline styling as well as styling specified in the header. Same strategy would apply on troubleshooting inline CSS for elements as those styles would show up on inspecting the element.\nI really didn't understand what the tester is referring to about the header class. "
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "N/A",
+          "HardAddressing": "N/A",
+          "MakeSense": "N/A"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "Yes, it's not a very common scenario so forgot to consider it. ",
+          "HardAddressing": "Writing a strategy that works in all cases is hard to address without making it very generic at which point it may not be helpful to troubleshoot something. ",
+          "MakeSense": "Yes, it does. It's hard to consider all cases while writing a strategy as one may not be a fit-all solution. I think if I had mentioned it covers only specific type of scenarios could have been helpful though. \nOr maybe I could have add animated element section in an if-else. "
+        }
+      },
+      "Tester1": "Tester7",
+      "Tester2": "Tester8",
+      "Time": "19:8:27"
+    },
+    "Auth13": {
+      "ParticipantId": "Auth13",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "Yes, I did. As I mentioned earlier, debugging animated elements specially the ones animated with javascript (like adding/removing DOM elements on intervals), are a bit unorthodox and hard to address.",
+          "HardAddressing": "Animated elements are harder to debug since they can be added and removed from the DOM with javascript. Thus, debugging is not solely and purely related to css anymore and it requires some debugging knowledge of javascript. ",
+          "MakeSense": "It makes sense. I have not anticipated animated elements while writing this strategy"
+        },
+        "Clarity": {
+          "AspectForgotten": "I should have double check my sentences for typos and right grammar. But by the time, I was finished, I was really tired for that. Writing strategy is time consuming in general. because you have to consider many aspects and there will be chances you forget one or two, or in my case many.",
+          "HardAddressing": "I am not sure my grammar was not right or it was typos. ",
+          "MakeSense": "Typo in my sentences or my sentences were not in plain English?!"
+        },
+        "Missing": {
+          "AspectForgotten": "I cannot answer that. ",
+          "HardAddressing": "There is not enough information for me to address this comment. ",
+          "MakeSense": "No"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "no comment",
+          "HardAddressing": "no comment",
+          "MakeSense": "no comment"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "Yes I did. Although I might say that most, if not all, browsers' debugging tools follow a set of standard functionalities, I had google chrome in mind whilst writing the strategy.",
+          "HardAddressing": "Since I have always been using chrome for testing, and not aware of other browsers' debugging tool interfaces, it is hard to have a make a strategy completely browser agnostic. ",
+          "MakeSense": "Absolutely. Although I have mentioned it that preferred browser is google chrome, but I think I have made my strategy specific to chrome. "
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "Yes, as mentioned above, I never anticipated typo in html like class typed as calss, and the reason is when writing the strategy, my mindset was focused on css and not html nor javascript being involved.",
+          "HardAddressing": "Well, I believe I should improve my strategy and this is the best way to get feedback and then come up with a revised and better strategy. Like any other programming, You will have to run your code and check the expected result and then work on improvements. The difference here is your audience is not a machine running your code, It's a human being and it is definitely harder to come up with general yet simple sentences so everyone understand, specially novice developer. ",
+          "MakeSense": "Yes, it does make sense. I believe the statement prior to this statement is not quite linked. Also, I have not anticipated html typo in my debugging. "
+        },
+        "Clarity": {
+          "AspectForgotten": "No comment",
+          "HardAddressing": "Nothing",
+          "MakeSense": "Yes. "
+        },
+        "Missing": {
+          "AspectForgotten": "Not that I think of. ",
+          "HardAddressing": "It is hard to write set of instructions so thoroughly to address all types of scenarios in simple words so everyone can understand, specially in the first try. ",
+          "MakeSense": "I don't understand what the tester means by color coding, but for \"clearer directions\", It make sense. It's always room for improvement and I could have written better and more clearer directions. "
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "no comment",
+          "HardAddressing": "no comment",
+          "MakeSense": "no comment"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "Yes, I never considered js being involved. \nConsidering all the aspects would make your strategy very long and maybe boring (or hard to follow) for the tester",
+          "HardAddressing": "I found it my strategy would have become very large to explain every details. ",
+          "MakeSense": "Ye and no! Yes, I should have added scenarios with js files involved, and no, which part of the ApplyCssToElement? Did the tester mean the concept of priority in css?!\nAlso the \"rainbow borders for the blue squares\", I do not know what that is but I assume it's from the tester's debugging scenario. "
+        }
+      },
+      "Tester1": "Tester5",
+      "Tester2": "Tester6",
+      "Time": "10:41:53"
+    },
+    "Auth3": {
+      "ParticipantId": "Auth3",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "I was for the most part of my work using Firefox browser so I was explaining at a high level rather than getting into details of each step.",
+          "HardAddressing": "An image with a sample webpage would be more beneficial to explain better.\nI use snipping tool a lot to capture something like else for better explanation.",
+          "MakeSense": "Yes.When I say \"point\" to what I meant is ... use the small icon on the  top left  of the browser debugger to pick an element of the webpage.The small pointer icon to the left of \"inspector\" can be used to inspect any part of the webpage.Also I agree that this can be done using ctrl+shift+C.\n"
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": "My comments for Tester#1 applies here as well."
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "N/A",
+          "MakeSense": "100% agree.Should have explained better."
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": "CSS Debugging has greatly improved with the tons of features provided by the browsers itself.\nSince ALL of the CSS issues except for importing the right CSS files can be debugged and resolved using Browser tools there is not much to write in terms of strategy except for highlighting different types of CSS issues like complex CSS issues vs simple CSS issues and then use concrete examples of how to resolve each one."
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "N/A",
+          "HardAddressing": "N/A",
+          "MakeSense": "My guess is Tester2 is familiar with the debugging process so tester2 was able to understand what I mentioned."
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": "My comments for Tester#1 applies here as well."
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": "Yes but I was assuming that at this point the developer of the code is aware of the fact that the new changes should be replaced with the buggy code in the IDE and push the code to GIT after successful testing."
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": "My comments for Tester#1 applies here as well."
+        }
+      },
+      "Tester1": "Tester1",
+      "Tester2": "Tester2",
+      "Time": "13:36:31"
+    },
+    "Auth5": {
+      "ParticipantId": "Auth5",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "NA",
+          "HardAddressing": "There is nothing to address",
+          "MakeSense": "Yes.  Shows that the tester followed the procedure in full"
+        },
+        "Clarity": {
+          "AspectForgotten": "NA",
+          "HardAddressing": "Nothing to address",
+          "MakeSense": "Yes shows understanding"
+        },
+        "Missing": {
+          "AspectForgotten": "NA",
+          "HardAddressing": "Nothing to address",
+          "MakeSense": "Yes it shows understanding"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "I could have added more pre-reqs, possibly.  Hard to consider ALL backgrounds of every developer",
+          "HardAddressing": "Specifying all the pre-reqs can sometimes be hard to predict. ",
+          "MakeSense": "Yes, shows the tester had to familiarize with the profiler "
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "NA",
+          "HardAddressing": "Nothing to address",
+          "MakeSense": "Yes, shows understanding"
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "NA",
+          "HardAddressing": "There is nothing to address",
+          "MakeSense": "Yes.  Shows that the tester followed the procedure in full"
+        },
+        "Clarity": {
+          "AspectForgotten": "I did not consider all the different sections the user would be looking for.  There are a lot of sections in the profile so it could be challenging and time consuming to consider ever deviation. ",
+          "HardAddressing": "Nothing.  It can be addressed",
+          "MakeSense": "Yes.  Shows the user had a hard time finding the NET section"
+        },
+        "Missing": {
+          "AspectForgotten": "I'm not sure since I do not understand where the tester deviated from the strategy",
+          "HardAddressing": "I do not know what button the tester is referring to.  Screen shots would be helpful",
+          "MakeSense": "No.  I don't understand what button the tester is referring to.  The strategy does not mention an optimize button"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "NA",
+          "HardAddressing": "NA",
+          "MakeSense": "NA"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "Perhaps I forgot to include something related to an optimize button.  I'm not sure about the optimize button or where I am supposed to use it. ",
+          "HardAddressing": "I'm not sure what additional steps the tester feels he/she needs for this specific strategy. ",
+          "MakeSense": "Yes. The tester is asking for more steps"
+        }
+      },
+      "Tester1": "Tester1",
+      "Tester2": "Tester2",
+      "Time": "15:8:50"
+    },
+    "Auth9": {
+      "ParticipantId": "Auth9",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "I assumed a certain level of experience in full stack web development.",
+          "HardAddressing": "The need to explain basic null handling in SQL Server and explain web controls.",
+          "MakeSense": "It makes sense and tells me that the reader it not a web developer and not familiar with web control object like list-boxes (drop down list boxes) and the term alpha for alphabetical. Web application do not take symbols as input at the as most user are not aware of the extended ASCII set and more text boxes (or textareas) like the one I am entering this text in now, will not access the keyboard entry of Alt-214 for the alpha character.  "
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "Reader does not know about web-controls.",
+          "MakeSense": "Yes"
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "What to do next is up to the developer as each situation is different.",
+          "MakeSense": "No. "
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "1=1 is a security issue. Best practice not to use it at all",
+          "MakeSense": "Yes"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": "No."
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "",
+          "HardAddressing": "I did not address JSON files.",
+          "MakeSense": "I spelled the word numeric wrong. Not sure where all the JSON file references are coming from."
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "SQL Server is not JSON file based.",
+          "MakeSense": "Does not make sense"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        }
+      },
+      "Tester1": "Tester5",
+      "Tester2": "Tester6",
+      "Time": "13:42:44"
+    },
+    "Pilot2": {
+      "Difficulties": ["Since this is just plain English, why not integrate a grammar checker :)\nbetter tools to author these stratgies "],
+      "ParticipationId": "Pilot2",
+      "StrategyDefinition": "#This Strategy helps you identify bottleneck  in your web application.\\n#Required Tools and Environments\\nChrome web browser\\nA JavaScript project\\n#Required Knowledge\\nBasic knowledge of how to use Chrome DevTools\\nBasic knowledge of javaScript\\nSTRATEGY performanceProfiler()\\n    # You need to first identify potential line of code\\n    # that might cause the performance overhead.\\n    # Look at data structures for any memory leaks\\n    # Look at loops and the code inside them.\\n    # Look at third party APIs calls.\\nHypothesize where in your code the bottleneck are\\nSet 'suspectLines' To the line of code that might cause the bottleneck \\nFor EACH line in 'suspectLines'\\n    # Add large numbers to data structures\\n    # Make the loop execute thousands of time\\n    # Call that third-party API hundreds of time\\n    # If  you do so, you do not need to execute your code for long time\\n    # so that the memory leak surfaces or the bottleneck is obvious  \\n    Amplify line impact\\nSet 'randomLine' to random line of code that IS NOT IN 'suspectLines'\\nFor EACH line in 'randomLine'\\n# These lines are your baseline for how should the code work\\n# Make sure that you set similar values to that \\n# you set to 'suspectLine'  \\n    Amplify line impact\\n#Lood your javaScript through the Chrome web browser\\n#Open up the Chrome DevTools and head to the profiler\\n# Run the application and wait until all the code execute\\nRun the web application through google DevTools\\nFor EACH line in 'suspectLines'\\n    #check how the code you suspect is the problem is acting comparing to \\n    #the code that you are pretty sure has nothing to do \\n    #with the performance issue\\n    check their CPU time and Memory usage and compare to the similar line in randomLine\\n    IF the line in 'suspectLines' has more overhead than the line in 'randomLine'\\n        Fix\\nRETURN nothing\\n",
+      "Time": "18:5:13"
+    },
+    "Pilot3": {
+      "Difficulties": ["", "none", "none", "=)"],
+      "ParticipationId": "Pilot3",
+      "StrategyDefinition": "#Required Tools and Environments\\nBrowser Performance Profiler\\nPerformance problem example\\n#Required Knowledge\\nUnderstandinng of memory leaks, CPU performance hotspot, and chart analysis\\nSTRATEGY findPerformanceHotSpot()\\n    Load web application\\n    cleare previous recording and start recording performance\\n    IF perfomance dive is observable at load time\\n        # perhaps is not CPU related\\n        observe Network Profiler for unusual load times for app's libraries\\n    ELSE\\n       excercise UI to replicate slowdown\\n       stop recording performance\\n       IF UI actions triggers slowdown\\n            go to Performance tab and find frame that matches the slowdown actions\\n            Find timestamp for action start and end, and narrow down the timeline analysis window\\n            Look at the Main thread tab and analyze the call stack\\n            Inspect for unusual calls in the stackframe\\n            IF unusual call behavior found\\n                go to responsible code and comment\\n                repeat this process and compare results\\n            ELSE\\n                Inspect Unexpectedly long local calls in the stackframe \\n                or Event Log where rendering or function call type activities take more time than expected\\n                IF unusual rendering behavior found\\n                    go to responsible code and comment\\n                    repeat this process and compare results\\n                    ELSE\\n                     Try frames before the current one to backtrack the fault and repeat from this STRATEGY from the begining\\n                \\n     \\n",
+      "Time": "16:42:16"
+    },
+    "Pilot4": {
+      "Difficulties": ["Depending on example used to devise the strategy, the description may be different. First I was using my own example, which had problems in the top level of the call stack. But, your example has errors deep down the stack, which added more things to look for.", "Lack of pictures. The help page you give is much better than what I wrote."],
+      "ParticipationId": "Pilot4",
+      "StrategyDefinition": "#Required tools and environment\\nChrome/Chromium Browser\\n#Required knowledge\\nHTML tags\\nJS/CSS proficiency: professional\\nSTRATEGY Profile()\\n    Open the webpage that you want to profile.\\n    Open DevTools and navigate to the Performance tab.\\n    Comprehend the actions you want to profile.\\n    IF you want to only profile the page load time\\n        Click on the \"Start Profiling and reload page\" button.\\n        # Profiling will stop few seconds after page load.\\n        Wait for profiling to finish.\\n    ELSE\\n        Click on the \"Start Profiling button\"\\n        Perform your actions and click \"Stop\" when done\\n    # Each event is a rectangle box. Scrolling should zoom in and out\\n    Observe that the profiler produces a graph of events captured\\n    # Top right red corners indicate events with potential performance issues\\n    SET 'problems' TO events with red top right corners \\n    FOR EACH 'problem' IN 'problems'\\n        click on the event for the problem\\n        # The description should begin with \"Warning\" in red text.\\n        On the pane below, look for a description of the problem.\\n        IF description is not helpful\\n            # Use the child events to drill deep into the stack\\n            Click on the red events below the current event. \\n        Use the link to understand the problem.\\n        Use the Call Stack to locate the source of problem.\\n        Fix it.\\n    Return \"You Did It\"\\n",
+      "Time": "9:52:53"
+    },
+    "Pilot7": {
+      "ParticipantId": "Pilot7",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        }
+      },
+      "Tester1": "T1",
+      "Tester2": "T4",
+      "Time": "18:0:49"
+    },
+    "Pilot9": {
+      "ParticipantId": "Pilot9",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "It's a broad problem with language as a whole, but it was challenging to anticipate how my words would be read. If I had uncertainty when writing a strategy, it's almost certain that whoever read my strategy would also feel uncertain.",
+          "HardAddressing": "I don't know if it'd be particularly hard to address, but I worry about making the strategy too long. I feel like, similar with functions, it's useful to have modularity and succinctness, and I may struggle to maintain that when addressing the comment.",
+          "MakeSense": "It does! I struggled to express the specifics of that action into a strategy, so it ended up being too much information for a single line. I also could have used \"return success\" or \"return failure\" in my strategy, instead of \"return done\"."
+        },
+        "Clarity": {
+          "AspectForgotten": "Again, considering many possible interpretations of my language. It's easier when writing a programming language -- there's a shared context in keywords, but since most of Roboto isn't keywords, it's hard to define a shared context between the writer and the reader. I think that writing in a programming language-esq syntax primes me to write with brevity over clarity, since I can always append with comments instead of writing long-form prose, which might make a better strategy description (and it'd be good to do the comparison).",
+          "HardAddressing": "It takes substantial effort to write a really good, concise, well-written strategies!",
+          "MakeSense": "It does! Again, I totally understand that the language that I choose to use might have a different interpretation or clarity when read."
+        },
+        "Missing": {
+          "AspectForgotten": "It's challenging to have the entire problem domain in my head at once when writing a strategy. There's probably a cognitive load/working-memory argument for why writing strategies is hard.",
+          "HardAddressing": "This is easy to address, I just didn't think to address it when I was writing the strategy.",
+          "MakeSense": "It does! Tester1 recognizes a part of the problem domain that I didn't consider when writing the strategy."
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "I forgot to consider how to make the strategy comprehensive, I also didn't consider how many ways my language would be interpreted and how long steps are hard to parse.",
+          "HardAddressing": "Again, it'd just be effort to write a really really good strategy. There's a lot of care that should be taken with language that I didn't put as much effort into.",
+          "MakeSense": "Yes! It encapsulates many of the other comments that were given -- my strategy encapsulated too much inside a single step and didn't take care of the case of multiple bugs."
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "This question isn't super relevant to a single word response.",
+          "HardAddressing": "It's hard to address a comment that I don't understand!",
+          "MakeSense": "This one doesn't -- it's hard to glean meaning from a single word."
+        }
+      },
+      "Strategy2": {},
+      "Tester1": "T1",
+      "Tester2": "",
+      "Time": "11:13:25"
+    }
+  },
+  "AUTHORS_CONSENT": {
+    "Auth1": {
+      "Agreement": "agree",
+      "Task": "ProfilerTask"
+    },
+    "Auth10": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "Auth11": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "Auth13": {
+      "Agreement": "agree",
+      "Task": "CssDebuggingTask"
+    },
+    "Auth14": {
+      "Agreement": "agree",
+      "Task": "CssDebuggingTask"
+    },
+    "Auth15": {
+      "Agreement": "agree",
+      "Task": "CssDebuggingTask"
+    },
+    "Auth17": {
+      "Agreement": "agree",
+      "Task": "ProfilerTask"
+    },
+    "Auth18": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "Auth2": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "Auth20": {
+      "Agreement": "agree",
+      "Task": "ProfilerTask"
+    },
+    "Auth3": {
+      "Agreement": "agree",
+      "Task": "CssDebuggingTask"
+    },
+    "Auth4": {
+      "Agreement": "agree",
+      "Task": "ProfilerTask"
+    },
+    "Auth5": {
+      "Agreement": "agree",
+      "Task": "ProfilerTask"
+    },
+    "Auth6": {
+      "Agreement": "agree",
+      "Task": "CssDebuggingTask"
+    },
+    "Auth7": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "Auth8": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "Auth9": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "Pilot9": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "T2": {
+      "Agreement": "agree",
+      "Task": "ErrorHandlingTask"
+    },
+    "Test": {
+      "Agreement": "agree",
+      "Task": "CssDebuggingTask"
+    }
+  },
+  "TESTERS_CONSENT": {
+    "Sneha1": {
+      "Agreement": "agree",
+      "Strategy1": "Auth3",
+      "Strategy2": "Auth5"
+    },
+    "T1": {
+      "Agreement": "agree",
+      "Strategy1": "Auth3",
+      "Strategy2": "Auth5"
+    },
+    "T11": {
+      "Agreement": "agree",
+      "Strategy1": "Auth14",
+      "Strategy2": "Auth17"
+    },
+    "Tester1": {
+      "Agreement": "agree",
+      "Strategy1": "Auth3",
+      "Strategy2": "Auth5"
+    },
+    "Tester10": {
+      "Agreement": "agree",
+      "Strategy1": "Auth6",
+      "Strategy2": "Auth8"
+    },
+    "Tester12": {
+      "Agreement": "agree",
+      "Strategy1": "Auth14",
+      "Strategy2": "Auth18"
+    },
+    "Tester2": {
+      "Agreement": "agree",
+      "Strategy1": "Auth3",
+      "Strategy2": "Auth5"
+    },
+    "Tester4": {
+      "Agreement": "agree",
+      "Strategy1": "Auth1",
+      "Strategy2": "Auth7"
+    },
+    "Tester6": {
+      "Agreement": "agree",
+      "Strategy1": "Auth9",
+      "Strategy2": "Auth13"
+    },
+    "Tester7": {
+      "Agreement": "agree",
+      "Strategy1": "Auth1",
+      "Strategy2": "Auth7"
+    },
+    "Tester8": {
+      "Agreement": "agree",
+      "Strategy1": "Auth1",
+      "Strategy2": "Auth7"
+    },
+    "rJv5Vf5lQahz4XWayvRJ": {}
   }
 }
