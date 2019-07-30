@@ -120,6 +120,126 @@
       "Tester2": "Tester6",
       "Time": "10:41:53"
     },
+    "Auth14": {
+      "ParticipantId": "Auth14",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "n/a",
+          "MakeSense": "yes, it does. says exactly what it means"
+        },
+        "Clarity": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "n/a",
+          "MakeSense": "yes"
+        },
+        "Missing": {
+          "AspectForgotten": "I just didn't think about it",
+          "HardAddressing": "I don't think there's anything to tremendously change with my instructions, besides maybe pointing out how to look for unclear variable names or something else that may come from a 3rd party",
+          "MakeSense": "yes it does. I was just focused on issues caused by the developer's own code, not 3rd party libraries"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "see above",
+          "HardAddressing": "not everyone will have the setup required to make this work. the instructions could theoretically call for it, but it's not how I work, so I hadn't considered it.",
+          "MakeSense": "yes, it's another way to apply the fix directly. it only works though in the case where somebody has their editor hooked up to Chrome to allow editing"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "see question 2 response",
+          "HardAddressing": "see question 2 response",
+          "MakeSense": "yes, see question 2 response"
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "n/a",
+          "MakeSense": "yes"
+        },
+        "Clarity": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "n/a",
+          "MakeSense": "yes"
+        },
+        "Missing": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "n/a",
+          "MakeSense": "yes"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "n/a",
+          "MakeSense": "yes"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "writing the strategy had no room for visuals, so I hadn't considered it. if there had been, I absolutely would have",
+          "HardAddressing": "the strategy documentation had no way to include visuals",
+          "MakeSense": "yes, adding visuals would help the guide tremendously"
+        }
+      },
+      "Tester1": "Tester12",
+      "Tester2": "Tester11",
+      "Time": "15:20:5"
+    },
+    "Auth17": {
+      "ParticipantId": "Auth17",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "yes, I was totally forgot that this is web front end works which my ideas how to use Jmeter is not working for this scenarios. ",
+          "HardAddressing": "nope, all i need is come up with new ideas how to do this. ",
+          "MakeSense": "this one make sense to me, I did not understand the requirements when I write strategy, the tester 1 was right, my ideas is not 100% working for this situation. "
+        },
+        "Clarity": {
+          "AspectForgotten": "yes, I was totally forgot that this is web front end works which my ideas how to use Jmeter is not working for this scenarios. ",
+          "HardAddressing": "nope, all i need is come up with new ideas how to do this. ",
+          "MakeSense": "this one make sense to me, I did not understand the requirements when I write strategy, the tester 1 was right, my ideas is not 100% working for this situation. \nOne thing I should is steps by step now to setup Jmeter on machine. However, as developer, i thought everyone should able to do some research on their own and find the way to get it works. I learn about Jmeter on my own and I had to spent time on my own to learn how to set it up and make it works. "
+        },
+        "Missing": {
+          "AspectForgotten": "yes, I was totally forgot that this is web front end works which my ideas how to use Jmeter is not working for this scenarios. ",
+          "HardAddressing": "nope, all i need is come up with new ideas how to do this. ",
+          "MakeSense": "this one make sense to me, I did not understand the requirements when I write strategy, the tester 1 was right, my ideas is not 100% working for this situation. "
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "One thing i didn't know is, if other testers need step by step instruction or overall strategy and they can be on their own to do some research. ",
+          "HardAddressing": "One thing I should is steps by step now to setup Jmeter on machine. However, as developer, i thought everyone should able to do some research on their own and find the way to get it works. I learn about Jmeter on my own and I had to spent time on my own to learn how to set it up and make it works. ",
+          "MakeSense": "yes, it does"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "yes, I was totally forgot that this is web front end works which my ideas how to use Jmeter is not working for this scenarios. ",
+          "HardAddressing": "nope, all i need is come up with new ideas how to do this. ",
+          "MakeSense": "this one make sense to me, I did not understand the requirements when I write strategy, the tester 1 was right, my ideas is not 100% working for this situation. "
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "yes, I was totally forgot that this is web front end works which my ideas how to use Jmeter is not working for this scenarios. ",
+          "HardAddressing": "nope, all i need is come up with new ideas how to do this. ",
+          "MakeSense": "this one make sense to me, I did not understand the requirements when I write strategy, the tester 1 was right, my ideas is not 100% working for this situation. "
+        },
+        "Clarity": {
+          "AspectForgotten": "yes, I was totally forgot that this is web front end works which my ideas how to use Jmeter is not working for this scenarios. ",
+          "HardAddressing": "nope, all i need is come up with new ideas how to do this. ",
+          "MakeSense": "this one make sense to me, I did not understand the requirements when I write strategy, the tester 1 was right, my ideas is not 100% working for this situation. \nOne thing I should is steps by step now to setup Jmeter on machine. However, as developer, i thought everyone should able to do some research on their own and find the way to get it works. I learn about Jmeter on my own and I had to spent time on my own to learn how to set it up and make it works. "
+        },
+        "Missing": {
+          "AspectForgotten": "yes, I was totally forgot that this is web front end works which my ideas how to use Jmeter is not working for this scenarios. ",
+          "HardAddressing": "nope, all i need is come up with new ideas how to do this. ",
+          "MakeSense": "this one make sense to me, I did not understand the requirements when I write strategy, the tester 1 was right, my ideas is not 100% working for this situation. "
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "yes, I was totally forgot that this is web front end works which my ideas how to use Jmeter is not working for this scenarios. ",
+          "HardAddressing": "nope, all i need is come up with new ideas how to do this. ",
+          "MakeSense": "One thing I should is steps by step now to setup Jmeter on machine. However, as developer, i thought everyone should able to do some research on their own and find the way to get it works. I learn about Jmeter on my own and I had to spent time on my own to learn how to set it up and make it works. "
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "yes, I was totally forgot that this is web front end works which my ideas how to use Jmeter is not working for this scenarios. ",
+          "HardAddressing": "nope, all i need is come up with new ideas how to do this. ",
+          "MakeSense": "this one make sense to me, I did not understand the requirements when I write strategy, the tester 1 was right, my ideas is not 100% working for this situation. "
+        }
+      },
+      "Tester1": "Tester12",
+      "Tester2": "Tester11",
+      "Time": "11:13:41"
+    },
     "Auth3": {
       "ParticipantId": "Auth3",
       "Strategy1": {
@@ -239,6 +359,66 @@
       "Tester1": "Tester1",
       "Tester2": "Tester2",
       "Time": "15:8:50"
+    },
+    "Auth7": {
+      "ParticipantId": "Auth7",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "Yes. I should have explained why I was assuming the backend was not available, and why this assumption makes sense. This did not occur to me that it could be controversial, but now it's obvious that it was an oversight.",
+          "HardAddressing": "Because I did not know the starting point or ecosystem of a developer actually using this strategy, I had to make some key assumptions (e.g. that they are only a front end developer and I cannot ask them to modify the back end code). ",
+          "MakeSense": "Only partially. I can't tell if the objection is to my key assumption (back end not available) or if the objection is to how I attempted to keep the strategy as generic as possible."
+        },
+        "Clarity": {
+          "AspectForgotten": "Yes. I meant to come back to this item and elaborate on it further, but I forgot. It would have been helpful to have a way to tag items that were not complete.",
+          "HardAddressing": "It would have taken significant additional time to spell out the some examples of the contexts in which this should be considered a failure, or not a failure. However, the wording \"stop the application\" was probably a bad choice. I should have said something more like \"return the error list now, or continue trying to execute the application\"",
+          "MakeSense": "Not really. Since I don't know the context in which the strategy is being used, there are some questions I can't fully answer."
+        },
+        "Missing": {
+          "AspectForgotten": "No, I don't believe I forgot anything. The example strategies I was shown did not contain sample code (that I recall). The interface I was provided did not allow me to add color-coding so I could not address it.",
+          "HardAddressing": "The assignment was so broad, I was a little lost as to whether specific examples could even be created for the strategy or if I should keep the focus on philosophy, not implementation.",
+          "MakeSense": "Yes, I agree with it."
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "N/A",
+          "HardAddressing": "N/A",
+          "MakeSense": "N/A"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "I should have asked for more clarification about how to format my strategy before submitting it. This was hard to consider because I was already late in submitting my strategy, and I did not believe the formatting was what was being studied.",
+          "HardAddressing": "The interface I was provided did not allow me to add color-coding (as far as I know)",
+          "MakeSense": "Yes. I 100% agree with the comment. I could not always follow my own strategy as I was writing it."
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "No. I considered this aspect, but I did not find a solution (see above).",
+          "HardAddressing": "I felt that the original assignment asked me to be generic as possible. I could not be more specific without knowing the language (or at least family of languages) used, and especially without knowing the architecture. If I were to assume a specific architectural context, and ask a more specific question, a less experienced developer might have answered \"No, I don't have one of those\" when in fact they had a logical equivalent for their ecosystem. This is a problem that also happens in the real world. Gaining context about the exact problem being solved is key when mentoring a less experienced programmer.",
+          "MakeSense": "Yes. It's a fair criticism and a weakness in the strategy of which I was already aware."
+        },
+        "Clarity": {
+          "AspectForgotten": "N/A",
+          "HardAddressing": "Nothing",
+          "MakeSense": "Yes"
+        },
+        "Missing": {
+          "AspectForgotten": "Based on the recommended time to complete the strategy, I assumed that this level of detail was not expected. ",
+          "HardAddressing": "It would have been time-consuming to add these suggested additions, and it's also hard to guess what the commenter thought was missing. I need more information about what they would have liked to see.",
+          "MakeSense": "Yes. I was concerned about this when I submitted the strategy."
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "N/A",
+          "HardAddressing": "N/A",
+          "MakeSense": "N/A"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "Based on the recommended time to complete the strategy, I assumed that this level of detail was not expected. ",
+          "HardAddressing": "It would have been time-consuming to add these suggested additions. The example strategies I was shown did not contain sample code (that I recall).",
+          "MakeSense": "Yes. In my experience, there is no such thing as too many examples when sharing programming strategies. "
+        }
+      },
+      "Tester1": "Tester7",
+      "Tester2": "Tester8",
+      "Time": "23:58:49"
     },
     "Auth9": {
       "ParticipantId": "Auth9",

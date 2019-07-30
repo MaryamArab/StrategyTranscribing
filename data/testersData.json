@@ -185,6 +185,68 @@
         "workExperiencePeriod": "9 years and 0 months"
       }
     },
+    "Tester13": {
+      "ParticipantId": "Tester13",
+      "Strategy1": {
+        "ChallengingToWork": "In overall the strategy was well written and could be easily followed. The only challenge I had, it was not clear for me if I necessarily have to reach to the answer and fix the problem or there was not need for fixing it.\nFrom the following line :\"First look at the three individual runs of the action and see if the performance is consistent\", I couldn't follow the instructions\n since I didn't know how to read the saved profiler files to check the performance and find out if it's consistent or if any improvement was there in any specific time.",
+        "Clarity": "Yes, it was clear. \nJust lack of some detail information was the problem for me.",
+        "Missing": "Probably a little details about reading the recorded profilers and figure out how much time each section is taking. Since the saved log files contain a lot of information and finding the relevant ones were difficult for me. ",
+        "OtherChallenges": "Nothing more",
+        "RequiredInfo": "Like the simple instruction given for opening the chrome developer tool (pressing F12), I was looking for something to teach me how to use the recorded files in order to find and fix the issue.",
+        "StrategyId": "Auth20"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "The flow of the strategy was fine to read and understand it but it didn't help me to locate the issue.It was like a general sudo-code that was written to help a developer to handle all potential errors. But as a tester, it couldn't help me to find the issue, i found the strategy more useful for developer of the application rather than its tester.",
+        "Clarity": "It was clear but in a wrong point of view, I think!",
+        "Missing": "the point of view of the strategy writer as a tester. It was also too general as I said like a sudo code for me.",
+        "OtherChallenges": "Nothing special",
+        "RequiredInfo": "the detail of how to find the issue and fix it. I know all possible inputs from user should be checked and any potential error should be handled, but knowing how to fix if any of them is not correctly handled was something that I was expecting to be leaded by reading the strategy. ",
+        "StrategyId": "Auth18"
+      },
+      "Task1": "ProfilerTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "23:55:4",
+      "WorkExperiences": {
+        "background": "I have experience in Java programming language and Python. Currently I'm working with Python for my research project. I've done web-application development just in a semester as the requirement of my coursework and unfortunately, I forgot most of them by now :D",
+        "biggestSoftware": "All my software experience are related to my class and research projects so definitely I'm not an expert developer.",
+        "biggestWebApplication": "just two class projects: a marketplace (as a member in a group 3 people) and creating a home page in university public directory",
+        "softwareDevelopmentExperience": "1",
+        "webDevelopmentExperience": "2",
+        "webExperiencePeriod": "0 years and 3 months",
+        "workExperiencePeriod": "2 years and 5 months"
+      }
+    },
+    "Tester15": {
+      "ParticipantId": "Tester15",
+      "Strategy1": {
+        "ChallengingToWork": "The strategy has lots of required features to be checked. First the TO key words at the beginning of the statement are a little confusing for me. It took me a while to understand they are asking me to check or share  some issues. Additionally they are very generally described. I need more descriptiona nad detail about how I should pass each feature requirements. For instance, how I should debug Css at line #8. I assume I would have a strategy to tell me how to debug CSS, but it is just a line of statement.\nAnother major challenging part could be using Github for users who are not familiar working with Github.\nGenerally speaking, all the statements are very general and high level description of the action that user should take. They need to have more detailed description of the actions user needs to take.",
+        "Clarity": "Not very clear. It took me a while to understand what statements asked me to do.",
+        "Missing": "Detailed description of all the statements are missing.",
+        "OtherChallenges": "Generally all the statements are very challenging to understand what I should do . ",
+        "RequiredInfo": "Just better description of the statemnets",
+        "StrategyId": "Auth6"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "What could be possible error scenarios? How can I make sure that I cover all the scenarios? \nWhat it means by implementing a alogical flow? And how should I implement it?\nWhat does the strategy by \"Write the statements that should get executed regardless of any error scenario\" ? It is challenging as it could have many different meaning for the statement.",
+        "Clarity": "It is very high level description. It is clear but not usable.",
+        "Missing": "The strategy is very high level description of the steps. I need more steps including more detailed description of what I need to do and check",
+        "OtherChallenges": "Many words that are used like stockholders, statement, possible error scenarios, and logical flow is used as it is a very common word that everybody should understand what it is. As I said, more description adding make it usable and less challenging",
+        "RequiredInfo": "More description on what part of the code should I check and what are most probable places for errors happening|? Edge cases should be described to cover and not being missed. In general, detailed description of steps make it easier to follow to be productive.",
+        "StrategyId": "Auth8"
+      },
+      "Task1": "CssDebuggingTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "13:42:17",
+      "WorkExperiences": {
+        "background": "I have worked in a small personal business company in which we developed the other companies requested applications.",
+        "biggestSoftware": "I developed a card producer application which retrieve information of users and print a personal card for them. It was a desktop application",
+        "biggestWebApplication": "A front end web application for a course work.",
+        "softwareDevelopmentExperience": "6",
+        "webDevelopmentExperience": "2",
+        "webExperiencePeriod": "2 years and 0 months",
+        "workExperiencePeriod": "4 years and 0 months"
+      }
+    },
     "Tester2": {
       "ParticipantId": "Tester2",
       "Strategy1": {
