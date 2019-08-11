@@ -352,6 +352,37 @@
         "workExperiencePeriod": "9 years and 0 months"
       }
     },
+    "Auth29": {
+      "CommonDifficulties": {
+        "ConcentrationDifficulty: ": "To write a strategy in a generalized manner required a lot of concentration to ensure all scenarios were covered in it. ",
+        "ConcentrationDifficulty_Idea: ": "agree",
+        "GuidelinesSupportDifficulty: ": "More examples will definitely help. ",
+        "GuidelinesSupportDifficulty_Idea: ": "agree",
+        "NoviceUnderstandabilityDifficulty : ": "Some problems/programming scenarios have multiple layers of complexity. To write strategy for novices, these complexities must be abstracted but it should also make sense. Achieving this balance is difficult.  ",
+        "NoviceUnderstandabilityDifficulty_Idea: ": "stronglyAgree",
+        "RobotoSupportDifficulty: ": "I believe the language does not serve its purpose if comments are required  to explain steps. Regular spoken languages could be more effective than a structured language to convey a process in certain scenarios, especially for novices. ",
+        "RobotoSupportDifficulty_Idea: ": "disagree",
+        "StrategyEndingDifficulty: ": "If the person writing the strategy understands the problem, terminating it would not be a problem.",
+        "StrategyEndingDifficulty_Idea: ": "stronglyDisagree",
+        "TimeConsumptionDifficulty: ": "It is in fact interesting, as it made me realize my process. Many crucial steps are instinctively done and can easily be looked over during the documentation process.",
+        "TimeConsumptionDifficulty_Idea: ": "disagree",
+        "TranslationDifficulty": "Most strategies are developed from the experience of dealing with the same problem over time. This becomes instinctive and is hard to formulate it in a coherent manner.",
+        "TranslationDifficultyIdea": "stronglyAgree"
+      },
+      "OtherDifficulties": [],
+      "StrategyDefinition": "# This strategy helps developers identify all the potential errors in an UI component. \\n\\n# The principle behind this strategy is to rely on whitelisting rather than blacklisting. \\n\\n# It is more effective and efficient to look for what is required than what is not required.\\n\\n\\n\\n# Required tools and environments\\n\\nTechnical specifications and requirements for the component\\n\\nUI Automation Testing tools based on framework\\n\\nError Message display component\\n\\n\\n\\n# Required Knowledge\\n\\nBasic design principles\\n\\nWeb UI and html elements\\n\\n\\n\\nSTRATEGY errorHandler()\\n\\n    # List all UI elements in the component such as buttons, plain text, images, input fields, etc\\n\\n    List all UI elements in the UI component\\n\\n    \\n\\n\\n# Separate if the element is interactive like a button or input field or if it is static like text or image\\n\\n    FOR EACH element in component\\n\\n        \\n\\n\\n\\nIF element is interactive\\n\\n            # Find all valid input parameters that the element can accept, a text field that accepts only aplha-numeric characters\\n\\n            # Create validation methods for each parameter, if requirement of that parameter is not met, appropriate error message stating the requirement is returned\\n\\n            Identify all valid input parameters\\n\\n            FOR EACH parameter in list \\n\\n                Create a validation method that \\n\\n                RETURNS error message\\n\\n\\n\\n\\n\\n\\n\\n\\n# Identify all expected behavior (disabled after submission, replace text to a loading icon, etc) of the element. \\n\\n\\n\\n\\n# If the element deviates from the expected behavior display error message stating the missing behavior.\\n\\n\\n\\n\\nIdentify all the functionalities of the element\\n\\n\\n\\n\\nFOR EACH functionality of element\\n\\n\\n\\n\\n\\nCreate test method \\n\\n                RETURNS error message if output is different from expected output\\n\\n\\n\\n\\n\\n\\n\\n# For both interactive and non interactive elements, identify all the properties (size, color, text, etc) of the element. \\n\\n\\n\\n# If the element does not exhibit a certain property display error message stating the expected property.\\n\\n\\n\\nIdentify all the proeprties of the element\\n\\n\\n\\nFOR EACH property of element\\n\\n\\n\\n\\nCreate verification method that \\n\\n            RETURNS error message if absent\\n\\n\\n\\n\\n\\n\\n\\nRETURNS nothing",
+      "Task": "ErrorHandlingTask",
+      "Time": "Sat Aug 03 2019 16:56:38 GMT-0400 (Eastern Daylight Time), 16:56:38",
+      "WorkExperiences": {
+        "background": "Developed several software applications, mainly web based applications using html, css, javascript. Other known languages include Python and Java. Familiar with multiple web frameworks, most with angular and node. Applications implemented vary from content management system to captcha to online ide. \n\nhttps://www.linkedin.com/in/pauravsurendra/",
+        "biggestSoftware": "Currently developing an enterprise software platform for universities to provide experiential opportunities to its students. The platform hosts thousands of users and opportunities listings. Provides API and non API integrations with campus systems and learning management systems. I am the lead developer in the project, responsible for building most parts of system (both front end and back end) along with system design, deployment and maintenance. ",
+        "biggestWebApplication": "The above mentioned platform is a web based application.",
+        "softwareDevelopmentExperience": "6",
+        "webDevelopmentExperience": "-2",
+        "webExperiencePeriod": "2 years and 5 months",
+        "workExperiencePeriod": "3 years and 0 months"
+      }
+    },
     "Auth3": {
       "CommonDifficulties": {
         "ConcentrationDifficulty: ": "I just need to remember all the situations I was in and how I resolved the issues.",
