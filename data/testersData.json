@@ -1,5 +1,5 @@
 {
-  "TESTERS": {
+"TESTERS": {
     "T1": {
       "ParticipantId": "T1",
       "Strategy1": {
@@ -216,6 +216,37 @@
         "workExperiencePeriod": "2 years and 5 months"
       }
     },
+    "Tester14": {
+      "ParticipantId": "Tester14",
+      "Strategy1": {
+        "ChallengingToWork": "DoPerformAction()\nThis action is unclear unless we click on the help tab on the application that explains it clearly\nOpening the json file and analyzing it took some time too.",
+        "Clarity": "No confusions expect for DoPerformAction().",
+        "Missing": "An explanation for DoPerformAction() function\nPress the record button inside the below loop  \n  FOR i = 0; i < 3; i++\n        # Perform the action causing performance problems        \n        # Allow the page to complete loading\n        DoPerformAction()\n    Stop recording",
+        "OtherChallenges": "None",
+        "RequiredInfo": "Accessing the json file for comparison, a performance metric that specifies the amount of time we must do the profiling for.",
+        "StrategyId": "Auth20"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "it was difficult to skim through the jquery code",
+        "Clarity": "i found UIInErrorState() a little difficult to work with",
+        "Missing": "A little more elaboration on the data types, probably use json",
+        "OtherChallenges": "none",
+        "RequiredInfo": "Use json",
+        "StrategyId": "Auth18"
+      },
+      "Task1": "ProfilerTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "13:5:33",
+      "WorkExperiences": {
+        "background": "I have an undergraduate degree in computer science during which i was exposed to various programming languages and projects and i have 1 year experience as a web developer in a multi-national company, currently i'm a graduate student at Mason majoring in information security. ",
+        "biggestSoftware": "I was web application developer",
+        "biggestWebApplication": "Developed an application that was aimed to detect denial of service attacks that would detect based on faulty ip addresses and keeps track of the number of requests that was sent from the same computer to avoid flooding the server with invalid requests to render it useless.",
+        "softwareDevelopmentExperience": "0",
+        "webDevelopmentExperience": "4",
+        "webExperiencePeriod": "1 years and 0 months",
+        "workExperiencePeriod": "1 years and 0 months"
+      }
+    },
     "Tester15": {
       "ParticipantId": "Tester15",
       "Strategy1": {
@@ -245,6 +276,99 @@
         "webDevelopmentExperience": "2",
         "webExperiencePeriod": "2 years and 0 months",
         "workExperiencePeriod": "4 years and 0 months"
+      }
+    },
+    "Tester16": {
+      "ParticipantId": "Tester16",
+      "Strategy1": {
+        "ChallengingToWork": "The main challenge that I experienced was looking for data format conversions because it took a lot of time combing through the whole flow of data input and everywhere that any data is manipulated.",
+        "Clarity": "I did think that the strategy was clear, nothing was really confusing.",
+        "Missing": "I think that detail around writing tests was missing, as it is important to feel confident that any changes made won't cause any regressions. ",
+        "OtherChallenges": "  ",
+        "RequiredInfo": "I didn't have a very difficult time following the strategy; I think the only thing that may have made it easier was if there were examples of the steps in addition to the description.",
+        "StrategyId": "Auth22"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "The main challenge that I observed was knowing which css properties to look for, as I usually use libraries to style my work, instead of using custom css. The other challenge was that sometimes a property with a strikethrough could not be overwritten.",
+        "Clarity": "I did think the strategy was clear, I did not have trouble following the instructions.",
+        "Missing": "A reference to general css would have been helpful.",
+        "OtherChallenges": "  ",
+        "RequiredInfo": "Understanding from where and how the styles are inherited would have been helpful. The list in the inspect panel isn't very descriptive, but if the strategy included some details that could have been helpful.",
+        "StrategyId": "Auth23"
+      },
+      "Task1": "ErrorHandlingTask",
+      "Task2": "CssDebuggingTask",
+      "Time": "22:31:4",
+      "WorkExperiences": {
+        "background": "Have worked at startups, which allows me to choose what I would like to work on and define projects that I think will be valuable to the company. I also am able to pair program with very senior engineers who want to spend time on my projects. Feel free to peruse my LinkedIn https://www.linkedin.com/in/jessica-libman/ . ",
+        "biggestSoftware": "Cannot give specifics; created architecture and built application that is in the Apple App Store and Google Play Store, each with hundreds of thousands of downloads. Wrapped react-redux app in Cordova and uses rxjs and reselect.",
+        "biggestWebApplication": "Cannot give specifics; created user management system involving organization and personal license management for an internal tool. Uses react and rxjs, and kotlin in the backend.",
+        "softwareDevelopmentExperience": "6",
+        "webDevelopmentExperience": "3",
+        "webExperiencePeriod": "4 years and 0 months",
+        "workExperiencePeriod": "3 years and 2 months"
+      }
+    },
+    "Tester17": {
+      "ParticipantId": "Tester17",
+      "Strategy1": {
+        "ChallengingToWork": "The given strategy is kind of similar to my one. But the only thing missing is I thought of doing automation strategy for these kinds of UI testing. Apart from that everything is pretty clear. Also, the instructions and details are kinds of too much and also to mention there should be minor changes like chrome dev tools shortcut(ctrl+shift+I), etc.",
+        "Clarity": "Yes, it's clear.",
+        "Missing": "Everything is good and mostly matches with my strategy except that I thought of testing each component that testing the performance of the whole UI. ",
+        "OtherChallenges": "N/A",
+        "RequiredInfo": "Nothing Everything is pretty clear",
+        "StrategyId": "Auth24"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "IF by changing or unhiding the properties you see the correct rendering result\n\nI felt this line was a bit confusing because the above line already covers the properties part.",
+        "Clarity": "Nothing, everything is pretty clear",
+        "Missing": "I think there are other ways for doing it within the IDE and fixing the issues instead of checking it continuously in the browser(like plugins) ",
+        "OtherChallenges": "N/A",
+        "RequiredInfo": "You can add pictures at some spots which makes it way more simple.",
+        "StrategyId": "Auth23"
+      },
+      "Task1": "ProfilerTask",
+      "Task2": "CssDebuggingTask",
+      "Time": "2:9:17",
+      "WorkExperiences": {
+        "background": "https://linkedin.com/in/anneharun/",
+        "biggestSoftware": "Request Manager which is a Human resources website specifically designed for a Financial company. It is used to manage all the request Id and Case Id details.",
+        "biggestWebApplication": "Request Manager which is a Human resources website specifically designed for a Financial company. It is used to manage all the request Id and Case Id details.",
+        "softwareDevelopmentExperience": "7",
+        "webDevelopmentExperience": "4",
+        "webExperiencePeriod": "2 years and 0 months",
+        "workExperiencePeriod": "2 years and 6 months"
+      }
+    },
+    "Tester18": {
+      "ParticipantId": "Tester18",
+      "Strategy1": {
+        "ChallengingToWork": "\nThe developer tools shortcut did not seem to work. I had to open them through the navigation menu on the top of the screen. Furthermore, the comments seemed distracting. When I'm following a list of actions, I'm used to doing one step after the other instead of pausing to read about what is happening. It made me forget which step I just completed. \nConfused about the return statements in context of instructions (ie. line 29).\nFor lines 19 and 30, the conditionals require us the know the solution before performing the steps under it. So when I got to those steps, I was not sure if the conditionals were true or false, but still did the steps underneath.",
+        "Clarity": "The conditional statements are confusing. When I read the prompt, I was expecting a strategy similar to a flow chart that would lead to one performance problem based on performing a certain action and seeing a certain result. This strategy accomplished that except the If statements confused me on how to check for them.",
+        "Missing": "I don't think it's missing anything. On the contrary, there seems to be too much information ",
+        "OtherChallenges": "NA",
+        "RequiredInfo": "Instead of the definitions embedded between the actions, it would be better if the definitions could be small popups. So if a user is confused about a certain term, they could hover over that term, and see the definition. ",
+        "StrategyId": "Auth24"
+      },
+      "Strategy2": {
+        "ChallengingToWork": "This instruction was confusing:     SET 'markdownNotes' to a filename such as PotentialErrors.md",
+        "Clarity": "Yes",
+        "Missing": "This strategy is not missing anything",
+        "OtherChallenges": "NA",
+        "RequiredInfo": "I believe this strategy is very clear and easy to follow",
+        "StrategyId": "Auth22"
+      },
+      "Task1": "ProfilerTask",
+      "Task2": "ErrorHandlingTask",
+      "Time": "20:27:15",
+      "WorkExperiences": {
+        "background": "After graduating from GMU with BS-CS two years ago, I have worked as a PL/SQL and Java developer. My web development experience comes from some of the technologies I have personally explored as well as the projects I have done for my web development classes in my masters program.\nLinkedin: https://www.linkedin.com/in/maleehafarukh/",
+        "biggestSoftware": "At one of my jobs, I worked with SQL to write dynamic queries that would modify data from a database based on what selections the user makes on an analytics application. ",
+        "biggestWebApplication": "I recently made a web application for one of my graduate classes. It is a student survey form that allows students to take surveys, save their surveys, which are then persisted to the database. The students can also view their old surveys and edit them. ",
+        "softwareDevelopmentExperience": "3",
+        "webDevelopmentExperience": "2",
+        "webExperiencePeriod": "1 years and 0 months",
+        "workExperiencePeriod": "2 years and 3 months"
       }
     },
     "Tester2": {
