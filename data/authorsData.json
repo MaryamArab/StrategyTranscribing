@@ -1,4 +1,5 @@
-{"AUTHORS": {
+{
+  "AUTHORS": {
     "0jfziD4HY6xwCE0FKfO0": {
       "CodebaseRequirements": "The developer should know where the metal image processing pipeline exists in the codebase",
       "Defect": "Using a Metal backed core image context to render to a MTKView",

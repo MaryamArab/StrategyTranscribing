@@ -240,6 +240,126 @@
       "Tester2": "Tester11",
       "Time": "11:13:41"
     },
+    "Auth22": {
+      "ParticipantId": "Auth22",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "I think instructions with \"such as\" might be better for comments, while instructions in something like SET should be explicit to help with clarity.",
+          "HardAddressing": "This comment isn't hard to address.",
+          "MakeSense": "Yes, this comment makes sense - the reviewer included the instruction in the feedback."
+        },
+        "Clarity": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "n/a",
+          "MakeSense": "yes, thanks :) it's clear feedback"
+        },
+        "Missing": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "I don't think it's difficult to address; the tester isn't requesting anything.",
+          "MakeSense": "Yes, thank you for the feedback!"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "n/a",
+          "MakeSense": "Makes sense! They were able to provide their feedback in other sections."
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "The tester does not request changes.",
+          "MakeSense": "It makes sense! :)"
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "I should have included some kind of data flow diagram as a comment to help with this.",
+          "HardAddressing": "It would help a little bit to know if a specific instruction confused them, or just the whole thing. I don't think this is difficult feedback to address, though.",
+          "MakeSense": "I'm 90% sure I understand what it means, it's great feedback."
+        },
+        "Clarity": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "n/a",
+          "MakeSense": "yes, thanks :) it's clear feedback."
+        },
+        "Missing": {
+          "AspectForgotten": "I didn't think enough about regressions; this is really thoughtful feedback.",
+          "HardAddressing": "This is a really helpful comment and not difficult to address.",
+          "MakeSense": "Makes sense, this is very thorough feedback."
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "n/a",
+          "HardAddressing": "n/a",
+          "MakeSense": "Makes sense! They were able to provide their feedback in other sections."
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "In my own experience debugging, I've always found examples helpful. I should have extended that to my strategy to help my testers have a more relaxing time :)",
+          "HardAddressing": "This is not difficult to address, this is really helpful feedback.",
+          "MakeSense": "Yes, it makes sense because I could see how the suggestion would have helped."
+        }
+      },
+      "Tester1": "Tester18",
+      "Tester2": "Tester16",
+      "Time": "18:54:4"
+    },
+    "Auth23": {
+      "ParticipantId": "Auth23",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "Already considered",
+          "HardAddressing": "N/A",
+          "MakeSense": "Yes. The IF clause mentioned by tester does a different action and is not covered in the previous statement"
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Missing": {
+          "AspectForgotten": "Yes, the strategy was developed as a general solution",
+          "HardAddressing": "CSS debugging is widely done through browsers, and the audience of this strategy was considered accordingly",
+          "MakeSense": "Yes, it's completely a different approach and will tie users to specific IDE requirements"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "No, adding pictures was not supported",
+          "HardAddressing": "Limitations on Roboto to add screenshots or links to pictures (Roboto could have included links to pictures from a repository)",
+          "MakeSense": "Yes"
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "Yes, already considered",
+          "HardAddressing": "The strategy is intended for all existing css files. It's also mentioned in the comment as below:\n# You will see all the applied CSS files to the selected UI component \n\nFor the second part of the comment, it was not mentioned to overwrite the striked though component, but rather finding the parent component of the striked-through:\nIF 'cssProperty' is striked through\n        # Check for the same property name throughout the Styles tab\n        IF there is an \"Inherited from\" word for the CSS selector of the 'cssProperty' ...\n            Click on the component next to \"Inherited from\" ...",
+          "MakeSense": "Yes, the first part of this comment is not valid because the tester missed reading the comment for all css files. The second part also might have been misunderstood by tester"
+        },
+        "Clarity": {
+          "AspectForgotten": "N/A",
+          "HardAddressing": "N/A",
+          "MakeSense": "All clear"
+        },
+        "Missing": {
+          "AspectForgotten": "N/A",
+          "HardAddressing": "N/A",
+          "MakeSense": "No, not sure what general css means. A page consists of multiple/one css files which was mentioned in the strategy"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "Yes. The aspect was hard to consider completely",
+          "HardAddressing": "We cannot determine the whole CSS inheritance tree beforehand. The parent/child check step is already included in the strategy",
+          "MakeSense": "Yes. It comes down to the limitation in List section of Inspect panel of the browser."
+        }
+      },
+      "Tester1": "Tester17",
+      "Tester2": "Tester16",
+      "Time": "12:23:31"
+    },
     "Auth3": {
       "ParticipantId": "Auth3",
       "Strategy1": {
