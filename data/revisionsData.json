@@ -240,6 +240,126 @@
       "Tester2": "Tester11",
       "Time": "11:13:41"
     },
+    "Auth18": {
+      "ParticipantId": "Auth18",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "It was difficult to understand to what extent I was being asked to write an implementation strategy versus a testing strategy",
+          "HardAddressing": "The comment doesn't explain what was missing from the strategy",
+          "MakeSense": "Yes - as a developer I probably wrote my strategy from a developer's perspective rather than a tester's"
+        },
+        "Clarity": {
+          "AspectForgotten": "I didn't consider the differences between testing and implementation",
+          "HardAddressing": "It's hard to know what information the tester will have in order to provide the point of view that would have been helpful",
+          "MakeSense": "Yes this makes sense, the strategy was clear but not helpful"
+        },
+        "Missing": {
+          "AspectForgotten": "It was hard to consider how to make my instructions specific when the scenario was so abstract",
+          "HardAddressing": "It's hard to know how I would make the strategy less general.",
+          "MakeSense": "Mostly, though I don't know how pseudo code would help the problem of the code being too general."
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "I'm glad to hear there were no other difficulties",
+          "HardAddressing": "Nothing",
+          "MakeSense": "Sure - not a lot to say about it"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "I didn't know what the expectations of the tester would be, it wasn't really specified in the instructions.",
+          "HardAddressing": "I wouldn't know how to give those instructions if I don't even know what kind of application is being tested or what kind of errors one might encounter",
+          "MakeSense": "The comment makes sense, my strategy didn't explain how to fix errors."
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "It sounds like this tester might not be as familiar with code. I might not have written my strategy to work for less technical testers.",
+          "HardAddressing": "It doesn't identify any specific problem other than perhaps readability",
+          "MakeSense": "Not exactly - I don't know why they referred to the code as jquery when it is not"
+        },
+        "Clarity": {
+          "AspectForgotten": "I knew this part of the code could be hard to follow, but I didn't know how to make it more clear",
+          "HardAddressing": "It doesn't give any detail about what made it hard to work with",
+          "MakeSense": "Yes, it's pointing to a specific part of my strategy."
+        },
+        "Missing": {
+          "AspectForgotten": "By not using a real programming language, it was hard to know if it made sense to use a real data type like json. It's difficult to write a strategy for an abstract scenario using an abstract programming language and then have the instructions be specific and understandable.",
+          "HardAddressing": "Nothing",
+          "MakeSense": "This makes sense, json is a standard and highly understood data type so it would make sense to use it"
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "I'm glad to hear there were no other difficulties",
+          "HardAddressing": "Nothing",
+          "MakeSense": "Sure - not a lot to say about it"
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "It's hard to say given how short the comment is",
+          "HardAddressing": "It doesn't explain where to use JSON or why or even what the suggestion pertains to in my strategy",
+          "MakeSense": "Not really, it's pretty out of context. "
+        }
+      },
+      "Tester1": "Tester13",
+      "Tester2": "Tester14",
+      "Time": "3:12:21"
+    },
+    "Auth20": {
+      "ParticipantId": "Auth20",
+      "Strategy1": {
+        "ChallengingToWork": {
+          "AspectForgotten": "",
+          "HardAddressing": "The underlying knowledge necessary is more complicated that I would have anticipated explaining",
+          "MakeSense": "Makes complete sense.  It calls out the assumption that the user has a base understanding about the analysis of runtime"
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        }
+      },
+      "Strategy2": {
+        "ChallengingToWork": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Clarity": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "Missing": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "OtherChallenges": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        },
+        "RequiredInfo": {
+          "AspectForgotten": "",
+          "HardAddressing": "",
+          "MakeSense": ""
+        }
+      },
+      "Tester1": "Tester13",
+      "Tester2": "Tester14",
+      "Time": "7:35:26"
+    },
     "Auth22": {
       "ParticipantId": "Auth22",
       "Strategy1": {
